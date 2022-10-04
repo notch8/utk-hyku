@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-RSpec.describe EmbargoAutoExpiryJob do
+RSpec.describe EmbargoAutoExpiryJob, :allinson_flex_admin_set do
   before do
     ActiveJob::Base.queue_adapter = :test
   end

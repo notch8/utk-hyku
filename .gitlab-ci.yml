@@ -53,7 +53,7 @@ test:
   allow_failure: true
   variables:
     ALLOW_ANONYMOUS_LOGIN: "yes"
-    CONFDIR: "/app/samvera/hyrax-webapp/solr/config"
+    CONFDIR: "/app/samvera/hyrax-webapp/solr/conf"
     CHROME_HOSTNAME: chrome
     DB_ADAPTER: postgresql
     DB_CLEANER_ALLOW_REMOTE_DB_URL: "true"

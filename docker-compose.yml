@@ -7,7 +7,10 @@ x-app: &app
     args:
       - HYKU_BULKRAX_ENABLED=true
       - EXTRA_APK_PACKAGES=less vim bash openjdk11-jre ffmpeg rsync
-  image: registry.gitlab.com/notch8/utk-hyku:${TAG:-latest}
+    cache_from:
+        - ghcr.io/notch8/utk-hyku:main
+        - ghcr.io/notch8/utk-hyku:${TAG:-latest}
+  image: ghcr.io/notch8/utk-hyku:${TAG:-latest}
   env_file:
     - .env
   # NOTE: all common env variables moved to .env
@@ -160,9 +163,10 @@ services:
         - EXTRA_APK_PACKAGES=less vim bash openjdk11-jre ffmpeg rsync
         - HYKU_BULKRAX_ENABLED=true
       cache_from:
-        - registry.gitlab.com/notch8/utk-hyku:${TAG:-latest}
-        - registry.gitlab.com/notch8/utk-hyku/worker:${TAG:-latest}
-    image: registry.gitlab.com/notch8/utk-hyku/worker:${TAG:-latest}
+        - ghcr.io/notch8/utk-hyku/worker:main
+        - ghcr.io/notch8/utk-hyku/worker:${TAG:-latest}
+        - ghcr.io/notch8/utk-hyku:${TAG:-latest}
+    image: ghcr.io/notch8/utk-hyku/worker:${TAG:-latest}
     command: bundle exec sidekiq
     depends_on:
       check_volumes:

@@ -40,8 +40,6 @@ module AllinsonFlex
       return_info[:updated] = error_code ? false : true
       return_info
     end
-    # rubocop:enable Metrics/CyclomaticComplexity
-    # rubocop:enable Metrics/MethodLength
 
     private
 
@@ -49,6 +47,7 @@ module AllinsonFlex
       # @return [String]
       def tab_to_update
         return 'metadata_context' if attributes.key?(:metadata_context_id)
+
         super
       end
 
@@ -69,7 +68,8 @@ module AllinsonFlex
       # override (from Hyrax 2.5.0) - new method to remove admin_set_id from any other AllinsonFlex::Context
       # Remove the metadata context if this is an update
       def remove_metadata_context
-        AllinsonFlex::Context.where.not(admin_set_ids: [nil, []], id: attributes['metadata_context_id']).each do |cxt|
+        AllinsonFlex::Context.where.not(admin_set_ids: [nil, []],
+                                        id: attributes['metadata_context_id']).each do |cxt|
           cxt.admin_set_ids -= [source_model.id] if cxt.admin_set_ids.include?(source_model.id)
           cxt.save
         end
