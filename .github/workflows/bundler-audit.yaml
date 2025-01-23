@@ -11,7 +11,7 @@ on:
 
 jobs:
   bundler-audit:
-    uses: scientist-softserv/actions/.github/workflows/bundler-audit.yaml@v0.0.14
+    uses: notch8/actions/.github/workflows/bundler-audit.yaml@v0.0.14
     with:
       webTarget: web
       tag: latest

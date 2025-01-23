@@ -45,7 +45,7 @@ gem 'i18n', '1.11.0' # TODO: why does updating to 1.14.1 break allinson flex?
 gem 'i18n-debug', require: false, group: %i[development test]
 gem 'i18n-tasks', group: %i[development test]
 gem 'iiif_manifest', git: 'https://github.com/samvera/iiif_manifest.git', ref: 'e5d8a2d'
-gem 'iiif_print', github: 'scientist-softserv/iiif_print', branch: 'main'
+gem 'iiif_print', github: 'notch8/iiif_print', branch: 'main'
 gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails' # Use jquery as the JavaScript library
 # The maintainers yanked 0.3.2 version (see https://github.com/dryruby/json-canonicalization/issues/2)

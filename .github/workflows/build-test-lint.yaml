@@ -17,7 +17,7 @@ on:
 # We are using version 14 since this project has not been knap-sackerized yet
 jobs:
   build:
-    uses: scientist-softserv/actions/.github/workflows/build.yaml@v0.0.15
+    uses: notch8/actions/.github/workflows/build.yaml@v0.0.15
     secrets: inherit
     with:
       platforms: "linux/amd64"
@@ -26,13 +26,13 @@ jobs:
       solrTarget: hyku-solr
   test:
     needs: build
-    uses: scientist-softserv/actions/.github/workflows/test.yaml@v0.0.15
+    uses: notch8/actions/.github/workflows/test.yaml@v0.0.15
     with:
       webTarget: hyku-base
       workerTarget: hyku-worker
   lint:
     needs: build
-    uses: scientist-softserv/actions/.github/workflows/lint.yaml@v0.0.15
+    uses: notch8/actions/.github/workflows/lint.yaml@v0.0.15
     with:
       webTarget: hyku-base
       workerTarget: hyku-worker
