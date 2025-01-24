@@ -134,7 +134,7 @@ GIT
       activesupport (>= 4)
 
 GIT
-  remote: https://github.com/scientist-softserv/iiif_print.git
+  remote: https://github.com/notch8/iiif_print.git
   revision: 5c5fa6880b3dc22beed738cfcba7af57b698ac36
   branch: main
   specs:

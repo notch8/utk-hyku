@@ -11,7 +11,7 @@ on:
 
 jobs:
   build:
-    uses: scientist-softserv/actions/.github/workflows/build.yaml@v0.0.14
+    uses: notch8/actions/.github/workflows/build.yaml@v0.0.14
     secrets: inherit
     with:
       platforms: "linux/amd64"

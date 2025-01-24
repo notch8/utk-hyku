@@ -8,8 +8,8 @@ x-app: &app
       BUILDKIT_INLINE_CACHE: 1
     cache_from:
       - ghcr.io/samvera/hyku/base:latest
-      - ghcr.io/scientist-softserv/utk-hyku:latest
-  image: ghcr.io/scientist-softserv/utk-hyku:${TAG:-latest}
+      - ghcr.io/notch8/utk-hyku:latest
+  image: ghcr.io/notch8/utk-hyku:${TAG:-latest}
   env_file:
     - .env
   # NOTE: all common env variables moved to .env
@@ -58,7 +58,7 @@ services:
       timeout: "8s"
 
   solr:
-    image: ghcr.io/scientist-softserv/utk-hyku/solr:${TAG:-latest}
+    image: ghcr.io/notch8/utk-hyku/solr:${TAG:-latest}
     build:
       context: ./solr
       target: hyku-solr
@@ -95,7 +95,7 @@ services:
         condition: service_healthy
 
   fcrepo:
-    image: ghcr.io/scientist-softserv/docker-fcrepo:4.7.6-s3-streaming
+    image: ghcr.io/notch8/docker-fcrepo:4.7.6-s3-streaming
     volumes:
       - fcrepo:/data:cached
     env_file:
@@ -177,9 +177,9 @@ services:
       args:
         BUILDKIT_INLINE_CACHE: 1
       cache_from:
-        - ghcr.io/scientist-softserv/utk-hyku:${TAG:-latest}
-        - ghcr.io/scientist-softserv/utk-hyku/worker:${TAG:-latest}
-    image: ghcr.io/scientist-softserv/utk-hyku/worker:${TAG:-latest}
+        - ghcr.io/notch8/utk-hyku:${TAG:-latest}
+        - ghcr.io/notch8/utk-hyku/worker:${TAG:-latest}
+    image: ghcr.io/notch8/utk-hyku/worker:${TAG:-latest}
     depends_on:
       check_volumes:
         condition: service_completed_successfully

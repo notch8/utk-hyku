@@ -142,7 +142,7 @@ RSpec.describe Hyrax::HomepageController, type: :controller, clean: true do
       end
     end
 
-    xcontext "without solr" do # skip until and fix with ticket #148 https://github.com/scientist-softserv/palni-palci/issues/148
+    xcontext "without solr" do # skip until and fix with ticket #148 https://github.com/notch8/palni-palci/issues/148
       before do
         allow(controller).to receive(:repository).and_return(instance_double(Blacklight::Solr::Repository))
         allow(controller.repository).to receive(:search).and_raise Blacklight::Exceptions::InvalidRequest
