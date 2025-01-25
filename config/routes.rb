@@ -33,7 +33,7 @@ Rails.application.routes.draw do # rubocop:disable Metrics/BlockLength
     end
   end
 
-  get 'status', to: 'status#index'
+  resource :status, only: [:show, :update], controller: 'status'
 
   mount BrowseEverything::Engine => '/browse'
   resource :site, only: [:update] do
