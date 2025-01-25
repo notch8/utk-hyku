@@ -254,3 +254,30 @@ externalSolrPassword: $SOLR_ADMIN_PASSWORD
 externalSolrHost: solr.solr.svc.cluster.local
 externalSolrUser: admin
 externalSolrCollection: "utk-hyku"
+
+
+extraDeploy:
+  - |-
+      apiVersion: rbac.authorization.k8s.io/v1
+      kind: Role
+      metadata:
+        namespace: utk-hyku-production
+        name: deployment-manager
+      rules:
+      - apiGroups: ["apps"]
+        resources: ["deployments"]
+        verbs: ["get", "list", "watch", "update", "patch"]
+      ---
+      apiVersion: rbac.authorization.k8s.io/v1
+      kind: RoleBinding
+      metadata:
+        name: hyrax-deployment-manager-binding
+        namespace: default
+      subjects:
+      - kind: ServiceAccount
+        name: utk-hyku-production-hyrax
+        namespace: utk-hyku-production
+      roleRef:
+        kind: Role
+        name: deployment-manager
+        apiGroup: rbac.authorization.k8s.io
