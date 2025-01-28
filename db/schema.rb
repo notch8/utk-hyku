@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2024_12_03_010707) do
+ActiveRecord::Schema.define(version: 2025_01_25_001320) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "hstore"
@@ -179,6 +179,7 @@ ActiveRecord::Schema.define(version: 2024_12_03_010707) do
     t.string "status_message", default: "Pending"
     t.string "error_class"
     t.index ["identifier", "importerexporter_id", "importerexporter_type"], name: "bulkrax_identifier_idx"
+    t.index ["importerexporter_id", "importerexporter_type", "id"], name: "index_bulkrax_entries_on_importerexporter_id_type_and_id"
     t.index ["importerexporter_id", "importerexporter_type"], name: "bulkrax_entries_importerexporter_idx"
     t.index ["type"], name: "index_bulkrax_entries_on_type"
   end
@@ -385,6 +386,8 @@ ActiveRecord::Schema.define(version: 2024_12_03_010707) do
     t.binary "options"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "restart_command"
+    t.datetime "last_restart", default: "2025-01-25 00:47:14"
   end
 
   create_table "featured_collections", force: :cascade do |t|

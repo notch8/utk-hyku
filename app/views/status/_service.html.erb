@@ -1,1 +1,20 @@
-<li class="list-group-item list-group-item-<%= status ? 'success' : 'danger' %>"><%= name %> <span class="badge"><%= status ? t(:'.ok') : t(:'.down') %></span></li>
+<li class="list-group-item list-group-item-<%= status ? 'success' : 'danger' %>">
+  <div class="row">
+    <div class="col-xs-10">
+      <%= name %>
+    </div>
+    <div class="col-xs-1 text-right">
+      <span class="badge">
+        <%= status ? t(:'.ok') : t(:'.down') %>
+      </span>
+    </div>
+    <div class="col-xs-1 text-right">
+      <% if endpoint && endpoint.restart_command.present? %>
+        <% disabled = endpoint.last_restart > 5.minutes.ago %>
+        <%= button_to t('.restart'), status_path(id: endpoint.id), disabled: disabled, method: :patch, class: 'btn btn-danger btn-xs', title: disabled ? t('.five_minutes') : t('.restart_label') %>
+      <% else %>
+        <%= button_to t('.restart'), '/', disabled: true, class: 'btn btn-danger btn-xs', title: t('.no_command') %>
+      <% end %>
+    </div>
+  </div>
+</li>
