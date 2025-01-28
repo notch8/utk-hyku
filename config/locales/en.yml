@@ -212,8 +212,15 @@ en:
         header: Manage Account
         remove: Remove
   status:
-    index:
+    show:
       services: Services
+    update:
+      not_run: Command skipped because of it is missing or was run too recently.
+      restart_result: "Restart result was: %{result}"
     service:
       down: Down
       ok: OK
+      restart: restart
+      five_minutes: You need to wait 5 minutes between restarts
+      restart_label: Restart endpoint
+      no_command: no command specified

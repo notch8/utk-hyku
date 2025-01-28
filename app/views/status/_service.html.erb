@@ -11,9 +11,9 @@
     <div class="col-xs-1 text-right">
       <% if endpoint && endpoint.restart_command.present? %>
         <% disabled = endpoint.last_restart > 5.minutes.ago %>
-        <%= button_to 'restart', status_path(id: endpoint.id), disabled: disabled, method: :patch, class: 'btn btn-danger btn-xs', title: disabled ? "You need to wait 5 minutes between restarts" : "Restart endpoint" %>
+        <%= button_to t('.restart'), status_path(id: endpoint.id), disabled: disabled, method: :patch, class: 'btn btn-danger btn-xs', title: disabled ? t('.five_minutes') : t('.restart_label') %>
       <% else %>
-        <%= button_to 'restart', '/', disabled: true, class: 'btn btn-danger btn-xs', title: 'no command specified' %>
+        <%= button_to t('.restart'), '/', disabled: true, class: 'btn btn-danger btn-xs', title: t('.no_command') %>
       <% end %>
     </div>
   </div>

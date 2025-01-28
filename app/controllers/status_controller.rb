@@ -18,10 +18,10 @@ class StatusController < ApplicationController
     result = if @endpoint.restart_command.present? && @endpoint.last_restart < 5.minutes.ago
                `#{@endpoint.restart_command}`
              else
-               'no run'
+               t('.not_run')
              end
     @endpoint.update(last_restart: Time.zone.now)
-    flash[:notice] = "Restart result was: #{result}"
+    flash[:notice] = t('.restart_result', result: result)
     redirect_to status_path
   end
 end
