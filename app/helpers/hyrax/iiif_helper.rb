@@ -36,5 +36,10 @@ module Hyrax
 
       "&q=#{url_encode(q)}" if q.present?
     end
+
+    # Checks if work has attachments with visibility of "Institution" ("authenticated")
+    def attachments_with_institution_visibility?(presenter)
+      presenter.solr_document.ordered_member_ids.all? { |id| ::SolrDocument.find(id).visibility == 'authenticated' }
+    end
   end
 end
