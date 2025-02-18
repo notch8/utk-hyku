@@ -1,0 +1,14 @@
+<%#
+  OVERRIDE Hyrax v3.6.0 to check if the work has all attachments that are set to institution.
+  If so then the UV should not show and instead display the thumbnail.
+%>
+
+<% if presenter.representative_id.present? && presenter.representative_presenter.present? %>
+  <% if defined?(viewer) && viewer && (!attachments_with_institution_visibility?(presenter) || current_user) %>
+    <%= iiif_viewer_display presenter %>
+  <% else %>
+    <%= render media_display_partial(presenter.representative_presenter), file_set: presenter.representative_presenter  %>
+  <% end %>
+<% else %>
+  <%= image_tag 'default.png', class: "canonical-image", alt: 'default representative image' %>
+<% end %>
