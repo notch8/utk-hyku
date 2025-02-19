@@ -1,0 +1,23 @@
+<%#
+  OVERRIDE Hyrax v3.6.0 to remove the download link so it doesn't show on the show page for public users
+%>
+
+<div class="thumbnail-container">
+  <% if display_media_download_link?(file_set: file_set) && current_user %>
+    <h2 class="sr-only"><%= t('hyrax.file_set.show.downloadable_content.heading') %></h2>
+    <%= image_tag thumbnail_url(file_set),
+                  class: "representative-media",
+                  alt: "",
+                  role: "presentation" %>
+    <%= link_to t('hyrax.file_set.show.downloadable_content.image_link'),
+                hyrax.download_path(file_set),
+                data: { label: file_set.id },
+                target: :_blank,
+                id: "file_download" %>
+  <% else %>
+    <%= image_tag thumbnail_url(file_set),
+                  class: "representative-media",
+                  alt: "",
+                  role: "presentation" %>
+  <% end %>
+</div>
