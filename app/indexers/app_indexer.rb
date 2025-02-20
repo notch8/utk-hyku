@@ -14,9 +14,6 @@ class AppIndexer < Hyrax::WorkIndexer
   # Uncomment this block if you want to add custom indexing behavior:
   def generate_solr_document
     super.tap do |solr_doc|
-      solr_doc["creator_sim"] = convert_uri_to_value(SolrDocument.creator_fields)
-      solr_doc["language_sim"] = solr_doc["language_tesim"] = convert_uri_to_value(["language"])
-      solr_doc["language_local_sim"] = solr_doc["language_local_tesim"] = convert_uri_to_value(["language"])
       solr_doc["account_cname_tesim"] = Site.instance&.account&.cname
       solr_doc["bulkrax_identifier_ssim"] = object.bulkrax_identifier
       # tesim is the wrong field for this, but until we reindex everything we need to keep it
