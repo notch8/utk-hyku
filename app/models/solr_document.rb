@@ -97,28 +97,54 @@ class SolrDocument
       super.merge!(semantics)
     end
 
-    def creator_fields
+    def blacklight_mappings
       fields = []
 
-      # A tenant is initially created without an AllinsonFlex profile which leads to an
-      # ActiveRecord::StatementInvalid exception when trying to query the 'allinson_flex_profiles' table.
-      begin
-        profile = AllinsonFlex::Profile.current_version
-      rescue ActiveRecord::StatementInvalid
-        return fields
+      blacklight_field_properties.each do |prop|
+        mapping = YAML.safe_load(prop.mappings.gsub(/=>/, ':'))['blacklight']
+        fields << mapping if mapping.present?
       end
 
-      return @creator_fields = fields if profile.blank?
+      fields.select { |field| field.ends_with?('m') }.map { |field| field.rpartition('_').first }.uniq
+    end
 
-      profile.properties.each do |prop|
-        next unless prop.mappings&.include?('blacklight')
+    # Creates methods dynamically for each blacklight mapping
+    def generate_field_methods
+      blacklight_mappings.each do |mapping|
+        # Convert mapping like 'creator_sim' to method name like 'creator_fields'
+        method_name = "#{mapping}_fields"
 
-        fields << prop.name.to_s if YAML.safe_load(prop.mappings.gsub(/=>/, ':'))['blacklight'] == 'creator_sim'
+        # Define the method using fields_by_blacklight_mapping
+        define_singleton_method(method_name) do
+          fields_by_blacklight_mapping("#{mapping}_sim")
+        end
       end
-      fields.uniq
     end
 
     private
+
+      def blacklight_field_properties
+        # A tenant is initially created without an AllinsonFlex profile which leads to an
+        # ActiveRecord::StatementInvalid exception when trying to query the 'allinson_flex_profiles' table.
+        begin
+          @profile ||= AllinsonFlex::Profile.current_version
+        rescue ActiveRecord::StatementInvalid
+          return fields
+        end
+
+        return [] if @profile.blank?
+
+        @profile.properties.select { |property| property.mappings&.include?('blacklight') }
+      end
+
+      def fields_by_blacklight_mapping(mapping_value)
+        fields = []
+
+        blacklight_field_properties.each do |prop|
+          fields << prop.name.to_s if YAML.safe_load(prop.mappings.gsub(/=>/, ':'))['blacklight'] == mapping_value
+        end
+        fields.uniq
+      end
 
       def semantics
         # oai_dc basic terms: [:contributor, :coverage, :creator, :date, :description,
