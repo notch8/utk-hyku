@@ -21,6 +21,8 @@ module UriToStringBehavior
   #   convert_uri_to_value(['creator', 'contributor'], found_mappings: mappings)
   #   #=> ["University of Tennessee", "John Doe"] # creator used cache, contributor made HTTP request
   def convert_uri_to_value(fields, found_mappings: {})
+    return [] if fields.blank?
+
     fields.flat_map do |prop|
       found_mappings[prop.to_sym] || uri_to_value_for(object.try(prop))
     end.compact

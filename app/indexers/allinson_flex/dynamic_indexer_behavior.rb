@@ -40,7 +40,7 @@ module AllinsonFlex
         end
 
         SolrDocument.blacklight_mappings.each do |index_field_name|
-          values = convert_uri_to_value(SolrDocument.send("#{index_field_name}_fields"), found_mappings: found_mappings)
+          values = convert_uri_to_value(SolrDocument.try("#{index_field_name}_fields"), found_mappings: found_mappings)
           solr_doc["#{index_field_name}_sim"] = solr_doc["#{index_field_name}_tesim"] = values
         end
       end
