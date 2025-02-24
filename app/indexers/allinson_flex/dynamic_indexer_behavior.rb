@@ -25,14 +25,23 @@ module AllinsonFlex
       uri_properties = uri_properties_from(dynamic_schema_service)
 
       super.tap do |solr_doc|
+        found_mappings = {}
+
         dynamic_schema_service.indexing_properties.each_pair do |prop_name, index_field_names|
+          prop_value = object.send(prop_name)
           value = if uri_properties.include?(prop_name.to_s)
-                    uri_to_value_for(object.send(prop_name))
+                    string_value = uri_to_value_for(prop_value)
+                    found_mappings[prop_name] = string_value if string_value.present?
                   else
-                    object.send(prop_name)
+                    prop_value
                   end
 
-          index_field_names.each { |index_field_name| solr_doc[index_field_name] = value }
+          index_field_names.each { |index_field_name| solr_doc[index_field_name] = value } if value.present?
+        end
+
+        SolrDocument.blacklight_mappings.each do |index_field_name|
+          values = convert_uri_to_value(SolrDocument.try("#{index_field_name}_fields"), found_mappings: found_mappings)
+          solr_doc["#{index_field_name}_sim"] = solr_doc["#{index_field_name}_tesim"] = values
         end
       end
     end

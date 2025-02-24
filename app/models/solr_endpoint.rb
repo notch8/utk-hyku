@@ -25,6 +25,7 @@ class SolrEndpoint < Endpoint
     ActiveFedora::SolrService.instance.conn = connection
     Blacklight.connection_config = connection_options
     Blacklight.default_index = nil
+    SolrDocument.generate_field_methods
     SolrDocument.field_semantics
   end
 

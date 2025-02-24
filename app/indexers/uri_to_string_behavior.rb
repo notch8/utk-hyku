@@ -9,13 +9,23 @@ module UriToStringBehavior
   # Converts URIs to their corresponding values for a list of fields.
   #
   # @param fields [Array<Symbol>] list of property names to process
+  # @param found_mappings [Hash] cache of previously resolved URI values to avoid redundant HTTP requests
   # @return [Array<String>] flattened array of resolved values with blanks removed
   #
-  # @example
+  # @example Without cache
   #   convert_uri_to_value(['creator', 'contributor'])
-  #   #=> ["University of Tennessee", "John Die"]
-  def convert_uri_to_value(fields)
-    fields.map { |prop| uri_to_value_for(object.try(prop)) }.flatten.compact
+  #   #=> ["University of Tennessee", "John Doe"]
+  #
+  # @example With cached values
+  #   mappings = { creator: ["University of Tennessee"] }
+  #   convert_uri_to_value(['creator', 'contributor'], found_mappings: mappings)
+  #   #=> ["University of Tennessee", "John Doe"] # creator used cache, contributor made HTTP request
+  def convert_uri_to_value(fields, found_mappings: {})
+    return [] if fields.blank?
+
+    fields.flat_map do |prop|
+      found_mappings[prop.to_sym] || uri_to_value_for(object.try(prop))
+    end.compact
   end
 
   # Retrieves a value for a given URI.
