@@ -151,7 +151,7 @@ class SolrDocument
         #                      :format, :identifier, :language, :publisher, :relation,
         #                      :rights, :source, :subject, :title, :type]
         {
-          creator: creator_fields.map { |field| field + '_tesim' },
+          creator: try(:creator_fields)&.map { |field| field + '_tesim' },
           date: ['date_created_d_tesim', 'date_issued_d_tesim'],
           description: 'abstract_tesim',
           format: ['form_tesim', 'form_local_tesim', 'extent_tesim'],
