@@ -6,10 +6,10 @@ on:
       environment:
         description: 'Deploy to Environment'
         required: true
-        default: 'staging'
+        default: 'friends'
         type: choice
         options:
-          - staging
+          - friends
           - production
       debug_enabled:
         type: boolean
