@@ -129,7 +129,7 @@ class SolrDocument
         begin
           @profile ||= AllinsonFlex::Profile.current_version
         rescue ActiveRecord::StatementInvalid
-          return fields
+          return []
         end
 
         return [] if @profile.blank?
