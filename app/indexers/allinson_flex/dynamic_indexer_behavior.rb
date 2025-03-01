@@ -21,7 +21,7 @@ module AllinsonFlex
     end
 
     def generate_solr_document
-      dynamic_schema_service = object.dynamic_schema_service
+      dynamic_schema_service = object.dynamic_schema_service(update: true)
       uri_properties = uri_properties_from(dynamic_schema_service)
 
       super.tap do |solr_doc|
