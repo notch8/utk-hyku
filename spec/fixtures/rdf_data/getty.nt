@@ -1,0 +1,678 @@
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vocab.getty.edu/ontology#Subject> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vocab.getty.edu/ontology#Concept> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2000/01/rdf-schema#label> "Postmodern"@en-us .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2000/01/rdf-schema#label> "Postmodernism"@en-us .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2000/01/rdf-schema#label> "P-M (Postmodern)"@en .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2000/01/rdf-schema#label> "Po-Mo (Postmodern)"@en .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2000/01/rdf-schema#label> "Post-Modern"@en-gb .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2000/01/rdf-schema#label> "Post-Modernism"@en-gb .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2000/01/rdf-schema#label> "\u5F8C\u73FE\u4EE3"@zh-hant .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2000/01/rdf-schema#label> "\u5F8C\u73FE\u4EE3\u4E3B\u7FA9"@zh-hant .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2000/01/rdf-schema#label> "h\u00F2u xi\u00E0n d\u00E0i"@zh-latn-pinyin-x-hanyu .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2000/01/rdf-schema#label> "hou xian dai"@zh-latn-pinyin-x-notone .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2000/01/rdf-schema#label> "hou hsien tai"@zh-latn-wadegile .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2000/01/rdf-schema#label> "postmodern"@nl .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2000/01/rdf-schema#label> "P\u00F3s-modernismo"@pt .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2000/01/rdf-schema#label> "arte p\u00F3s-moderna"@pt .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2000/01/rdf-schema#label> "Posmoderno"@es .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2000/01/rdf-schema#label> "Posmodernismo"@es .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.getty.edu/vow/AATFullDisplay?find=&logic=AND&note=&subjectid=300022208> .
+<http://vocab.getty.edu/aat/300022208> <http://purl.org/dc/terms/created> "1988-01-01T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://vocab.getty.edu/aat/300022208> <http://purl.org/dc/terms/modified> "2022-01-07T11:49:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://vocab.getty.edu/aat/300022208> <http://purl.org/dc/terms/modified> "2012-04-13T12:06:10"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://vocab.getty.edu/aat/300022208> <http://purl.org/dc/terms/modified> "2010-04-23T01:00:23"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://vocab.getty.edu/aat/300022208> <http://purl.org/dc/terms/modified> "2003-08-20T13:44:22"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://vocab.getty.edu/aat/300022208> <http://purl.org/dc/terms/modified> "2003-08-20T13:45:54"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://vocab.getty.edu/aat/300022208> <http://purl.org/dc/terms/modified> "2003-08-20T13:50:58"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://vocab.getty.edu/aat/300022208> <http://purl.org/dc/terms/modified> "2003-08-20T13:52:06"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://vocab.getty.edu/aat/300022208> <http://purl.org/dc/terms/modified> "2003-08-20T13:52:28"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://vocab.getty.edu/aat/300022208> <http://purl.org/dc/terms/modified> "2007-02-06T14:06:26"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://vocab.getty.edu/aat/300022208> <http://purl.org/dc/terms/modified> "2010-04-23T01:00:24"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://vocab.getty.edu/aat/300022208> <http://purl.org/dc/terms/modified> "2011-01-08T00:55:28"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://vocab.getty.edu/aat/300022208> <http://purl.org/dc/terms/modified> "2013-03-29T09:52:01"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://vocab.getty.edu/aat/300022208> <http://purl.org/dc/terms/modified> "2014-02-27T15:57:45"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://vocab.getty.edu/aat/300022208> <http://purl.org/dc/terms/modified> "2014-02-27T16:21:13"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://vocab.getty.edu/aat/300022208> <http://purl.org/dc/terms/modified> "2001-07-26T21:59:28"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://vocab.getty.edu/aat/300022208> <http://purl.org/dc/terms/modified> "2011-01-08T00:55:27"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#changeNote> <http://vocab.getty.edu/aat/rev/5000005049> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#changeNote> <http://vocab.getty.edu/aat/rev/5001500378> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#changeNote> <http://vocab.getty.edu/aat/rev/5001500379> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#changeNote> <http://vocab.getty.edu/aat/rev/5001500387> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#changeNote> <http://vocab.getty.edu/aat/rev/5001500388> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#changeNote> <http://vocab.getty.edu/aat/rev/5001500389> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#changeNote> <http://vocab.getty.edu/aat/rev/5001604667> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#changeNote> <http://vocab.getty.edu/aat/rev/5002263432> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#changeNote> <http://vocab.getty.edu/aat/rev/5002921882> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#changeNote> <http://vocab.getty.edu/aat/rev/5003236135> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#changeNote> <http://vocab.getty.edu/aat/rev/5003402268> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#changeNote> <http://vocab.getty.edu/aat/rev/5003579729> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#changeNote> <http://vocab.getty.edu/aat/rev/5003579758> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#changeNote> <http://vocab.getty.edu/aat/rev/5005357957> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#changeNote> <http://vocab.getty.edu/aat/rev/5001500377> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#changeNote> <http://vocab.getty.edu/aat/rev/5001055818> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#changeNote> <http://vocab.getty.edu/aat/rev/5001055819> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#changeNote> <http://vocab.getty.edu/aat/rev/5001055820> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#changeNote> <http://vocab.getty.edu/aat/rev/5001055821> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#changeNote> <http://vocab.getty.edu/aat/rev/5001055822> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#changeNote> <http://vocab.getty.edu/aat/rev/5001500380> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#changeNote> <http://vocab.getty.edu/aat/rev/5001500384> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#changeNote> <http://vocab.getty.edu/aat/rev/5001500385> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#changeNote> <http://vocab.getty.edu/aat/rev/5002263420> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#changeNote> <http://vocab.getty.edu/aat/rev/5002263421> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#changeNote> <http://vocab.getty.edu/aat/rev/5002921871> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#changeNote> <http://vocab.getty.edu/aat/rev/5003402244> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#changeNote> <http://vocab.getty.edu/aat/rev/5003402245> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#changeNote> <http://vocab.getty.edu/aat/rev/5003402246> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#changeNote> <http://vocab.getty.edu/aat/rev/5003402247> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#changeNote> <http://vocab.getty.edu/aat/rev/5003402248> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#changeNote> <http://vocab.getty.edu/aat/rev/5005357933> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#changeNote> <http://vocab.getty.edu/aat/rev/5005357934> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#changeNote> <http://vocab.getty.edu/aat/rev/5005357935> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#changeNote> <http://vocab.getty.edu/aat/rev/5005357936> .
+<http://vocab.getty.edu/aat/300022208> <http://vocab.getty.edu/ontology#broader> <http://vocab.getty.edu/aat/300022097> .
+<http://vocab.getty.edu/aat/300022208> <http://vocab.getty.edu/ontology#broaderGenericExtended> <http://vocab.getty.edu/aat/300111079> .
+<http://vocab.getty.edu/aat/300022208> <http://vocab.getty.edu/ontology#broaderGenericExtended> <http://vocab.getty.edu/aat/300022097> .
+<http://vocab.getty.edu/aat/300022208> <http://vocab.getty.edu/ontology#broaderGenericExtended> <http://vocab.getty.edu/aat/300264088> .
+<http://vocab.getty.edu/aat/300022208> <http://vocab.getty.edu/ontology#broaderGenericExtended> <http://vocab.getty.edu/aat/300015646> .
+<http://vocab.getty.edu/aat/300022208> <http://vocab.getty.edu/ontology#broaderExtended> <http://vocab.getty.edu/aat/300111079> .
+<http://vocab.getty.edu/aat/300022208> <http://vocab.getty.edu/ontology#broaderExtended> <http://vocab.getty.edu/aat/300022097> .
+<http://vocab.getty.edu/aat/300022208> <http://vocab.getty.edu/ontology#broaderExtended> <http://vocab.getty.edu/aat/300264088> .
+<http://vocab.getty.edu/aat/300022208> <http://vocab.getty.edu/ontology#broaderExtended> <http://vocab.getty.edu/aat/300015646> .
+<http://vocab.getty.edu/aat/300022208> <http://vocab.getty.edu/ontology#broaderPreferredExtended> <http://vocab.getty.edu/aat/300111079> .
+<http://vocab.getty.edu/aat/300022208> <http://vocab.getty.edu/ontology#broaderPreferredExtended> <http://vocab.getty.edu/aat/300022097> .
+<http://vocab.getty.edu/aat/300022208> <http://vocab.getty.edu/ontology#broaderPreferredExtended> <http://vocab.getty.edu/aat/300264088> .
+<http://vocab.getty.edu/aat/300022208> <http://vocab.getty.edu/ontology#broaderPreferredExtended> <http://vocab.getty.edu/aat/300015646> .
+<http://vocab.getty.edu/aat/300022208> <http://vocab.getty.edu/ontology#parentString> "<international post-1945 styles and movements>, <styles, periods, and cultures by region>, Styles and Periods (hierarchy name), Styles and Periods Facet" .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#note> <http://vocab.getty.edu/aat/scopeNote/53435> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#note> <http://vocab.getty.edu/aat/scopeNote/62726> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#note> <http://vocab.getty.edu/aat/scopeNote/98933> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#note> <http://vocab.getty.edu/aat/scopeNote/111595> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#note> <http://vocab.getty.edu/aat/scopeNote/166215> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#note> <http://vocab.getty.edu/aat/rev/5000005049> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#note> <http://vocab.getty.edu/aat/rev/5001500378> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#note> <http://vocab.getty.edu/aat/rev/5001500379> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#note> <http://vocab.getty.edu/aat/rev/5001500387> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#note> <http://vocab.getty.edu/aat/rev/5001500388> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#note> <http://vocab.getty.edu/aat/rev/5001500389> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#note> <http://vocab.getty.edu/aat/rev/5001604667> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#note> <http://vocab.getty.edu/aat/rev/5002263432> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#note> <http://vocab.getty.edu/aat/rev/5002921882> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#note> <http://vocab.getty.edu/aat/rev/5003236135> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#note> <http://vocab.getty.edu/aat/rev/5003402268> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#note> <http://vocab.getty.edu/aat/rev/5003579729> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#note> <http://vocab.getty.edu/aat/rev/5003579758> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#note> <http://vocab.getty.edu/aat/rev/5005357957> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#note> <http://vocab.getty.edu/aat/rev/5001500377> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#note> <http://vocab.getty.edu/aat/rev/5001055818> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#note> <http://vocab.getty.edu/aat/rev/5001055819> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#note> <http://vocab.getty.edu/aat/rev/5001055820> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#note> <http://vocab.getty.edu/aat/rev/5001055821> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#note> <http://vocab.getty.edu/aat/rev/5001055822> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#note> <http://vocab.getty.edu/aat/rev/5001500380> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#note> <http://vocab.getty.edu/aat/rev/5001500384> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#note> <http://vocab.getty.edu/aat/rev/5001500385> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#note> <http://vocab.getty.edu/aat/rev/5002263420> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#note> <http://vocab.getty.edu/aat/rev/5002263421> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#note> <http://vocab.getty.edu/aat/rev/5002921871> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#note> <http://vocab.getty.edu/aat/rev/5003402244> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#note> <http://vocab.getty.edu/aat/rev/5003402245> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#note> <http://vocab.getty.edu/aat/rev/5003402246> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#note> <http://vocab.getty.edu/aat/rev/5003402247> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#note> <http://vocab.getty.edu/aat/rev/5003402248> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#note> <http://vocab.getty.edu/aat/rev/5005357933> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#note> <http://vocab.getty.edu/aat/rev/5005357934> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#note> <http://vocab.getty.edu/aat/rev/5005357935> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#note> <http://vocab.getty.edu/aat/rev/5005357936> .
+<http://vocab.getty.edu/aat/300022208> <http://vocab.getty.edu/ontology#parentStringAbbrev> "<international post-1945 styles and movements>, <styles, periods, and cultures by region>, ... Styles and Periods Facet" .
+<http://vocab.getty.edu/aat/300022208> <http://vocab.getty.edu/ontology#displayOrder> "3"^^<http://www.w3.org/2001/XMLSchema#positiveInteger> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://vocab.getty.edu/aat/300022208> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://www.wikidata.org/entity/Q595448> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://www.wikidata.org/entity/Q47783> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2008/05/skos-xl#prefLabel> <http://vocab.getty.edu/aat/term/1000022208-en-US> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2008/05/skos-xl#prefLabel> <http://vocab.getty.edu/aat/term/1000279931-en-GB> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2008/05/skos-xl#prefLabel> <http://vocab.getty.edu/aat/term/1000550488-zh-Hant> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2008/05/skos-xl#prefLabel> <http://vocab.getty.edu/aat/term/1000550491-zh-Latn-pinyin-x-hanyu> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2008/05/skos-xl#prefLabel> <http://vocab.getty.edu/aat/term/1000550490-zh-Latn-pinyin-x-notone> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2008/05/skos-xl#prefLabel> <http://vocab.getty.edu/aat/term/1000550492-zh-Latn-wadegile> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2008/05/skos-xl#prefLabel> <http://vocab.getty.edu/aat/term/1000475271-nl> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2008/05/skos-xl#prefLabel> <http://vocab.getty.edu/aat/term/1000885025-pt> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2008/05/skos-xl#prefLabel> <http://vocab.getty.edu/aat/term/1000423097-es> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#prefLabel> "Postmodern"@en-us .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#prefLabel> "Post-Modern"@en-gb .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#prefLabel> "\u5F8C\u73FE\u4EE3"@zh-hant .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#prefLabel> "h\u00F2u xi\u00E0n d\u00E0i"@zh-latn-pinyin-x-hanyu .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#prefLabel> "hou xian dai"@zh-latn-pinyin-x-notone .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#prefLabel> "hou hsien tai"@zh-latn-wadegile .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#prefLabel> "postmodern"@nl .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#prefLabel> "P\u00F3s-modernismo"@pt .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#prefLabel> "Posmoderno"@es .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2008/05/skos-xl#altLabel> <http://vocab.getty.edu/aat/term/1000279929-en-US> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2008/05/skos-xl#altLabel> <http://vocab.getty.edu/aat/term/1000304999-en> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2008/05/skos-xl#altLabel> <http://vocab.getty.edu/aat/term/1000305000-en> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2008/05/skos-xl#altLabel> <http://vocab.getty.edu/aat/term/1000279930-en-GB> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2008/05/skos-xl#altLabel> <http://vocab.getty.edu/aat/term/1000550489-zh-Hant> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2008/05/skos-xl#altLabel> <http://vocab.getty.edu/aat/term/1000885026-pt> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2008/05/skos-xl#altLabel> <http://vocab.getty.edu/aat/term/1000423098-es> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#altLabel> "Postmodernism"@en-us .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#altLabel> "P-M (Postmodern)"@en .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#altLabel> "Po-Mo (Postmodern)"@en .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#altLabel> "Post-Modernism"@en-gb .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#altLabel> "\u5F8C\u73FE\u4EE3\u4E3B\u7FA9"@zh-hant .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#altLabel> "arte p\u00F3s-moderna"@pt .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#altLabel> "Posmodernismo"@es .
+<http://vocab.getty.edu/aat/300022208> <http://vocab.getty.edu/ontology#broaderGeneric> <http://vocab.getty.edu/aat/300022097> .
+<http://vocab.getty.edu/aat/300022208> <http://vocab.getty.edu/ontology#broaderPreferred> <http://vocab.getty.edu/aat/300022097> .
+<http://vocab.getty.edu/aat/300022208> <http://vocab.getty.edu/ontology#broaderNonConcept> <http://vocab.getty.edu/aat/300111079> .
+<http://vocab.getty.edu/aat/300022208> <http://vocab.getty.edu/ontology#broaderNonConcept> <http://vocab.getty.edu/aat/300022097> .
+<http://vocab.getty.edu/aat/300022208> <http://vocab.getty.edu/ontology#prefLabelGVP> <http://vocab.getty.edu/aat/term/1000022208-en-US> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.getty.edu/aat/> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#scopeNote> <http://vocab.getty.edu/aat/scopeNote/53435> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#scopeNote> <http://vocab.getty.edu/aat/scopeNote/62726> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#scopeNote> <http://vocab.getty.edu/aat/scopeNote/98933> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#scopeNote> <http://vocab.getty.edu/aat/scopeNote/111595> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#scopeNote> <http://vocab.getty.edu/aat/scopeNote/166215> .
+<http://vocab.getty.edu/aat/300022208> <http://purl.org/dc/terms/contributor> <http://vocab.getty.edu/aat/contrib/10000000> .
+<http://vocab.getty.edu/aat/300022208> <http://purl.org/dc/terms/contributor> <http://vocab.getty.edu/aat/contrib/10000131> .
+<http://vocab.getty.edu/aat/300022208> <http://purl.org/dc/terms/contributor> <http://vocab.getty.edu/aat/contrib/10000088> .
+<http://vocab.getty.edu/aat/300022208> <http://purl.org/dc/terms/contributor> <http://vocab.getty.edu/aat/contrib/10000205> .
+<http://vocab.getty.edu/aat/300022208> <http://purl.org/dc/terms/contributor> <http://vocab.getty.edu/aat/contrib/10000250> .
+<http://vocab.getty.edu/aat/300022208> <http://purl.org/dc/terms/contributor> <http://vocab.getty.edu/aat/contrib/10000316> .
+<http://vocab.getty.edu/aat/300022208> <http://purl.org/dc/terms/source> <http://vocab.getty.edu/aat/source/2000099099> .
+<http://vocab.getty.edu/aat/300022208> <http://purl.org/dc/terms/source> <http://vocab.getty.edu/aat/source/2000109633> .
+<http://vocab.getty.edu/aat/300022208> <http://purl.org/dc/terms/source> <http://vocab.getty.edu/aat/source/2000024811-subject-300022208> .
+<http://vocab.getty.edu/aat/300022208> <http://purl.org/dc/terms/source> <http://vocab.getty.edu/aat/source/2000046672-subject-300022208> .
+<http://vocab.getty.edu/aat/300022208> <http://purl.org/dc/terms/source> <http://vocab.getty.edu/aat/source/2000051089-subject-300022208> .
+<http://vocab.getty.edu/aat/300022208> <http://purl.org/dc/elements/1.1/identifier> "300022208" .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#mappingRelation> <http://vocab.getty.edu/aat/300022208> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#mappingRelation> <http://www.wikidata.org/entity/Q595448> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#mappingRelation> <http://www.wikidata.org/entity/Q47783> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://vocab.getty.edu/aat/300022208> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://www.wikidata.org/entity/Q595448> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://www.wikidata.org/entity/Q47783> .
+<http://vocab.getty.edu/aat/300022208> <http://rdfs.org/ns/void#inDataset> <http://vocab.getty.edu/dataset/aat> .
+<http://vocab.getty.edu/aat/300022208> <http://creativecommons.org/ns#license> <http://opendatacommons.org/licenses/by/1.0/> .
+<http://vocab.getty.edu/aat/300022208> <http://purl.org/dc/terms/license> <http://opendatacommons.org/licenses/by/1.0/> .
+<http://vocab.getty.edu/aat/300022208> <http://www.w3.org/ns/prov#wasGeneratedBy> <http://vocab.getty.edu/aat/rev/5000005049> .
+<http://vocab.getty.edu/aat/rev/5000005049> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Activity> .
+<http://vocab.getty.edu/aat/rev/5000005049> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Create> .
+<http://vocab.getty.edu/aat/rev/5000005049> <http://www.w3.org/ns/prov#startedAtTime> "1988-01-01T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://vocab.getty.edu/aat/rev/5000005049> <http://purl.org/dc/elements/1.1/type> "created" .
+<http://vocab.getty.edu/aat/rev/5000005049> <http://purl.org/dc/elements/1.1/description> "" .
+<http://vocab.getty.edu/aat/rev/5001500378> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Activity> .
+<http://vocab.getty.edu/aat/rev/5001500378> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Modify> .
+<http://vocab.getty.edu/aat/rev/5001500378> <http://www.w3.org/ns/prov#startedAtTime> "2003-08-20T13:44:22"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://vocab.getty.edu/aat/rev/5001500378> <http://www.w3.org/ns/prov#used> <http://vocab.getty.edu/aat/300022208> .
+<http://vocab.getty.edu/aat/rev/5001500378> <http://purl.org/dc/elements/1.1/type> "updated" .
+<http://vocab.getty.edu/aat/rev/5001500378> <http://purl.org/dc/elements/1.1/description> "" .
+<http://vocab.getty.edu/aat/rev/5001500379> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Activity> .
+<http://vocab.getty.edu/aat/rev/5001500379> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Modify> .
+<http://vocab.getty.edu/aat/rev/5001500379> <http://www.w3.org/ns/prov#startedAtTime> "2003-08-20T13:45:54"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://vocab.getty.edu/aat/rev/5001500379> <http://www.w3.org/ns/prov#used> <http://vocab.getty.edu/aat/300022208> .
+<http://vocab.getty.edu/aat/rev/5001500379> <http://purl.org/dc/elements/1.1/type> "updated" .
+<http://vocab.getty.edu/aat/rev/5001500379> <http://purl.org/dc/elements/1.1/description> "" .
+<http://vocab.getty.edu/aat/rev/5001500387> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Activity> .
+<http://vocab.getty.edu/aat/rev/5001500387> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Modify> .
+<http://vocab.getty.edu/aat/rev/5001500387> <http://www.w3.org/ns/prov#startedAtTime> "2003-08-20T13:50:58"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://vocab.getty.edu/aat/rev/5001500387> <http://www.w3.org/ns/prov#used> <http://vocab.getty.edu/aat/300022208> .
+<http://vocab.getty.edu/aat/rev/5001500387> <http://purl.org/dc/elements/1.1/type> "updated" .
+<http://vocab.getty.edu/aat/rev/5001500387> <http://purl.org/dc/elements/1.1/description> "" .
+<http://vocab.getty.edu/aat/rev/5001500388> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Activity> .
+<http://vocab.getty.edu/aat/rev/5001500388> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Modify> .
+<http://vocab.getty.edu/aat/rev/5001500388> <http://www.w3.org/ns/prov#startedAtTime> "2003-08-20T13:52:06"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://vocab.getty.edu/aat/rev/5001500388> <http://www.w3.org/ns/prov#used> <http://vocab.getty.edu/aat/300022208> .
+<http://vocab.getty.edu/aat/rev/5001500388> <http://purl.org/dc/elements/1.1/type> "updated" .
+<http://vocab.getty.edu/aat/rev/5001500388> <http://purl.org/dc/elements/1.1/description> "" .
+<http://vocab.getty.edu/aat/rev/5001500389> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Activity> .
+<http://vocab.getty.edu/aat/rev/5001500389> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Modify> .
+<http://vocab.getty.edu/aat/rev/5001500389> <http://www.w3.org/ns/prov#startedAtTime> "2003-08-20T13:52:28"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://vocab.getty.edu/aat/rev/5001500389> <http://www.w3.org/ns/prov#used> <http://vocab.getty.edu/aat/300022208> .
+<http://vocab.getty.edu/aat/rev/5001500389> <http://purl.org/dc/elements/1.1/type> "updated" .
+<http://vocab.getty.edu/aat/rev/5001500389> <http://purl.org/dc/elements/1.1/description> "" .
+<http://vocab.getty.edu/aat/rev/5001604667> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Activity> .
+<http://vocab.getty.edu/aat/rev/5001604667> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Modify> .
+<http://vocab.getty.edu/aat/rev/5001604667> <http://www.w3.org/ns/prov#startedAtTime> "2007-02-06T14:06:26"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://vocab.getty.edu/aat/rev/5001604667> <http://www.w3.org/ns/prov#used> <http://vocab.getty.edu/aat/300022208> .
+<http://vocab.getty.edu/aat/rev/5001604667> <http://purl.org/dc/elements/1.1/type> "updated" .
+<http://vocab.getty.edu/aat/rev/5001604667> <http://purl.org/dc/elements/1.1/description> "" .
+<http://vocab.getty.edu/aat/rev/5003236135> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Activity> .
+<http://vocab.getty.edu/aat/rev/5003236135> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Modify> .
+<http://vocab.getty.edu/aat/rev/5003236135> <http://www.w3.org/ns/prov#startedAtTime> "2012-04-13T12:06:10"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://vocab.getty.edu/aat/rev/5003236135> <http://www.w3.org/ns/prov#used> <http://vocab.getty.edu/aat/300022208> .
+<http://vocab.getty.edu/aat/rev/5003236135> <http://purl.org/dc/elements/1.1/type> "updated" .
+<http://vocab.getty.edu/aat/rev/5003236135> <http://purl.org/dc/elements/1.1/description> "GCI Source and Contributor added" .
+<http://vocab.getty.edu/aat/rev/5003579729> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Activity> .
+<http://vocab.getty.edu/aat/rev/5003579729> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Modify> .
+<http://vocab.getty.edu/aat/rev/5003579729> <http://www.w3.org/ns/prov#startedAtTime> "2014-02-27T15:57:45"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://vocab.getty.edu/aat/rev/5003579729> <http://www.w3.org/ns/prov#used> <http://vocab.getty.edu/aat/300022208> .
+<http://vocab.getty.edu/aat/rev/5003579729> <http://purl.org/dc/elements/1.1/type> "updated" .
+<http://vocab.getty.edu/aat/rev/5003579729> <http://purl.org/dc/elements/1.1/description> "" .
+<http://vocab.getty.edu/aat/rev/5003579758> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Activity> .
+<http://vocab.getty.edu/aat/rev/5003579758> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Modify> .
+<http://vocab.getty.edu/aat/rev/5003579758> <http://www.w3.org/ns/prov#startedAtTime> "2014-02-27T16:21:13"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://vocab.getty.edu/aat/rev/5003579758> <http://www.w3.org/ns/prov#used> <http://vocab.getty.edu/aat/300022208> .
+<http://vocab.getty.edu/aat/rev/5003579758> <http://purl.org/dc/elements/1.1/type> "updated" .
+<http://vocab.getty.edu/aat/rev/5003579758> <http://purl.org/dc/elements/1.1/description> "" .
+<http://vocab.getty.edu/aat/rev/5001500377> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Activity> .
+<http://vocab.getty.edu/aat/rev/5001500377> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Modify> .
+<http://vocab.getty.edu/aat/rev/5001500377> <http://www.w3.org/ns/prov#startedAtTime> "2003-08-20T13:44:22"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://vocab.getty.edu/aat/rev/5001500377> <http://www.w3.org/ns/prov#used> <http://vocab.getty.edu/aat/300022208> .
+<http://vocab.getty.edu/aat/rev/5001500377> <http://purl.org/dc/elements/1.1/type> "note created" .
+<http://vocab.getty.edu/aat/rev/5001500377> <http://purl.org/dc/elements/1.1/description> "" .
+<http://vocab.getty.edu/aat/rev/5001055818> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Activity> .
+<http://vocab.getty.edu/aat/rev/5001055818> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Modify> .
+<http://vocab.getty.edu/aat/rev/5001055818> <http://www.w3.org/ns/prov#startedAtTime> "2001-07-26T21:59:28"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://vocab.getty.edu/aat/rev/5001055818> <http://www.w3.org/ns/prov#used> <http://vocab.getty.edu/aat/300022208> .
+<http://vocab.getty.edu/aat/rev/5001055818> <http://purl.org/dc/elements/1.1/type> "term added" .
+<http://vocab.getty.edu/aat/rev/5001055818> <http://purl.org/dc/elements/1.1/description> "Postmodern (1000022208);" .
+<http://vocab.getty.edu/aat/rev/5001055819> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Activity> .
+<http://vocab.getty.edu/aat/rev/5001055819> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Modify> .
+<http://vocab.getty.edu/aat/rev/5001055819> <http://www.w3.org/ns/prov#startedAtTime> "2001-07-26T21:59:28"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://vocab.getty.edu/aat/rev/5001055819> <http://www.w3.org/ns/prov#used> <http://vocab.getty.edu/aat/300022208> .
+<http://vocab.getty.edu/aat/rev/5001055819> <http://purl.org/dc/elements/1.1/type> "term added" .
+<http://vocab.getty.edu/aat/rev/5001055819> <http://purl.org/dc/elements/1.1/description> "Post-Modern (1000279931);" .
+<http://vocab.getty.edu/aat/rev/5001055820> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Activity> .
+<http://vocab.getty.edu/aat/rev/5001055820> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Modify> .
+<http://vocab.getty.edu/aat/rev/5001055820> <http://www.w3.org/ns/prov#startedAtTime> "2001-07-26T21:59:28"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://vocab.getty.edu/aat/rev/5001055820> <http://www.w3.org/ns/prov#used> <http://vocab.getty.edu/aat/300022208> .
+<http://vocab.getty.edu/aat/rev/5001055820> <http://purl.org/dc/elements/1.1/type> "term added" .
+<http://vocab.getty.edu/aat/rev/5001055820> <http://purl.org/dc/elements/1.1/description> "Postmodernism (1000279929);" .
+<http://vocab.getty.edu/aat/rev/5001055821> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Activity> .
+<http://vocab.getty.edu/aat/rev/5001055821> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Modify> .
+<http://vocab.getty.edu/aat/rev/5001055821> <http://www.w3.org/ns/prov#startedAtTime> "2001-07-26T21:59:28"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://vocab.getty.edu/aat/rev/5001055821> <http://www.w3.org/ns/prov#used> <http://vocab.getty.edu/aat/300022208> .
+<http://vocab.getty.edu/aat/rev/5001055821> <http://purl.org/dc/elements/1.1/type> "term added" .
+<http://vocab.getty.edu/aat/rev/5001055821> <http://purl.org/dc/elements/1.1/description> "Post-Modernism (1000279930);" .
+<http://vocab.getty.edu/aat/rev/5001055822> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Activity> .
+<http://vocab.getty.edu/aat/rev/5001055822> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Modify> .
+<http://vocab.getty.edu/aat/rev/5001055822> <http://www.w3.org/ns/prov#startedAtTime> "2001-07-26T21:59:28"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://vocab.getty.edu/aat/rev/5001055822> <http://www.w3.org/ns/prov#used> <http://vocab.getty.edu/aat/300022208> .
+<http://vocab.getty.edu/aat/rev/5001055822> <http://purl.org/dc/elements/1.1/type> "term added" .
+<http://vocab.getty.edu/aat/rev/5001055822> <http://purl.org/dc/elements/1.1/description> "Post-modernism (1000279932);" .
+<http://vocab.getty.edu/aat/rev/5001500380> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Activity> .
+<http://vocab.getty.edu/aat/rev/5001500380> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Modify> .
+<http://vocab.getty.edu/aat/rev/5001500380> <http://www.w3.org/ns/prov#startedAtTime> "2003-08-20T13:45:54"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://vocab.getty.edu/aat/rev/5001500380> <http://www.w3.org/ns/prov#used> <http://vocab.getty.edu/aat/300022208> .
+<http://vocab.getty.edu/aat/rev/5001500380> <http://purl.org/dc/elements/1.1/type> "term deleted" .
+<http://vocab.getty.edu/aat/rev/5001500380> <http://purl.org/dc/elements/1.1/description> "Post-modernism (1000279932);" .
+<http://vocab.getty.edu/aat/rev/5001500384> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Activity> .
+<http://vocab.getty.edu/aat/rev/5001500384> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Modify> .
+<http://vocab.getty.edu/aat/rev/5001500384> <http://www.w3.org/ns/prov#startedAtTime> "2003-08-20T13:45:54"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://vocab.getty.edu/aat/rev/5001500384> <http://www.w3.org/ns/prov#used> <http://vocab.getty.edu/aat/300022208> .
+<http://vocab.getty.edu/aat/rev/5001500384> <http://purl.org/dc/elements/1.1/type> "term added" .
+<http://vocab.getty.edu/aat/rev/5001500384> <http://purl.org/dc/elements/1.1/description> "P-M (1000304999);" .
+<http://vocab.getty.edu/aat/rev/5001500385> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Activity> .
+<http://vocab.getty.edu/aat/rev/5001500385> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Modify> .
+<http://vocab.getty.edu/aat/rev/5001500385> <http://www.w3.org/ns/prov#startedAtTime> "2003-08-20T13:45:54"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://vocab.getty.edu/aat/rev/5001500385> <http://www.w3.org/ns/prov#used> <http://vocab.getty.edu/aat/300022208> .
+<http://vocab.getty.edu/aat/rev/5001500385> <http://purl.org/dc/elements/1.1/type> "term added" .
+<http://vocab.getty.edu/aat/rev/5001500385> <http://purl.org/dc/elements/1.1/description> "Po-Mo (1000305000);" .
+<http://vocab.getty.edu/aat/rev/5002263420> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Activity> .
+<http://vocab.getty.edu/aat/rev/5002263420> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Modify> .
+<http://vocab.getty.edu/aat/rev/5002263420> <http://www.w3.org/ns/prov#startedAtTime> "2010-04-23T01:00:23"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://vocab.getty.edu/aat/rev/5002263420> <http://www.w3.org/ns/prov#used> <http://vocab.getty.edu/aat/300022208> .
+<http://vocab.getty.edu/aat/rev/5002263420> <http://purl.org/dc/elements/1.1/type> "term added" .
+<http://vocab.getty.edu/aat/rev/5002263420> <http://purl.org/dc/elements/1.1/description> "Posmoderno (1000423097);" .
+<http://vocab.getty.edu/aat/rev/5002263421> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Activity> .
+<http://vocab.getty.edu/aat/rev/5002263421> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Modify> .
+<http://vocab.getty.edu/aat/rev/5002263421> <http://www.w3.org/ns/prov#startedAtTime> "2010-04-23T01:00:23"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://vocab.getty.edu/aat/rev/5002263421> <http://www.w3.org/ns/prov#used> <http://vocab.getty.edu/aat/300022208> .
+<http://vocab.getty.edu/aat/rev/5002263421> <http://purl.org/dc/elements/1.1/type> "term added" .
+<http://vocab.getty.edu/aat/rev/5002263421> <http://purl.org/dc/elements/1.1/description> "Posmodernismo (1000423098);" .
+<http://vocab.getty.edu/aat/rev/5002921871> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Activity> .
+<http://vocab.getty.edu/aat/rev/5002921871> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Modify> .
+<http://vocab.getty.edu/aat/rev/5002921871> <http://www.w3.org/ns/prov#startedAtTime> "2011-01-08T00:55:27"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://vocab.getty.edu/aat/rev/5002921871> <http://www.w3.org/ns/prov#used> <http://vocab.getty.edu/aat/300022208> .
+<http://vocab.getty.edu/aat/rev/5002921871> <http://purl.org/dc/elements/1.1/type> "term added" .
+<http://vocab.getty.edu/aat/rev/5002921871> <http://purl.org/dc/elements/1.1/description> "postmodern (1000475271);" .
+<http://vocab.getty.edu/aat/rev/5003402244> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Activity> .
+<http://vocab.getty.edu/aat/rev/5003402244> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Modify> .
+<http://vocab.getty.edu/aat/rev/5003402244> <http://www.w3.org/ns/prov#startedAtTime> "2013-03-29T09:52:01"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://vocab.getty.edu/aat/rev/5003402244> <http://www.w3.org/ns/prov#used> <http://vocab.getty.edu/aat/300022208> .
+<http://vocab.getty.edu/aat/rev/5003402244> <http://purl.org/dc/elements/1.1/type> "term added" .
+<http://vocab.getty.edu/aat/rev/5003402244> <http://purl.org/dc/elements/1.1/description> "\u5F8C\u73FE\u4EE3 (1000550488);" .
+<http://vocab.getty.edu/aat/rev/5003402245> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Activity> .
+<http://vocab.getty.edu/aat/rev/5003402245> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Modify> .
+<http://vocab.getty.edu/aat/rev/5003402245> <http://www.w3.org/ns/prov#startedAtTime> "2013-03-29T09:52:01"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://vocab.getty.edu/aat/rev/5003402245> <http://www.w3.org/ns/prov#used> <http://vocab.getty.edu/aat/300022208> .
+<http://vocab.getty.edu/aat/rev/5003402245> <http://purl.org/dc/elements/1.1/type> "term added" .
+<http://vocab.getty.edu/aat/rev/5003402245> <http://purl.org/dc/elements/1.1/description> "hou hsien tai (1000550492);" .
+<http://vocab.getty.edu/aat/rev/5003402246> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Activity> .
+<http://vocab.getty.edu/aat/rev/5003402246> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Modify> .
+<http://vocab.getty.edu/aat/rev/5003402246> <http://www.w3.org/ns/prov#startedAtTime> "2013-03-29T09:52:01"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://vocab.getty.edu/aat/rev/5003402246> <http://www.w3.org/ns/prov#used> <http://vocab.getty.edu/aat/300022208> .
+<http://vocab.getty.edu/aat/rev/5003402246> <http://purl.org/dc/elements/1.1/type> "term added" .
+<http://vocab.getty.edu/aat/rev/5003402246> <http://purl.org/dc/elements/1.1/description> "hou xian dai (1000550490);" .
+<http://vocab.getty.edu/aat/rev/5003402247> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Activity> .
+<http://vocab.getty.edu/aat/rev/5003402247> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Modify> .
+<http://vocab.getty.edu/aat/rev/5003402247> <http://www.w3.org/ns/prov#startedAtTime> "2013-03-29T09:52:01"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://vocab.getty.edu/aat/rev/5003402247> <http://www.w3.org/ns/prov#used> <http://vocab.getty.edu/aat/300022208> .
+<http://vocab.getty.edu/aat/rev/5003402247> <http://purl.org/dc/elements/1.1/type> "term added" .
+<http://vocab.getty.edu/aat/rev/5003402247> <http://purl.org/dc/elements/1.1/description> "h\u00F2u xi\u00E0n d\u00E0i (1000550491);" .
+<http://vocab.getty.edu/aat/rev/5003402248> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Activity> .
+<http://vocab.getty.edu/aat/rev/5003402248> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Modify> .
+<http://vocab.getty.edu/aat/rev/5003402248> <http://www.w3.org/ns/prov#startedAtTime> "2013-03-29T09:52:01"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://vocab.getty.edu/aat/rev/5003402248> <http://www.w3.org/ns/prov#used> <http://vocab.getty.edu/aat/300022208> .
+<http://vocab.getty.edu/aat/rev/5003402248> <http://purl.org/dc/elements/1.1/type> "term added" .
+<http://vocab.getty.edu/aat/rev/5003402248> <http://purl.org/dc/elements/1.1/description> "\u5F8C\u73FE\u4EE3\u4E3B\u7FA9 (1000550489);" .
+<http://vocab.getty.edu/aat/rev/5005357933> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Activity> .
+<http://vocab.getty.edu/aat/rev/5005357933> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Modify> .
+<http://vocab.getty.edu/aat/rev/5005357933> <http://www.w3.org/ns/prov#startedAtTime> "2022-01-07T11:49:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://vocab.getty.edu/aat/rev/5005357933> <http://www.w3.org/ns/prov#used> <http://vocab.getty.edu/aat/300022208> .
+<http://vocab.getty.edu/aat/rev/5005357933> <http://purl.org/dc/elements/1.1/type> "term added" .
+<http://vocab.getty.edu/aat/rev/5005357933> <http://purl.org/dc/elements/1.1/description> "P\u00F3s-modernismo (1000885025);" .
+<http://vocab.getty.edu/aat/rev/5005357934> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Activity> .
+<http://vocab.getty.edu/aat/rev/5005357934> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Modify> .
+<http://vocab.getty.edu/aat/rev/5005357934> <http://www.w3.org/ns/prov#startedAtTime> "2022-01-07T11:49:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://vocab.getty.edu/aat/rev/5005357934> <http://www.w3.org/ns/prov#used> <http://vocab.getty.edu/aat/300022208> .
+<http://vocab.getty.edu/aat/rev/5005357934> <http://purl.org/dc/elements/1.1/type> "term added" .
+<http://vocab.getty.edu/aat/rev/5005357934> <http://purl.org/dc/elements/1.1/description> "P\u00F3s-modernismo (1000885025), Language: Portuguese 70543; Descriptor added; Preferred term for language added" .
+<http://vocab.getty.edu/aat/rev/5005357935> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Activity> .
+<http://vocab.getty.edu/aat/rev/5005357935> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Modify> .
+<http://vocab.getty.edu/aat/rev/5005357935> <http://www.w3.org/ns/prov#startedAtTime> "2022-01-07T11:49:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://vocab.getty.edu/aat/rev/5005357935> <http://www.w3.org/ns/prov#used> <http://vocab.getty.edu/aat/300022208> .
+<http://vocab.getty.edu/aat/rev/5005357935> <http://purl.org/dc/elements/1.1/type> "term added" .
+<http://vocab.getty.edu/aat/rev/5005357935> <http://purl.org/dc/elements/1.1/description> "arte p\u00F3s-moderna (1000885026);" .
+<http://vocab.getty.edu/aat/rev/5005357936> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Activity> .
+<http://vocab.getty.edu/aat/rev/5005357936> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Modify> .
+<http://vocab.getty.edu/aat/rev/5005357936> <http://www.w3.org/ns/prov#startedAtTime> "2022-01-07T11:49:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://vocab.getty.edu/aat/rev/5005357936> <http://www.w3.org/ns/prov#used> <http://vocab.getty.edu/aat/300022208> .
+<http://vocab.getty.edu/aat/rev/5005357936> <http://purl.org/dc/elements/1.1/type> "term added" .
+<http://vocab.getty.edu/aat/rev/5005357936> <http://purl.org/dc/elements/1.1/description> "arte p\u00F3s-moderna (1000885026), Language: Portuguese 70543; Alternate Descriptor added" .
+<http://vocab.getty.edu/aat/source/2000024811-subject-300022208> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/ontology/bibo/DocumentPart> .
+<http://vocab.getty.edu/aat/source/2000024811-subject-300022208> <http://purl.org/dc/terms/isPartOf> <http://vocab.getty.edu/aat/source/2000024811> .
+<http://vocab.getty.edu/aat/source/2000024811-subject-300022208> <http://purl.org/ontology/bibo/locator> "architecture, Postmodern" .
+<http://vocab.getty.edu/aat/source/2000046672-subject-300022208> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/ontology/bibo/DocumentPart> .
+<http://vocab.getty.edu/aat/source/2000046672-subject-300022208> <http://purl.org/dc/terms/isPartOf> <http://vocab.getty.edu/aat/source/2000046672> .
+<http://vocab.getty.edu/aat/source/2000046672-subject-300022208> <http://purl.org/ontology/bibo/locator> "v. 25, p. 359" .
+<http://vocab.getty.edu/aat/source/2000051089-subject-300022208> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/ontology/bibo/DocumentPart> .
+<http://vocab.getty.edu/aat/source/2000051089-subject-300022208> <http://purl.org/dc/terms/isPartOf> <http://vocab.getty.edu/aat/source/2000051089> .
+<http://vocab.getty.edu/aat/source/2000051089-subject-300022208> <http://purl.org/ontology/bibo/locator> "127641 checked 26 January 2012" .
+<http://vocab.getty.edu/aat/scopeNote/53435> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vocab.getty.edu/ontology#ScopeNote> .
+<http://vocab.getty.edu/aat/scopeNote/53435> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Refers to the style and period of art and architecture that developed in the 1960s and after, when there was a clear challenge to the dominance of Modernism. Generally speaking, it advocated a pluralistic approach to the arts and it stated that Modernism had failed because of a lack of a coded language of meaning to the viewer. The term was first used by Spanish poet Federico de Onis in 1934 and later by Arnold Toynbee's \"A Study of History\" in 1938, but it was in the 1970s when it came into wide use in connection with a trend in architecture that employed selective Eclecticism and Historicism. This resulted in structures that displayed a knowledge of Modernism, but also playful, whimsical, applications of Classical elements. In the other arts, such as painting, there was a return to a classical approach to the human figure, style, and composition, often resulting in Old Masters style works, but with updated imagery, such as the inclusion of current celebrities, or artists from the past. In photography, as well as painting, a narrative or story telling approach to work also became popular. By the early 1980s, many work dubbed Postmodern, were purchased by the corporate art market, where large sums were paid for the work of relatively new artists. By the 1990s, Postmodernism showed signs of slowing down in terms of popularity, when more traditional Modernist forms began to re-emerge."@en .
+<http://vocab.getty.edu/aat/scopeNote/53435> <http://purl.org/dc/terms/contributor> <http://vocab.getty.edu/aat/contrib/10000000> .
+<http://vocab.getty.edu/aat/scopeNote/53435> <http://purl.org/dc/terms/source> <http://vocab.getty.edu/aat/source/2000046833> .
+<http://vocab.getty.edu/aat/scopeNote/53435> <http://purl.org/dc/terms/source> <http://vocab.getty.edu/aat/source/2000046672-scopeNote-53435> .
+<http://vocab.getty.edu/aat/scopeNote/53435> <http://purl.org/dc/terms/source> <http://vocab.getty.edu/aat/source/2000042211-scopeNote-53435> .
+<http://vocab.getty.edu/aat/scopeNote/53435> <http://purl.org/dc/elements/1.1/identifier> "53435" .
+<http://vocab.getty.edu/aat/scopeNote/53435> <http://purl.org/dc/terms/language> <http://vocab.getty.edu/aat/300388277> .
+<http://vocab.getty.edu/aat/scopeNote/53435> <http://purl.org/dc/terms/language> <http://vocab.getty.edu/language/en> .
+<http://vocab.getty.edu/aat/scopeNote/62726> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vocab.getty.edu/ontology#ScopeNote> .
+<http://vocab.getty.edu/aat/scopeNote/62726> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Se refiere al estilo y periodos de arte y arquitectura desarrollados desde 1960 en adelante, cuando el desaf\u00EDo de Modernismo presenta un claro dominio. De manera general, propugna un acercamiento pluralist a las artes y plantea que el Modernismo ha fallado debido a una falta de lenguaje de significado codificado para el espectador. El t\u00E9rmino fue empleado por primera vez por el poeta espa\u00F1ol Federico de Onis en 1934 y posteriormente por Arnold Toynbee en \"Un estudio de la Historia\" de 1938, sin embargo fue en la d\u00E9cada de 1970 cuando comenz\u00F3 a emplearse de manera amplia en relaci\u00F3n a una tendencia arquitect\u00F3nica del uso selectivo del Eclecticismo y de Historicismo. Esto result\u00F3 en estructuras que muestra un conocimiento de Modernismo, as\u00ED como tambi\u00E9n de manera l\u00FAdica y caprichosa, la aplicaci\u00F3n de elementos Cl\u00E1sicos. En otras artes, como en pintura, se present\u00F3 un retorno y acercamiento cl\u00E1sico a la figura humana, estilo y composici\u00F3n, en donde muchas veces el resultado corresponde al estilo de los grandes maestros pero con un imaginer\u00EDa actualizada, como la inclusi\u00F3n de personas famosas del momento o artistas del pasado. En fotograf\u00EDa, as\u00ED tambi\u00E9n como en pintura, se popularizo un acercamiento narrativo y de contar historias. A comienzos de la d\u00E9cada de 1980 muchas obras apodadas posmodernas fueron adquiridas por empresas del mercado de arte pag\u00E1ndose altas sumas por obras de artists relativamente nuevos. En la d\u00E9cada de 1990, el Posmodernismo present\u00F3 signos de p\u00E9rdida de popularidad cuando empezaron a reaparer formas modernistas m\u00E1s tradicionales."@es .
+<http://vocab.getty.edu/aat/scopeNote/62726> <http://purl.org/dc/terms/contributor> <http://vocab.getty.edu/aat/contrib/10000131> .
+<http://vocab.getty.edu/aat/scopeNote/62726> <http://purl.org/dc/terms/source> <http://vocab.getty.edu/aat/source/2000051034> .
+<http://vocab.getty.edu/aat/scopeNote/62726> <http://purl.org/dc/elements/1.1/identifier> "62726" .
+<http://vocab.getty.edu/aat/scopeNote/62726> <http://purl.org/dc/terms/language> <http://vocab.getty.edu/aat/300389311> .
+<http://vocab.getty.edu/aat/scopeNote/62726> <http://purl.org/dc/terms/language> <http://vocab.getty.edu/language/es> .
+<http://vocab.getty.edu/aat/scopeNote/98933> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vocab.getty.edu/ontology#ScopeNote> .
+<http://vocab.getty.edu/aat/scopeNote/98933> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Verwijst naar de stijl en periode van kunst en architectuur die tot ontwikkeling kwam in de jaren zestig van de 20ste eeuw en daarna, toen de overheersende rol van het modernisme werd aangevochten. In het algemeen stond deze stijl een pluralistische benadering van de kunsten voor, waarbij werd gesteld dat het modernisme had gefaald vanwege het ontbreken van een gecodeerde betekenistaal voor de kijker. De term werd voor het eerst gebruikt door de Spaanse dichter Federico de Onis in 1934 en later in 'A Study of History' van Arnold Toynbee in 1938, maar de term werd pas in de jaren zeventig vrij algemeen gebruikt in relatie tot een trend in de architectuur waarbij sprake was van selectief eclecticisme en historicisme. Dit leidde tot structuren waaruit kennis van het modernisme naar voren kwam, maar ook tot speelse, grillige toepassingen van klassieke elementen. In overige kunstvormen, zoals de schilderkunst, was sprake van een terugkeer naar een klassieke benadering van de menselijke gestalte, stijl en compositie, wat vaak resulteerde in werken in de stijl van de Oude meesters, maar dan met eigentijdse beelden, zoals beroemdheden uit die tijd of kunstenaars uit het verleden. In de fotografie en de schilderkunst werd een verhalende benadering ook populair. Aan het begin van de jaren tachtig kwamen veel postmoderne werken in handen van de commerci\u00EBle kunsthandel, waarbij grote bedragen werden betaald voor het werk van relatief nieuwe kunstenaars. In de jaren negentig leek de populariteit van het postmodernisme enigszins te tanen en kwamen meer traditionele modernistische vormen weer in opkomst."@nl .
+<http://vocab.getty.edu/aat/scopeNote/98933> <http://purl.org/dc/terms/contributor> <http://vocab.getty.edu/aat/contrib/10000205> .
+<http://vocab.getty.edu/aat/scopeNote/98933> <http://purl.org/dc/terms/source> <http://vocab.getty.edu/aat/source/2000099099> .
+<http://vocab.getty.edu/aat/scopeNote/98933> <http://purl.org/dc/terms/source> <http://vocab.getty.edu/aat/source/2000113770> .
+<http://vocab.getty.edu/aat/scopeNote/98933> <http://purl.org/dc/elements/1.1/identifier> "98933" .
+<http://vocab.getty.edu/aat/scopeNote/98933> <http://purl.org/dc/terms/language> <http://vocab.getty.edu/aat/300388256> .
+<http://vocab.getty.edu/aat/scopeNote/98933> <http://purl.org/dc/terms/language> <http://vocab.getty.edu/language/nl> .
+<http://vocab.getty.edu/aat/scopeNote/111595> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vocab.getty.edu/ontology#ScopeNote> .
+<http://vocab.getty.edu/aat/scopeNote/111595> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "\u5C08\u6307\u5728\u73FE\u4EE3\u4E3B\u7FA9\u5099\u53D7\u6311\u6230\u6642\u6240\u8208\u8D77\u7684\u85DD\u8853\u5EFA\u7BC9\u98A8\u683C\uFF0C\u572860\u5E74\u4EE3\u4E4B\u5F8C\u958B\u59CB\u767C\u5C55\u3002\u7C21\u800C\u8A00\u4E4B\uFF0C\u5F8C\u73FE\u4EE3\u4E3B\u7FA9\u4E3B\u5F35\u591A\u5143\u7684\u85DD\u8853\u8DEF\u7DDA\uFF0C\u8072\u7A31\u73FE\u4EE3\u4E3B\u7FA9\u5931\u6557\u7684\u539F\u56E0\u5728\u65BC\u7F3A\u4E4F\u4E00\u5957\u7DE8\u78BC\u8A9E\u8A00\uFF0C\u7528\u4EE5\u50B3\u9054\u610F\u7FA9\u7D66\u89C0\u773E\u3002\u897F\u73ED\u7259\u8A69\u4EBA\u8CBB\u5FB7\u91CC\u53EF\u2027\u5FB7\u2027\u6B50\u5C3C\u65AF(Federico de Onis)\u57281934\u5E74\u7B2C\u4E00\u6B21\u63D0\u51FA\u9019\u500B\u8A5E\u5F59\uFF0C1938\u5E74\u300C\u5F8C\u73FE\u4EE3\u300D\u4E00\u8A5E\u53C8\u5728\u4E9E\u8AFE\u2027\u6E6F\u6069\u6BD4(Arnold Toynbee)\u7684\u300A\u6B77\u53F2\u7814\u7A76\u300B(A Study of History)\u4E00\u66F8\u4E2D\u51FA\u73FE\u300270\u5E74\u4EE3\uFF0C\u5EFA\u7BC9\u98A8\u6F6E\u53D7\u5230\u90E8\u5206\u6298\u8877\u4E3B\u7FA9\uFF08Eclecticism\uFF09\u8207\u6B77\u53F2\u4E3B\u7FA9\uFF08Historicism\uFF09\u7684\u5F71\u97FF\uFF0C\u5F8C\u73FE\u4EE3\u4E3B\u7FA9\u958B\u59CB\u88AB\u5EE3\u6CDB\u904B\u7528\u3002\u53D7\u6B64\u5F71\u97FF\u7684\u5EFA\u7BC9\u7269\uFF0C\u4E0D\u50C5\u5C55\u793A\u51FA\u5C0D\u300C\u73FE\u4EE3\u4E3B\u7FA9\u300D\u7406\u8AD6\u6DF1\u5165\u7684\u7406\u89E3\uFF0C\u4E5F\u5728\u53E4\u5178\u5143\u7D20\u4E0A\u505A\u51FA\u9017\u8DA3\u53C8\u602A\u8A95\u7684\u61C9\u7528\u3002\u5F8C\u73FE\u4EE3\u4E3B\u7FA9\u4E0B\u7684\u5176\u4ED6\u85DD\u8853\u5982\u7E6A\u756B\uFF0C\u5247\u5728\u4EBA\u7269\u3001\u98A8\u683C\u3001\u69CB\u5716\u7B49\u65B9\u9762\uFF0C\u56DE\u6B78\u53E4\u5178\u8DEF\u7DDA\uFF0C\u4EE5\u65B0\u5716\u50CF\u5C55\u73FE\u51FA\u5982\u53E4\u5178\u5927\u5E2B\u7684\u4F5C\u54C1\uFF0C\u4F8B\u5982\u4F86\u8AAA\uFF0C\u756B\u4F5C\u4E2D\u51FA\u73FE\u5C07\u7576\u4EE3\u540D\u4EBA\u6216\u904E\u53BB\u7684\u85DD\u8853\u5BB6\u7B49\u3002\u5728\u651D\u5F71\u65B9\u9762\uFF0C\u5177\u5099\u500B\u4EBA\u89C0\u9EDE\u6216\u6558\u8AAA\u6545\u4E8B\u7684\u4F5C\u54C1\u8D8A\u4F86\u8D8A\u53D7\u5230\u6B61\u8FCE\u300280\u5E74\u4EE3\u65E9\u671F\uFF0C\u85DD\u8853\u5E02\u5834\u8CFC\u5165\u4E0D\u5C11\u6A19\u699C\u5F8C\u73FE\u4EE3\u4E3B\u7FA9\u7684\u4F5C\u54C1\uFF0C\u65B0\u8208\u85DD\u8853\u5BB6\u7684\u4F5C\u54C1\u53D7\u5230\u9AD8\u50F9\u6536\u8CFC\u3002 \u4F46\u662F\u5230\u4E8690\u5E74\u4EE3\uFF0C\u5F8C\u73FE\u4EE3\u4E3B\u7FA9\uFF08Postmodernism\uFF09\u9010\u6F38\u5F0F\u5FAE\uFF0C\u53CD\u5012\u662F\u50B3\u7D71\u7684\u73FE\u4EE3\u4E3B\u7FA9\u4F5C\u54C1\u6709\u6372\u571F\u91CD\u4F86\u4E4B\u52E2\u3002"@zh-hant .
+<http://vocab.getty.edu/aat/scopeNote/111595> <http://purl.org/dc/terms/contributor> <http://vocab.getty.edu/aat/contrib/10000250> .
+<http://vocab.getty.edu/aat/scopeNote/111595> <http://purl.org/dc/terms/source> <http://vocab.getty.edu/aat/source/2000052784> .
+<http://vocab.getty.edu/aat/scopeNote/111595> <http://purl.org/dc/elements/1.1/identifier> "111595" .
+<http://vocab.getty.edu/aat/scopeNote/111595> <http://purl.org/dc/terms/language> <http://vocab.getty.edu/aat/300388116> .
+<http://vocab.getty.edu/aat/scopeNote/111595> <http://purl.org/dc/terms/language> <http://vocab.getty.edu/language/zh-Hant> .
+<http://vocab.getty.edu/aat/scopeNote/166215> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vocab.getty.edu/ontology#ScopeNote> .
+<http://vocab.getty.edu/aat/scopeNote/166215> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Refere-se ao estilo e per\u00EDodo de arte e arquitetura que se desenvolveu na d\u00E9cada de 1960 e depois, quando havia um claro desafio ao dom\u00EDnio do Modernismo. De um modo geral, defendia uma abordagem pluralista das artes e afirmava que o modernismo havia falhado por causa da falta de uma linguagem codificada de significado para o espectador. O termo foi usado pela primeira vez pelo poeta espanhol Federico de Onis em 1934 e mais tarde por \"A Study of History\" de Arnold Toynbee em 1938, mas foi na d\u00E9cada de 1970 quando passou a ser amplamente utilizado em conex\u00E3o com uma tend\u00EAncia na arquitetura que empregava o ecleticismo seletivo e historicismo. Isso resultou em estruturas que exibiam um conhecimento do Modernismo, mas tamb\u00E9m aplica\u00E7\u00F5es l\u00FAdicas e caprichosas de elementos cl\u00E1ssicos. Nas outras artes, como a pintura, houve um retorno a uma abordagem cl\u00E1ssica da figura, estilo e composi\u00E7\u00E3o humana, muitas vezes resultando em obras no estilo dos antigos mestres, mas com imagens atualizadas, como a inclus\u00E3o de celebridades ou artistas atuais. do passado. Na fotografia, assim como na pintura, uma abordagem narrativa ou narrativa do trabalho tamb\u00E9m se tornou popular. No in\u00EDcio dos anos 1980, muitos trabalhos apelidados de p\u00F3s-modernos foram adquiridos pelo mercado de arte corporativa, onde grandes somas foram pagas pelo trabalho de artistas relativamente novos. Na d\u00E9cada de 1990, o p\u00F3s-modernismo mostrou sinais de desacelera\u00E7\u00E3o em termos de popularidade, quando formas modernistas mais tradicionais come\u00E7aram a ressurgir. "@pt .
+<http://vocab.getty.edu/aat/scopeNote/166215> <http://purl.org/dc/terms/contributor> <http://vocab.getty.edu/aat/contrib/10000316> .
+<http://vocab.getty.edu/aat/scopeNote/166215> <http://purl.org/dc/terms/source> <http://vocab.getty.edu/aat/source/2000109633> .
+<http://vocab.getty.edu/aat/scopeNote/166215> <http://purl.org/dc/elements/1.1/identifier> "166215" .
+<http://vocab.getty.edu/aat/scopeNote/166215> <http://purl.org/dc/terms/language> <http://vocab.getty.edu/aat/300389115> .
+<http://vocab.getty.edu/aat/scopeNote/166215> <http://purl.org/dc/terms/language> <http://vocab.getty.edu/language/pt> .
+<http://vocab.getty.edu/aat/source/2000046672-scopeNote-53435> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/ontology/bibo/DocumentPart> .
+<http://vocab.getty.edu/aat/source/2000046672-scopeNote-53435> <http://purl.org/dc/terms/isPartOf> <http://vocab.getty.edu/aat/source/2000046672> .
+<http://vocab.getty.edu/aat/source/2000046672-scopeNote-53435> <http://purl.org/ontology/bibo/locator> "v. 25, p. 359" .
+<http://vocab.getty.edu/aat/source/2000042211-scopeNote-53435> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/ontology/bibo/DocumentPart> .
+<http://vocab.getty.edu/aat/source/2000042211-scopeNote-53435> <http://purl.org/dc/terms/isPartOf> <http://vocab.getty.edu/aat/source/2000042211> .
+<http://vocab.getty.edu/aat/source/2000042211-scopeNote-53435> <http://purl.org/ontology/bibo/locator> "529" .
+<http://vocab.getty.edu/aat/term/1000022208-en-US> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2008/05/skos-xl#Label> .
+<http://vocab.getty.edu/aat/term/1000022208-en-US> <http://vocab.getty.edu/ontology#term> "Postmodern"@en-us .
+<http://vocab.getty.edu/aat/term/1000022208-en-US> <http://vocab.getty.edu/ontology#displayOrder> "1"^^<http://www.w3.org/2001/XMLSchema#positiveInteger> .
+<http://vocab.getty.edu/aat/term/1000022208-en-US> <http://www.w3.org/2008/05/skos-xl#literalForm> "Postmodern"@en-us .
+<http://vocab.getty.edu/aat/term/1000022208-en-US> <http://vocab.getty.edu/ontology#termType> <http://vocab.getty.edu/term/type/Descriptor> .
+<http://vocab.getty.edu/aat/term/1000022208-en-US> <http://vocab.getty.edu/ontology#termPOS> <http://vocab.getty.edu/term/POS/Adjectival> .
+<http://vocab.getty.edu/aat/term/1000022208-en-US> <http://vocab.getty.edu/ontology#contributorPreferred> <http://vocab.getty.edu/aat/contrib/10000000> .
+<http://vocab.getty.edu/aat/term/1000022208-en-US> <http://vocab.getty.edu/ontology#contributorPreferred> <http://vocab.getty.edu/aat/contrib/10000088> .
+<http://vocab.getty.edu/aat/term/1000022208-en-US> <http://purl.org/dc/terms/contributor> <http://vocab.getty.edu/aat/contrib/10000000> .
+<http://vocab.getty.edu/aat/term/1000022208-en-US> <http://purl.org/dc/terms/contributor> <http://vocab.getty.edu/aat/contrib/10000088> .
+<http://vocab.getty.edu/aat/term/1000022208-en-US> <http://vocab.getty.edu/ontology#sourcePreferred> <http://vocab.getty.edu/aat/source/2000046684> .
+<http://vocab.getty.edu/aat/term/1000022208-en-US> <http://vocab.getty.edu/ontology#sourcePreferred> <http://vocab.getty.edu/aat/source/2000047206> .
+<http://vocab.getty.edu/aat/term/1000022208-en-US> <http://vocab.getty.edu/ontology#sourcePreferred> <http://vocab.getty.edu/aat/source/2000033591-term-1000022208> .
+<http://vocab.getty.edu/aat/term/1000022208-en-US> <http://vocab.getty.edu/ontology#sourcePreferred> <http://vocab.getty.edu/aat/source/2000051089-term-1000022208> .
+<http://vocab.getty.edu/aat/term/1000022208-en-US> <http://purl.org/dc/terms/source> <http://vocab.getty.edu/aat/source/2000046684> .
+<http://vocab.getty.edu/aat/term/1000022208-en-US> <http://purl.org/dc/terms/source> <http://vocab.getty.edu/aat/source/2000047206> .
+<http://vocab.getty.edu/aat/term/1000022208-en-US> <http://purl.org/dc/terms/source> <http://vocab.getty.edu/aat/source/2000033591-term-1000022208> .
+<http://vocab.getty.edu/aat/term/1000022208-en-US> <http://purl.org/dc/terms/source> <http://vocab.getty.edu/aat/source/2000051089-term-1000022208> .
+<http://vocab.getty.edu/aat/term/1000022208-en-US> <http://purl.org/dc/elements/1.1/identifier> "1000022208" .
+<http://vocab.getty.edu/aat/term/1000022208-en-US> <http://purl.org/dc/terms/language> <http://vocab.getty.edu/aat/300387822> .
+<http://vocab.getty.edu/aat/term/1000022208-en-US> <http://purl.org/dc/terms/language> <http://vocab.getty.edu/language/en-US> .
+<http://vocab.getty.edu/aat/term/1000279931-en-GB> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2008/05/skos-xl#Label> .
+<http://vocab.getty.edu/aat/term/1000279931-en-GB> <http://vocab.getty.edu/ontology#term> "Post-Modern"@en-gb .
+<http://vocab.getty.edu/aat/term/1000279931-en-GB> <http://vocab.getty.edu/ontology#displayOrder> "5"^^<http://www.w3.org/2001/XMLSchema#positiveInteger> .
+<http://vocab.getty.edu/aat/term/1000279931-en-GB> <http://www.w3.org/2008/05/skos-xl#literalForm> "Post-Modern"@en-gb .
+<http://vocab.getty.edu/aat/term/1000279931-en-GB> <http://vocab.getty.edu/ontology#termType> <http://vocab.getty.edu/term/type/Descriptor> .
+<http://vocab.getty.edu/aat/term/1000279931-en-GB> <http://vocab.getty.edu/ontology#termPOS> <http://vocab.getty.edu/term/POS/Adjectival> .
+<http://vocab.getty.edu/aat/term/1000279931-en-GB> <http://purl.org/dc/terms/contributor> <http://vocab.getty.edu/aat/contrib/10000000> .
+<http://vocab.getty.edu/aat/term/1000279931-en-GB> <http://vocab.getty.edu/ontology#contributorNonPreferred> <http://vocab.getty.edu/aat/contrib/10000000> .
+<http://vocab.getty.edu/aat/term/1000279931-en-GB> <http://vocab.getty.edu/ontology#sourcePreferred> <http://vocab.getty.edu/aat/source/2000031141> .
+<http://vocab.getty.edu/aat/term/1000279931-en-GB> <http://vocab.getty.edu/ontology#sourcePreferred> <http://vocab.getty.edu/aat/source/2000046691> .
+<http://vocab.getty.edu/aat/term/1000279931-en-GB> <http://vocab.getty.edu/ontology#sourcePreferred> <http://vocab.getty.edu/aat/source/2000052903> .
+<http://vocab.getty.edu/aat/term/1000279931-en-GB> <http://vocab.getty.edu/ontology#sourcePreferred> <http://vocab.getty.edu/aat/source/2000042211-term-1000279931> .
+<http://vocab.getty.edu/aat/term/1000279931-en-GB> <http://purl.org/dc/terms/source> <http://vocab.getty.edu/aat/source/2000031141> .
+<http://vocab.getty.edu/aat/term/1000279931-en-GB> <http://purl.org/dc/terms/source> <http://vocab.getty.edu/aat/source/2000046691> .
+<http://vocab.getty.edu/aat/term/1000279931-en-GB> <http://purl.org/dc/terms/source> <http://vocab.getty.edu/aat/source/2000052903> .
+<http://vocab.getty.edu/aat/term/1000279931-en-GB> <http://purl.org/dc/terms/source> <http://vocab.getty.edu/aat/source/2000042211-term-1000279931> .
+<http://vocab.getty.edu/aat/term/1000279931-en-GB> <http://purl.org/dc/elements/1.1/identifier> "1000279931" .
+<http://vocab.getty.edu/aat/term/1000279931-en-GB> <http://purl.org/dc/terms/language> <http://vocab.getty.edu/aat/300388027> .
+<http://vocab.getty.edu/aat/term/1000279931-en-GB> <http://purl.org/dc/terms/language> <http://vocab.getty.edu/language/en-GB> .
+<http://vocab.getty.edu/aat/term/1000550488-zh-Hant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2008/05/skos-xl#Label> .
+<http://vocab.getty.edu/aat/term/1000550488-zh-Hant> <http://vocab.getty.edu/ontology#term> "\u5F8C\u73FE\u4EE3"@zh-hant .
+<http://vocab.getty.edu/aat/term/1000550488-zh-Hant> <http://vocab.getty.edu/ontology#displayOrder> "7"^^<http://www.w3.org/2001/XMLSchema#positiveInteger> .
+<http://vocab.getty.edu/aat/term/1000550488-zh-Hant> <http://www.w3.org/2008/05/skos-xl#literalForm> "\u5F8C\u73FE\u4EE3"@zh-hant .
+<http://vocab.getty.edu/aat/term/1000550488-zh-Hant> <http://vocab.getty.edu/ontology#termType> <http://vocab.getty.edu/term/type/Descriptor> .
+<http://vocab.getty.edu/aat/term/1000550488-zh-Hant> <http://vocab.getty.edu/ontology#contributorPreferred> <http://vocab.getty.edu/aat/contrib/10000250> .
+<http://vocab.getty.edu/aat/term/1000550488-zh-Hant> <http://purl.org/dc/terms/contributor> <http://vocab.getty.edu/aat/contrib/10000250> .
+<http://vocab.getty.edu/aat/term/1000550488-zh-Hant> <http://vocab.getty.edu/ontology#sourcePreferred> <http://vocab.getty.edu/aat/source/2000070098-term-1000550488> .
+<http://vocab.getty.edu/aat/term/1000550488-zh-Hant> <http://purl.org/dc/terms/source> <http://vocab.getty.edu/aat/source/2000070098-term-1000550488> .
+<http://vocab.getty.edu/aat/term/1000550488-zh-Hant> <http://purl.org/dc/elements/1.1/identifier> "1000550488" .
+<http://vocab.getty.edu/aat/term/1000550488-zh-Hant> <http://purl.org/dc/terms/language> <http://vocab.getty.edu/aat/300388116> .
+<http://vocab.getty.edu/aat/term/1000550488-zh-Hant> <http://purl.org/dc/terms/language> <http://vocab.getty.edu/language/zh-Hant> .
+<http://vocab.getty.edu/aat/term/1000550491-zh-Latn-pinyin-x-hanyu> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2008/05/skos-xl#Label> .
+<http://vocab.getty.edu/aat/term/1000550491-zh-Latn-pinyin-x-hanyu> <http://vocab.getty.edu/ontology#term> "h\u00F2u xi\u00E0n d\u00E0i"@zh-latn-pinyin-x-hanyu .
+<http://vocab.getty.edu/aat/term/1000550491-zh-Latn-pinyin-x-hanyu> <http://vocab.getty.edu/ontology#displayOrder> "9"^^<http://www.w3.org/2001/XMLSchema#positiveInteger> .
+<http://vocab.getty.edu/aat/term/1000550491-zh-Latn-pinyin-x-hanyu> <http://www.w3.org/2008/05/skos-xl#literalForm> "h\u00F2u xi\u00E0n d\u00E0i"@zh-latn-pinyin-x-hanyu .
+<http://vocab.getty.edu/aat/term/1000550491-zh-Latn-pinyin-x-hanyu> <http://vocab.getty.edu/ontology#termType> <http://vocab.getty.edu/term/type/UsedForTerm> .
+<http://vocab.getty.edu/aat/term/1000550491-zh-Latn-pinyin-x-hanyu> <http://purl.org/dc/terms/contributor> <http://vocab.getty.edu/aat/contrib/10000250> .
+<http://vocab.getty.edu/aat/term/1000550491-zh-Latn-pinyin-x-hanyu> <http://vocab.getty.edu/ontology#contributorNonPreferred> <http://vocab.getty.edu/aat/contrib/10000250> .
+<http://vocab.getty.edu/aat/term/1000550491-zh-Latn-pinyin-x-hanyu> <http://purl.org/dc/terms/source> <http://vocab.getty.edu/aat/source/2000052784> .
+<http://vocab.getty.edu/aat/term/1000550491-zh-Latn-pinyin-x-hanyu> <http://vocab.getty.edu/ontology#sourceNonPreferred> <http://vocab.getty.edu/aat/source/2000052784> .
+<http://vocab.getty.edu/aat/term/1000550491-zh-Latn-pinyin-x-hanyu> <http://purl.org/dc/elements/1.1/identifier> "1000550491" .
+<http://vocab.getty.edu/aat/term/1000550491-zh-Latn-pinyin-x-hanyu> <http://purl.org/dc/terms/language> <http://vocab.getty.edu/aat/300388117> .
+<http://vocab.getty.edu/aat/term/1000550491-zh-Latn-pinyin-x-hanyu> <http://purl.org/dc/terms/language> <http://vocab.getty.edu/language/zh-Latn-pinyin-x-hanyu> .
+<http://vocab.getty.edu/aat/term/1000550490-zh-Latn-pinyin-x-notone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2008/05/skos-xl#Label> .
+<http://vocab.getty.edu/aat/term/1000550490-zh-Latn-pinyin-x-notone> <http://vocab.getty.edu/ontology#term> "hou xian dai"@zh-latn-pinyin-x-notone .
+<http://vocab.getty.edu/aat/term/1000550490-zh-Latn-pinyin-x-notone> <http://vocab.getty.edu/ontology#displayOrder> "10"^^<http://www.w3.org/2001/XMLSchema#positiveInteger> .
+<http://vocab.getty.edu/aat/term/1000550490-zh-Latn-pinyin-x-notone> <http://www.w3.org/2008/05/skos-xl#literalForm> "hou xian dai"@zh-latn-pinyin-x-notone .
+<http://vocab.getty.edu/aat/term/1000550490-zh-Latn-pinyin-x-notone> <http://vocab.getty.edu/ontology#termType> <http://vocab.getty.edu/term/type/UsedForTerm> .
+<http://vocab.getty.edu/aat/term/1000550490-zh-Latn-pinyin-x-notone> <http://purl.org/dc/terms/contributor> <http://vocab.getty.edu/aat/contrib/10000250> .
+<http://vocab.getty.edu/aat/term/1000550490-zh-Latn-pinyin-x-notone> <http://vocab.getty.edu/ontology#contributorNonPreferred> <http://vocab.getty.edu/aat/contrib/10000250> .
+<http://vocab.getty.edu/aat/term/1000550490-zh-Latn-pinyin-x-notone> <http://purl.org/dc/terms/source> <http://vocab.getty.edu/aat/source/2000052784> .
+<http://vocab.getty.edu/aat/term/1000550490-zh-Latn-pinyin-x-notone> <http://vocab.getty.edu/ontology#sourceNonPreferred> <http://vocab.getty.edu/aat/source/2000052784> .
+<http://vocab.getty.edu/aat/term/1000550490-zh-Latn-pinyin-x-notone> <http://purl.org/dc/elements/1.1/identifier> "1000550490" .
+<http://vocab.getty.edu/aat/term/1000550490-zh-Latn-pinyin-x-notone> <http://purl.org/dc/terms/language> <http://vocab.getty.edu/aat/300388118> .
+<http://vocab.getty.edu/aat/term/1000550490-zh-Latn-pinyin-x-notone> <http://purl.org/dc/terms/language> <http://vocab.getty.edu/language/zh-Latn-pinyin-x-notone> .
+<http://vocab.getty.edu/aat/term/1000550492-zh-Latn-wadegile> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2008/05/skos-xl#Label> .
+<http://vocab.getty.edu/aat/term/1000550492-zh-Latn-wadegile> <http://vocab.getty.edu/ontology#term> "hou hsien tai"@zh-latn-wadegile .
+<http://vocab.getty.edu/aat/term/1000550492-zh-Latn-wadegile> <http://vocab.getty.edu/ontology#displayOrder> "11"^^<http://www.w3.org/2001/XMLSchema#positiveInteger> .
+<http://vocab.getty.edu/aat/term/1000550492-zh-Latn-wadegile> <http://www.w3.org/2008/05/skos-xl#literalForm> "hou hsien tai"@zh-latn-wadegile .
+<http://vocab.getty.edu/aat/term/1000550492-zh-Latn-wadegile> <http://vocab.getty.edu/ontology#termType> <http://vocab.getty.edu/term/type/UsedForTerm> .
+<http://vocab.getty.edu/aat/term/1000550492-zh-Latn-wadegile> <http://purl.org/dc/terms/contributor> <http://vocab.getty.edu/aat/contrib/10000250> .
+<http://vocab.getty.edu/aat/term/1000550492-zh-Latn-wadegile> <http://vocab.getty.edu/ontology#contributorNonPreferred> <http://vocab.getty.edu/aat/contrib/10000250> .
+<http://vocab.getty.edu/aat/term/1000550492-zh-Latn-wadegile> <http://purl.org/dc/terms/source> <http://vocab.getty.edu/aat/source/2000052784> .
+<http://vocab.getty.edu/aat/term/1000550492-zh-Latn-wadegile> <http://vocab.getty.edu/ontology#sourceNonPreferred> <http://vocab.getty.edu/aat/source/2000052784> .
+<http://vocab.getty.edu/aat/term/1000550492-zh-Latn-wadegile> <http://purl.org/dc/elements/1.1/identifier> "1000550492" .
+<http://vocab.getty.edu/aat/term/1000550492-zh-Latn-wadegile> <http://purl.org/dc/terms/language> <http://vocab.getty.edu/aat/300388121> .
+<http://vocab.getty.edu/aat/term/1000550492-zh-Latn-wadegile> <http://purl.org/dc/terms/language> <http://vocab.getty.edu/language/zh-Latn-wadegile> .
+<http://vocab.getty.edu/aat/term/1000475271-nl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2008/05/skos-xl#Label> .
+<http://vocab.getty.edu/aat/term/1000475271-nl> <http://vocab.getty.edu/ontology#term> "postmodern"@nl .
+<http://vocab.getty.edu/aat/term/1000475271-nl> <http://vocab.getty.edu/ontology#displayOrder> "12"^^<http://www.w3.org/2001/XMLSchema#positiveInteger> .
+<http://vocab.getty.edu/aat/term/1000475271-nl> <http://www.w3.org/2008/05/skos-xl#literalForm> "postmodern"@nl .
+<http://vocab.getty.edu/aat/term/1000475271-nl> <http://vocab.getty.edu/ontology#termType> <http://vocab.getty.edu/term/type/Descriptor> .
+<http://vocab.getty.edu/aat/term/1000475271-nl> <http://vocab.getty.edu/ontology#contributorPreferred> <http://vocab.getty.edu/aat/contrib/10000205> .
+<http://vocab.getty.edu/aat/term/1000475271-nl> <http://purl.org/dc/terms/contributor> <http://vocab.getty.edu/aat/contrib/10000205> .
+<http://vocab.getty.edu/aat/term/1000475271-nl> <http://vocab.getty.edu/ontology#sourcePreferred> <http://vocab.getty.edu/aat/source/2000113770> .
+<http://vocab.getty.edu/aat/term/1000475271-nl> <http://purl.org/dc/terms/source> <http://vocab.getty.edu/aat/source/2000099099> .
+<http://vocab.getty.edu/aat/term/1000475271-nl> <http://purl.org/dc/terms/source> <http://vocab.getty.edu/aat/source/2000113770> .
+<http://vocab.getty.edu/aat/term/1000475271-nl> <http://purl.org/dc/elements/1.1/identifier> "1000475271" .
+<http://vocab.getty.edu/aat/term/1000475271-nl> <http://purl.org/dc/terms/language> <http://vocab.getty.edu/aat/300388256> .
+<http://vocab.getty.edu/aat/term/1000475271-nl> <http://purl.org/dc/terms/language> <http://vocab.getty.edu/language/nl> .
+<http://vocab.getty.edu/aat/term/1000885025-pt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2008/05/skos-xl#Label> .
+<http://vocab.getty.edu/aat/term/1000885025-pt> <http://vocab.getty.edu/ontology#term> "P\u00F3s-modernismo"@pt .
+<http://vocab.getty.edu/aat/term/1000885025-pt> <http://vocab.getty.edu/ontology#displayOrder> "13"^^<http://www.w3.org/2001/XMLSchema#positiveInteger> .
+<http://vocab.getty.edu/aat/term/1000885025-pt> <http://www.w3.org/2008/05/skos-xl#literalForm> "P\u00F3s-modernismo"@pt .
+<http://vocab.getty.edu/aat/term/1000885025-pt> <http://vocab.getty.edu/ontology#termType> <http://vocab.getty.edu/term/type/Descriptor> .
+<http://vocab.getty.edu/aat/term/1000885025-pt> <http://vocab.getty.edu/ontology#termPOS> <http://vocab.getty.edu/term/POS/SingularNoun> .
+<http://vocab.getty.edu/aat/term/1000885025-pt> <http://vocab.getty.edu/ontology#contributorPreferred> <http://vocab.getty.edu/aat/contrib/10000316> .
+<http://vocab.getty.edu/aat/term/1000885025-pt> <http://purl.org/dc/terms/contributor> <http://vocab.getty.edu/aat/contrib/10000316> .
+<http://vocab.getty.edu/aat/term/1000885025-pt> <http://vocab.getty.edu/ontology#sourcePreferred> <http://vocab.getty.edu/aat/source/2000109633> .
+<http://vocab.getty.edu/aat/term/1000885025-pt> <http://purl.org/dc/terms/source> <http://vocab.getty.edu/aat/source/2000109633> .
+<http://vocab.getty.edu/aat/term/1000885025-pt> <http://purl.org/dc/elements/1.1/identifier> "1000885025" .
+<http://vocab.getty.edu/aat/term/1000885025-pt> <http://purl.org/dc/terms/language> <http://vocab.getty.edu/aat/300389115> .
+<http://vocab.getty.edu/aat/term/1000885025-pt> <http://purl.org/dc/terms/language> <http://vocab.getty.edu/language/pt> .
+<http://vocab.getty.edu/aat/term/1000423097-es> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2008/05/skos-xl#Label> .
+<http://vocab.getty.edu/aat/term/1000423097-es> <http://vocab.getty.edu/ontology#term> "Posmoderno"@es .
+<http://vocab.getty.edu/aat/term/1000423097-es> <http://vocab.getty.edu/ontology#displayOrder> "15"^^<http://www.w3.org/2001/XMLSchema#positiveInteger> .
+<http://vocab.getty.edu/aat/term/1000423097-es> <http://www.w3.org/2008/05/skos-xl#literalForm> "Posmoderno"@es .
+<http://vocab.getty.edu/aat/term/1000423097-es> <http://vocab.getty.edu/ontology#termType> <http://vocab.getty.edu/term/type/Descriptor> .
+<http://vocab.getty.edu/aat/term/1000423097-es> <http://vocab.getty.edu/ontology#contributorPreferred> <http://vocab.getty.edu/aat/contrib/10000131> .
+<http://vocab.getty.edu/aat/term/1000423097-es> <http://purl.org/dc/terms/contributor> <http://vocab.getty.edu/aat/contrib/10000131> .
+<http://vocab.getty.edu/aat/term/1000423097-es> <http://vocab.getty.edu/ontology#sourcePreferred> <http://vocab.getty.edu/aat/source/2000051034> .
+<http://vocab.getty.edu/aat/term/1000423097-es> <http://purl.org/dc/terms/source> <http://vocab.getty.edu/aat/source/2000051034> .
+<http://vocab.getty.edu/aat/term/1000423097-es> <http://purl.org/dc/elements/1.1/identifier> "1000423097" .
+<http://vocab.getty.edu/aat/term/1000423097-es> <http://purl.org/dc/terms/language> <http://vocab.getty.edu/aat/300389311> .
+<http://vocab.getty.edu/aat/term/1000423097-es> <http://purl.org/dc/terms/language> <http://vocab.getty.edu/language/es> .
+<http://vocab.getty.edu/aat/source/2000033591-term-1000022208> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/ontology/bibo/Document> .
+<http://vocab.getty.edu/aat/source/2000033591-term-1000022208> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/ontology/bibo/DocumentPart> .
+<http://vocab.getty.edu/aat/source/2000033591-term-1000022208> <http://purl.org/dc/terms/isPartOf> <http://vocab.getty.edu/aat/source/2000033591> .
+<http://vocab.getty.edu/aat/source/2000033591-term-1000022208> <http://purl.org/ontology/bibo/locator> "GLOS" .
+<http://vocab.getty.edu/aat/source/2000051089-term-1000022208> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/ontology/bibo/Document> .
+<http://vocab.getty.edu/aat/source/2000051089-term-1000022208> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/ontology/bibo/DocumentPart> .
+<http://vocab.getty.edu/aat/source/2000051089-term-1000022208> <http://purl.org/dc/terms/isPartOf> <http://vocab.getty.edu/aat/source/2000051089> .
+<http://vocab.getty.edu/aat/source/2000051089-term-1000022208> <http://purl.org/ontology/bibo/locator> "127641 checked 26 January 2012" .
+<http://vocab.getty.edu/aat/source/2000042211-term-1000279931> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/ontology/bibo/Document> .
+<http://vocab.getty.edu/aat/source/2000042211-term-1000279931> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/ontology/bibo/DocumentPart> .
+<http://vocab.getty.edu/aat/source/2000042211-term-1000279931> <http://purl.org/dc/terms/isPartOf> <http://vocab.getty.edu/aat/source/2000042211> .
+<http://vocab.getty.edu/aat/source/2000042211-term-1000279931> <http://purl.org/ontology/bibo/locator> "526" .
+<http://vocab.getty.edu/aat/source/2000070098-term-1000550488> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/ontology/bibo/Document> .
+<http://vocab.getty.edu/aat/source/2000070098-term-1000550488> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/ontology/bibo/DocumentPart> .
+<http://vocab.getty.edu/aat/source/2000070098-term-1000550488> <http://purl.org/dc/terms/isPartOf> <http://vocab.getty.edu/aat/source/2000070098> .
+<http://vocab.getty.edu/aat/source/2000070098-term-1000550488> <http://purl.org/ontology/bibo/locator> "p. 1361" .
+<http://vocab.getty.edu/aat/term/1000279929-en-US> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2008/05/skos-xl#Label> .
+<http://vocab.getty.edu/aat/term/1000279929-en-US> <http://vocab.getty.edu/ontology#term> "Postmodernism"@en-us .
+<http://vocab.getty.edu/aat/term/1000279929-en-US> <http://vocab.getty.edu/ontology#displayOrder> "2"^^<http://www.w3.org/2001/XMLSchema#positiveInteger> .
+<http://vocab.getty.edu/aat/term/1000279929-en-US> <http://www.w3.org/2008/05/skos-xl#literalForm> "Postmodernism"@en-us .
+<http://vocab.getty.edu/aat/term/1000279929-en-US> <http://vocab.getty.edu/ontology#termType> <http://vocab.getty.edu/term/type/AlternateDescriptor> .
+<http://vocab.getty.edu/aat/term/1000279929-en-US> <http://purl.org/dc/terms/contributor> <http://vocab.getty.edu/aat/contrib/10000000> .
+<http://vocab.getty.edu/aat/term/1000279929-en-US> <http://vocab.getty.edu/ontology#contributorNonPreferred> <http://vocab.getty.edu/aat/contrib/10000000> .
+<http://vocab.getty.edu/aat/term/1000279929-en-US> <http://vocab.getty.edu/ontology#sourcePreferred> <http://vocab.getty.edu/aat/source/2000024811> .
+<http://vocab.getty.edu/aat/term/1000279929-en-US> <http://vocab.getty.edu/ontology#sourcePreferred> <http://vocab.getty.edu/aat/source/2000046657> .
+<http://vocab.getty.edu/aat/term/1000279929-en-US> <http://purl.org/dc/terms/source> <http://vocab.getty.edu/aat/source/2000024811> .
+<http://vocab.getty.edu/aat/term/1000279929-en-US> <http://purl.org/dc/terms/source> <http://vocab.getty.edu/aat/source/2000046657> .
+<http://vocab.getty.edu/aat/term/1000279929-en-US> <http://purl.org/dc/terms/source> <http://vocab.getty.edu/aat/source/2000033591-term-1000279929> .
+<http://vocab.getty.edu/aat/term/1000279929-en-US> <http://vocab.getty.edu/ontology#sourceAlternatePreferred> <http://vocab.getty.edu/aat/source/2000033591-term-1000279929> .
+<http://vocab.getty.edu/aat/term/1000279929-en-US> <http://purl.org/dc/elements/1.1/identifier> "1000279929" .
+<http://vocab.getty.edu/aat/term/1000279929-en-US> <http://purl.org/dc/terms/language> <http://vocab.getty.edu/aat/300387822> .
+<http://vocab.getty.edu/aat/term/1000279929-en-US> <http://purl.org/dc/terms/language> <http://vocab.getty.edu/language/en-US> .
+<http://vocab.getty.edu/aat/term/1000304999-en> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2008/05/skos-xl#Label> .
+<http://vocab.getty.edu/aat/term/1000304999-en> <http://vocab.getty.edu/ontology#term> "P-M"@en .
+<http://vocab.getty.edu/aat/term/1000304999-en> <http://vocab.getty.edu/ontology#qualifier> "Postmodern"@en .
+<http://vocab.getty.edu/aat/term/1000304999-en> <http://vocab.getty.edu/ontology#displayOrder> "3"^^<http://www.w3.org/2001/XMLSchema#positiveInteger> .
+<http://vocab.getty.edu/aat/term/1000304999-en> <http://www.w3.org/2008/05/skos-xl#literalForm> "P-M (Postmodern)"@en .
+<http://vocab.getty.edu/aat/term/1000304999-en> <http://vocab.getty.edu/ontology#termType> <http://vocab.getty.edu/term/type/UsedForTerm> .
+<http://vocab.getty.edu/aat/term/1000304999-en> <http://purl.org/dc/terms/contributor> <http://vocab.getty.edu/aat/contrib/10000000> .
+<http://vocab.getty.edu/aat/term/1000304999-en> <http://vocab.getty.edu/ontology#contributorNonPreferred> <http://vocab.getty.edu/aat/contrib/10000000> .
+<http://vocab.getty.edu/aat/term/1000304999-en> <http://purl.org/dc/terms/source> <http://vocab.getty.edu/aat/source/2000042211> .
+<http://vocab.getty.edu/aat/term/1000304999-en> <http://vocab.getty.edu/ontology#sourceNonPreferred> <http://vocab.getty.edu/aat/source/2000042211> .
+<http://vocab.getty.edu/aat/term/1000304999-en> <http://purl.org/dc/elements/1.1/identifier> "1000304999" .
+<http://vocab.getty.edu/aat/term/1000304999-en> <http://purl.org/dc/terms/language> <http://vocab.getty.edu/aat/300388277> .
+<http://vocab.getty.edu/aat/term/1000304999-en> <http://purl.org/dc/terms/language> <http://vocab.getty.edu/language/en> .
+<http://vocab.getty.edu/aat/term/1000305000-en> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2008/05/skos-xl#Label> .
+<http://vocab.getty.edu/aat/term/1000305000-en> <http://vocab.getty.edu/ontology#term> "Po-Mo"@en .
+<http://vocab.getty.edu/aat/term/1000305000-en> <http://vocab.getty.edu/ontology#qualifier> "Postmodern"@en .
+<http://vocab.getty.edu/aat/term/1000305000-en> <http://vocab.getty.edu/ontology#displayOrder> "4"^^<http://www.w3.org/2001/XMLSchema#positiveInteger> .
+<http://vocab.getty.edu/aat/term/1000305000-en> <http://www.w3.org/2008/05/skos-xl#literalForm> "Po-Mo (Postmodern)"@en .
+<http://vocab.getty.edu/aat/term/1000305000-en> <http://vocab.getty.edu/ontology#termType> <http://vocab.getty.edu/term/type/UsedForTerm> .
+<http://vocab.getty.edu/aat/term/1000305000-en> <http://purl.org/dc/terms/contributor> <http://vocab.getty.edu/aat/contrib/10000000> .
+<http://vocab.getty.edu/aat/term/1000305000-en> <http://vocab.getty.edu/ontology#contributorNonPreferred> <http://vocab.getty.edu/aat/contrib/10000000> .
+<http://vocab.getty.edu/aat/term/1000305000-en> <http://purl.org/dc/terms/source> <http://vocab.getty.edu/aat/source/2000042211> .
+<http://vocab.getty.edu/aat/term/1000305000-en> <http://vocab.getty.edu/ontology#sourceNonPreferred> <http://vocab.getty.edu/aat/source/2000042211> .
+<http://vocab.getty.edu/aat/term/1000305000-en> <http://purl.org/dc/elements/1.1/identifier> "1000305000" .
+<http://vocab.getty.edu/aat/term/1000305000-en> <http://purl.org/dc/terms/language> <http://vocab.getty.edu/aat/300388277> .
+<http://vocab.getty.edu/aat/term/1000305000-en> <http://purl.org/dc/terms/language> <http://vocab.getty.edu/language/en> .
+<http://vocab.getty.edu/aat/term/1000279930-en-GB> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2008/05/skos-xl#Label> .
+<http://vocab.getty.edu/aat/term/1000279930-en-GB> <http://vocab.getty.edu/ontology#term> "Post-Modernism"@en-gb .
+<http://vocab.getty.edu/aat/term/1000279930-en-GB> <http://vocab.getty.edu/ontology#displayOrder> "6"^^<http://www.w3.org/2001/XMLSchema#positiveInteger> .
+<http://vocab.getty.edu/aat/term/1000279930-en-GB> <http://www.w3.org/2008/05/skos-xl#literalForm> "Post-Modernism"@en-gb .
+<http://vocab.getty.edu/aat/term/1000279930-en-GB> <http://vocab.getty.edu/ontology#termType> <http://vocab.getty.edu/term/type/AlternateDescriptor> .
+<http://vocab.getty.edu/aat/term/1000279930-en-GB> <http://purl.org/dc/terms/contributor> <http://vocab.getty.edu/aat/contrib/10000000> .
+<http://vocab.getty.edu/aat/term/1000279930-en-GB> <http://vocab.getty.edu/ontology#contributorNonPreferred> <http://vocab.getty.edu/aat/contrib/10000000> .
+<http://vocab.getty.edu/aat/term/1000279930-en-GB> <http://vocab.getty.edu/ontology#sourcePreferred> <http://vocab.getty.edu/aat/source/2000035251> .
+<http://vocab.getty.edu/aat/term/1000279930-en-GB> <http://purl.org/dc/terms/source> <http://vocab.getty.edu/aat/source/2000031141> .
+<http://vocab.getty.edu/aat/term/1000279930-en-GB> <http://purl.org/dc/terms/source> <http://vocab.getty.edu/aat/source/2000035251> .
+<http://vocab.getty.edu/aat/term/1000279930-en-GB> <http://vocab.getty.edu/ontology#sourceAlternatePreferred> <http://vocab.getty.edu/aat/source/2000031141> .
+<http://vocab.getty.edu/aat/term/1000279930-en-GB> <http://purl.org/dc/elements/1.1/identifier> "1000279930" .
+<http://vocab.getty.edu/aat/term/1000279930-en-GB> <http://purl.org/dc/terms/language> <http://vocab.getty.edu/aat/300388027> .
+<http://vocab.getty.edu/aat/term/1000279930-en-GB> <http://purl.org/dc/terms/language> <http://vocab.getty.edu/language/en-GB> .
+<http://vocab.getty.edu/aat/term/1000550489-zh-Hant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2008/05/skos-xl#Label> .
+<http://vocab.getty.edu/aat/term/1000550489-zh-Hant> <http://vocab.getty.edu/ontology#term> "\u5F8C\u73FE\u4EE3\u4E3B\u7FA9"@zh-hant .
+<http://vocab.getty.edu/aat/term/1000550489-zh-Hant> <http://vocab.getty.edu/ontology#displayOrder> "8"^^<http://www.w3.org/2001/XMLSchema#positiveInteger> .
+<http://vocab.getty.edu/aat/term/1000550489-zh-Hant> <http://www.w3.org/2008/05/skos-xl#literalForm> "\u5F8C\u73FE\u4EE3\u4E3B\u7FA9"@zh-hant .
+<http://vocab.getty.edu/aat/term/1000550489-zh-Hant> <http://vocab.getty.edu/ontology#termType> <http://vocab.getty.edu/term/type/UsedForTerm> .
+<http://vocab.getty.edu/aat/term/1000550489-zh-Hant> <http://purl.org/dc/terms/contributor> <http://vocab.getty.edu/aat/contrib/10000250> .
+<http://vocab.getty.edu/aat/term/1000550489-zh-Hant> <http://vocab.getty.edu/ontology#contributorNonPreferred> <http://vocab.getty.edu/aat/contrib/10000250> .
+<http://vocab.getty.edu/aat/term/1000550489-zh-Hant> <http://purl.org/dc/terms/source> <http://vocab.getty.edu/aat/source/2000070099-term-1000550489> .
+<http://vocab.getty.edu/aat/term/1000550489-zh-Hant> <http://vocab.getty.edu/ontology#sourceNonPreferred> <http://vocab.getty.edu/aat/source/2000070099-term-1000550489> .
+<http://vocab.getty.edu/aat/term/1000550489-zh-Hant> <http://purl.org/dc/elements/1.1/identifier> "1000550489" .
+<http://vocab.getty.edu/aat/term/1000550489-zh-Hant> <http://purl.org/dc/terms/language> <http://vocab.getty.edu/aat/300388116> .
+<http://vocab.getty.edu/aat/term/1000550489-zh-Hant> <http://purl.org/dc/terms/language> <http://vocab.getty.edu/language/zh-Hant> .
+<http://vocab.getty.edu/aat/term/1000885026-pt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2008/05/skos-xl#Label> .
+<http://vocab.getty.edu/aat/term/1000885026-pt> <http://vocab.getty.edu/ontology#term> "arte p\u00F3s-moderna"@pt .
+<http://vocab.getty.edu/aat/term/1000885026-pt> <http://vocab.getty.edu/ontology#displayOrder> "14"^^<http://www.w3.org/2001/XMLSchema#positiveInteger> .
+<http://vocab.getty.edu/aat/term/1000885026-pt> <http://www.w3.org/2008/05/skos-xl#literalForm> "arte p\u00F3s-moderna"@pt .
+<http://vocab.getty.edu/aat/term/1000885026-pt> <http://vocab.getty.edu/ontology#termType> <http://vocab.getty.edu/term/type/AlternateDescriptor> .
+<http://vocab.getty.edu/aat/term/1000885026-pt> <http://purl.org/dc/terms/contributor> <http://vocab.getty.edu/aat/contrib/10000316> .
+<http://vocab.getty.edu/aat/term/1000885026-pt> <http://vocab.getty.edu/ontology#contributorNonPreferred> <http://vocab.getty.edu/aat/contrib/10000316> .
+<http://vocab.getty.edu/aat/term/1000885026-pt> <http://purl.org/dc/terms/source> <http://vocab.getty.edu/aat/source/2000109633> .
+<http://vocab.getty.edu/aat/term/1000885026-pt> <http://vocab.getty.edu/ontology#sourceNonPreferred> <http://vocab.getty.edu/aat/source/2000109633> .
+<http://vocab.getty.edu/aat/term/1000885026-pt> <http://purl.org/dc/elements/1.1/identifier> "1000885026" .
+<http://vocab.getty.edu/aat/term/1000885026-pt> <http://purl.org/dc/terms/language> <http://vocab.getty.edu/aat/300389115> .
+<http://vocab.getty.edu/aat/term/1000885026-pt> <http://purl.org/dc/terms/language> <http://vocab.getty.edu/language/pt> .
+<http://vocab.getty.edu/aat/term/1000423098-es> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2008/05/skos-xl#Label> .
+<http://vocab.getty.edu/aat/term/1000423098-es> <http://vocab.getty.edu/ontology#term> "Posmodernismo"@es .
+<http://vocab.getty.edu/aat/term/1000423098-es> <http://vocab.getty.edu/ontology#displayOrder> "16"^^<http://www.w3.org/2001/XMLSchema#positiveInteger> .
+<http://vocab.getty.edu/aat/term/1000423098-es> <http://www.w3.org/2008/05/skos-xl#literalForm> "Posmodernismo"@es .
+<http://vocab.getty.edu/aat/term/1000423098-es> <http://vocab.getty.edu/ontology#termType> <http://vocab.getty.edu/term/type/AlternateDescriptor> .
+<http://vocab.getty.edu/aat/term/1000423098-es> <http://purl.org/dc/terms/contributor> <http://vocab.getty.edu/aat/contrib/10000131> .
+<http://vocab.getty.edu/aat/term/1000423098-es> <http://vocab.getty.edu/ontology#contributorNonPreferred> <http://vocab.getty.edu/aat/contrib/10000131> .
+<http://vocab.getty.edu/aat/term/1000423098-es> <http://purl.org/dc/terms/source> <http://vocab.getty.edu/aat/source/2000048952-term-1000423098> .
+<http://vocab.getty.edu/aat/term/1000423098-es> <http://purl.org/dc/elements/1.1/identifier> "1000423098" .
+<http://vocab.getty.edu/aat/term/1000423098-es> <http://purl.org/dc/terms/language> <http://vocab.getty.edu/aat/300389311> .
+<http://vocab.getty.edu/aat/term/1000423098-es> <http://purl.org/dc/terms/language> <http://vocab.getty.edu/language/es> .
+<http://vocab.getty.edu/aat/source/2000033591-term-1000279929> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/ontology/bibo/Document> .
+<http://vocab.getty.edu/aat/source/2000033591-term-1000279929> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/ontology/bibo/DocumentPart> .
+<http://vocab.getty.edu/aat/source/2000033591-term-1000279929> <http://purl.org/dc/terms/isPartOf> <http://vocab.getty.edu/aat/source/2000033591> .
+<http://vocab.getty.edu/aat/source/2000033591-term-1000279929> <http://purl.org/ontology/bibo/locator> "GLOS" .
+<http://vocab.getty.edu/aat/source/2000070099-term-1000550489> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/ontology/bibo/Document> .
+<http://vocab.getty.edu/aat/source/2000070099-term-1000550489> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/ontology/bibo/DocumentPart> .
+<http://vocab.getty.edu/aat/source/2000070099-term-1000550489> <http://purl.org/dc/terms/isPartOf> <http://vocab.getty.edu/aat/source/2000070099> .
+<http://vocab.getty.edu/aat/source/2000070099-term-1000550489> <http://purl.org/ontology/bibo/locator> "p. 234" .
+<http://vocab.getty.edu/aat/source/2000048952-term-1000423098> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/ontology/bibo/DocumentPart> .
+<http://vocab.getty.edu/aat/source/2000048952-term-1000423098> <http://purl.org/dc/terms/isPartOf> <http://vocab.getty.edu/aat/source/2000048952> .
+<http://vocab.getty.edu/aat/source/2000048952-term-1000423098> <http://purl.org/ontology/bibo/locator> "289" .
