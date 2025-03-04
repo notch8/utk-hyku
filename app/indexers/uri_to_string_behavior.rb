@@ -97,26 +97,37 @@ module UriToStringBehavior
     #   #=> ['https://rightsstatements.org/data/InC/1.0.ttl',
     #        'http://rightsstatements.org/vocab/InC/1.0/',
     #        #<RDF::URI:0x... URI:http://www.w3.org/2004/02/skos/core#prefLabel>]
+    # Extracts components needed for RDF querying based on the URI pattern.
+    # @param uri [String] the URI to process
+    # @return [Array<String, String, RDF::URI>] processed URI, subject URI, and predicate URI
     def extract_rdf_components(uri)
-      if uri.include?('vocab.getty.edu')
-        modified_uri = uri.gsub('/page/', '/')
-        subject_uri = uri.gsub('/page/', '/').gsub('https://', 'http://')
-        predicate = RDF::URI(DEFAULT_LABEL)
-      elsif uri.include?('sws.geonames.org')
-        modified_uri = "#{uri}/about.rdf"
-        subject_uri = "#{uri.gsub('http://', 'https://')}/"
-        predicate = RDF::URI("http://www.geonames.org/ontology#name")
-      elsif uri.include?('rightsstatements.org') # fallback if QA fails for whatever reason
-        modified_uri = "#{uri.chomp('/').gsub('http://', 'https://').gsub('/vocab/', '/data/')}.ttl"
-        subject_uri = uri
-        predicate = RDF::URI(DEFAULT_LABEL)
-      else
-        modified_uri = uri
-        subject_uri = uri
-        predicate = RDF::URI(DEFAULT_LABEL)
-      end
+      uri_handlers = {
+        'vocab.getty.edu' => lambda { |input_uri|
+          modified_uri = input_uri.gsub('/page/', '/')
+          subject_uri = modified_uri.gsub('https://', 'http://')
+          [modified_uri, subject_uri, RDF::URI(DEFAULT_LABEL)]
+        },
 
-      [modified_uri, subject_uri, predicate]
+        'sws.geonames.org' => lambda { |input_uri|
+          modified_uri = "#{input_uri}/about.rdf"
+          subject_uri = "#{input_uri.gsub('http://', 'https://')}/"
+          [modified_uri, subject_uri, RDF::URI("http://www.geonames.org/ontology#name")]
+        },
+
+        'rightsstatements.org' => lambda { |input_uri|
+          modified_uri = "#{input_uri.chomp('/').gsub('http://', 'https://').gsub('/vocab/', '/data/')}.ttl"
+          [modified_uri, input_uri, RDF::URI(DEFAULT_LABEL)]
+        }
+      }
+
+      # Find the matching handler or use default
+      handler_key = uri_handlers.keys.find { |key| uri.include?(key) }
+
+      if handler_key
+        uri_handlers[handler_key].call(uri)
+      else
+        [uri, uri, RDF::URI(DEFAULT_LABEL)]
+      end
     end
 
     def rights_term_for(uri)
