@@ -4,6 +4,7 @@
   <%# @todo internationalisation %>
   <% next if Rails.configuration.hidden_properties.include?(prop_key) %>
   <% next if prop_value[:admin_only] && !presenter.current_ability.current_user.admin? %>
+  <% next if prop_value[:grouped] %>
   <%# Only rights_statement and license have special render_as options %>
   <% value = if [:rights_statement, :license].include? prop_key %>
     <% presenter.attribute_to_html(prop_key, render_as: prop_key, html_dl: true) %>
