@@ -53,11 +53,11 @@ GIT
 
 GIT
   remote: https://github.com/samvera/bulkrax.git
-  revision: 13a37b4b839f8c7f9d48785445cf9d66ab27edb1
+  revision: 03d7e8bf87e52777321ae2d572bd5d221ca40f5c
   branch: main
   specs:
-    bulkrax (8.3.0)
-      bagit (~> 0.4.6)
+    bulkrax (9.0.2)
+      bagit (~> 0.6.0)
       coderay
       denormalize_fields
       iso8601 (~> 0.9.0)
@@ -266,7 +266,7 @@ GEM
     babel-transpiler (0.7.0)
       babel-source (>= 4.0, < 6)
       execjs (~> 2.0)
-    bagit (0.4.6)
+    bagit (0.6.0)
       docopt (~> 0.5.0)
       validatable (~> 1.6)
     bcp47 (0.3.3)
