@@ -82,6 +82,27 @@ RSpec.describe UriToStringBehavior do
           end
         end
       end
+
+      context 'when the URI is a License' do
+        let(:uri) { 'http://creativecommons.org/licenses/by-nc/4.0/' }
+        let(:rdf_data) { Rails.root.join('spec', 'fixtures', 'rdf_data', 'licenses.rdf').to_s }
+
+        context 'from QA' do
+          it 'retrieves a value for a given URI' do
+            expect(subject.uri_to_value_for(uri)).to include 'Attribution-NonCommercial 4.0 International'
+          end
+        end
+
+        context 'from remote' do
+          it 'retrieves a value for a given URI' do
+            authority = instance_double(Qa::Authorities::Local::FileBasedAuthority)
+            allow(Qa::Authorities::Local).to receive(:subauthority_for).with('licenses').and_return(authority)
+            allow(authority).to receive(:find).with(uri).and_return(term: nil)
+
+            expect(subject.uri_to_value_for(uri)).to include 'Attribution-NonCommercial 4.0 International'
+          end
+        end
+      end
       # rubocop:enable RSpec/NestedGroups
     end
 
