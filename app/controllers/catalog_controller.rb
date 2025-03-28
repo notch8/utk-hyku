@@ -103,7 +103,7 @@ class CatalogController < ApplicationController
     config.add_facet_field 'intermediate_provider_sim', label: "Intermediate Provider", limit: 5
     config.add_facet_field 'license_sim', label: "License", limit: 5
     config.add_facet_field 'resource_type_sim', label: "Resource Type", limit: 5
-    config.add_facet_field 'rights_statement_sim', label: "Rights Statement", limit: 5
+    config.add_facet_field 'rights_sim', label: "Rights", limit: 5
     config.add_facet_field 'member_of_collections_sim', label: "Collections", limit: 5
     config.add_facet_field 'spatial_sim', label: "Location", limit: 5
 

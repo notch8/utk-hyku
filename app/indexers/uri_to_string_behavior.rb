@@ -43,11 +43,11 @@ module UriToStringBehavior
   def uri_to_value_for(uri)
     return uri.map { |v| uri_to_value_for(v) } if uri.is_a?(Enumerable)
     return if uri.blank?
-    return uri unless uri.is_a?(String)
-    return uri unless uri.start_with?('http')
-    # checks QA isntead of reaching out to a server
-    value = rights_term_for(uri) if uri.start_with?('http://rightsstatements.org/')
-    return value if value.present?
+    return uri unless uri.is_a?(String) && uri.start_with?('http')
+
+    # Checks QA instead of reaching out to a server
+    local_value = get_local_uri_value(uri)
+    return local_value if local_value.present?
 
     # Handle different URI patterns
     modified_uri, subject_uri, predicate = extract_rdf_components(uri)
@@ -70,6 +70,14 @@ module UriToStringBehavior
   end
 
   private
+
+    def get_local_uri_value(uri)
+      if uri.start_with?('http://rightsstatements.org/')
+        rights_term_for(uri)
+      elsif uri.start_with?('http://creativecommons.org/')
+        license_term_for(uri)
+      end
+    end
 
     # Extracts components needed for RDF querying based on the URI pattern.
     # Handles special cases for Getty, GeoNames URIs, and RightsStatement.org,
@@ -99,6 +107,13 @@ module UriToStringBehavior
     #   #=> ['https://rightsstatements.org/data/InC/1.0.ttl',
     #        'http://rightsstatements.org/vocab/InC/1.0/',
     #        #<RDF::URI:0x... URI:http://www.w3.org/2004/02/skos/core#prefLabel>]
+    #
+    # @example Creative Commons URI
+    #   extract_rdf_components('https://creativecommons.org/licenses/by/4.0/')
+    #   #=> ['https://creativecommons.org/licenses/by/4.0/rdf',
+    #        'https://creativecommons.org/licenses/by/4.0/',
+    #        #<RDF::URI:0x... URI:http://purl.org/dc/terms/title>]
+    #
     # Extracts components needed for RDF querying based on the URI pattern.
     # @param uri [String] the URI to process
     # @return [Array<String, String, RDF::URI>] processed URI, subject URI, and predicate URI
@@ -119,6 +134,11 @@ module UriToStringBehavior
         'rightsstatements.org' => lambda { |input_uri|
           modified_uri = "#{input_uri.chomp('/').gsub('http://', 'https://').gsub('/vocab/', '/data/')}.ttl"
           [modified_uri, input_uri, RDF::URI(DEFAULT_LABEL)]
+        },
+
+        'creativecommons.org' => lambda { |input_uri|
+          modified_uri = input_uri + 'rdf'
+          [modified_uri, input_uri, RDF::URI('http://purl.org/dc/terms/title')]
         }
       }
 
@@ -133,6 +153,10 @@ module UriToStringBehavior
     end
 
     def rights_term_for(uri)
-      Qa::Authorities::Local.subauthority_for('rights_statements').find(uri)[:term]
+      Qa::Authorities::Local.subauthority_for('rights_statements').find(uri).fetch(:term, nil)
+    end
+
+    def license_term_for(uri)
+      Qa::Authorities::Local.subauthority_for('licenses').find(uri).fetch(:term, nil)
     end
 end
