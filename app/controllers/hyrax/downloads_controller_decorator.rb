@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
-# OVERRIDE Hyrax 3.5.0 allow downloading directly from S3
+# OVERRIDE Hyrax 3.6.0 allow downloading directly from S3
+#   and allow thumbnails to be accessed by anyone
 
 require 'aws-sdk-s3'
 
@@ -39,6 +40,14 @@ module Hyrax
 
       fname
     end
+
+    private
+
+      def authorize_download!
+        return if params['file'] == 'thumbnail'
+
+        super
+      end
   end
 end
 
