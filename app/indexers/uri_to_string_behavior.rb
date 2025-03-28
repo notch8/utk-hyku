@@ -129,6 +129,7 @@ module UriToStringBehavior
     # Extracts components needed for RDF querying based on the URI pattern.
     # @param uri [String] the URI to process
     # @return [Array<String, String, RDF::URI>] processed URI, subject URI, and predicate URI
+    # rubocop:disable Metrics/MethodLength
     def extract_rdf_components(uri)
       uri_handlers = {
         'id.loc.gov' => lambda { |input_uri|
@@ -143,6 +144,7 @@ module UriToStringBehavior
         },
 
         'sws.geonames.org' => lambda { |input_uri|
+          input_uri = input_uri.chomp('/')
           modified_uri = "#{input_uri}/about.rdf"
           subject_uri = "#{input_uri.gsub('http://', 'https://')}/"
           [modified_uri, subject_uri, RDF::URI("http://www.geonames.org/ontology#name")]
@@ -174,6 +176,7 @@ module UriToStringBehavior
         [uri, uri, RDF::URI(DEFAULT_LABEL)]
       end
     end
+    # rubocop:enable Metrics/MethodLength
 
     def rights_term_for(uri)
       Qa::Authorities::Local.subauthority_for('rights_statements').find(uri).fetch(:term, nil)
