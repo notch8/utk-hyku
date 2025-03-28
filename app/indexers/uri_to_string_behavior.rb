@@ -90,6 +90,12 @@ module UriToStringBehavior
     #   - The subject URI for querying the graph
     #   - The predicate URI for finding the label
     #
+    # @example Library of Congress URI
+    #   extract_rdf_components('https://id.loc.gov/authorities/names/n2017180154')
+    #   #=> ['https://id.loc.gov/authorities/names/n2017180154',
+    #        'http://id.loc.gov/authorities/names/n2017180154',
+    #        #<RDF::URI:0x... URI:http://www.w3.org/2004/02/skos/core#prefLabel>]
+    #
     # @example Getty URI
     #   extract_rdf_components('https://vocab.getty.edu/page/ulan/500026846')
     #   #=> ['https://vocab.getty.edu/ulan/500026846',
@@ -114,11 +120,23 @@ module UriToStringBehavior
     #        'https://creativecommons.org/licenses/by/4.0/',
     #        #<RDF::URI:0x... URI:http://purl.org/dc/terms/title>]
     #
+    # @example Wikidata URI
+    #   extract_rdf_components('https://www.wikidata.org/entity/Q85304029')
+    #   #=> ['http://www.wikidata.org/entity/Q85304029.nt',
+    #        'http://www.wikidata.org/entity/Q85304029',
+    #        #<RDF::URI:0x... URI:http://www.w3.org/2004/02/skos/core#prefLabel>]
+    #
     # Extracts components needed for RDF querying based on the URI pattern.
     # @param uri [String] the URI to process
     # @return [Array<String, String, RDF::URI>] processed URI, subject URI, and predicate URI
+    # rubocop:disable Metrics/MethodLength
     def extract_rdf_components(uri)
       uri_handlers = {
+        'id.loc.gov' => lambda { |input_uri|
+          subject_uri = input_uri.gsub('https://', 'http://')
+          [input_uri, subject_uri, RDF::URI(DEFAULT_LABEL)]
+        },
+
         'vocab.getty.edu' => lambda { |input_uri|
           modified_uri = input_uri.gsub('/page/', '/')
           subject_uri = modified_uri.gsub('https://', 'http://')
@@ -126,6 +144,7 @@ module UriToStringBehavior
         },
 
         'sws.geonames.org' => lambda { |input_uri|
+          input_uri = input_uri.chomp('/')
           modified_uri = "#{input_uri}/about.rdf"
           subject_uri = "#{input_uri.gsub('http://', 'https://')}/"
           [modified_uri, subject_uri, RDF::URI("http://www.geonames.org/ontology#name")]
@@ -139,6 +158,12 @@ module UriToStringBehavior
         'creativecommons.org' => lambda { |input_uri|
           modified_uri = input_uri + 'rdf'
           [modified_uri, input_uri, RDF::URI('http://purl.org/dc/terms/title')]
+        },
+
+        'wikidata.org' => lambda { |input_uri|
+          modified_uri = "#{input_uri.gsub('https://', 'http://')}.nt"
+          subject_uri = input_uri.gsub('https://', 'http://')
+          [modified_uri, subject_uri, RDF::URI(DEFAULT_LABEL)]
         }
       }
 
@@ -151,6 +176,7 @@ module UriToStringBehavior
         [uri, uri, RDF::URI(DEFAULT_LABEL)]
       end
     end
+    # rubocop:enable Metrics/MethodLength
 
     def rights_term_for(uri)
       Qa::Authorities::Local.subauthority_for('rights_statements').find(uri).fetch(:term, nil)
