@@ -114,6 +114,12 @@ module UriToStringBehavior
     #        'https://creativecommons.org/licenses/by/4.0/',
     #        #<RDF::URI:0x... URI:http://purl.org/dc/terms/title>]
     #
+    # @example Wikidata URI
+    #   extract_rdf_components('https://www.wikidata.org/entity/Q85304029')
+    #   #=> ['http://www.wikidata.org/entity/Q85304029.nt',
+    #        'http://www.wikidata.org/entity/Q85304029',
+    #        #<RDF::URI:0x... URI:http://www.w3.org/2004/02/skos/core#prefLabel>]
+    #
     # Extracts components needed for RDF querying based on the URI pattern.
     # @param uri [String] the URI to process
     # @return [Array<String, String, RDF::URI>] processed URI, subject URI, and predicate URI
@@ -139,6 +145,12 @@ module UriToStringBehavior
         'creativecommons.org' => lambda { |input_uri|
           modified_uri = input_uri + 'rdf'
           [modified_uri, input_uri, RDF::URI('http://purl.org/dc/terms/title')]
+        },
+
+        'wikidata.org' => lambda { |input_uri|
+          modified_uri = "#{input_uri.gsub('https://', 'http://')}.nt"
+          subject_uri = input_uri.gsub('https://', 'http://')
+          [modified_uri, subject_uri, RDF::URI(DEFAULT_LABEL)]
         }
       }
 

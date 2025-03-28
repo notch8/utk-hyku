@@ -61,6 +61,15 @@ RSpec.describe UriToStringBehavior do
         end
       end
 
+      context 'from WikiData' do
+        let(:uri) { 'https://www.wikidata.org/entity/Q85304029' }
+        let(:rdf_data) { Rails.root.join('spec', 'fixtures', 'rdf_data', 'wikidata.nt').to_s }
+
+        it 'retrieves a value for a given URI' do
+          expect(subject.uri_to_value_for(uri)).to eq 'Dorothy Doolittle'
+        end
+      end
+
       # rubocop:disable RSpec/NestedGroups
       context 'when the URI is a Rights Statement' do
         let(:uri) { 'http://rightsstatements.org/vocab/InC/1.0/' }
