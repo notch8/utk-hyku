@@ -90,6 +90,12 @@ module UriToStringBehavior
     #   - The subject URI for querying the graph
     #   - The predicate URI for finding the label
     #
+    # @example Library of Congress URI
+    #   extract_rdf_components('https://id.loc.gov/authorities/names/n2017180154')
+    #   #=> ['https://id.loc.gov/authorities/names/n2017180154',
+    #        'http://id.loc.gov/authorities/names/n2017180154',
+    #        #<RDF::URI:0x... URI:http://www.w3.org/2004/02/skos/core#prefLabel>]
+    #
     # @example Getty URI
     #   extract_rdf_components('https://vocab.getty.edu/page/ulan/500026846')
     #   #=> ['https://vocab.getty.edu/ulan/500026846',
@@ -125,6 +131,11 @@ module UriToStringBehavior
     # @return [Array<String, String, RDF::URI>] processed URI, subject URI, and predicate URI
     def extract_rdf_components(uri)
       uri_handlers = {
+        'id.loc.gov' => lambda { |input_uri|
+          subject_uri = input_uri.gsub('https://', 'http://')
+          [input_uri, subject_uri, RDF::URI(DEFAULT_LABEL)]
+        },
+
         'vocab.getty.edu' => lambda { |input_uri|
           modified_uri = input_uri.gsub('/page/', '/')
           subject_uri = modified_uri.gsub('https://', 'http://')

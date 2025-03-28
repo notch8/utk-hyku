@@ -35,7 +35,7 @@ RSpec.describe UriToStringBehavior do
       end
 
       context 'from the Library of Congress' do
-        let(:uri) { 'http://id.loc.gov/authorities/names/n79007751' }
+        let(:uri) { 'https://id.loc.gov/authorities/names/n79007751' }
         let(:rdf_data) { Rails.root.join('spec', 'fixtures', 'rdf_data', 'loc.nt').to_s }
 
         it 'retrieves a value for a given URI' do
