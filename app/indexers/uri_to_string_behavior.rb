@@ -61,7 +61,9 @@ module UriToStringBehavior
 
     subject = RDF::URI.new(subject_uri)
     objects = graph.query([subject, predicate, nil]).objects
-    object = objects.find { |o| o.language == :en || o.language == :'en-us' } || objects.first
+    object = objects.find do |o|
+      o.language == :en || o.language == :'en-us' || o.language.nil?
+    end || objects.sort_by(&:value).first
     return "#{uri} (No label found)" if object.blank?
 
     object.to_s
