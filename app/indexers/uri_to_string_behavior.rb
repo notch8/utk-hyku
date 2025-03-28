@@ -43,15 +43,11 @@ module UriToStringBehavior
   def uri_to_value_for(uri)
     return uri.map { |v| uri_to_value_for(v) } if uri.is_a?(Enumerable)
     return if uri.blank?
-    return uri unless uri.is_a?(String)
-    return uri unless uri.start_with?('http')
-    # checks QA isntead of reaching out to a server
-    value = if uri.start_with?('http://rightsstatements.org/')
-              rights_term_for(uri)
-            elsif uri.start_with?('http://creativecommons.org/')
-              license_term_for(uri)
-            end
-    return value if value.present?
+    return uri unless uri.is_a?(String) && uri.start_with?('http')
+
+    # Checks QA instead of reaching out to a server
+    local_value = get_local_uri_value(uri)
+    return local_value if local_value.present?
 
     # Handle different URI patterns
     modified_uri, subject_uri, predicate = extract_rdf_components(uri)
@@ -65,13 +61,23 @@ module UriToStringBehavior
 
     subject = RDF::URI.new(subject_uri)
     objects = graph.query([subject, predicate, nil]).objects
-    object = objects.find { |o| o.language == :en || o.language == :'en-us' } || objects.first
+    object = objects.find do |o|
+      o.language == :en || o.language == :'en-us' || o.language.nil?
+    end || objects.sort_by(&:value).first
     return "#{uri} (No label found)" if object.blank?
 
     object.to_s
   end
 
   private
+
+    def get_local_uri_value(uri)
+      if uri.start_with?('http://rightsstatements.org/')
+        rights_term_for(uri)
+      elsif uri.start_with?('http://creativecommons.org/')
+        license_term_for(uri)
+      end
+    end
 
     # Extracts components needed for RDF querying based on the URI pattern.
     # Handles special cases for Getty, GeoNames URIs, and RightsStatement.org,

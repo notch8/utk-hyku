@@ -35,11 +35,11 @@ RSpec.describe UriToStringBehavior do
       end
 
       context 'from the Library of Congress' do
-        let(:uri) { 'http://id.loc.gov/vocabulary/iso639-2/eng' }
+        let(:uri) { 'http://id.loc.gov/authorities/names/n79007751' }
         let(:rdf_data) { Rails.root.join('spec', 'fixtures', 'rdf_data', 'loc.nt').to_s }
 
         it 'retrieves a value for a given URI' do
-          expect(subject.uri_to_value_for(uri)).to eq 'English'
+          expect(subject.uri_to_value_for(uri)).to eq 'New York (N.Y.)'
         end
       end
 
