@@ -41,7 +41,6 @@ module Hyrax
     def manifest_url
       return '' if id.blank?
 
-      protocol = Site.account.ssl_configured ? 'https' : 'http'
       Rails.application.routes.url_helpers.polymorphic_url([:manifest, model], host: hostname, protocol: protocol)
     end
 
@@ -49,7 +48,6 @@ module Hyrax
     # @return [String] the URL that is used in the manifest to link back to the show page
     # @see ManifestBuilderServiceDecorator#homepage
     def work_url
-      protocol = Site.account.ssl_configured ? 'https' : 'http'
       Rails.application.routes.url_helpers.polymorphic_url(model, host: hostname, protocol: protocol)
     end
 
@@ -59,7 +57,6 @@ module Hyrax
     def collection_url(collection_id)
       return '' if collection_id.blank?
 
-      protocol = Site.account.ssl_configured ? 'https' : 'http'
       "#{protocol}://#{hostname}/collections/#{collection_id}"
     end
 
@@ -79,9 +76,9 @@ module Hyrax
         @supplementing_content ||= begin
                                      return [] unless media_and_transcript?
 
-                                     attachments = transcript_attachments
-                                     attachments.map do |attachment|
-                                       create_supplementing_content(attachment)
+                                     attachment_docs = transcript_attachments
+                                     attachment_docs.map do |doc|
+                                       create_supplementing_content(doc)
                                      end
                                    end
       end
@@ -95,10 +92,16 @@ module Hyrax
         end
 
         def transcript_attachments
-          parent = ::FileSet.find(id).parent.member_of.first
-          return [] unless parent
+          member_ids = Hyrax::SolrService.query(
+            "file_set_ids_ssim:#{id} AND -has_model_ssim:Attachment", rows: count, fl: 'id,member_ids_ssim'
+          ).first['member_ids_ssim']
 
-          parent.members.select { |member| member.rdf_type == [TRANSCRIPT_RDF_TYPE] }
+          return [] unless member_ids
+          Hyrax::SolrService.query(
+            "id:(#{member_ids.join(' OR ')})",
+            rows: member_ids.length,
+            fl: 'id,title_tesim,file_language_ssm,rdf_type_ssm,member_ids_ssim'
+          ).select { |hit| hit['rdf_type_ssm'].present? && hit['rdf_type_ssm'].include?(TRANSCRIPT_RDF_TYPE) }
         end
 
         def create_supplementing_content(attachment)
@@ -108,14 +111,14 @@ module Hyrax
                                                      type: 'Text',
                                                      format: 'text/vtt',
                                                      label: hash[:title],
-                                                     language: hash[:language].first || 'en')
+                                                     language: hash[:language] || 'en')
         end
 
-        def get_file_set_ids_and_languages(attachment)
+        def get_file_set_ids_and_languages(doc)
           {
-            file_set_id: attachment.file_sets.first.id,
-            title: attachment.title.first,
-            language: attachment.file_language
+            file_set_id: doc['member_ids_ssim']&.first,
+            title: doc['title_tesim']&.first,
+            language: doc['file_language_ssm']&.first
           }
         end
 
@@ -130,6 +133,10 @@ module Hyrax
 
       def scrub(value)
         CGI.unescapeHTML(Loofah.fragment(value).scrub!(:whitewash).to_s)
+      end
+
+      def protocol
+        @protocol ||= @base_url.start_with?('https') ? 'https' : 'http'
       end
   end
 end
