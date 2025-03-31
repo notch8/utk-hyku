@@ -2,6 +2,7 @@
 
 # OVERRIDE Hyrax 3.6.0 allow downloading directly from S3
 #   and allow thumbnails to be accessed by anyone
+#   and to override :file_set_parent to use Solr first before going to Fedora
 
 require 'aws-sdk-s3'
 
@@ -47,6 +48,16 @@ module Hyrax
         return if params['file'] == 'thumbnail'
 
         super
+      end
+
+      def file_set_parent(file_set_id)
+        parent =
+          Hyrax::SolrService
+          .query("-has_model_ssim:FileSet AND file_set_ids_ssim:#{params[asset_param_key]}", rows: 1)
+          .first
+        return super if parent.nil?
+
+        ::SolrDocument.new(parent)
       end
   end
 end
