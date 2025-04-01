@@ -61,4 +61,3 @@
 //= require flot/jquery.flot.selection.js
 //= require bootstrap-slider
 //= require_tree ./blacklight_range_limit
-//= require clover_iiif_custom
