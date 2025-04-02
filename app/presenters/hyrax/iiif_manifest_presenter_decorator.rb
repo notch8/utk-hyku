@@ -106,12 +106,18 @@ module Hyrax
 
         def create_supplementing_content(attachment)
           hash = get_file_set_ids_and_languages(attachment)
-          captions_url = get_captions_url(hash[:file_set_id])
-          IIIFManifest::V3::SupplementingContent.new(captions_url,
-                                                     type: 'Text',
-                                                     format: 'text/vtt',
-                                                     label: hash[:title],
-                                                     language: hash[:language] || 'en')
+
+          captions_url = Rails.application.routes.url_helpers.supplementing_content_url(
+            id: hash[:file_set_id], protocol: 'https'
+          )
+
+          IIIFManifest::V3::SupplementingContent.new(
+            captions_url,
+            type: 'Text',
+            format: 'text/vtt',
+            label: hash[:title],
+            language: hash[:language] || 'en'
+          )
         end
 
         def get_file_set_ids_and_languages(doc)
