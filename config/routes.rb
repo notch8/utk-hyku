@@ -136,4 +136,8 @@ Rails.application.routes.draw do # rubocop:disable Metrics/BlockLength
   post "/dashboard/collections/:id/delete_uploaded_thumbnail",
     to: "hyrax/dashboard/collections#delete_uploaded_thumbnail",
     as: :delete_uploaded_thumbnail
+
+  # Use proxy URL for S3 content to avoid CORS issues
+  # see #create_supplementing_content in app/presenters/hyrax/iiif_manifest_presenter_decorator.rb
+  get 'supplementing_content/:id(.:format)', to: 'supplementing_content#show', as: 'supplementing_content'
 end
