@@ -150,7 +150,7 @@ module ModsSolrDocument
         xml.url({ usage: 'primary', access: "object in context" }, object_url)
         if self[:thumbnail_path_ss].present?
           thumbnail_url = url.gsub('?file=thumbnail', '')
-          xml.url(access: 'preview', "xlink:href" => thumbnail_url)
+          xml.url({ access: 'preview' }, thumbnail_url)
         end
       end
     end
