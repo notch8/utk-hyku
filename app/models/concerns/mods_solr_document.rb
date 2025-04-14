@@ -99,8 +99,8 @@ module ModsSolrDocument
     # originInfo
     def load_origin(xml)
       xml.originInfo do
-        date_created_d&.each { |value| xml.dateCreated value.to_s }
-        date_issued_d&.each { |value| xml.dateIssued value.to_s }
+        Array.wrap(date_created_d).each { |value| xml.dateCreated value.to_s if value.present? }
+        Array.wrap(date_issued_d).each { |value| xml.dateIssued value.to_s if value.present? }
       end
     end
 
