@@ -2,6 +2,23 @@
   height: 500px;
 }
 
+.hyrax-videos-show, .hyrax-audios-show {
+  @media (max-width: 991px) {
+    .viewer-wrapper {
+      height: 750px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .viewer-wrapper {
+      iframe {
+        position: relative;
+        width: 90vw;
+      }
+    }
+  }
+}
+
 .viewer {
   height: 100%;
   padding: 10px;
