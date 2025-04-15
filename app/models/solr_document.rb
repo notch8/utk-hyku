@@ -58,6 +58,10 @@ class SolrDocument
     self['form_tesim']
   end
 
+  def primary_identifier
+    self['primary_identifier_tesim']
+  end
+
   def publication_place
     self['publication_place_tesim']
   end

@@ -1141,6 +1141,7 @@ en:
         extent: 'Extent'
         form: 'Form'
         note: 'Note'
+        primary_identifier: Primary Identifier
         publication_place: 'Publication Place'
         repository: 'Repository'
         resource_link: Resource Link

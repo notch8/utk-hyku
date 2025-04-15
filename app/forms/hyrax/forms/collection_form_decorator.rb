@@ -5,7 +5,7 @@ module Hyrax
     module CollectionFormDecorator
       # Terms that appear above the accordion
       def primary_terms
-        %i[title abstract]
+        %i[title abstract primary_identifier]
       end
 
       def secondary_terms
@@ -45,6 +45,7 @@ Hyrax::Forms::CollectionForm.terms += %i[
   extent
   form
   note
+  primary_identifier
   publication_place
   repository
   resource_link
