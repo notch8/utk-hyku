@@ -99,8 +99,8 @@ module ModsSolrDocument
     # originInfo
     def load_origin(xml)
       xml.originInfo do
-        date_created_d&.each { |value| xml.dateCreated value.to_s }
-        date_issued_d&.each { |value| xml.dateIssued value.to_s }
+        Array.wrap(date_created_d).each { |value| xml.dateCreated value.to_s if value.present? }
+        Array.wrap(date_issued_d).each { |value| xml.dateIssued value.to_s if value.present? }
       end
     end
 
@@ -150,7 +150,7 @@ module ModsSolrDocument
         xml.url({ usage: 'primary', access: "object in context" }, object_url)
         if self[:thumbnail_path_ss].present?
           thumbnail_url = url.gsub('?file=thumbnail', '')
-          xml.url(access: 'preview', "xlink:href" => thumbnail_url)
+          xml.url({ access: 'preview' }, thumbnail_url)
         end
       end
     end
