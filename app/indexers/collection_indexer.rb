@@ -18,6 +18,7 @@ class CollectionIndexer < Hyrax::CollectionIndexer
       solr_doc[CatalogController.title_field] = Array(object.title).first
       solr_doc[CatalogController.published_field] = Array(object.date_issued_d).first
       solr_doc[CatalogController.created_field] = Array(object.date_created_d).first
+      solr_doc["primary_identifier_ssm"] = solr_doc["primary_identifier_tesim"] = object.primary_identifier
     end
   end
 end

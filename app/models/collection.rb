@@ -11,6 +11,12 @@ class Collection < ActiveFedora::Base
     index.as :stored_searchable, :facetable
   end
 
+  property :primary_identifier,
+           predicate: ::RDF::URI('https://hykucommons.org/terms/primary_identifier'),
+           multiple: true do |index|
+    index.as :stored_searchable, :facetable
+  end
+
   property :date_created_d,
            predicate: ::RDF::URI('https://dbpedia.org/ontology/completionDate'),
            multiple: false do |index|

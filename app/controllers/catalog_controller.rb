@@ -150,6 +150,7 @@ class CatalogController < ApplicationController
     config.add_index_field 'utk_contributor_tesim', label: 'Local Contributor'
     config.add_index_field 'utk_creator_tesim', label: 'Local Creator'
     config.add_index_field 'utk_publisher_tesim', label: 'Local Publisher'
+    config.add_index_field 'primary_identifier_tesim', label: 'Primary Identifier'
 
     # solr fields to be displayed in the show (single result) view
     #   The ordering of the field names is the order of the display
@@ -185,6 +186,7 @@ class CatalogController < ApplicationController
     config.add_show_field 'utk_contributor_tesim', label: 'Local Contributor'
     config.add_show_field 'utk_creator_tesim', label: 'Local Creator'
     config.add_show_field 'utk_publisher_tesim', label: 'Local Publisher'
+    config.add_show_field 'primary_identifier_tesim', label: 'Primary Identifier'
 
     # "fielded" search configuration. Used by pulldown among other places.
     # For supported keys in hash, see rdoc for Blacklight::SearchFields
