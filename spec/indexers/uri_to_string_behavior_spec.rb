@@ -70,6 +70,15 @@ RSpec.describe UriToStringBehavior do
         end
       end
 
+      context 'from Homosaurus' do
+        let(:uri) { 'https://homosaurus.org/v3/homoit0000070' }
+        let(:rdf_data) { Rails.root.join('spec', 'fixtures', 'rdf_data', 'homosaurus.nt').to_s }
+
+        it 'retrieves a value for a given URI' do
+          expect(subject.uri_to_value_for(uri)).to eq 'LGBTQ+ artists'
+        end
+      end
+
       # rubocop:disable RSpec/NestedGroups
       context 'when the URI is a Rights Statement' do
         let(:uri) { 'http://rightsstatements.org/vocab/InC/1.0/' }
