@@ -126,6 +126,12 @@ module UriToStringBehavior
     #        'http://www.wikidata.org/entity/Q85304029',
     #        #<RDF::URI:0x... URI:http://www.w3.org/2004/02/skos/core#prefLabel>]
     #
+    # @example Homosaurus URI
+    #   extract_rdf_components('https://homosaurus.org/v3/homoit0000070')
+    #   #=> ['https://homosaurus.org/v3/homoit0000070.nt',
+    #        'https://homosaurus.org/v4/homoit0000070',
+    #        #<RDF::URI:0x... URI:http://www.w3.org/2004/02/skos/core#prefLabel>]
+    #
     # Extracts components needed for RDF querying based on the URI pattern.
     # @param uri [String] the URI to process
     # @return [Array<String, String, RDF::URI>] processed URI, subject URI, and predicate URI
@@ -163,6 +169,12 @@ module UriToStringBehavior
         'wikidata.org' => lambda { |input_uri|
           modified_uri = "#{input_uri.gsub('https://', 'http://')}.nt"
           subject_uri = input_uri.gsub('https://', 'http://')
+          [modified_uri, subject_uri, RDF::URI(DEFAULT_LABEL)]
+        },
+
+        'homosaurus.org' => lambda { |input_uri|
+          modified_uri = "#{input_uri}.nt"
+          subject_uri = input_uri.gsub('/v3/', '/v4/') # looks like the rdf falls back to v4
           [modified_uri, subject_uri, RDF::URI(DEFAULT_LABEL)]
         }
       }

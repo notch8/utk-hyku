@@ -1,0 +1,28 @@
+<https://homosaurus.org/v4/homoit0000070> <http://purl.org/dc/terms/identifier> "homoit0000070" .
+<https://homosaurus.org/v4/homoit0000070> <http://www.w3.org/2004/02/skos/core#prefLabel> "LGBTQ+ artists" .
+<https://homosaurus.org/v4/homoit0000070> <http://www.w3.org/2004/02/skos/core#altLabel> "Artists (LGBTQ)" .
+<https://homosaurus.org/v4/homoit0000070> <http://www.w3.org/2000/01/rdf-schema#comment> "LGBTQ+ people who practice any of various creative arts." .
+<https://homosaurus.org/v4/homoit0000070> <http://www.w3.org/2004/02/skos/core#broader> "https://homosaurus.org/v3/homoit0000915" .
+<https://homosaurus.org/v4/homoit0000070> <http://www.w3.org/2004/02/skos/core#narrower> "https://homosaurus.org/v3/homoit0000129" .
+<https://homosaurus.org/v4/homoit0000070> <http://www.w3.org/2004/02/skos/core#narrower> "https://homosaurus.org/v3/homoit0000470" .
+<https://homosaurus.org/v4/homoit0000070> <http://www.w3.org/2004/02/skos/core#narrower> "https://homosaurus.org/v3/homoit0000720" .
+<https://homosaurus.org/v4/homoit0000070> <http://www.w3.org/2004/02/skos/core#narrower> "https://homosaurus.org/v3/homoit0001157" .
+<https://homosaurus.org/v4/homoit0000070> <http://www.w3.org/2004/02/skos/core#narrower> "https://homosaurus.org/v3/homoit0001390" .
+<https://homosaurus.org/v4/homoit0000070> <http://www.w3.org/2004/02/skos/core#narrower> "https://homosaurus.org/v3/homoit0002760" .
+<https://homosaurus.org/v4/homoit0000070> <http://www.w3.org/2004/02/skos/core#narrower> "https://homosaurus.org/v3/homoit0002777" .
+<https://homosaurus.org/v4/homoit0000070> <http://www.w3.org/2004/02/skos/core#narrower> "https://homosaurus.org/v3/homoit0003446" .
+<https://homosaurus.org/v4/homoit0000070> <http://www.w3.org/2004/02/skos/core#narrower> "https://homosaurus.org/v3/homoit0003511" .
+<https://homosaurus.org/v4/homoit0000070> <http://www.w3.org/2004/02/skos/core#narrower> "https://homosaurus.org/v3/homoit0003845" .
+<https://homosaurus.org/v4/homoit0000070> <http://www.w3.org/2004/02/skos/core#narrower> "https://homosaurus.org/v3/homoit0003846" .
+<https://homosaurus.org/v4/homoit0000070> <http://www.w3.org/2004/02/skos/core#narrower> "https://homosaurus.org/v3/homoit0003847" .
+<https://homosaurus.org/v4/homoit0000070> <http://www.w3.org/2004/02/skos/core#narrower> "https://homosaurus.org/v3/homoit0003848" .
+<https://homosaurus.org/v4/homoit0000070> <http://www.w3.org/2004/02/skos/core#related> "https://homosaurus.org/v3/homoit0000816" .
+<https://homosaurus.org/v4/homoit0000070> <http://www.w3.org/2004/02/skos/core#related> "https://homosaurus.org/v3/homoit0001755" .
+<https://homosaurus.org/v4/homoit0000070> <http://www.w3.org/2004/02/skos/core#related> "https://homosaurus.org/v3/homoit0002678" .
+<https://homosaurus.org/v4/homoit0000070> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://homosaurus.org/v4/homoit0000915> .
+<https://homosaurus.org/v4/homoit0000070> <http://purl.org/dc/terms/replaces> <http://homosaurus.org/v2/artistsLGBTQ> .
+<https://homosaurus.org/v4/homoit0000070> <http://purl.org/dc/terms/issued> "2019-05-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://homosaurus.org/v4/homoit0000070> <http://purl.org/dc/terms/modified> "2025-02-23"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://homosaurus.org/v4/homoit0000070> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://homosaurus.org/v4/homoit0000070> <http://www.w3.org/2004/02/skos/core#inScheme> <https://homosaurus.org/v3> .
+<https://homosaurus.org/v4/homoit0000070> <http://www.w3.org/2004/02/skos/core#changeNote> "Version 3.7.1" .
