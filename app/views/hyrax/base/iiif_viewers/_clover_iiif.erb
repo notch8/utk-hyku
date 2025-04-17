@@ -1,4 +1,4 @@
-<div class="viewer-wrapper">
+<div class="viewer-wrapper clover-iiif-viewer">
   <iframe
     id="clover-iiif-iframe"
     src="<%= clover_iiif_base_url %>?manifest=<%= main_app.polymorphic_url [main_app, :manifest, presenter], { locale: nil } %>&config=<%= clover_iiif_config_url %>"
