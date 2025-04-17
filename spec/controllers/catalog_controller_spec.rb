@@ -43,7 +43,6 @@ RSpec.describe CatalogController, type: :controller do
       expect(facet_fields['file_format_sim'].limit).to eq 5
       expect(facet_fields['form_local_sim'].limit).to eq 5
       expect(facet_fields['intermediate_provider_sim'].limit).to eq 5
-      expect(facet_fields['license_sim'].limit).to eq 5
       expect(facet_fields['resource_type_sim'].limit).to eq 5
       expect(facet_fields['member_of_collections_sim'].limit).to eq 5
       expect(facet_fields['spatial_sim'].limit).to eq 5

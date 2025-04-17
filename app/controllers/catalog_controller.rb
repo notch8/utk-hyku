@@ -93,19 +93,19 @@ class CatalogController < ApplicationController
     config.add_facet_field 'human_readable_type_sim', label: "Type", limit: 5
     config.add_facet_field 'creator_sim', limit: 5
     config.add_facet_field 'contributor_sim', label: "Contributor", limit: 5
+    config.add_facet_field 'intermediate_provider_sim', label: "Intermediate Provider", limit: 5
     config.add_facet_field 'keyword_sim', limit: 5
     config.add_facet_field 'subject_sim', limit: 5
     config.add_facet_field 'language_sim', limit: 5
+    config.add_facet_field 'spatial_sim', label: "Location", limit: 5
     config.add_facet_field 'based_near_label_sim', limit: 5
     config.add_facet_field 'publisher_sim', limit: 5
     config.add_facet_field 'file_format_sim', limit: 5
     config.add_facet_field 'form_local_sim', label: "Form", limit: 5
-    config.add_facet_field 'intermediate_provider_sim', label: "Intermediate Provider", limit: 5
-    config.add_facet_field 'license_sim', label: "License", limit: 5
     config.add_facet_field 'resource_type_sim', label: "Resource Type", limit: 5
     config.add_facet_field 'rights_sim', label: "Rights", limit: 5
     config.add_facet_field 'member_of_collections_sim', label: "Collections", limit: 5
-    config.add_facet_field 'spatial_sim', label: "Location", limit: 5
+    config.add_facet_field 'temporal_sim', label: "Temporal Coverage", limit: 5
 
     # Have BL send all facet field names to Solr, which has been the default
     # previously. Simply remove these lines if you'd rather use Solr request
