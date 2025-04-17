@@ -116,6 +116,8 @@ class SolrDocument
       fields = []
 
       blacklight_field_properties.each do |prop|
+        next if prop.nil?
+
         mapping = YAML.safe_load(prop.mappings.gsub(/=>/, ':'))['blacklight']
         fields << mapping if mapping.present?
       end
@@ -149,13 +151,15 @@ class SolrDocument
 
         return [] if @profile.blank?
 
-        @profile.properties.select { |property| property.mappings&.include?('blacklight') }
+        @profile.properties.select { |property| property&.mappings&.include?('blacklight') }
       end
 
       def fields_by_blacklight_mapping(mapping_value)
         fields = []
 
         blacklight_field_properties.each do |prop|
+          next if prop.nil?
+
           fields << prop.name.to_s if YAML.safe_load(prop.mappings.gsub(/=>/, ':'))['blacklight'] == mapping_value
         end
         fields.uniq
