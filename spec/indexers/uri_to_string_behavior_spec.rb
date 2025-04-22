@@ -121,6 +121,27 @@ RSpec.describe UriToStringBehavior do
           end
         end
       end
+
+      context 'UriCache' do
+        let(:uri) { 'http://id.loc.gov/authorities/names/n2017180154' }
+        let(:rdf_data) { Rails.root.join('spec', 'fixtures', 'rdf_data', 'loc_ut.nt').to_s }
+
+        context 'when the URI is cached' do
+          before { create(:uri_cache) }
+
+          it 'pulls from the cache' do
+            expect(subject.uri_to_value_for('http://id.loc.gov/authorities/names/n2017180154'))
+              .to eq 'University of Tennessee'
+          end
+        end
+
+        context 'when the URI is not cached' do
+          it 'caches the URI' do
+            expect { subject.uri_to_value_for(uri) }.to change { UriCache.where(uri: uri).count }.from(0).to(1)
+            expect(UriCache.find_by(uri: uri).value).to eq 'University of Tennessee'
+          end
+        end
+      end
       # rubocop:enable RSpec/NestedGroups
     end
 

@@ -49,6 +49,10 @@ module UriToStringBehavior
     local_value = get_local_uri_value(uri)
     return local_value if local_value.present?
 
+    # Check the database cache
+    cached = UriCache.find_by(uri: uri)
+    return cached.value if cached.present?
+
     # Handle different URI patterns
     modified_uri, subject_uri, predicate = extract_rdf_components(uri)
 
@@ -66,7 +70,10 @@ module UriToStringBehavior
     end || objects.sort_by(&:value).first
     return "#{uri} (No label found)" if object.blank?
 
-    object.to_s
+    value = object.to_s
+    UriCache.create(uri: uri, value: value) # save for future use
+
+    value
   end
 
   private

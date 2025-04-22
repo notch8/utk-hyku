@@ -1,0 +1,131 @@
+<http://id.loc.gov/authorities/names/n2017180154> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#CorporateName> .
+<http://id.loc.gov/authorities/names/n2017180154> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/authorities/names/n2017180154> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "University of Tennessee" .
+<http://id.loc.gov/authorities/names/n2017180154> <http://www.loc.gov/mads/rdf/v1#elementList> _:b7iddOtlocdOtgovauthoritiesnamesn2017180154 .
+_:b7iddOtlocdOtgovauthoritiesnamesn2017180154 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b8iddOtlocdOtgovauthoritiesnamesn2017180154 .
+_:b7iddOtlocdOtgovauthoritiesnamesn2017180154 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:b8iddOtlocdOtgovauthoritiesnamesn2017180154 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#NameElement> .
+_:b8iddOtlocdOtgovauthoritiesnamesn2017180154 <http://www.loc.gov/mads/rdf/v1#elementValue> "University of Tennessee" .
+<http://id.loc.gov/authorities/names/n2017180154> <http://id.loc.gov/ontologies/bflc/marcKey> "1102 $aUniversity of Tennessee" .
+<http://id.loc.gov/authorities/names/n2017180154> <http://www.loc.gov/mads/rdf/v1#hasRelatedAuthority> <http://id.loc.gov/authorities/names/n80003891> .
+<http://id.loc.gov/authorities/names/n80003891> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#CorporateName> .
+<http://id.loc.gov/authorities/names/n80003891> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/authorities/names/n80003891> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "University of Tennessee (System)" .
+<http://id.loc.gov/authorities/names/n80003891> <http://www.loc.gov/mads/rdf/v1#elementList> _:b18iddOtlocdOtgovauthoritiesnamesn2017180154 .
+_:b18iddOtlocdOtgovauthoritiesnamesn2017180154 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b19iddOtlocdOtgovauthoritiesnamesn2017180154 .
+_:b18iddOtlocdOtgovauthoritiesnamesn2017180154 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:b19iddOtlocdOtgovauthoritiesnamesn2017180154 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#NameElement> .
+_:b19iddOtlocdOtgovauthoritiesnamesn2017180154 <http://www.loc.gov/mads/rdf/v1#elementValue> "University of Tennessee (System)" .
+<http://id.loc.gov/authorities/names/n2017180154> <http://www.loc.gov/mads/rdf/v1#hasRelatedAuthority> <http://id.loc.gov/authorities/names/n80003887> .
+<http://id.loc.gov/authorities/names/n80003887> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#CorporateName> .
+<http://id.loc.gov/authorities/names/n80003887> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/authorities/names/n80003887> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "University of Tennessee (Knoxville campus)" .
+<http://id.loc.gov/authorities/names/n80003887> <http://www.loc.gov/mads/rdf/v1#elementList> _:b27iddOtlocdOtgovauthoritiesnamesn2017180154 .
+_:b27iddOtlocdOtgovauthoritiesnamesn2017180154 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b28iddOtlocdOtgovauthoritiesnamesn2017180154 .
+_:b27iddOtlocdOtgovauthoritiesnamesn2017180154 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:b28iddOtlocdOtgovauthoritiesnamesn2017180154 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#NameElement> .
+_:b28iddOtlocdOtgovauthoritiesnamesn2017180154 <http://www.loc.gov/mads/rdf/v1#elementValue> "University of Tennessee (Knoxville campus)" .
+<http://id.loc.gov/authorities/names/n2017180154> <http://www.loc.gov/mads/rdf/v1#hasRelatedAuthority> <http://id.loc.gov/authorities/names/n80003883> .
+<http://id.loc.gov/authorities/names/n80003883> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#CorporateName> .
+<http://id.loc.gov/authorities/names/n80003883> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/authorities/names/n80003883> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "University of Tennessee (Memphis campus)" .
+<http://id.loc.gov/authorities/names/n80003883> <http://www.loc.gov/mads/rdf/v1#elementList> _:b36iddOtlocdOtgovauthoritiesnamesn2017180154 .
+_:b36iddOtlocdOtgovauthoritiesnamesn2017180154 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b37iddOtlocdOtgovauthoritiesnamesn2017180154 .
+_:b36iddOtlocdOtgovauthoritiesnamesn2017180154 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:b37iddOtlocdOtgovauthoritiesnamesn2017180154 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#NameElement> .
+_:b37iddOtlocdOtgovauthoritiesnamesn2017180154 <http://www.loc.gov/mads/rdf/v1#elementValue> "University of Tennessee (Memphis campus)" .
+<http://id.loc.gov/authorities/names/n2017180154> <http://www.loc.gov/mads/rdf/v1#hasRelatedAuthority> <http://id.loc.gov/authorities/names/nr95035347> .
+<http://id.loc.gov/authorities/names/nr95035347> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#CorporateName> .
+<http://id.loc.gov/authorities/names/nr95035347> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/authorities/names/nr95035347> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "East Tennessee University" .
+<http://id.loc.gov/authorities/names/nr95035347> <http://www.loc.gov/mads/rdf/v1#elementList> _:b45iddOtlocdOtgovauthoritiesnamesn2017180154 .
+_:b45iddOtlocdOtgovauthoritiesnamesn2017180154 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b46iddOtlocdOtgovauthoritiesnamesn2017180154 .
+_:b45iddOtlocdOtgovauthoritiesnamesn2017180154 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:b46iddOtlocdOtgovauthoritiesnamesn2017180154 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#NameElement> .
+_:b46iddOtlocdOtgovauthoritiesnamesn2017180154 <http://www.loc.gov/mads/rdf/v1#elementValue> "East Tennessee University" .
+<http://id.loc.gov/authorities/names/n2017180154> <http://www.loc.gov/mads/rdf/v1#hasCloseExternalAuthority> <http://id.worldcat.org/fast/1995123> .
+<http://id.worldcat.org/fast/1995123> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.worldcat.org/fast/1995123> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "University of Tennessee" .
+<http://id.loc.gov/authorities/names/n2017180154> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection> <http://id.loc.gov/authorities/names/collection_NamesAuthorizedHeadings> .
+<http://id.loc.gov/authorities/names/n2017180154> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection> <http://id.loc.gov/authorities/names/collection_LCNAF> .
+<http://id.loc.gov/authorities/names/n2017180154> <http://www.loc.gov/mads/rdf/v1#hasExactExternalAuthority> <http://viaf.org/viaf/sourceID/LC%7Cn+2017180154#skos:Concept> .
+<http://id.loc.gov/authorities/names/n2017180154> <http://www.loc.gov/mads/rdf/v1#identifiesRWO> <http://id.loc.gov/rwo/agents/n2017180154> .
+<http://id.loc.gov/rwo/agents/n2017180154> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#RWO> .
+<http://id.loc.gov/rwo/agents/n2017180154> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Organization> .
+<http://id.loc.gov/rwo/agents/n2017180154> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://id.loc.gov/rwo/agents/n2017180154> <http://www.w3.org/2000/01/rdf-schema#label> "University of Tennessee" .
+<http://id.loc.gov/rwo/agents/n2017180154> <http://www.loc.gov/mads/rdf/v1#isIdentifiedByAuthority> <http://id.loc.gov/authorities/names/n2017180154> .
+<http://id.loc.gov/rwo/agents/n2017180154> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/22506972> .
+<http://id.loc.gov/resources/works/22506972> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+<http://id.loc.gov/resources/works/22506972> <http://id.loc.gov/ontologies/bflc/aap> "Annual financial report" .
+<http://id.loc.gov/rwo/agents/n2017180154> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/23110862> .
+<http://id.loc.gov/resources/works/23110862> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+<http://id.loc.gov/resources/works/23110862> <http://id.loc.gov/ontologies/bflc/aap> "Bales, Stephen Lyn Rising from the ashes" .
+<http://id.loc.gov/rwo/agents/n2017180154> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/22086820> .
+<http://id.loc.gov/resources/works/22086820> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+<http://id.loc.gov/resources/works/22086820> <http://id.loc.gov/ontologies/bflc/aap> "Newman, Marvin E. [Image from LOOK - Job 57-7538 titled Bowden Wyatt -- Tennessee football]" .
+<http://id.loc.gov/rwo/agents/n2017180154> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/11055169> .
+<http://id.loc.gov/resources/works/11055169> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+<http://id.loc.gov/resources/works/11055169> <http://id.loc.gov/ontologies/bflc/aap> "University of Tennessee Annual report of the president" .
+<http://id.loc.gov/rwo/agents/n2017180154> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/10800050> .
+<http://id.loc.gov/resources/works/10800050> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+<http://id.loc.gov/resources/works/10800050> <http://id.loc.gov/ontologies/bflc/aap> "University of Tennessee General catalog" .
+<http://id.loc.gov/rwo/agents/n2017180154> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/10532783> .
+<http://id.loc.gov/resources/works/10532783> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+<http://id.loc.gov/resources/works/10532783> <http://id.loc.gov/ontologies/bflc/aap> "University of Tennessee Report ... to the state superintendent of public instruction" .
+<http://id.loc.gov/rwo/agents/n2017180154> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/17777546> .
+<http://id.loc.gov/resources/works/17777546> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+<http://id.loc.gov/resources/works/17777546> <http://id.loc.gov/ontologies/bflc/aap> "University of Tennessee Report of the treasurer" .
+<http://id.loc.gov/rwo/agents/n2017180154> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/11055242> .
+<http://id.loc.gov/resources/works/11055242> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+<http://id.loc.gov/resources/works/11055242> <http://id.loc.gov/ontologies/bflc/aap> "University of Tennessee Summer school" .
+<http://id.loc.gov/authorities/names/n2017180154> <http://www.loc.gov/mads/rdf/v1#identifiesRWO> <https://d-nb.info/gnd/40340-4> .
+<http://id.loc.gov/authorities/names/n2017180154> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSScheme> <http://id.loc.gov/authorities/names> .
+<http://id.loc.gov/authorities/names/n2017180154> <http://id.loc.gov/vocabulary/identifiers/lccn> "n 2017180154" .
+<http://id.loc.gov/authorities/names/n2017180154> <http://id.loc.gov/vocabulary/identifiers/local> "(DNLM)1343319" .
+<http://id.loc.gov/authorities/names/n2017180154> <http://www.loc.gov/mads/rdf/v1#hasSource> _:b101iddOtlocdOtgovauthoritiesnamesn2017180154 .
+_:b101iddOtlocdOtgovauthoritiesnamesn2017180154 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+_:b101iddOtlocdOtgovauthoritiesnamesn2017180154 <http://www.loc.gov/mads/rdf/v1#citationStatus> "found" .
+_:b101iddOtlocdOtgovauthoritiesnamesn2017180154 <http://www.loc.gov/mads/rdf/v1#citationSource> "The prophecy of science, 1883:" .
+_:b101iddOtlocdOtgovauthoritiesnamesn2017180154 <http://www.loc.gov/mads/rdf/v1#citationNote> "t.p. (University of Tennessee)" .
+<http://id.loc.gov/authorities/names/n2017180154> <http://www.loc.gov/mads/rdf/v1#hasSource> _:b109iddOtlocdOtgovauthoritiesnamesn2017180154 .
+_:b109iddOtlocdOtgovauthoritiesnamesn2017180154 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+_:b109iddOtlocdOtgovauthoritiesnamesn2017180154 <http://www.loc.gov/mads/rdf/v1#citationStatus> "found" .
+_:b109iddOtlocdOtgovauthoritiesnamesn2017180154 <http://www.loc.gov/mads/rdf/v1#citationSource> "Creekmore, B.B. Knoxville, 1958:" .
+_:b109iddOtlocdOtgovauthoritiesnamesn2017180154 <http://www.loc.gov/mads/rdf/v1#citationNote> "p. 164, etc. (University of Tennessee established 1794 as Blount College; 1807 name changed to East Tennessee College; 1840 became East Tennessee University; 1879 name changed to University of Tennessee)" .
+<http://id.loc.gov/authorities/names/n2017180154> <http://www.loc.gov/mads/rdf/v1#hasSource> _:b117iddOtlocdOtgovauthoritiesnamesn2017180154 .
+_:b117iddOtlocdOtgovauthoritiesnamesn2017180154 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+_:b117iddOtlocdOtgovauthoritiesnamesn2017180154 <http://www.loc.gov/mads/rdf/v1#citationStatus> "found" .
+_:b117iddOtlocdOtgovauthoritiesnamesn2017180154 <http://www.loc.gov/mads/rdf/v1#citationSource> "The University of Tennessee System website, viewed Feb. 24, 2006" .
+_:b117iddOtlocdOtgovauthoritiesnamesn2017180154 <http://www.loc.gov/mads/rdf/v1#citationNote> "(system created: 1968; Offices of the university system administration are located on the Knoxville campus. The University system has three parts: 1. University of Tennessee including the flagship campus at Knoxville, the Health Science Center at Memphis, Institute for Public Service, Institute of Agriculture, and Space Institute at Tullahoma; 2. University of Tennessee at Martin; 3. University of Tennessee at Chattanooga)" .
+<http://id.loc.gov/authorities/names/n2017180154> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:b125iddOtlocdOtgovauthoritiesnamesn2017180154 .
+_:b125iddOtlocdOtgovauthoritiesnamesn2017180154 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+_:b125iddOtlocdOtgovauthoritiesnamesn2017180154 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "2017-01-09T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+_:b125iddOtlocdOtgovauthoritiesnamesn2017180154 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "new"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:b125iddOtlocdOtgovauthoritiesnamesn2017180154 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/dnlm> .
+_:b125iddOtlocdOtgovauthoritiesnamesn2017180154 <http://id.loc.gov/ontologies/RecordInfo#languageOfCataloging> <http://id.loc.gov/vocabulary/iso639-2/eng> .
+<http://id.loc.gov/authorities/names/n2017180154> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/authorities/names/n2017180154> <http://www.w3.org/2004/02/skos/core#prefLabel> "University of Tennessee" .
+<http://id.loc.gov/authorities/names/n2017180154> <http://www.w3.org/2004/02/skos/core#semanticRelation> <http://id.loc.gov/authorities/names/n80003891> .
+<http://id.loc.gov/authorities/names/n80003891> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/authorities/names/n80003891> <http://www.w3.org/2004/02/skos/core#prefLabel> "University of Tennessee (System)" .
+<http://id.loc.gov/authorities/names/n2017180154> <http://www.w3.org/2004/02/skos/core#semanticRelation> <http://id.loc.gov/authorities/names/n80003887> .
+<http://id.loc.gov/authorities/names/n80003887> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/authorities/names/n80003887> <http://www.w3.org/2004/02/skos/core#prefLabel> "University of Tennessee (Knoxville campus)" .
+<http://id.loc.gov/authorities/names/n2017180154> <http://www.w3.org/2004/02/skos/core#semanticRelation> <http://id.loc.gov/authorities/names/n80003883> .
+<http://id.loc.gov/authorities/names/n80003883> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/authorities/names/n80003883> <http://www.w3.org/2004/02/skos/core#prefLabel> "University of Tennessee (Memphis campus)" .
+<http://id.loc.gov/authorities/names/n2017180154> <http://www.w3.org/2004/02/skos/core#semanticRelation> <http://id.loc.gov/authorities/names/nr95035347> .
+<http://id.loc.gov/authorities/names/nr95035347> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/authorities/names/nr95035347> <http://www.w3.org/2004/02/skos/core#prefLabel> "East Tennessee University" .
+<http://id.loc.gov/authorities/names/n2017180154> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://viaf.org/viaf/sourceID/LC%7Cn+2017180154#skos:Concept> .
+<http://id.loc.gov/authorities/names/n2017180154> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://id.worldcat.org/fast/1995123> .
+<http://id.worldcat.org/fast/1995123> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.worldcat.org/fast/1995123> <http://www.w3.org/2004/02/skos/core#prefLabel> "University of Tennessee" .
+<http://id.loc.gov/authorities/names/n2017180154> <http://www.w3.org/2004/02/skos/core#inScheme> <http://id.loc.gov/authorities/names> .
+<http://id.loc.gov/authorities/names/n2017180154> <http://www.w3.org/2004/02/skos/core#changeNote> _:b163iddOtlocdOtgovauthoritiesnamesn2017180154 .
+_:b163iddOtlocdOtgovauthoritiesnamesn2017180154 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocab/changeset/schema#ChangeSet> .
+_:b163iddOtlocdOtgovauthoritiesnamesn2017180154 <http://purl.org/vocab/changeset/schema#subjectOfChange> <http://id.loc.gov/authorities/names/n2017180154> .
+_:b163iddOtlocdOtgovauthoritiesnamesn2017180154 <http://purl.org/vocab/changeset/schema#creatorName> <http://id.loc.gov/vocabulary/organizations/dnlm> .
+_:b163iddOtlocdOtgovauthoritiesnamesn2017180154 <http://purl.org/vocab/changeset/schema#createdDate> "2017-01-09T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+_:b163iddOtlocdOtgovauthoritiesnamesn2017180154 <http://purl.org/vocab/changeset/schema#changeReason> "new"^^<http://www.w3.org/2001/XMLSchema#string> .
