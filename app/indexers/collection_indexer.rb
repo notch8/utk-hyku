@@ -9,8 +9,8 @@ class CollectionIndexer < Hyrax::CollectionIndexer
   # Uncomment this block if you want to add custom indexing behavior:
   def generate_solr_document
     super.tap do |solr_doc|
-      solr_doc["creator_sim"] = solr_doc["creator_tesim"] = convert_uri_to_value(SolrDocument.try(:creator_fields))
-      solr_doc["subject_sim"] = solr_doc["subject_tesim"] = convert_uri_to_value(SolrDocument.try(:subject_fields))
+      solr_doc["creator_sim"] = solr_doc["creator_tesim"] = convert_uri_to_value(['creator'])
+      solr_doc["subject_sim"] = solr_doc["subject_tesim"] = convert_uri_to_value(['subject'])
       solr_doc["contributor_sim"] = solr_doc["contributor_tesim"] = convert_uri_to_value(['contributor'])
       solr_doc["language_sim"] = solr_doc["language_tesim"] = convert_uri_to_value(['language'])
       solr_doc["bulkrax_identifier_sim"] = object.bulkrax_identifier
