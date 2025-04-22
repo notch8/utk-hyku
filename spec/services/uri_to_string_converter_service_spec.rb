@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-RSpec.describe UriToStringBehavior do
-  subject { AppIndexer.new(work) }
+RSpec.describe UriToStringConverterService do
+  subject { described_class.new(work) }
 
   let(:work) { double('work') }
   let(:graph) { RDF::Graph.new }
@@ -9,7 +9,7 @@ RSpec.describe UriToStringBehavior do
 
   describe '#uri_to_value_for' do
     context 'when the URI is an RDF resource' do
-      let(:modified_uri) { subject.send(:extract_rdf_components, uri).first }
+      let(:modified_uri) { subject.class.send(:extract_rdf_components, uri).first }
 
       before do
         reader_format =

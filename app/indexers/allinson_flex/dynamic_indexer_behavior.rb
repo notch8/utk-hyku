@@ -11,7 +11,6 @@
 
 module AllinsonFlex
   module DynamicIndexerBehavior
-    include UriToStringBehavior
     extend ActiveSupport::Concern
 
     RANGE = "http://www.w3.org/2001/XMLSchema#anyURI"
@@ -21,6 +20,7 @@ module AllinsonFlex
     end
 
     def generate_solr_document
+      converter = UriToStringConverterService.new(object)
       dynamic_schema_service = object.dynamic_schema_service(update: true)
       uri_properties = uri_properties_from(dynamic_schema_service)
 
@@ -30,7 +30,7 @@ module AllinsonFlex
         dynamic_schema_service.indexing_properties.each_pair do |prop_name, index_field_names|
           prop_value = object.send(prop_name)
           value = if uri_properties.include?(prop_name.to_s)
-                    string_value = uri_to_value_for(prop_value)
+                    string_value = ::UriToStringConverterService.uri_to_value_for(prop_value)
                     found_mappings[prop_name] = string_value if string_value.present?
                   else
                     prop_value
@@ -40,7 +40,10 @@ module AllinsonFlex
         end
 
         SolrDocument.blacklight_mappings.each do |index_field_name|
-          values = convert_uri_to_value(SolrDocument.try("#{index_field_name}_fields"), found_mappings: found_mappings)
+          values =
+            converter.convert_uri_to_value(
+              SolrDocument.try("#{index_field_name}_fields"), found_mappings: found_mappings
+            )
           solr_doc["#{index_field_name}_sim"] = solr_doc["#{index_field_name}_tesim"] = values
         end
       end
