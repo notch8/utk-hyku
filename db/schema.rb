@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2025_01_25_001320) do
+ActiveRecord::Schema.define(version: 2025_04_22_195027) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "hstore"
@@ -387,7 +387,7 @@ ActiveRecord::Schema.define(version: 2025_01_25_001320) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "restart_command"
-    t.datetime "last_restart", default: "2025-01-25 00:47:14"
+    t.datetime "last_restart", default: "2025-02-13 03:27:20"
   end
 
   create_table "featured_collections", force: :cascade do |t|
@@ -920,6 +920,14 @@ ActiveRecord::Schema.define(version: 2025_01_25_001320) do
     t.string "filename"
     t.index ["file_set_uri"], name: "index_uploaded_files_on_file_set_uri"
     t.index ["user_id"], name: "index_uploaded_files_on_user_id"
+  end
+
+  create_table "uri_caches", force: :cascade do |t|
+    t.text "uri"
+    t.text "value"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["uri"], name: "index_uri_caches_on_uri", unique: true
   end
 
   create_table "user_stats", id: :serial, force: :cascade do |t|
