@@ -40,7 +40,7 @@ class UriToStringConverterService
   end
 
   class << self
-     # Retrieves a value for a given URI.
+    # Retrieves a value for a given URI.
     #
     # @param value [String] the value to retrieve. If this value starts with 'http', it is treated as a URI.
     # @return [String]
@@ -49,7 +49,8 @@ class UriToStringConverterService
     #   uri_to_value_for('http://example.com') #=> "Failed to load RDF data: ..."
     #   uri_to_value_for('http://id.loc.gov/authorities/names/n2017180154') #=> "University of Tennessee"
     #   uri_to_value_for('Doe, John') #=> "Doe, John"
-    def uri_to_value_for(uri)
+    # rubocop:disable Metrics/CyclomaticComplexity
+    def uri_to_value_for(uri, fetch_from_remote: false)
       return uri.map { |v| uri_to_value_for(v) } if uri.is_a?(Enumerable)
       return if uri.blank?
       return uri unless uri.is_a?(String) && uri.start_with?('http')
@@ -59,7 +60,7 @@ class UriToStringConverterService
       return local_value if local_value.present?
 
       # Check the database cache
-      cached = UriCache.find_by(uri: uri)
+      cached = fetch_from_remote == true ? nil : UriCache.find_by(uri: uri)
       return cached.value if cached.present?
 
       # Handle different URI patterns
@@ -84,6 +85,7 @@ class UriToStringConverterService
 
       value
     end
+    # rubocop:enable Metrics/CyclomaticComplexity
 
     private
 
