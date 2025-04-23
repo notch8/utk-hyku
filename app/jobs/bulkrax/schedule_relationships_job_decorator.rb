@@ -11,7 +11,7 @@ module Bulkrax
         Bulkrax::Status
         .where(statusable_id: importer.entries.pluck(:id))
         .where(runnable_id: importer.last_run.id)
-        .where(status_message: ['Complete', 'Failed', 'Skipped'])
+        .where.not(status_message: 'Pending')
         .pluck(:statusable_id).uniq
       pending_entries = importer.entries.where.not(id: processed_entries)
       pending_num = pending_entries.count
