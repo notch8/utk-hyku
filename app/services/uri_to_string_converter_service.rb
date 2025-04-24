@@ -49,7 +49,7 @@ class UriToStringConverterService
     #   uri_to_value_for('http://example.com') #=> "Failed to load RDF data: ..."
     #   uri_to_value_for('http://id.loc.gov/authorities/names/n2017180154') #=> "University of Tennessee"
     #   uri_to_value_for('Doe, John') #=> "Doe, John"
-    # rubocop:disable Metrics/CyclomaticComplexity
+    # rubocop:disable Metrics/CyclomaticComplexity, Metrics/PerceivedComplexity
     def uri_to_value_for(uri, fetch_from_remote: false)
       return uri.map { |v| uri_to_value_for(v) } if uri.is_a?(Enumerable)
       return if uri.blank?
@@ -81,11 +81,18 @@ class UriToStringConverterService
       return "#{uri} (No label found)" if object.blank?
 
       value = object.to_s
-      UriCache.create(uri: uri, value: value) # save for future use
+
+      begin
+        UriCache.create(uri: uri, value: value) # save for future use
+      rescue ActiveRecord::RecordNotUnique
+        # Another worker created this entry between our check so we just use that one instead
+        cached = UriCache.find_by(uri: uri)
+        value = cached&.value || value
+      end
 
       value
     end
-    # rubocop:enable Metrics/CyclomaticComplexity
+    # rubocop:enable Metrics/CyclomaticComplexity, Metrics/PerceivedComplexity
 
     private
 
