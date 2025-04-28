@@ -16,7 +16,6 @@ end
 Rails.application.config.after_initialize do
   # baseline of 0, higher is sooner
 
-  Bulkrax::ScheduleRelationshipsJob.priority = 50
   CreateDerivativesJob.priority = 40
   CharacterizeJob.priority = 30
   Hyrax::GrantEditToMembersJob.priority = 10
@@ -29,6 +28,7 @@ Rails.application.config.after_initialize do
   Bulkrax::CreateRelationshipsJob.priority = -20
   Bulkrax::ImporterJob.priority = -20
   IiifPrint::Jobs::CreateRelationshipsJob.priority = -20
+  Bulkrax::ScheduleRelationshipsJob.priority = -30
   ContentDepositEventJob.priority = -50
   ContentUpdateEventJob.priority = -50
 end
