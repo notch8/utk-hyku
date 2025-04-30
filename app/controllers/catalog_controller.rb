@@ -83,6 +83,7 @@ class CatalogController < ApplicationController
 
     # solr fields that will be treated as facets by the blacklight application
     #   The ordering of the field names is the order of the display
+    config.add_facet_field 'member_of_collections_ssim', label: "Collections", limit: 5
     config.add_facet_field 'date_created_d_sim', label: "Date Created",
                                                  range: {
                                                    num_segments: 6,
@@ -104,7 +105,6 @@ class CatalogController < ApplicationController
     config.add_facet_field 'form_local_sim', label: "Form", limit: 5
     config.add_facet_field 'resource_type_sim', label: "Resource Type", limit: 5
     config.add_facet_field 'rights_sim', label: "Rights", limit: 5
-    config.add_facet_field 'member_of_collections_sim', label: "Collections", limit: 5
     config.add_facet_field 'temporal_sim', label: "Temporal Coverage", limit: 5
 
     # Have BL send all facet field names to Solr, which has been the default
