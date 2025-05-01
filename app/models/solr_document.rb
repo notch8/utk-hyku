@@ -149,7 +149,9 @@ class SolrDocument
 
         return [] if @profile.blank?
 
-        @profile.properties.select { |property| property.mappings&.include?('blacklight') }
+        @profile.properties.select do |property|
+          property&.mappings&.include?('blacklight')
+        end
       end
 
       def fields_by_blacklight_mapping(mapping_value)
