@@ -5,6 +5,21 @@
 
 module Hyrax
   module CollectionMemberSearchBuilderDecorator
+    include IiifPrint::AllinsonFlexFields
+    def member_of_collection(solr_parameters)
+      super
+
+      return if solr_parameters[:q].blank?
+
+      original_query = solr_parameters[:q]
+
+      solr_parameters[:user_query] = original_query
+      solr_parameters[:defType] = 'lucene'
+      solr_parameters[:q] = '{!lucene}' \
+                            '_query_:"{!dismax v=$user_query}" ' \
+                            '_query_:"{!join from=id to=file_set_ids_ssim}{!dismax v=$user_query}"'
+    end
+
     def apply_viewer_access_permissions(solr_parameters)
       return unless collection
       return unless current_ability.can?(:read, collection)
@@ -19,4 +34,4 @@ end
 
 Hyrax::CollectionMemberSearchBuilder.prepend(Hyrax::CollectionMemberSearchBuilderDecorator)
 Hyrax::CollectionMemberSearchBuilder
-  .default_processor_chain += %i[member_of_collection apply_viewer_access_permissions]
+  .default_processor_chain += %i[apply_viewer_access_permissions include_allinson_flex_fields]
