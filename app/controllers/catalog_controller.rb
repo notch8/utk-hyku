@@ -69,7 +69,7 @@ class CatalogController < ApplicationController
     config.default_solr_params = {
       qt: "search",
       rows: 10,
-      qf: "title_tesim description_tesim creator_tesim keyword_tesim all_text_timv all_text_tesimv"
+      qf: "title_tesim description_tesim abstract_tesim creator_tesim keyword_tesim all_text_timv all_text_tesimv"
     }
 
     # Specify which field to use in the tag cloud on the homepage.
