@@ -489,3 +489,8 @@ body.public-facing {
 body.dashboard #content-wrapper table[aria-label="Resource Types"].table.table-striped.sr-only.text-left {
   display: none;
 }
+
+// Collection show page search results
+.matching-child-works {
+  padding-bottom: 2rem;
+}

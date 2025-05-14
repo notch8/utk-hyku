@@ -1,0 +1,6 @@
+<%= content_tag :div, class: 'matching-child-works' do %>
+  <em>Search results found in:</em>
+  <%= documents.each_with_object([]) do |document, arr| %>
+    <% arr << (link_to document.title_or_label, [main_app, document]) %>
+  <% end.to_sentence.html_safe %>
+<% end %>
