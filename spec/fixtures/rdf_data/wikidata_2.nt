@@ -1,0 +1,318 @@
+<https://www.wikidata.org/wiki/Special:EntityData/Q55264128> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+<https://www.wikidata.org/wiki/Special:EntityData/Q55264128> <http://schema.org/about> <http://www.wikidata.org/entity/Q55264128> .
+<https://www.wikidata.org/wiki/Special:EntityData/Q55264128> <http://creativecommons.org/ns#license> <http://creativecommons.org/publicdomain/zero/1.0/> .
+<https://www.wikidata.org/wiki/Special:EntityData/Q55264128> <http://schema.org/softwareVersion> "1.0.0" .
+<https://www.wikidata.org/wiki/Special:EntityData/Q55264128> <http://schema.org/version> "1978003174"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://www.wikidata.org/wiki/Special:EntityData/Q55264128> <http://schema.org/dateModified> "2023-09-20T01:56:01Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://www.wikidata.org/wiki/Special:EntityData/Q55264128> <http://wikiba.se/ontology#statements> "8"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://www.wikidata.org/wiki/Special:EntityData/Q55264128> <http://wikiba.se/ontology#sitelinks> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://www.wikidata.org/wiki/Special:EntityData/Q55264128> <http://wikiba.se/ontology#identifiers> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.wikidata.org/entity/Q55264128> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://wikiba.se/ontology#Item> .
+<https://en.wikipedia.org/wiki/Tennessee_Volunteers_men%27s_tennis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Article> .
+<https://en.wikipedia.org/wiki/Tennessee_Volunteers_men%27s_tennis> <http://schema.org/about> <http://www.wikidata.org/entity/Q55264128> .
+<https://en.wikipedia.org/wiki/Tennessee_Volunteers_men%27s_tennis> <http://schema.org/inLanguage> "en" .
+<https://en.wikipedia.org/wiki/Tennessee_Volunteers_men%27s_tennis> <http://schema.org/isPartOf> <https://en.wikipedia.org/> .
+<https://en.wikipedia.org/wiki/Tennessee_Volunteers_men%27s_tennis> <http://schema.org/name> "Tennessee Volunteers men's tennis"@en .
+<https://en.wikipedia.org/> <http://wikiba.se/ontology#wikiGroup> "wikipedia" .
+<http://www.wikidata.org/entity/Q55264128> <http://www.wikidata.org/prop/direct/P17> <http://www.wikidata.org/entity/Q30> .
+<http://www.wikidata.org/entity/Q55264128> <http://www.wikidata.org/prop/direct/P2671> "/g/11f61521pt" .
+<http://www.wikidata.org/entity/Q55264128> <http://www.wikidata.org/prop/direct-normalized/P2671> <http://g.co/kg/g/11f61521pt> .
+<http://www.wikidata.org/entity/Q55264128> <http://www.wikidata.org/prop/direct/P831> <http://www.wikidata.org/entity/Q5134647> .
+<http://www.wikidata.org/entity/Q55264128> <http://www.wikidata.org/prop/direct/P910> <http://www.wikidata.org/entity/Q49176598> .
+<http://www.wikidata.org/entity/Q55264128> <http://www.wikidata.org/prop/direct/P31> <http://www.wikidata.org/entity/Q23900202> .
+<http://www.wikidata.org/entity/Q55264128> <http://www.wikidata.org/prop/direct/P31> <http://www.wikidata.org/entity/Q18558301> .
+<http://www.wikidata.org/entity/Q55264128> <http://www.wikidata.org/prop/direct/P6112> <http://www.wikidata.org/entity/Q25129238> .
+<http://www.wikidata.org/entity/Q55264128> <http://www.wikidata.org/prop/direct/P641> <http://www.wikidata.org/entity/Q847> .
+<http://www.wikidata.org/entity/Q55264128> <http://www.wikidata.org/prop/P17> <http://www.wikidata.org/entity/statement/Q55264128-2F53ECE9-982A-4986-8B27-A780A5DAABC4> .
+<http://www.wikidata.org/entity/statement/Q55264128-2F53ECE9-982A-4986-8B27-A780A5DAABC4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://wikiba.se/ontology#Statement> .
+<http://www.wikidata.org/entity/statement/Q55264128-2F53ECE9-982A-4986-8B27-A780A5DAABC4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://wikiba.se/ontology#BestRank> .
+<http://www.wikidata.org/entity/statement/Q55264128-2F53ECE9-982A-4986-8B27-A780A5DAABC4> <http://wikiba.se/ontology#rank> <http://wikiba.se/ontology#NormalRank> .
+<http://www.wikidata.org/entity/statement/Q55264128-2F53ECE9-982A-4986-8B27-A780A5DAABC4> <http://www.wikidata.org/prop/statement/P17> <http://www.wikidata.org/entity/Q30> .
+<http://www.wikidata.org/entity/Q55264128> <http://www.wikidata.org/prop/P2671> <http://www.wikidata.org/entity/statement/Q55264128-D7A6767E-6F0C-42E3-8886-6BEC09959DBC> .
+<http://www.wikidata.org/entity/statement/Q55264128-D7A6767E-6F0C-42E3-8886-6BEC09959DBC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://wikiba.se/ontology#Statement> .
+<http://www.wikidata.org/entity/statement/Q55264128-D7A6767E-6F0C-42E3-8886-6BEC09959DBC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://wikiba.se/ontology#BestRank> .
+<http://www.wikidata.org/entity/statement/Q55264128-D7A6767E-6F0C-42E3-8886-6BEC09959DBC> <http://wikiba.se/ontology#rank> <http://wikiba.se/ontology#NormalRank> .
+<http://www.wikidata.org/entity/statement/Q55264128-D7A6767E-6F0C-42E3-8886-6BEC09959DBC> <http://www.wikidata.org/prop/statement/P2671> "/g/11f61521pt" .
+<http://www.wikidata.org/entity/statement/Q55264128-D7A6767E-6F0C-42E3-8886-6BEC09959DBC> <http://www.wikidata.org/prop/statement/value-normalized/P2671> <http://g.co/kg/g/11f61521pt> .
+<http://www.wikidata.org/entity/Q55264128> <http://www.wikidata.org/prop/P831> <http://www.wikidata.org/entity/statement/Q55264128-259C5B4C-7BF8-43A8-B766-9D53916608C3> .
+<http://www.wikidata.org/entity/statement/Q55264128-259C5B4C-7BF8-43A8-B766-9D53916608C3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://wikiba.se/ontology#Statement> .
+<http://www.wikidata.org/entity/statement/Q55264128-259C5B4C-7BF8-43A8-B766-9D53916608C3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://wikiba.se/ontology#BestRank> .
+<http://www.wikidata.org/entity/statement/Q55264128-259C5B4C-7BF8-43A8-B766-9D53916608C3> <http://wikiba.se/ontology#rank> <http://wikiba.se/ontology#NormalRank> .
+<http://www.wikidata.org/entity/statement/Q55264128-259C5B4C-7BF8-43A8-B766-9D53916608C3> <http://www.wikidata.org/prop/statement/P831> <http://www.wikidata.org/entity/Q5134647> .
+<http://www.wikidata.org/entity/Q55264128> <http://www.wikidata.org/prop/P910> <http://www.wikidata.org/entity/statement/Q55264128-CA696410-9597-4C67-B51F-84CE04235D69> .
+<http://www.wikidata.org/entity/statement/Q55264128-CA696410-9597-4C67-B51F-84CE04235D69> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://wikiba.se/ontology#Statement> .
+<http://www.wikidata.org/entity/statement/Q55264128-CA696410-9597-4C67-B51F-84CE04235D69> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://wikiba.se/ontology#BestRank> .
+<http://www.wikidata.org/entity/statement/Q55264128-CA696410-9597-4C67-B51F-84CE04235D69> <http://wikiba.se/ontology#rank> <http://wikiba.se/ontology#NormalRank> .
+<http://www.wikidata.org/entity/statement/Q55264128-CA696410-9597-4C67-B51F-84CE04235D69> <http://www.wikidata.org/prop/statement/P910> <http://www.wikidata.org/entity/Q49176598> .
+<http://www.wikidata.org/entity/Q55264128> <http://www.wikidata.org/prop/P31> <http://www.wikidata.org/entity/statement/Q55264128-CA046B6F-40FF-4B5A-9BCB-9DF94AE6CDAE> .
+<http://www.wikidata.org/entity/statement/Q55264128-CA046B6F-40FF-4B5A-9BCB-9DF94AE6CDAE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://wikiba.se/ontology#Statement> .
+<http://www.wikidata.org/entity/statement/Q55264128-CA046B6F-40FF-4B5A-9BCB-9DF94AE6CDAE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://wikiba.se/ontology#BestRank> .
+<http://www.wikidata.org/entity/statement/Q55264128-CA046B6F-40FF-4B5A-9BCB-9DF94AE6CDAE> <http://wikiba.se/ontology#rank> <http://wikiba.se/ontology#NormalRank> .
+<http://www.wikidata.org/entity/statement/Q55264128-CA046B6F-40FF-4B5A-9BCB-9DF94AE6CDAE> <http://www.wikidata.org/prop/statement/P31> <http://www.wikidata.org/entity/Q23900202> .
+<http://www.wikidata.org/entity/Q55264128> <http://www.wikidata.org/prop/P31> <http://www.wikidata.org/entity/statement/Q55264128-5762D054-07EE-4F01-AF61-CE9B38E88AC9> .
+<http://www.wikidata.org/entity/statement/Q55264128-5762D054-07EE-4F01-AF61-CE9B38E88AC9> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://wikiba.se/ontology#Statement> .
+<http://www.wikidata.org/entity/statement/Q55264128-5762D054-07EE-4F01-AF61-CE9B38E88AC9> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://wikiba.se/ontology#BestRank> .
+<http://www.wikidata.org/entity/statement/Q55264128-5762D054-07EE-4F01-AF61-CE9B38E88AC9> <http://wikiba.se/ontology#rank> <http://wikiba.se/ontology#NormalRank> .
+<http://www.wikidata.org/entity/statement/Q55264128-5762D054-07EE-4F01-AF61-CE9B38E88AC9> <http://www.wikidata.org/prop/statement/P31> <http://www.wikidata.org/entity/Q18558301> .
+<http://www.wikidata.org/entity/Q55264128> <http://www.wikidata.org/prop/P6112> <http://www.wikidata.org/entity/statement/Q55264128-B2D2C95F-ED21-496D-8AEB-2112A32961BA> .
+<http://www.wikidata.org/entity/statement/Q55264128-B2D2C95F-ED21-496D-8AEB-2112A32961BA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://wikiba.se/ontology#Statement> .
+<http://www.wikidata.org/entity/statement/Q55264128-B2D2C95F-ED21-496D-8AEB-2112A32961BA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://wikiba.se/ontology#BestRank> .
+<http://www.wikidata.org/entity/statement/Q55264128-B2D2C95F-ED21-496D-8AEB-2112A32961BA> <http://wikiba.se/ontology#rank> <http://wikiba.se/ontology#NormalRank> .
+<http://www.wikidata.org/entity/statement/Q55264128-B2D2C95F-ED21-496D-8AEB-2112A32961BA> <http://www.wikidata.org/prop/statement/P6112> <http://www.wikidata.org/entity/Q25129238> .
+<http://www.wikidata.org/entity/Q55264128> <http://www.wikidata.org/prop/P641> <http://www.wikidata.org/entity/statement/Q55264128-210265B8-6321-4EED-A0F1-DAF3901D24D9> .
+<http://www.wikidata.org/entity/statement/Q55264128-210265B8-6321-4EED-A0F1-DAF3901D24D9> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://wikiba.se/ontology#Statement> .
+<http://www.wikidata.org/entity/statement/Q55264128-210265B8-6321-4EED-A0F1-DAF3901D24D9> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://wikiba.se/ontology#BestRank> .
+<http://www.wikidata.org/entity/statement/Q55264128-210265B8-6321-4EED-A0F1-DAF3901D24D9> <http://wikiba.se/ontology#rank> <http://wikiba.se/ontology#NormalRank> .
+<http://www.wikidata.org/entity/statement/Q55264128-210265B8-6321-4EED-A0F1-DAF3901D24D9> <http://www.wikidata.org/prop/statement/P641> <http://www.wikidata.org/entity/Q847> .
+<http://www.wikidata.org/entity/Q55264128> <http://www.w3.org/2000/01/rdf-schema#label> "Tennessee Volunteers men's tennis"@en .
+<http://www.wikidata.org/entity/Q55264128> <http://www.w3.org/2004/02/skos/core#prefLabel> "Tennessee Volunteers men's tennis"@en .
+<http://www.wikidata.org/entity/Q55264128> <http://schema.org/name> "Tennessee Volunteers men's tennis"@en .
+<http://www.wikidata.org/entity/Q55264128> <http://www.w3.org/2000/01/rdf-schema#label> "\u0645\u062A\u0637\u0648\u0639\u0629 \u062A\u064A\u0646\u064A\u0633\u064A \u0644\u0643\u0631\u0629 \u0627\u0644\u0645\u0636\u0631\u0628 \u0644\u0644\u0631\u062C\u0627\u0644"@ar .
+<http://www.wikidata.org/entity/Q55264128> <http://www.w3.org/2004/02/skos/core#prefLabel> "\u0645\u062A\u0637\u0648\u0639\u0629 \u062A\u064A\u0646\u064A\u0633\u064A \u0644\u0643\u0631\u0629 \u0627\u0644\u0645\u0636\u0631\u0628 \u0644\u0644\u0631\u062C\u0627\u0644"@ar .
+<http://www.wikidata.org/entity/Q55264128> <http://schema.org/name> "\u0645\u062A\u0637\u0648\u0639\u0629 \u062A\u064A\u0646\u064A\u0633\u064A \u0644\u0643\u0631\u0629 \u0627\u0644\u0645\u0636\u0631\u0628 \u0644\u0644\u0631\u062C\u0627\u0644"@ar .
+<http://www.wikidata.org/entity/Q55264128> <http://schema.org/description> "men's tennis team of the University of Tennessee, Knoxville"@en .
+<http://www.wikidata.org/entity/Q55264128> <http://schema.org/description> "\u0641\u0631\u064A\u0642 \u0643\u0631\u0629 \u0627\u0644\u0645\u0636\u0631\u0628 \u0644\u0644\u0631\u062C\u0627\u0644 \u0627\u0644\u062A\u0627\u0628\u0639 \u0644\u062C\u0627\u0645\u0639\u0629 \u062A\u064A\u0646\u064A\u0633\u064A \u0641\u064A \u0646\u0648\u0643\u0633\u0641\u064A\u0644"@ar .
+<http://www.wikidata.org/entity/Q55264128> <http://www.w3.org/2004/02/skos/core#altLabel> "Tennessee Volunteers tennis"@en .
+<http://www.wikidata.org/entity/Q30> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://wikiba.se/ontology#Item> .
+<http://www.wikidata.org/entity/Q30> <http://www.w3.org/2000/01/rdf-schema#label> "United States"@en .
+<http://www.wikidata.org/entity/Q30> <http://www.w3.org/2004/02/skos/core#prefLabel> "United States"@en .
+<http://www.wikidata.org/entity/Q30> <http://schema.org/name> "United States"@en .
+<http://www.wikidata.org/entity/Q30> <http://www.w3.org/2000/01/rdf-schema#label> "United States"@mul .
+<http://www.wikidata.org/entity/Q30> <http://www.w3.org/2004/02/skos/core#prefLabel> "United States"@mul .
+<http://www.wikidata.org/entity/Q30> <http://schema.org/name> "United States"@mul .
+<http://www.wikidata.org/entity/Q30> <http://schema.org/description> "country located primarily in North America"@en .
+<http://www.wikidata.org/entity/P17> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://wikiba.se/ontology#Property> .
+<http://www.wikidata.org/entity/P17> <http://www.w3.org/2000/01/rdf-schema#label> "country"@en .
+<http://www.wikidata.org/entity/P17> <http://www.w3.org/2004/02/skos/core#prefLabel> "country"@en .
+<http://www.wikidata.org/entity/P17> <http://schema.org/name> "country"@en .
+<http://www.wikidata.org/entity/P17> <http://schema.org/description> "sovereign state that this item is in (not to be used for human beings)"@en .
+<http://www.wikidata.org/entity/P17> <http://wikiba.se/ontology#propertyType> <http://wikiba.se/ontology#WikibaseItem> .
+<http://www.wikidata.org/entity/P17> <http://wikiba.se/ontology#directClaim> <http://www.wikidata.org/prop/direct/P17> .
+<http://www.wikidata.org/entity/P17> <http://wikiba.se/ontology#claim> <http://www.wikidata.org/prop/P17> .
+<http://www.wikidata.org/entity/P17> <http://wikiba.se/ontology#statementProperty> <http://www.wikidata.org/prop/statement/P17> .
+<http://www.wikidata.org/entity/P17> <http://wikiba.se/ontology#statementValue> <http://www.wikidata.org/prop/statement/value/P17> .
+<http://www.wikidata.org/entity/P17> <http://wikiba.se/ontology#qualifier> <http://www.wikidata.org/prop/qualifier/P17> .
+<http://www.wikidata.org/entity/P17> <http://wikiba.se/ontology#qualifierValue> <http://www.wikidata.org/prop/qualifier/value/P17> .
+<http://www.wikidata.org/entity/P17> <http://wikiba.se/ontology#reference> <http://www.wikidata.org/prop/reference/P17> .
+<http://www.wikidata.org/entity/P17> <http://wikiba.se/ontology#referenceValue> <http://www.wikidata.org/prop/reference/value/P17> .
+<http://www.wikidata.org/entity/P17> <http://wikiba.se/ontology#novalue> <http://www.wikidata.org/prop/novalue/P17> .
+<http://www.wikidata.org/prop/P17> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.wikidata.org/prop/statement/value/P17> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.wikidata.org/prop/qualifier/value/P17> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.wikidata.org/prop/reference/value/P17> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.wikidata.org/prop/direct/P17> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.wikidata.org/prop/statement/P17> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.wikidata.org/prop/qualifier/P17> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.wikidata.org/prop/reference/P17> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.wikidata.org/prop/novalue/P17> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.wikidata.org/prop/novalue/P17> <http://www.w3.org/2002/07/owl#complementOf> _:67baa1dbbc8d4f6b0b3d4a74a3ee0290 .
+_:67baa1dbbc8d4f6b0b3d4a74a3ee0290 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:67baa1dbbc8d4f6b0b3d4a74a3ee0290 <http://www.w3.org/2002/07/owl#onProperty> <http://www.wikidata.org/prop/direct/P17> .
+_:67baa1dbbc8d4f6b0b3d4a74a3ee0290 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002/07/owl#Thing> .
+<http://www.wikidata.org/entity/P2671> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://wikiba.se/ontology#Property> .
+<http://www.wikidata.org/entity/P2671> <http://www.w3.org/2000/01/rdf-schema#label> "Google Knowledge Graph ID"@en .
+<http://www.wikidata.org/entity/P2671> <http://www.w3.org/2004/02/skos/core#prefLabel> "Google Knowledge Graph ID"@en .
+<http://www.wikidata.org/entity/P2671> <http://schema.org/name> "Google Knowledge Graph ID"@en .
+<http://www.wikidata.org/entity/P2671> <http://schema.org/description> "identifier for Google Knowledge Graph API, starting with \"/g/\". For IDs starting with \"/m/\", use Freebase ID (P646)"@en .
+<http://www.wikidata.org/entity/P2671> <http://wikiba.se/ontology#propertyType> <http://wikiba.se/ontology#ExternalId> .
+<http://www.wikidata.org/entity/P2671> <http://wikiba.se/ontology#directClaim> <http://www.wikidata.org/prop/direct/P2671> .
+<http://www.wikidata.org/entity/P2671> <http://wikiba.se/ontology#claim> <http://www.wikidata.org/prop/P2671> .
+<http://www.wikidata.org/entity/P2671> <http://wikiba.se/ontology#statementProperty> <http://www.wikidata.org/prop/statement/P2671> .
+<http://www.wikidata.org/entity/P2671> <http://wikiba.se/ontology#statementValue> <http://www.wikidata.org/prop/statement/value/P2671> .
+<http://www.wikidata.org/entity/P2671> <http://wikiba.se/ontology#qualifier> <http://www.wikidata.org/prop/qualifier/P2671> .
+<http://www.wikidata.org/entity/P2671> <http://wikiba.se/ontology#qualifierValue> <http://www.wikidata.org/prop/qualifier/value/P2671> .
+<http://www.wikidata.org/entity/P2671> <http://wikiba.se/ontology#reference> <http://www.wikidata.org/prop/reference/P2671> .
+<http://www.wikidata.org/entity/P2671> <http://wikiba.se/ontology#referenceValue> <http://www.wikidata.org/prop/reference/value/P2671> .
+<http://www.wikidata.org/entity/P2671> <http://wikiba.se/ontology#novalue> <http://www.wikidata.org/prop/novalue/P2671> .
+<http://www.wikidata.org/entity/P2671> <http://wikiba.se/ontology#directClaimNormalized> <http://www.wikidata.org/prop/direct-normalized/P2671> .
+<http://www.wikidata.org/entity/P2671> <http://wikiba.se/ontology#statementValueNormalized> <http://www.wikidata.org/prop/statement/value-normalized/P2671> .
+<http://www.wikidata.org/entity/P2671> <http://wikiba.se/ontology#qualifierValueNormalized> <http://www.wikidata.org/prop/qualifier/value-normalized/P2671> .
+<http://www.wikidata.org/entity/P2671> <http://wikiba.se/ontology#referenceValueNormalized> <http://www.wikidata.org/prop/reference/value-normalized/P2671> .
+<http://www.wikidata.org/prop/P2671> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.wikidata.org/prop/statement/value/P2671> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.wikidata.org/prop/qualifier/value/P2671> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.wikidata.org/prop/reference/value/P2671> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.wikidata.org/prop/direct/P2671> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.wikidata.org/prop/statement/P2671> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.wikidata.org/prop/qualifier/P2671> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.wikidata.org/prop/reference/P2671> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.wikidata.org/prop/statement/value-normalized/P2671> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.wikidata.org/prop/qualifier/value-normalized/P2671> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.wikidata.org/prop/reference/value-normalized/P2671> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.wikidata.org/prop/direct-normalized/P2671> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.wikidata.org/prop/novalue/P2671> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.wikidata.org/prop/novalue/P2671> <http://www.w3.org/2002/07/owl#complementOf> _:65accf8c5265233a873cf53510c73fa5 .
+_:65accf8c5265233a873cf53510c73fa5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:65accf8c5265233a873cf53510c73fa5 <http://www.w3.org/2002/07/owl#onProperty> <http://www.wikidata.org/prop/direct/P2671> .
+_:65accf8c5265233a873cf53510c73fa5 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002/07/owl#Thing> .
+<http://www.wikidata.org/entity/Q5134647> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://wikiba.se/ontology#Item> .
+<http://www.wikidata.org/entity/Q5134647> <http://www.w3.org/2000/01/rdf-schema#label> "Tennessee Volunteers"@en .
+<http://www.wikidata.org/entity/Q5134647> <http://www.w3.org/2004/02/skos/core#prefLabel> "Tennessee Volunteers"@en .
+<http://www.wikidata.org/entity/Q5134647> <http://schema.org/name> "Tennessee Volunteers"@en .
+<http://www.wikidata.org/entity/Q5134647> <http://schema.org/description> "intercollegiate sports teams of the University of Tennessee at Knoxville"@en .
+<http://www.wikidata.org/entity/P831> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://wikiba.se/ontology#Property> .
+<http://www.wikidata.org/entity/P831> <http://www.w3.org/2000/01/rdf-schema#label> "parent club"@en .
+<http://www.wikidata.org/entity/P831> <http://www.w3.org/2004/02/skos/core#prefLabel> "parent club"@en .
+<http://www.wikidata.org/entity/P831> <http://schema.org/name> "parent club"@en .
+<http://www.wikidata.org/entity/P831> <http://schema.org/description> "parent club of this team"@en .
+<http://www.wikidata.org/entity/P831> <http://wikiba.se/ontology#propertyType> <http://wikiba.se/ontology#WikibaseItem> .
+<http://www.wikidata.org/entity/P831> <http://wikiba.se/ontology#directClaim> <http://www.wikidata.org/prop/direct/P831> .
+<http://www.wikidata.org/entity/P831> <http://wikiba.se/ontology#claim> <http://www.wikidata.org/prop/P831> .
+<http://www.wikidata.org/entity/P831> <http://wikiba.se/ontology#statementProperty> <http://www.wikidata.org/prop/statement/P831> .
+<http://www.wikidata.org/entity/P831> <http://wikiba.se/ontology#statementValue> <http://www.wikidata.org/prop/statement/value/P831> .
+<http://www.wikidata.org/entity/P831> <http://wikiba.se/ontology#qualifier> <http://www.wikidata.org/prop/qualifier/P831> .
+<http://www.wikidata.org/entity/P831> <http://wikiba.se/ontology#qualifierValue> <http://www.wikidata.org/prop/qualifier/value/P831> .
+<http://www.wikidata.org/entity/P831> <http://wikiba.se/ontology#reference> <http://www.wikidata.org/prop/reference/P831> .
+<http://www.wikidata.org/entity/P831> <http://wikiba.se/ontology#referenceValue> <http://www.wikidata.org/prop/reference/value/P831> .
+<http://www.wikidata.org/entity/P831> <http://wikiba.se/ontology#novalue> <http://www.wikidata.org/prop/novalue/P831> .
+<http://www.wikidata.org/prop/P831> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.wikidata.org/prop/statement/value/P831> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.wikidata.org/prop/qualifier/value/P831> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.wikidata.org/prop/reference/value/P831> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.wikidata.org/prop/direct/P831> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.wikidata.org/prop/statement/P831> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.wikidata.org/prop/qualifier/P831> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.wikidata.org/prop/reference/P831> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.wikidata.org/prop/novalue/P831> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.wikidata.org/prop/novalue/P831> <http://www.w3.org/2002/07/owl#complementOf> _:fa8b088eeade105f1a25f031a7c0282f .
+_:fa8b088eeade105f1a25f031a7c0282f <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:fa8b088eeade105f1a25f031a7c0282f <http://www.w3.org/2002/07/owl#onProperty> <http://www.wikidata.org/prop/direct/P831> .
+_:fa8b088eeade105f1a25f031a7c0282f <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002/07/owl#Thing> .
+<http://www.wikidata.org/entity/Q49176598> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://wikiba.se/ontology#Item> .
+<http://www.wikidata.org/entity/Q49176598> <http://www.w3.org/2000/01/rdf-schema#label> "Category:Tennessee Volunteers men's tennis"@en .
+<http://www.wikidata.org/entity/Q49176598> <http://www.w3.org/2004/02/skos/core#prefLabel> "Category:Tennessee Volunteers men's tennis"@en .
+<http://www.wikidata.org/entity/Q49176598> <http://schema.org/name> "Category:Tennessee Volunteers men's tennis"@en .
+<http://www.wikidata.org/entity/Q49176598> <http://schema.org/description> "Wikimedia category"@en .
+<http://www.wikidata.org/entity/P910> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://wikiba.se/ontology#Property> .
+<http://www.wikidata.org/entity/P910> <http://www.w3.org/2000/01/rdf-schema#label> "topic's main category"@en .
+<http://www.wikidata.org/entity/P910> <http://www.w3.org/2004/02/skos/core#prefLabel> "topic's main category"@en .
+<http://www.wikidata.org/entity/P910> <http://schema.org/name> "topic's main category"@en .
+<http://www.wikidata.org/entity/P910> <http://schema.org/description> "main Wikimedia category"@en .
+<http://www.wikidata.org/entity/P910> <http://wikiba.se/ontology#propertyType> <http://wikiba.se/ontology#WikibaseItem> .
+<http://www.wikidata.org/entity/P910> <http://wikiba.se/ontology#directClaim> <http://www.wikidata.org/prop/direct/P910> .
+<http://www.wikidata.org/entity/P910> <http://wikiba.se/ontology#claim> <http://www.wikidata.org/prop/P910> .
+<http://www.wikidata.org/entity/P910> <http://wikiba.se/ontology#statementProperty> <http://www.wikidata.org/prop/statement/P910> .
+<http://www.wikidata.org/entity/P910> <http://wikiba.se/ontology#statementValue> <http://www.wikidata.org/prop/statement/value/P910> .
+<http://www.wikidata.org/entity/P910> <http://wikiba.se/ontology#qualifier> <http://www.wikidata.org/prop/qualifier/P910> .
+<http://www.wikidata.org/entity/P910> <http://wikiba.se/ontology#qualifierValue> <http://www.wikidata.org/prop/qualifier/value/P910> .
+<http://www.wikidata.org/entity/P910> <http://wikiba.se/ontology#reference> <http://www.wikidata.org/prop/reference/P910> .
+<http://www.wikidata.org/entity/P910> <http://wikiba.se/ontology#referenceValue> <http://www.wikidata.org/prop/reference/value/P910> .
+<http://www.wikidata.org/entity/P910> <http://wikiba.se/ontology#novalue> <http://www.wikidata.org/prop/novalue/P910> .
+<http://www.wikidata.org/prop/P910> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.wikidata.org/prop/statement/value/P910> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.wikidata.org/prop/qualifier/value/P910> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.wikidata.org/prop/reference/value/P910> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.wikidata.org/prop/direct/P910> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.wikidata.org/prop/statement/P910> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.wikidata.org/prop/qualifier/P910> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.wikidata.org/prop/reference/P910> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.wikidata.org/prop/novalue/P910> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.wikidata.org/prop/novalue/P910> <http://www.w3.org/2002/07/owl#complementOf> _:06be9361e78d041ce01df69013cf6906 .
+_:06be9361e78d041ce01df69013cf6906 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:06be9361e78d041ce01df69013cf6906 <http://www.w3.org/2002/07/owl#onProperty> <http://www.wikidata.org/prop/direct/P910> .
+_:06be9361e78d041ce01df69013cf6906 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002/07/owl#Thing> .
+<http://www.wikidata.org/entity/Q23900202> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://wikiba.se/ontology#Item> .
+<http://www.wikidata.org/entity/Q23900202> <http://www.w3.org/2000/01/rdf-schema#label> "tennis team"@en .
+<http://www.wikidata.org/entity/Q23900202> <http://www.w3.org/2004/02/skos/core#prefLabel> "tennis team"@en .
+<http://www.wikidata.org/entity/Q23900202> <http://schema.org/name> "tennis team"@en .
+<http://www.wikidata.org/entity/Q23900202> <http://schema.org/description> "group of people that play tennis"@en .
+<http://www.wikidata.org/entity/P31> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://wikiba.se/ontology#Property> .
+<http://www.wikidata.org/entity/P31> <http://www.w3.org/2000/01/rdf-schema#label> "instance of"@en .
+<http://www.wikidata.org/entity/P31> <http://www.w3.org/2004/02/skos/core#prefLabel> "instance of"@en .
+<http://www.wikidata.org/entity/P31> <http://schema.org/name> "instance of"@en .
+<http://www.wikidata.org/entity/P31> <http://schema.org/description> "type to which this subject corresponds/belongs. Different from P279 (subclass of); for example: K2 is an instance of mountain; volcanoes form a subclass of mountains, and the volcano is a type (instance) of volcanic landform"@en .
+<http://www.wikidata.org/entity/P31> <http://wikiba.se/ontology#propertyType> <http://wikiba.se/ontology#WikibaseItem> .
+<http://www.wikidata.org/entity/P31> <http://wikiba.se/ontology#directClaim> <http://www.wikidata.org/prop/direct/P31> .
+<http://www.wikidata.org/entity/P31> <http://wikiba.se/ontology#claim> <http://www.wikidata.org/prop/P31> .
+<http://www.wikidata.org/entity/P31> <http://wikiba.se/ontology#statementProperty> <http://www.wikidata.org/prop/statement/P31> .
+<http://www.wikidata.org/entity/P31> <http://wikiba.se/ontology#statementValue> <http://www.wikidata.org/prop/statement/value/P31> .
+<http://www.wikidata.org/entity/P31> <http://wikiba.se/ontology#qualifier> <http://www.wikidata.org/prop/qualifier/P31> .
+<http://www.wikidata.org/entity/P31> <http://wikiba.se/ontology#qualifierValue> <http://www.wikidata.org/prop/qualifier/value/P31> .
+<http://www.wikidata.org/entity/P31> <http://wikiba.se/ontology#reference> <http://www.wikidata.org/prop/reference/P31> .
+<http://www.wikidata.org/entity/P31> <http://wikiba.se/ontology#referenceValue> <http://www.wikidata.org/prop/reference/value/P31> .
+<http://www.wikidata.org/entity/P31> <http://wikiba.se/ontology#novalue> <http://www.wikidata.org/prop/novalue/P31> .
+<http://www.wikidata.org/prop/P31> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.wikidata.org/prop/statement/value/P31> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.wikidata.org/prop/qualifier/value/P31> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.wikidata.org/prop/reference/value/P31> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.wikidata.org/prop/direct/P31> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.wikidata.org/prop/statement/P31> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.wikidata.org/prop/qualifier/P31> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.wikidata.org/prop/reference/P31> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.wikidata.org/prop/novalue/P31> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.wikidata.org/prop/novalue/P31> <http://www.w3.org/2002/07/owl#complementOf> _:0b8bd71b926a65ca3fa72e5d9103e4d6 .
+_:0b8bd71b926a65ca3fa72e5d9103e4d6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:0b8bd71b926a65ca3fa72e5d9103e4d6 <http://www.w3.org/2002/07/owl#onProperty> <http://www.wikidata.org/prop/direct/P31> .
+_:0b8bd71b926a65ca3fa72e5d9103e4d6 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002/07/owl#Thing> .
+<http://www.wikidata.org/entity/Q18558301> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://wikiba.se/ontology#Item> .
+<http://www.wikidata.org/entity/Q18558301> <http://www.w3.org/2000/01/rdf-schema#label> "college sports team"@en .
+<http://www.wikidata.org/entity/Q18558301> <http://www.w3.org/2004/02/skos/core#prefLabel> "college sports team"@en .
+<http://www.wikidata.org/entity/Q18558301> <http://schema.org/name> "college sports team"@en .
+<http://www.wikidata.org/entity/Q18558301> <http://schema.org/description> "sports team in a particular sport composed of collegiate players representing their college or university"@en .
+<http://www.wikidata.org/entity/Q25129238> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://wikiba.se/ontology#Item> .
+<http://www.wikidata.org/entity/Q25129238> <http://www.w3.org/2000/01/rdf-schema#label> "Category:Tennessee Volunteers men's tennis players"@en .
+<http://www.wikidata.org/entity/Q25129238> <http://www.w3.org/2004/02/skos/core#prefLabel> "Category:Tennessee Volunteers men's tennis players"@en .
+<http://www.wikidata.org/entity/Q25129238> <http://schema.org/name> "Category:Tennessee Volunteers men's tennis players"@en .
+<http://www.wikidata.org/entity/Q25129238> <http://schema.org/description> "Wikimedia category"@en .
+<http://www.wikidata.org/entity/P6112> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://wikiba.se/ontology#Property> .
+<http://www.wikidata.org/entity/P6112> <http://www.w3.org/2000/01/rdf-schema#label> "category for members of a team"@en .
+<http://www.wikidata.org/entity/P6112> <http://www.w3.org/2004/02/skos/core#prefLabel> "category for members of a team"@en .
+<http://www.wikidata.org/entity/P6112> <http://schema.org/name> "category for members of a team"@en .
+<http://www.wikidata.org/entity/P6112> <http://schema.org/description> "Wikimedia category for players playing for a sports team"@en .
+<http://www.wikidata.org/entity/P6112> <http://wikiba.se/ontology#propertyType> <http://wikiba.se/ontology#WikibaseItem> .
+<http://www.wikidata.org/entity/P6112> <http://wikiba.se/ontology#directClaim> <http://www.wikidata.org/prop/direct/P6112> .
+<http://www.wikidata.org/entity/P6112> <http://wikiba.se/ontology#claim> <http://www.wikidata.org/prop/P6112> .
+<http://www.wikidata.org/entity/P6112> <http://wikiba.se/ontology#statementProperty> <http://www.wikidata.org/prop/statement/P6112> .
+<http://www.wikidata.org/entity/P6112> <http://wikiba.se/ontology#statementValue> <http://www.wikidata.org/prop/statement/value/P6112> .
+<http://www.wikidata.org/entity/P6112> <http://wikiba.se/ontology#qualifier> <http://www.wikidata.org/prop/qualifier/P6112> .
+<http://www.wikidata.org/entity/P6112> <http://wikiba.se/ontology#qualifierValue> <http://www.wikidata.org/prop/qualifier/value/P6112> .
+<http://www.wikidata.org/entity/P6112> <http://wikiba.se/ontology#reference> <http://www.wikidata.org/prop/reference/P6112> .
+<http://www.wikidata.org/entity/P6112> <http://wikiba.se/ontology#referenceValue> <http://www.wikidata.org/prop/reference/value/P6112> .
+<http://www.wikidata.org/entity/P6112> <http://wikiba.se/ontology#novalue> <http://www.wikidata.org/prop/novalue/P6112> .
+<http://www.wikidata.org/prop/P6112> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.wikidata.org/prop/statement/value/P6112> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.wikidata.org/prop/qualifier/value/P6112> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.wikidata.org/prop/reference/value/P6112> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.wikidata.org/prop/direct/P6112> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.wikidata.org/prop/statement/P6112> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.wikidata.org/prop/qualifier/P6112> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.wikidata.org/prop/reference/P6112> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.wikidata.org/prop/novalue/P6112> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.wikidata.org/prop/novalue/P6112> <http://www.w3.org/2002/07/owl#complementOf> _:de2fd20d948d2a182344b81f5f3e6dba .
+_:de2fd20d948d2a182344b81f5f3e6dba <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:de2fd20d948d2a182344b81f5f3e6dba <http://www.w3.org/2002/07/owl#onProperty> <http://www.wikidata.org/prop/direct/P6112> .
+_:de2fd20d948d2a182344b81f5f3e6dba <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002/07/owl#Thing> .
+<http://www.wikidata.org/entity/Q847> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://wikiba.se/ontology#Item> .
+<http://www.wikidata.org/entity/Q847> <http://www.w3.org/2000/01/rdf-schema#label> "tennis"@en .
+<http://www.wikidata.org/entity/Q847> <http://www.w3.org/2004/02/skos/core#prefLabel> "tennis"@en .
+<http://www.wikidata.org/entity/Q847> <http://schema.org/name> "tennis"@en .
+<http://www.wikidata.org/entity/Q847> <http://schema.org/description> "racket sport played on a court bisected by a net"@en .
+<http://www.wikidata.org/entity/P641> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://wikiba.se/ontology#Property> .
+<http://www.wikidata.org/entity/P641> <http://www.w3.org/2000/01/rdf-schema#label> "sport"@en .
+<http://www.wikidata.org/entity/P641> <http://www.w3.org/2004/02/skos/core#prefLabel> "sport"@en .
+<http://www.wikidata.org/entity/P641> <http://schema.org/name> "sport"@en .
+<http://www.wikidata.org/entity/P641> <http://schema.org/description> "sport that the subject participates or participated in or is associated with"@en .
+<http://www.wikidata.org/entity/P641> <http://wikiba.se/ontology#propertyType> <http://wikiba.se/ontology#WikibaseItem> .
+<http://www.wikidata.org/entity/P641> <http://wikiba.se/ontology#directClaim> <http://www.wikidata.org/prop/direct/P641> .
+<http://www.wikidata.org/entity/P641> <http://wikiba.se/ontology#claim> <http://www.wikidata.org/prop/P641> .
+<http://www.wikidata.org/entity/P641> <http://wikiba.se/ontology#statementProperty> <http://www.wikidata.org/prop/statement/P641> .
+<http://www.wikidata.org/entity/P641> <http://wikiba.se/ontology#statementValue> <http://www.wikidata.org/prop/statement/value/P641> .
+<http://www.wikidata.org/entity/P641> <http://wikiba.se/ontology#qualifier> <http://www.wikidata.org/prop/qualifier/P641> .
+<http://www.wikidata.org/entity/P641> <http://wikiba.se/ontology#qualifierValue> <http://www.wikidata.org/prop/qualifier/value/P641> .
+<http://www.wikidata.org/entity/P641> <http://wikiba.se/ontology#reference> <http://www.wikidata.org/prop/reference/P641> .
+<http://www.wikidata.org/entity/P641> <http://wikiba.se/ontology#referenceValue> <http://www.wikidata.org/prop/reference/value/P641> .
+<http://www.wikidata.org/entity/P641> <http://wikiba.se/ontology#novalue> <http://www.wikidata.org/prop/novalue/P641> .
+<http://www.wikidata.org/prop/P641> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.wikidata.org/prop/statement/value/P641> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.wikidata.org/prop/qualifier/value/P641> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.wikidata.org/prop/reference/value/P641> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.wikidata.org/prop/direct/P641> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.wikidata.org/prop/statement/P641> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.wikidata.org/prop/qualifier/P641> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.wikidata.org/prop/reference/P641> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.wikidata.org/prop/novalue/P641> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.wikidata.org/prop/novalue/P641> <http://www.w3.org/2002/07/owl#complementOf> _:5a52da304d3e45dae52dca4b5d8d3c1d .
+_:5a52da304d3e45dae52dca4b5d8d3c1d <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:5a52da304d3e45dae52dca4b5d8d3c1d <http://www.w3.org/2002/07/owl#onProperty> <http://www.wikidata.org/prop/direct/P641> .
+_:5a52da304d3e45dae52dca4b5d8d3c1d <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002/07/owl#Thing> .
+<http://www.wikidata.org/entity/Q107881652> <http://www.w3.org/2002/07/owl#sameAs> <http://www.wikidata.org/entity/Q55264128> .

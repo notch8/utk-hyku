@@ -1,0 +1,100 @@
+<http://id.loc.gov/authorities/childrensSubjects/sj96006364> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Topic> .
+<http://id.loc.gov/authorities/childrensSubjects/sj96006364> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/authorities/childrensSubjects/sj96006364> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Water power"@en .
+<http://id.loc.gov/authorities/childrensSubjects/sj96006364> <http://www.loc.gov/mads/rdf/v1#elementList> _:b7iddOtlocdOtgovauthoritieschildrensSubjectssj96006364 .
+_:b7iddOtlocdOtgovauthoritieschildrensSubjectssj96006364 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b8iddOtlocdOtgovauthoritieschildrensSubjectssj96006364 .
+_:b7iddOtlocdOtgovauthoritieschildrensSubjectssj96006364 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:b8iddOtlocdOtgovauthoritieschildrensSubjectssj96006364 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#TopicElement> .
+_:b8iddOtlocdOtgovauthoritieschildrensSubjectssj96006364 <http://www.loc.gov/mads/rdf/v1#elementValue> "Water power"@en .
+<http://id.loc.gov/authorities/childrensSubjects/sj96006364> <http://id.loc.gov/ontologies/bflc/marcKey> "150 0$aWater power" .
+<http://id.loc.gov/authorities/childrensSubjects/sj96006364> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection> <http://id.loc.gov/authorities/subjects/collection_LCSH_Childrens> .
+<http://id.loc.gov/authorities/childrensSubjects/sj96006364> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/20151694> .
+<http://id.loc.gov/resources/works/20151694> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+<http://id.loc.gov/resources/works/20151694> <http://id.loc.gov/ontologies/bflc/aap> "Alkire, Jessie. Water energy" .
+<http://id.loc.gov/authorities/childrensSubjects/sj96006364> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/21719384> .
+<http://id.loc.gov/resources/works/21719384> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+<http://id.loc.gov/resources/works/21719384> <http://id.loc.gov/ontologies/bflc/aap> "Alkire, Jessie. Water energy" .
+<http://id.loc.gov/authorities/childrensSubjects/sj96006364> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/581947> .
+<http://id.loc.gov/resources/works/581947> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+<http://id.loc.gov/resources/works/581947> <http://id.loc.gov/ontologies/bflc/aap> "Bailey, Donna. Energy from wind and water" .
+<http://id.loc.gov/authorities/childrensSubjects/sj96006364> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/19090383> .
+<http://id.loc.gov/resources/works/19090383> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+<http://id.loc.gov/resources/works/19090383> <http://id.loc.gov/ontologies/bflc/aap> "Currie, Stephen, 1960-. What is the future of hydropower" .
+<http://id.loc.gov/authorities/childrensSubjects/sj96006364> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/23053874> .
+<http://id.loc.gov/resources/works/23053874> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+<http://id.loc.gov/resources/works/23053874> <http://id.loc.gov/ontologies/bflc/aap> "Dickmann, Nancy. Harnessing wave and tidal energy" .
+<http://id.loc.gov/authorities/childrensSubjects/sj96006364> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/12632425> .
+<http://id.loc.gov/resources/works/12632425> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+<http://id.loc.gov/resources/works/12632425> <http://id.loc.gov/ontologies/bflc/aap> "Draper, Allison Stark. Hydropower of the future" .
+<http://id.loc.gov/authorities/childrensSubjects/sj96006364> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/11815396> .
+<http://id.loc.gov/resources/works/11815396> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+<http://id.loc.gov/resources/works/11815396> <http://id.loc.gov/ontologies/bflc/aap> "Gibson, Diane, 1966-. Hydroelectricity" .
+<http://id.loc.gov/authorities/childrensSubjects/sj96006364> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/16187909> .
+<http://id.loc.gov/resources/works/16187909> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+<http://id.loc.gov/resources/works/16187909> <http://id.loc.gov/ontologies/bflc/aap> "Goodman, Polly. Understanding water power" .
+<http://id.loc.gov/authorities/childrensSubjects/sj96006364> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/725167> .
+<http://id.loc.gov/resources/works/725167> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+<http://id.loc.gov/resources/works/725167> <http://id.loc.gov/ontologies/bflc/aap> "Graham, Ian, 1953-. Water power" .
+<http://id.loc.gov/authorities/childrensSubjects/sj96006364> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/13153058> .
+<http://id.loc.gov/resources/works/13153058> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+<http://id.loc.gov/resources/works/13153058> <http://id.loc.gov/ontologies/bflc/aap> "Harris, William, 1964-. Water makes hydropower" .
+<http://id.loc.gov/authorities/childrensSubjects/sj96006364> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/411143> .
+<http://id.loc.gov/resources/works/411143> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+<http://id.loc.gov/resources/works/411143> <http://id.loc.gov/ontologies/bflc/aap> "Lewis, Alun, 1947-. Water" .
+<http://id.loc.gov/authorities/childrensSubjects/sj96006364> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/15435241> .
+<http://id.loc.gov/resources/works/15435241> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+<http://id.loc.gov/resources/works/15435241> <http://id.loc.gov/ontologies/bflc/aap> "Morris, Neil, 1946-. Water power" .
+<http://id.loc.gov/authorities/childrensSubjects/sj96006364> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/20148884> .
+<http://id.loc.gov/resources/works/20148884> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+<http://id.loc.gov/resources/works/20148884> <http://id.loc.gov/ontologies/bflc/aap> "Olson, Elsie, 1986-. Water energy" .
+<http://id.loc.gov/authorities/childrensSubjects/sj96006364> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/21716045> .
+<http://id.loc.gov/resources/works/21716045> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+<http://id.loc.gov/resources/works/21716045> <http://id.loc.gov/ontologies/bflc/aap> "Olson, Elsie, 1986-. Water energy" .
+<http://id.loc.gov/authorities/childrensSubjects/sj96006364> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/14185214> .
+<http://id.loc.gov/resources/works/14185214> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+<http://id.loc.gov/resources/works/14185214> <http://id.loc.gov/ontologies/bflc/aap> "Oxlade, Chris. Water power" .
+<http://id.loc.gov/authorities/childrensSubjects/sj96006364> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/13328760> .
+<http://id.loc.gov/resources/works/13328760> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+<http://id.loc.gov/resources/works/13328760> <http://id.loc.gov/ontologies/bflc/aap> "Parker, Steve, 1952-. Water power" .
+<http://id.loc.gov/authorities/childrensSubjects/sj96006364> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/1388130> .
+<http://id.loc.gov/resources/works/1388130> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+<http://id.loc.gov/resources/works/1388130> <http://id.loc.gov/ontologies/bflc/aap> "Payne, Sherry Neuwirth. Wind and water energy" .
+<http://id.loc.gov/authorities/childrensSubjects/sj96006364> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/13316272> .
+<http://id.loc.gov/resources/works/13316272> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+<http://id.loc.gov/resources/works/13316272> <http://id.loc.gov/ontologies/bflc/aap> "Petersen, Christine. Water power" .
+<http://id.loc.gov/authorities/childrensSubjects/sj96006364> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/3904618> .
+<http://id.loc.gov/resources/works/3904618> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+<http://id.loc.gov/resources/works/3904618> <http://id.loc.gov/ontologies/bflc/aap> "Rickard, Graham. Water energy" .
+<http://id.loc.gov/authorities/childrensSubjects/sj96006364> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/2370987> .
+<http://id.loc.gov/resources/works/2370987> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+<http://id.loc.gov/resources/works/2370987> <http://id.loc.gov/ontologies/bflc/aap> "Satchwell, John. Water" .
+<http://id.loc.gov/authorities/childrensSubjects/sj96006364> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/13260797> .
+<http://id.loc.gov/resources/works/13260797> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+<http://id.loc.gov/resources/works/13260797> <http://id.loc.gov/ontologies/bflc/aap> "Sherman, Josepha. Hydroelectric power" .
+<http://id.loc.gov/authorities/childrensSubjects/sj96006364> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/14753729> .
+<http://id.loc.gov/resources/works/14753729> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+<http://id.loc.gov/resources/works/14753729> <http://id.loc.gov/ontologies/bflc/aap> "Solway, Andrew. Water power" .
+<http://id.loc.gov/authorities/childrensSubjects/sj96006364> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/2505456> .
+<http://id.loc.gov/resources/works/2505456> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+<http://id.loc.gov/resources/works/2505456> <http://id.loc.gov/ontologies/bflc/aap> "Twist, Clint. Wind & water power" .
+<http://id.loc.gov/authorities/childrensSubjects/sj96006364> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/14552802> .
+<http://id.loc.gov/resources/works/14552802> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+<http://id.loc.gov/resources/works/14552802> <http://id.loc.gov/ontologies/bflc/aap> "Water" .
+<http://id.loc.gov/authorities/childrensSubjects/sj96006364> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSScheme> <http://id.loc.gov/authorities/childrensSubjects> .
+<http://id.loc.gov/authorities/childrensSubjects/sj96006364> <http://id.loc.gov/vocabulary/identifiers/lccn> "sj 96006364" .
+<http://id.loc.gov/authorities/childrensSubjects/sj96006364> <http://www.w3.org/2002/07/owl#sameAs> <info:lc/authorities/sj96006364> .
+<http://id.loc.gov/authorities/childrensSubjects/sj96006364> <http://www.w3.org/2002/07/owl#sameAs> <http://id.loc.gov/authorities/sj96006364#concept> .
+<http://id.loc.gov/authorities/childrensSubjects/sj96006364> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:b115iddOtlocdOtgovauthoritieschildrensSubjectssj96006364 .
+_:b115iddOtlocdOtgovauthoritieschildrensSubjectssj96006364 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+_:b115iddOtlocdOtgovauthoritieschildrensSubjectssj96006364 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "1996-05-16T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+_:b115iddOtlocdOtgovauthoritieschildrensSubjectssj96006364 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "new"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:b115iddOtlocdOtgovauthoritieschildrensSubjectssj96006364 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/dlc> .
+<http://id.loc.gov/authorities/childrensSubjects/sj96006364> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/authorities/childrensSubjects/sj96006364> <http://www.w3.org/2004/02/skos/core#prefLabel> "Water power"@en .
+<http://id.loc.gov/authorities/childrensSubjects/sj96006364> <http://www.w3.org/2004/02/skos/core#inScheme> <http://id.loc.gov/authorities/childrensSubjects> .
+<http://id.loc.gov/authorities/childrensSubjects/sj96006364> <http://www.w3.org/2004/02/skos/core#changeNote> _:b126iddOtlocdOtgovauthoritieschildrensSubjectssj96006364 .
+_:b126iddOtlocdOtgovauthoritieschildrensSubjectssj96006364 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocab/changeset/schema#ChangeSet> .
+_:b126iddOtlocdOtgovauthoritieschildrensSubjectssj96006364 <http://purl.org/vocab/changeset/schema#subjectOfChange> <http://id.loc.gov/authorities/childrensSubjects/sj96006364> .
+_:b126iddOtlocdOtgovauthoritieschildrensSubjectssj96006364 <http://purl.org/vocab/changeset/schema#creatorName> <http://id.loc.gov/vocabulary/organizations/dlc> .
+_:b126iddOtlocdOtgovauthoritieschildrensSubjectssj96006364 <http://purl.org/vocab/changeset/schema#createdDate> "1996-05-16T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+_:b126iddOtlocdOtgovauthoritieschildrensSubjectssj96006364 <http://purl.org/vocab/changeset/schema#changeReason> "new"^^<http://www.w3.org/2001/XMLSchema#string> .
