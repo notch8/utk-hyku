@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# rubocop:disable Metrics/ClassLength
 class UriToStringConverterService
   # UTK uses this label to house the value that needs to be rendered
   DEFAULT_LABEL = "http://www.w3.org/2004/02/skos/core#prefLabel"
@@ -49,8 +50,7 @@ class UriToStringConverterService
     #   uri_to_value_for('http://example.com') #=> "Failed to load RDF data: ..."
     #   uri_to_value_for('http://id.loc.gov/authorities/names/n2017180154') #=> "University of Tennessee"
     #   uri_to_value_for('Doe, John') #=> "Doe, John"
-    # rubocop:disable Metrics/CyclomaticComplexity, Metrics/PerceivedComplexity
-    def uri_to_value_for(uri, fetch_from_remote: false)
+    def uri_to_value_for(uri, fetch_from_remote: false) # rubocop:disable Metrics/CyclomaticComplexity
       return uri.map { |v| uri_to_value_for(v) } if uri.is_a?(Enumerable)
       return if uri.blank?
       return uri unless uri.is_a?(String) && uri.start_with?('http')
@@ -63,6 +63,8 @@ class UriToStringConverterService
       cached = fetch_from_remote == true ? nil : UriCache.find_by(uri: uri)
       return cached.value if cached.present?
 
+      UriCache.find_by(uri: uri)&.destroy if fetch_from_remote # remove current cached uri if exists
+
       # Handle different URI patterns
       modified_uri, subject_uri, predicate = extract_rdf_components(uri)
 
@@ -74,10 +76,7 @@ class UriToStringConverterService
       end
 
       subject = RDF::URI.new(subject_uri)
-      objects = graph.query([subject, predicate, nil]).objects
-      object = objects.find do |o|
-        o.language == :en || o.language == :'en-us' || o.language.nil?
-      end || objects.sort_by(&:value).first
+      object = fetch_object(graph, subject, predicate)
       return "#{uri} (No label found)" if object.blank?
 
       value = object.to_s
@@ -92,7 +91,6 @@ class UriToStringConverterService
 
       value
     end
-    # rubocop:enable Metrics/CyclomaticComplexity, Metrics/PerceivedComplexity
 
     private
 
@@ -102,6 +100,29 @@ class UriToStringConverterService
         elsif uri.start_with?('http://creativecommons.org/')
           license_term_for(uri)
         end
+      end
+
+      def fetch_object(graph, subject, predicate, refetch: false)
+        deletion_note_uri = RDF::URI('http://www.loc.gov/mads/rdf/v1#deletionNote')
+        object = graph.query([subject, deletion_note_uri, nil]).objects.first
+
+        return "#{subject} (Failed to load URI) - #{object}" if object.present?
+
+        objects = graph.query([subject, predicate, nil]).objects
+        object = objects.find do |o|
+          o.language == :en || o.language == :'en-us' || o.language.nil?
+        end || objects.sort_by(&:value).first
+
+        return object if object.present?
+
+        # handle redirects
+        redirect = graph.predicates.find { |pred| pred.end_with?('sameAs') }
+        new_subject = graph.query([nil, redirect, nil]).subjects.first if redirect.present?
+        new_subject = graph.query([nil, redirect, nil]).objects.first if subject == new_subject
+
+        return fetch_object(graph, new_subject, predicate, refetch: true) unless refetch
+
+        nil
       end
 
       # Extracts components needed for RDF querying based on the URI pattern.
@@ -164,7 +185,7 @@ class UriToStringConverterService
       def extract_rdf_components(uri)
         uri_handlers = {
           'id.loc.gov' => lambda { |input_uri|
-            subject_uri = input_uri.gsub('https://', 'http://')
+            subject_uri = input_uri.gsub('https://', 'http://').gsub('.html', '')
             [input_uri, subject_uri, RDF::URI(DEFAULT_LABEL)]
           },
 
@@ -192,8 +213,8 @@ class UriToStringConverterService
           },
 
           'wikidata.org' => lambda { |input_uri|
-            modified_uri = "#{input_uri.gsub('https://', 'http://')}.nt"
-            subject_uri = input_uri.gsub('https://', 'http://')
+            modified_uri = "#{input_uri.gsub('https://', 'http://').gsub('/wiki/', '/entity/')}.nt"
+            subject_uri = input_uri.gsub('https://', 'http://').gsub('/wiki/', '/entity/')
             [modified_uri, subject_uri, RDF::URI(DEFAULT_LABEL)]
           },
 
@@ -224,3 +245,4 @@ class UriToStringConverterService
       end
   end
 end
+# rubocop:enable Metrics/ClassLength

@@ -1,0 +1,277 @@
+<http://id.loc.gov/authorities/subjects/sh85088046> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Topic> .
+<http://id.loc.gov/authorities/subjects/sh85088046> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/authorities/subjects/sh85088046> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Motion picture film collections"@en .
+<http://id.loc.gov/authorities/subjects/sh85088046> <http://www.loc.gov/mads/rdf/v1#elementList> _:b7iddOtlocdOtgovauthoritiessubjectssh85088046 .
+_:b7iddOtlocdOtgovauthoritiessubjectssh85088046 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b8iddOtlocdOtgovauthoritiessubjectssh85088046 .
+_:b7iddOtlocdOtgovauthoritiessubjectssh85088046 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:b8iddOtlocdOtgovauthoritiessubjectssh85088046 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#TopicElement> .
+_:b8iddOtlocdOtgovauthoritiessubjectssh85088046 <http://www.loc.gov/mads/rdf/v1#elementValue> "Motion picture film collections"@en .
+<http://id.loc.gov/authorities/subjects/sh85088046> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:b11iddOtlocdOtgovauthoritiessubjectssh85088046 .
+_:b11iddOtlocdOtgovauthoritiessubjectssh85088046 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Topic> .
+_:b11iddOtlocdOtgovauthoritiessubjectssh85088046 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+_:b11iddOtlocdOtgovauthoritiessubjectssh85088046 <http://www.loc.gov/mads/rdf/v1#variantLabel> "Film collections"@en .
+_:b11iddOtlocdOtgovauthoritiessubjectssh85088046 <http://www.loc.gov/mads/rdf/v1#elementList> _:b16iddOtlocdOtgovauthoritiessubjectssh85088046 .
+_:b16iddOtlocdOtgovauthoritiessubjectssh85088046 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b17iddOtlocdOtgovauthoritiessubjectssh85088046 .
+_:b16iddOtlocdOtgovauthoritiessubjectssh85088046 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:b17iddOtlocdOtgovauthoritiessubjectssh85088046 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#TopicElement> .
+_:b17iddOtlocdOtgovauthoritiessubjectssh85088046 <http://www.loc.gov/mads/rdf/v1#elementValue> "Film collections"@en .
+<http://id.loc.gov/authorities/subjects/sh85088046> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:b20iddOtlocdOtgovauthoritiessubjectssh85088046 .
+_:b20iddOtlocdOtgovauthoritiessubjectssh85088046 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Topic> .
+_:b20iddOtlocdOtgovauthoritiessubjectssh85088046 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+_:b20iddOtlocdOtgovauthoritiessubjectssh85088046 <http://www.loc.gov/mads/rdf/v1#variantLabel> "Film libraries"@en .
+_:b20iddOtlocdOtgovauthoritiessubjectssh85088046 <http://www.loc.gov/mads/rdf/v1#elementList> _:b25iddOtlocdOtgovauthoritiessubjectssh85088046 .
+_:b25iddOtlocdOtgovauthoritiessubjectssh85088046 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b26iddOtlocdOtgovauthoritiessubjectssh85088046 .
+_:b25iddOtlocdOtgovauthoritiessubjectssh85088046 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:b26iddOtlocdOtgovauthoritiessubjectssh85088046 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#TopicElement> .
+_:b26iddOtlocdOtgovauthoritiessubjectssh85088046 <http://www.loc.gov/mads/rdf/v1#elementValue> "Film libraries"@en .
+<http://id.loc.gov/authorities/subjects/sh85088046> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:b29iddOtlocdOtgovauthoritiessubjectssh85088046 .
+_:b29iddOtlocdOtgovauthoritiessubjectssh85088046 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Topic> .
+_:b29iddOtlocdOtgovauthoritiessubjectssh85088046 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+_:b29iddOtlocdOtgovauthoritiessubjectssh85088046 <http://www.loc.gov/mads/rdf/v1#variantLabel> "Motion picture collections"@en .
+_:b29iddOtlocdOtgovauthoritiessubjectssh85088046 <http://www.loc.gov/mads/rdf/v1#elementList> _:b34iddOtlocdOtgovauthoritiessubjectssh85088046 .
+_:b34iddOtlocdOtgovauthoritiessubjectssh85088046 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b35iddOtlocdOtgovauthoritiessubjectssh85088046 .
+_:b34iddOtlocdOtgovauthoritiessubjectssh85088046 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:b35iddOtlocdOtgovauthoritiessubjectssh85088046 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#TopicElement> .
+_:b35iddOtlocdOtgovauthoritiessubjectssh85088046 <http://www.loc.gov/mads/rdf/v1#elementValue> "Motion picture collections"@en .
+<http://id.loc.gov/authorities/subjects/sh85088046> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:b38iddOtlocdOtgovauthoritiessubjectssh85088046 .
+_:b38iddOtlocdOtgovauthoritiessubjectssh85088046 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Topic> .
+_:b38iddOtlocdOtgovauthoritiessubjectssh85088046 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+_:b38iddOtlocdOtgovauthoritiessubjectssh85088046 <http://www.loc.gov/mads/rdf/v1#variantLabel> "Motion picture libraries"@en .
+_:b38iddOtlocdOtgovauthoritiessubjectssh85088046 <http://www.loc.gov/mads/rdf/v1#elementList> _:b43iddOtlocdOtgovauthoritiessubjectssh85088046 .
+_:b43iddOtlocdOtgovauthoritiessubjectssh85088046 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b44iddOtlocdOtgovauthoritiessubjectssh85088046 .
+_:b43iddOtlocdOtgovauthoritiessubjectssh85088046 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:b44iddOtlocdOtgovauthoritiessubjectssh85088046 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#TopicElement> .
+_:b44iddOtlocdOtgovauthoritiessubjectssh85088046 <http://www.loc.gov/mads/rdf/v1#elementValue> "Motion picture libraries"@en .
+<http://id.loc.gov/authorities/subjects/sh85088046> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:b47iddOtlocdOtgovauthoritiessubjectssh85088046 .
+_:b47iddOtlocdOtgovauthoritiessubjectssh85088046 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Topic> .
+_:b47iddOtlocdOtgovauthoritiessubjectssh85088046 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+_:b47iddOtlocdOtgovauthoritiessubjectssh85088046 <http://www.loc.gov/mads/rdf/v1#variantLabel> "Moving-picture film collections"@en .
+_:b47iddOtlocdOtgovauthoritiessubjectssh85088046 <http://www.loc.gov/mads/rdf/v1#elementList> _:b52iddOtlocdOtgovauthoritiessubjectssh85088046 .
+_:b52iddOtlocdOtgovauthoritiessubjectssh85088046 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b53iddOtlocdOtgovauthoritiessubjectssh85088046 .
+_:b52iddOtlocdOtgovauthoritiessubjectssh85088046 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:b53iddOtlocdOtgovauthoritiessubjectssh85088046 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#TopicElement> .
+_:b53iddOtlocdOtgovauthoritiessubjectssh85088046 <http://www.loc.gov/mads/rdf/v1#elementValue> "Moving-picture film collections"@en .
+<http://id.loc.gov/authorities/subjects/sh85088046> <http://id.loc.gov/ontologies/bflc/marcKey> "150 0$aMotion picture film collections" .
+<http://id.loc.gov/authorities/subjects/sh85088046> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/subjects/sh92002356> .
+<http://id.loc.gov/authorities/subjects/sh92002356> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/authorities/subjects/sh92002356> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Tyler, Texas, Black Film Collection"@en .
+<http://id.loc.gov/authorities/subjects/sh85088046> <http://www.loc.gov/mads/rdf/v1#hasBroaderExternalAuthority> <http://id.worldcat.org/fast/1027147> .
+<http://id.worldcat.org/fast/1027147> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.worldcat.org/fast/1027147> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Motion picture film collections--Evaluation" .
+<http://id.loc.gov/authorities/subjects/sh85088046> <http://www.loc.gov/mads/rdf/v1#hasCloseExternalAuthority> <http://purl.org/bncf/tid/36420> .
+<http://purl.org/bncf/tid/36420> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://purl.org/bncf/tid/36420> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Cineteche"@it .
+<http://id.loc.gov/authorities/subjects/sh85088046> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/subjects/sh85035757> .
+<http://id.loc.gov/authorities/subjects/sh85035757> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/authorities/subjects/sh85035757> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Danmarks Radio Film Collection"@en .
+<http://id.loc.gov/authorities/subjects/sh85088046> <http://www.loc.gov/mads/rdf/v1#hasBroaderExternalAuthority> <http://id.worldcat.org/fast/1027148> .
+<http://id.worldcat.org/fast/1027148> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.worldcat.org/fast/1027148> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Motion picture film collections--Fires and fire prevention" .
+<http://id.loc.gov/authorities/subjects/sh85088046> <http://www.loc.gov/mads/rdf/v1#hasReciprocalAuthority> <http://id.loc.gov/authorities/subjects/sh85006925> .
+<http://id.loc.gov/authorities/subjects/sh85006925> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Topic> .
+<http://id.loc.gov/authorities/subjects/sh85006925> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/authorities/subjects/sh85006925> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Film archives"@en .
+<http://id.loc.gov/authorities/subjects/sh85006925> <http://www.loc.gov/mads/rdf/v1#elementList> _:b83iddOtlocdOtgovauthoritiessubjectssh85088046 .
+_:b83iddOtlocdOtgovauthoritiessubjectssh85088046 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b84iddOtlocdOtgovauthoritiessubjectssh85088046 .
+_:b83iddOtlocdOtgovauthoritiessubjectssh85088046 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:b84iddOtlocdOtgovauthoritiessubjectssh85088046 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#TopicElement> .
+_:b84iddOtlocdOtgovauthoritiessubjectssh85088046 <http://www.loc.gov/mads/rdf/v1#elementValue> "Film archives"@en .
+<http://id.loc.gov/authorities/subjects/sh85088046> <http://www.loc.gov/mads/rdf/v1#hasBroaderExternalAuthority> <http://id.worldcat.org/fast/1027149> .
+<http://id.worldcat.org/fast/1027149> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.worldcat.org/fast/1027149> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Motion picture film collections--Government policy" .
+<http://id.loc.gov/authorities/subjects/sh85088046> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/subjects/sh2001000499> .
+<http://id.loc.gov/authorities/subjects/sh2001000499> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/authorities/subjects/sh2001000499> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Stock footage collections"@en .
+<http://id.loc.gov/authorities/subjects/sh85088046> <http://www.loc.gov/mads/rdf/v1#hasCloseExternalAuthority> <http://id.worldcat.org/fast/1027145> .
+<http://id.worldcat.org/fast/1027145> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.worldcat.org/fast/1027145> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Motion picture film collections" .
+<http://id.loc.gov/authorities/subjects/sh85088046> <http://www.loc.gov/mads/rdf/v1#hasEarlierEstablishedForm> _:b99iddOtlocdOtgovauthoritiessubjectssh85088046 .
+_:b99iddOtlocdOtgovauthoritiessubjectssh85088046 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Topic> .
+_:b99iddOtlocdOtgovauthoritiessubjectssh85088046 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+_:b99iddOtlocdOtgovauthoritiessubjectssh85088046 <http://www.loc.gov/mads/rdf/v1#variantLabel> "Moving-picture film collections"@en .
+_:b99iddOtlocdOtgovauthoritiessubjectssh85088046 <http://www.loc.gov/mads/rdf/v1#elementList> _:b104iddOtlocdOtgovauthoritiessubjectssh85088046 .
+_:b104iddOtlocdOtgovauthoritiessubjectssh85088046 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b105iddOtlocdOtgovauthoritiessubjectssh85088046 .
+_:b104iddOtlocdOtgovauthoritiessubjectssh85088046 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:b105iddOtlocdOtgovauthoritiessubjectssh85088046 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#TopicElement> .
+_:b105iddOtlocdOtgovauthoritiessubjectssh85088046 <http://www.loc.gov/mads/rdf/v1#elementValue> "Moving-picture film collections"@en .
+<http://id.loc.gov/authorities/subjects/sh85088046> <http://www.loc.gov/mads/rdf/v1#hasCloseExternalAuthority> <http://id.ndl.go.jp/auth/ndlsh/01015976> .
+<http://id.ndl.go.jp/auth/ndlsh/01015976> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.ndl.go.jp/auth/ndlsh/01015976> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "フィルムアーカイブ" .
+<http://id.loc.gov/authorities/subjects/sh85088046> <http://www.loc.gov/mads/rdf/v1#hasBroaderExternalAuthority> <http://id.worldcat.org/fast/1027146> .
+<http://id.worldcat.org/fast/1027146> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.worldcat.org/fast/1027146> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Motion picture film collections--Archival resources" .
+<http://id.loc.gov/authorities/subjects/sh85088046> <http://www.loc.gov/mads/rdf/v1#hasCloseExternalAuthority> <http://data.bnf.fr/ark:/12148/cb119453988> .
+<http://data.bnf.fr/ark:/12148/cb119453988> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://data.bnf.fr/ark:/12148/cb119453988> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Cinémathèques"@fr .
+<http://id.loc.gov/authorities/subjects/sh85088046> <http://www.loc.gov/mads/rdf/v1#hasBroaderAuthority> <http://id.loc.gov/authorities/subjects/sh85076573> .
+<http://id.loc.gov/authorities/subjects/sh85076573> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Topic> .
+<http://id.loc.gov/authorities/subjects/sh85076573> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/authorities/subjects/sh85076573> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Special libraries"@en .
+<http://id.loc.gov/authorities/subjects/sh85076573> <http://www.loc.gov/mads/rdf/v1#elementList> _:b125iddOtlocdOtgovauthoritiessubjectssh85088046 .
+_:b125iddOtlocdOtgovauthoritiessubjectssh85088046 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b126iddOtlocdOtgovauthoritiessubjectssh85088046 .
+_:b125iddOtlocdOtgovauthoritiessubjectssh85088046 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:b126iddOtlocdOtgovauthoritiessubjectssh85088046 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#TopicElement> .
+_:b126iddOtlocdOtgovauthoritiessubjectssh85088046 <http://www.loc.gov/mads/rdf/v1#elementValue> "Special libraries"@en .
+<http://id.loc.gov/authorities/subjects/sh85088046> <http://www.loc.gov/mads/rdf/v1#hasCloseExternalAuthority> <http://www.wikidata.org/entity/Q1414390> .
+<http://www.wikidata.org/entity/Q1414390> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://www.wikidata.org/entity/Q1414390> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "film library" .
+<http://id.loc.gov/authorities/subjects/sh85088046> <http://www.loc.gov/mads/rdf/v1#hasCloseExternalAuthority> <http://vocab.getty.edu/aat/300343385> .
+<http://vocab.getty.edu/aat/300343385> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://vocab.getty.edu/aat/300343385> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "film libraries (institutions)"@en .
+<http://id.loc.gov/authorities/subjects/sh85088046> <http://www.loc.gov/mads/rdf/v1#hasCloseExternalAuthority> <http://datos.bne.es/resource/XX613782> .
+<http://datos.bne.es/resource/XX613782> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://datos.bne.es/resource/XX613782> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Películas cinematográficas--Colecciones"@es .
+<http://id.loc.gov/authorities/subjects/sh85088046> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection> <http://id.loc.gov/authorities/subjects/collection_LCSHAuthorizedHeadings> .
+<http://id.loc.gov/authorities/subjects/sh85088046> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection> <http://id.loc.gov/authorities/subjects/collection_LCSH_General> .
+<http://id.loc.gov/authorities/subjects/sh85088046> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection> <http://id.loc.gov/authorities/subjects/collection_SubdivideGeographically> .
+<http://id.loc.gov/authorities/subjects/sh85088046> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/18154849> .
+<http://id.loc.gov/resources/works/18154849> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+<http://id.loc.gov/resources/works/18154849> <http://id.loc.gov/ontologies/bflc/aap> "75000 films" .
+<http://id.loc.gov/authorities/subjects/sh85088046> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/2658981> .
+<http://id.loc.gov/resources/works/2658981> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+<http://id.loc.gov/resources/works/2658981> <http://id.loc.gov/ontologies/bflc/aap> "A Prototype system for a computer-based statewide film library network" .
+<http://id.loc.gov/authorities/subjects/sh85088046> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/6445418> .
+<http://id.loc.gov/resources/works/6445418> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+<http://id.loc.gov/resources/works/6445418> <http://id.loc.gov/ontologies/bflc/aap> "Elliott, Godfrey M. (Godfrey Monroe), 1908- The county film library" .
+<http://id.loc.gov/authorities/subjects/sh85088046> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/6996729> .
+<http://id.loc.gov/resources/works/6996729> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+<http://id.loc.gov/resources/works/6996729> <http://id.loc.gov/ontologies/bflc/aap> "Farmer, Herbert E. A survey of the distribution of non-theatrical motion pictures" .
+<http://id.loc.gov/authorities/subjects/sh85088046> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/15753909> .
+<http://id.loc.gov/resources/works/15753909> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+<http://id.loc.gov/resources/works/15753909> <http://id.loc.gov/ontologies/bflc/aap> "Halsall, Jane. Visual media for teens" .
+<http://id.loc.gov/authorities/subjects/sh85088046> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/3146849> .
+<http://id.loc.gov/resources/works/3146849> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+<http://id.loc.gov/resources/works/3146849> <http://id.loc.gov/ontologies/bflc/aap> "Harrison, Helen P. Film library techniques" .
+<http://id.loc.gov/authorities/subjects/sh85088046> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/778782> .
+<http://id.loc.gov/resources/works/778782> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+<http://id.loc.gov/resources/works/778782> <http://id.loc.gov/ontologies/bflc/aap> "Harrison, Helen P. Film library techniques" .
+<http://id.loc.gov/authorities/subjects/sh85088046> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/2552264> .
+<http://id.loc.gov/resources/works/2552264> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+<http://id.loc.gov/resources/works/2552264> <http://id.loc.gov/ontologies/bflc/aap> "Houston, Penelope Keepers of the frame" .
+<http://id.loc.gov/authorities/subjects/sh85088046> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/19470835> .
+<http://id.loc.gov/resources/works/19470835> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+<http://id.loc.gov/resources/works/19470835> <http://id.loc.gov/ontologies/bflc/aap> "Klerk, Nico de. Showing and telling" .
+<http://id.loc.gov/authorities/subjects/sh85088046> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/312438> .
+<http://id.loc.gov/resources/works/312438> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+<http://id.loc.gov/resources/works/312438> <http://id.loc.gov/ontologies/bflc/aap> "Kohte, W. Archives of motion pictures, photographic records and sound recordings" .
+<http://id.loc.gov/authorities/subjects/sh85088046> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/9377115> .
+<http://id.loc.gov/resources/works/9377115> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+<http://id.loc.gov/resources/works/9377115> <http://id.loc.gov/ontologies/bflc/aap> "Kuzin, Aleksandr Avramievich Kino-foto-fonoarkhivy" .
+<http://id.loc.gov/authorities/subjects/sh85088046> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/18146865> .
+<http://id.loc.gov/resources/works/18146865> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+<http://id.loc.gov/resources/works/18146865> <http://id.loc.gov/ontologies/bflc/aap> "Le Roy, Eric Cinémathèques et archives du film" .
+<http://id.loc.gov/authorities/subjects/sh85088046> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/13930172> .
+<http://id.loc.gov/resources/works/13930172> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+<http://id.loc.gov/resources/works/13930172> <http://id.loc.gov/ontologies/bflc/aap> "McCurley, James B., 1942-. Civilization package" .
+<http://id.loc.gov/authorities/subjects/sh85088046> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/8793061> .
+<http://id.loc.gov/resources/works/8793061> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+<http://id.loc.gov/resources/works/8793061> <http://id.loc.gov/ontologies/bflc/aap> "McDonald, Gerald D. (Gerald Doan), 1905- Educational motion pictures and libraries" .
+<http://id.loc.gov/authorities/subjects/sh85088046> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/6113471> .
+<http://id.loc.gov/resources/works/6113471> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+<http://id.loc.gov/resources/works/6113471> <http://id.loc.gov/ontologies/bflc/aap> "Russia (1923- U.S.S.R.). T︠S︡entralʹnyĭ gosudarstvennyĭ arkhiv kino-foto-fonodokumentov Stranit︠s︡y zhivoĭ istoriĭ" .
+<http://id.loc.gov/authorities/subjects/sh85088046> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/18230397> .
+<http://id.loc.gov/resources/works/18230397> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+<http://id.loc.gov/resources/works/18230397> <http://id.loc.gov/ontologies/bflc/aap> "The Criterion collection" .
+<http://id.loc.gov/authorities/subjects/sh85088046> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/4530587> .
+<http://id.loc.gov/resources/works/4530587> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+<http://id.loc.gov/resources/works/4530587> <http://id.loc.gov/ontologies/bflc/aap> "United States. Department of the Air Force. Air Force base film libraries" .
+<http://id.loc.gov/authorities/subjects/sh85088046> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/5984124> .
+<http://id.loc.gov/resources/works/5984124> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+<http://id.loc.gov/resources/works/5984124> <http://id.loc.gov/ontologies/bflc/aap> "United States. Office of civilian defense. Films for defense" .
+<http://id.loc.gov/authorities/subjects/sh85088046> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSScheme> <http://id.loc.gov/authorities/subjects> .
+<http://id.loc.gov/authorities/subjects/sh85088046> <http://id.loc.gov/vocabulary/identifiers/lccn> "sh 85088046" .
+<http://id.loc.gov/authorities/subjects/sh85088046> <http://www.w3.org/2002/07/owl#sameAs> <info:lc/authorities/sh85088046> .
+<http://id.loc.gov/authorities/subjects/sh85088046> <http://www.w3.org/2002/07/owl#sameAs> <http://id.loc.gov/authorities/sh85088046#concept> .
+<http://id.loc.gov/authorities/subjects/sh85088046> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:b221iddOtlocdOtgovauthoritiessubjectssh85088046 .
+_:b221iddOtlocdOtgovauthoritiessubjectssh85088046 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+_:b221iddOtlocdOtgovauthoritiessubjectssh85088046 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "1986-02-11T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+_:b221iddOtlocdOtgovauthoritiessubjectssh85088046 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "new"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:b221iddOtlocdOtgovauthoritiessubjectssh85088046 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/dlc> .
+<http://id.loc.gov/authorities/subjects/sh85088046> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:b228iddOtlocdOtgovauthoritiessubjectssh85088046 .
+_:b228iddOtlocdOtgovauthoritiessubjectssh85088046 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+_:b228iddOtlocdOtgovauthoritiessubjectssh85088046 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "1993-09-21T09:19:50"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+_:b228iddOtlocdOtgovauthoritiessubjectssh85088046 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "revised"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:b228iddOtlocdOtgovauthoritiessubjectssh85088046 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/dlc> .
+<http://id.loc.gov/authorities/subjects/sh85088046> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/authorities/subjects/sh85088046> <http://www.w3.org/2004/02/skos/core#prefLabel> "Motion picture film collections"@en .
+<http://id.loc.gov/authorities/subjects/sh85088046> <http://www.w3.org/2008/05/skos-xl#altLabel> _:b238iddOtlocdOtgovauthoritiessubjectssh85088046 .
+_:b238iddOtlocdOtgovauthoritiessubjectssh85088046 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2008/05/skos-xl#Label> .
+_:b238iddOtlocdOtgovauthoritiessubjectssh85088046 <http://www.w3.org/2008/05/skos-xl#literalForm> "Film collections"@en .
+<http://id.loc.gov/authorities/subjects/sh85088046> <http://www.w3.org/2008/05/skos-xl#altLabel> _:b243iddOtlocdOtgovauthoritiessubjectssh85088046 .
+_:b243iddOtlocdOtgovauthoritiessubjectssh85088046 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2008/05/skos-xl#Label> .
+_:b243iddOtlocdOtgovauthoritiessubjectssh85088046 <http://www.w3.org/2008/05/skos-xl#literalForm> "Film libraries"@en .
+<http://id.loc.gov/authorities/subjects/sh85088046> <http://www.w3.org/2008/05/skos-xl#altLabel> _:b248iddOtlocdOtgovauthoritiessubjectssh85088046 .
+_:b248iddOtlocdOtgovauthoritiessubjectssh85088046 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2008/05/skos-xl#Label> .
+_:b248iddOtlocdOtgovauthoritiessubjectssh85088046 <http://www.w3.org/2008/05/skos-xl#literalForm> "Motion picture collections"@en .
+<http://id.loc.gov/authorities/subjects/sh85088046> <http://www.w3.org/2008/05/skos-xl#altLabel> _:b253iddOtlocdOtgovauthoritiessubjectssh85088046 .
+_:b253iddOtlocdOtgovauthoritiessubjectssh85088046 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2008/05/skos-xl#Label> .
+_:b253iddOtlocdOtgovauthoritiessubjectssh85088046 <http://www.w3.org/2008/05/skos-xl#literalForm> "Motion picture libraries"@en .
+<http://id.loc.gov/authorities/subjects/sh85088046> <http://www.w3.org/2008/05/skos-xl#altLabel> _:b258iddOtlocdOtgovauthoritiessubjectssh85088046 .
+_:b258iddOtlocdOtgovauthoritiessubjectssh85088046 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2008/05/skos-xl#Label> .
+_:b258iddOtlocdOtgovauthoritiessubjectssh85088046 <http://www.w3.org/2008/05/skos-xl#literalForm> "Moving-picture film collections"@en .
+<http://id.loc.gov/authorities/subjects/sh85088046> <http://www.w3.org/2004/02/skos/core#broader> <http://id.loc.gov/authorities/subjects/sh85076573> .
+<http://id.loc.gov/authorities/subjects/sh85076573> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/authorities/subjects/sh85076573> <http://www.w3.org/2004/02/skos/core#prefLabel> "Special libraries"@en .
+<http://id.loc.gov/authorities/subjects/sh85088046> <http://www.w3.org/2004/02/skos/core#narrower> <http://id.loc.gov/authorities/subjects/sh92002356> .
+<http://id.loc.gov/authorities/subjects/sh92002356> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/authorities/subjects/sh92002356> <http://www.w3.org/2004/02/skos/core#prefLabel> "Tyler, Texas, Black Film Collection"@en .
+<http://id.loc.gov/authorities/subjects/sh85088046> <http://www.w3.org/2004/02/skos/core#narrower> <http://id.loc.gov/authorities/subjects/sh85035757> .
+<http://id.loc.gov/authorities/subjects/sh85035757> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/authorities/subjects/sh85035757> <http://www.w3.org/2004/02/skos/core#prefLabel> "Danmarks Radio Film Collection"@en .
+<http://id.loc.gov/authorities/subjects/sh85088046> <http://www.w3.org/2004/02/skos/core#narrower> <http://id.loc.gov/authorities/subjects/sh2001000499> .
+<http://id.loc.gov/authorities/subjects/sh2001000499> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/authorities/subjects/sh2001000499> <http://www.w3.org/2004/02/skos/core#prefLabel> "Stock footage collections"@en .
+<http://id.loc.gov/authorities/subjects/sh85088046> <http://www.w3.org/2004/02/skos/core#related> <http://id.loc.gov/authorities/subjects/sh85006925> .
+<http://id.loc.gov/authorities/subjects/sh85006925> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/authorities/subjects/sh85006925> <http://www.w3.org/2004/02/skos/core#prefLabel> "Film archives"@en .
+<http://id.loc.gov/authorities/subjects/sh85088046> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://purl.org/bncf/tid/36420> .
+<http://purl.org/bncf/tid/36420> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://purl.org/bncf/tid/36420> <http://www.w3.org/2004/02/skos/core#prefLabel> "Cineteche"@it .
+<http://id.loc.gov/authorities/subjects/sh85088046> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://id.worldcat.org/fast/1027145> .
+<http://id.worldcat.org/fast/1027145> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.worldcat.org/fast/1027145> <http://www.w3.org/2004/02/skos/core#prefLabel> "Motion picture film collections" .
+<http://id.loc.gov/authorities/subjects/sh85088046> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://id.ndl.go.jp/auth/ndlsh/01015976> .
+<http://id.ndl.go.jp/auth/ndlsh/01015976> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.ndl.go.jp/auth/ndlsh/01015976> <http://www.w3.org/2004/02/skos/core#prefLabel> "フィルムアーカイブ" .
+<http://id.loc.gov/authorities/subjects/sh85088046> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://data.bnf.fr/ark:/12148/cb119453988> .
+<http://data.bnf.fr/ark:/12148/cb119453988> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://data.bnf.fr/ark:/12148/cb119453988> <http://www.w3.org/2004/02/skos/core#prefLabel> "Cinémathèques"@fr .
+<http://id.loc.gov/authorities/subjects/sh85088046> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://www.wikidata.org/entity/Q1414390> .
+<http://www.wikidata.org/entity/Q1414390> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.wikidata.org/entity/Q1414390> <http://www.w3.org/2004/02/skos/core#prefLabel> "film library" .
+<http://id.loc.gov/authorities/subjects/sh85088046> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://vocab.getty.edu/aat/300343385> .
+<http://vocab.getty.edu/aat/300343385> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.getty.edu/aat/300343385> <http://www.w3.org/2004/02/skos/core#prefLabel> "film libraries (institutions)"@en .
+<http://id.loc.gov/authorities/subjects/sh85088046> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://datos.bne.es/resource/XX613782> .
+<http://datos.bne.es/resource/XX613782> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://datos.bne.es/resource/XX613782> <http://www.w3.org/2004/02/skos/core#prefLabel> "Películas cinematográficas--Colecciones"@es .
+<http://id.loc.gov/authorities/subjects/sh85088046> <http://www.w3.org/2004/02/skos/core#broadMatch> <http://id.worldcat.org/fast/1027147> .
+<http://id.worldcat.org/fast/1027147> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.worldcat.org/fast/1027147> <http://www.w3.org/2004/02/skos/core#prefLabel> "Motion picture film collections--Evaluation" .
+<http://id.loc.gov/authorities/subjects/sh85088046> <http://www.w3.org/2004/02/skos/core#broadMatch> <http://id.worldcat.org/fast/1027148> .
+<http://id.worldcat.org/fast/1027148> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.worldcat.org/fast/1027148> <http://www.w3.org/2004/02/skos/core#prefLabel> "Motion picture film collections--Fires and fire prevention" .
+<http://id.loc.gov/authorities/subjects/sh85088046> <http://www.w3.org/2004/02/skos/core#broadMatch> <http://id.worldcat.org/fast/1027149> .
+<http://id.worldcat.org/fast/1027149> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.worldcat.org/fast/1027149> <http://www.w3.org/2004/02/skos/core#prefLabel> "Motion picture film collections--Government policy" .
+<http://id.loc.gov/authorities/subjects/sh85088046> <http://www.w3.org/2004/02/skos/core#broadMatch> <http://id.worldcat.org/fast/1027146> .
+<http://id.worldcat.org/fast/1027146> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.worldcat.org/fast/1027146> <http://www.w3.org/2004/02/skos/core#prefLabel> "Motion picture film collections--Archival resources" .
+<http://id.loc.gov/authorities/subjects/sh85088046> <http://www.w3.org/2004/02/skos/core#inScheme> <http://id.loc.gov/authorities/subjects> .
+<http://id.loc.gov/authorities/subjects/sh85088046> <http://www.w3.org/2004/02/skos/core#altLabel> "Film collections"@en .
+<http://id.loc.gov/authorities/subjects/sh85088046> <http://www.w3.org/2004/02/skos/core#altLabel> "Film libraries"@en .
+<http://id.loc.gov/authorities/subjects/sh85088046> <http://www.w3.org/2004/02/skos/core#altLabel> "Motion picture collections"@en .
+<http://id.loc.gov/authorities/subjects/sh85088046> <http://www.w3.org/2004/02/skos/core#altLabel> "Motion picture libraries"@en .
+<http://id.loc.gov/authorities/subjects/sh85088046> <http://www.w3.org/2004/02/skos/core#altLabel> "Moving-picture film collections"@en .
+<http://id.loc.gov/authorities/subjects/sh85088046> <http://www.w3.org/2004/02/skos/core#changeNote> _:b354iddOtlocdOtgovauthoritiessubjectssh85088046 .
+_:b354iddOtlocdOtgovauthoritiessubjectssh85088046 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocab/changeset/schema#ChangeSet> .
+_:b354iddOtlocdOtgovauthoritiessubjectssh85088046 <http://purl.org/vocab/changeset/schema#subjectOfChange> <http://id.loc.gov/authorities/subjects/sh85088046> .
+_:b354iddOtlocdOtgovauthoritiessubjectssh85088046 <http://purl.org/vocab/changeset/schema#creatorName> <http://id.loc.gov/vocabulary/organizations/dlc> .
+_:b354iddOtlocdOtgovauthoritiessubjectssh85088046 <http://purl.org/vocab/changeset/schema#createdDate> "1986-02-11T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+_:b354iddOtlocdOtgovauthoritiessubjectssh85088046 <http://purl.org/vocab/changeset/schema#changeReason> "new"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://id.loc.gov/authorities/subjects/sh85088046> <http://www.w3.org/2004/02/skos/core#changeNote> _:b362iddOtlocdOtgovauthoritiessubjectssh85088046 .
+_:b362iddOtlocdOtgovauthoritiessubjectssh85088046 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocab/changeset/schema#ChangeSet> .
+_:b362iddOtlocdOtgovauthoritiessubjectssh85088046 <http://purl.org/vocab/changeset/schema#subjectOfChange> <http://id.loc.gov/authorities/subjects/sh85088046> .
+_:b362iddOtlocdOtgovauthoritiessubjectssh85088046 <http://purl.org/vocab/changeset/schema#creatorName> <http://id.loc.gov/vocabulary/organizations/dlc> .
+_:b362iddOtlocdOtgovauthoritiessubjectssh85088046 <http://purl.org/vocab/changeset/schema#createdDate> "1993-09-21T09:19:50"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+_:b362iddOtlocdOtgovauthoritiessubjectssh85088046 <http://purl.org/vocab/changeset/schema#changeReason> "revised"^^<http://www.w3.org/2001/XMLSchema#string> .

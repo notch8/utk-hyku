@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# rubocop:disable RSpec/NestedGroups
 RSpec.describe UriToStringConverterService do
   subject { described_class.new(work) }
 
@@ -35,11 +36,43 @@ RSpec.describe UriToStringConverterService do
       end
 
       context 'from the Library of Congress' do
-        let(:uri) { 'https://id.loc.gov/authorities/names/n79007751' }
-        let(:rdf_data) { Rails.root.join('spec', 'fixtures', 'rdf_data', 'loc.nt').to_s }
+        context 'example 1' do
+          let(:uri) { 'https://id.loc.gov/authorities/names/n79007751' }
+          let(:rdf_data) { Rails.root.join('spec', 'fixtures', 'rdf_data', 'loc_1.nt').to_s }
 
-        it 'retrieves a value for a given URI' do
-          expect(subject.uri_to_value_for(uri)).to eq 'New York (N.Y.)'
+          it 'retrieves a value for a given URI' do
+            expect(subject.uri_to_value_for(uri)).to eq 'New York (N.Y.)'
+          end
+        end
+
+        context 'example 2 (has redirect)' do
+          let(:uri) { 'http://id.loc.gov/authorities/subjects/sj96006364' }
+          let(:rdf_data) { Rails.root.join('spec', 'fixtures', 'rdf_data', 'loc_2.nt').to_s }
+
+          it 'retrieves a value for a given URI' do
+            expect(subject.uri_to_value_for(uri)).to eq 'Water power'
+          end
+        end
+
+        context 'example 3 (has .html in uri)' do
+          let(:uri) { 'https://id.loc.gov/authorities/subjects/sh85088046.html' }
+          let(:rdf_data) { Rails.root.join('spec', 'fixtures', 'rdf_data', 'loc_3.nt').to_s }
+
+          it 'retrieves a value for a given URI' do
+            expect(subject.uri_to_value_for(uri)).to eq 'Motion picture film collections'
+          end
+        end
+
+        context 'example 4 (has been deleted)' do
+          let(:uri) { 'http://id.loc.gov/authorities/subjects/sh2009007848' }
+          let(:rdf_data) { Rails.root.join('spec', 'fixtures', 'rdf_data', 'loc_4.nt').to_s }
+          let(:str) do
+            "#{uri} (Failed to load URI) - This authority record has been deleted because it is not a valid heading."
+          end
+
+          it 'retrieves the deletion notes' do
+            expect(subject.uri_to_value_for(uri)).to eq str
+          end
         end
       end
 
@@ -62,11 +95,31 @@ RSpec.describe UriToStringConverterService do
       end
 
       context 'from WikiData' do
-        let(:uri) { 'https://www.wikidata.org/entity/Q85304029' }
-        let(:rdf_data) { Rails.root.join('spec', 'fixtures', 'rdf_data', 'wikidata.nt').to_s }
+        context 'example 1' do
+          let(:uri) { 'https://www.wikidata.org/entity/Q85304029' }
+          let(:rdf_data) { Rails.root.join('spec', 'fixtures', 'rdf_data', 'wikidata_1.nt').to_s }
 
-        it 'retrieves a value for a given URI' do
-          expect(subject.uri_to_value_for(uri)).to eq 'Dorothy Doolittle'
+          it 'retrieves a value for a given URI' do
+            expect(subject.uri_to_value_for(uri)).to eq 'Dorothy Doolittle'
+          end
+        end
+
+        context 'example 2 (has redirect)' do
+          let(:uri) { 'http://www.wikidata.org/entity/Q107881652' }
+          let(:rdf_data) { Rails.root.join('spec', 'fixtures', 'rdf_data', 'wikidata_2.nt').to_s }
+
+          it 'retrieves a value for a given URI' do
+            expect(subject.uri_to_value_for(uri)).to eq "Tennessee Volunteers men's tennis"
+          end
+        end
+
+        context 'example 3 (using "wiki" instead of "entity")' do
+          let(:uri) { 'https://www.wikidata.org/wiki/Q61779863' }
+          let(:rdf_data) { Rails.root.join('spec', 'fixtures', 'rdf_data', 'wikidata_3.nt').to_s }
+
+          it 'retrieves a value for a given URI' do
+            expect(subject.uri_to_value_for(uri)).to eq "Karen Weekly"
+          end
         end
       end
 
@@ -79,7 +132,6 @@ RSpec.describe UriToStringConverterService do
         end
       end
 
-      # rubocop:disable RSpec/NestedGroups
       context 'when the URI is a Rights Statement' do
         let(:uri) { 'http://rightsstatements.org/vocab/InC/1.0/' }
         let(:rdf_data) { Rails.root.join('spec', 'fixtures', 'rdf_data', 'rights.ttl').to_s }
@@ -142,7 +194,6 @@ RSpec.describe UriToStringConverterService do
           end
         end
       end
-      # rubocop:enable RSpec/NestedGroups
     end
 
     context 'when the URI is just a string' do
@@ -187,3 +238,4 @@ RSpec.describe UriToStringConverterService do
     end
   end
 end
+# rubocop:enable RSpec/NestedGroups
