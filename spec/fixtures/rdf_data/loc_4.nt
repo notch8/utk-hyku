@@ -1,0 +1,55 @@
+<http://id.loc.gov/authorities/subjects/sh2009007848> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#ComplexSubject> .
+<http://id.loc.gov/authorities/subjects/sh2009007848> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+<http://id.loc.gov/authorities/subjects/sh2009007848> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#DeprecatedAuthority> .
+<http://id.loc.gov/authorities/subjects/sh2009007848> <http://www.loc.gov/mads/rdf/v1#variantLabel> "Indians of North America--United States"@en .
+<http://id.loc.gov/authorities/subjects/sh2009007848> <http://www.loc.gov/mads/rdf/v1#componentList> _:b8iddOtlocdOtgovauthoritiessubjectssh2009007848 .
+_:b8iddOtlocdOtgovauthoritiessubjectssh2009007848 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://id.loc.gov/authorities/subjects/sh85065184> .
+_:b8iddOtlocdOtgovauthoritiessubjectssh2009007848 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b016 .
+<http://id.loc.gov/authorities/subjects/sh85065184> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Topic> .
+<http://id.loc.gov/authorities/subjects/sh85065184> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+<http://id.loc.gov/authorities/subjects/sh85065184> <http://www.loc.gov/mads/rdf/v1#variantLabel> "Indians of North America"@en .
+<http://id.loc.gov/authorities/subjects/sh85065184> <http://www.loc.gov/mads/rdf/v1#elementList> _:b13iddOtlocdOtgovauthoritiessubjectssh2009007848 .
+_:b13iddOtlocdOtgovauthoritiessubjectssh2009007848 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b14iddOtlocdOtgovauthoritiessubjectssh2009007848 .
+_:b13iddOtlocdOtgovauthoritiessubjectssh2009007848 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:b14iddOtlocdOtgovauthoritiessubjectssh2009007848 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#TopicElement> .
+_:b14iddOtlocdOtgovauthoritiessubjectssh2009007848 <http://www.loc.gov/mads/rdf/v1#elementValue> "Indians of North America"@en .
+_:b016 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b17iddOtlocdOtgovauthoritiessubjectssh2009007848 .
+_:b016 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:b17iddOtlocdOtgovauthoritiessubjectssh2009007848 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Geographic> .
+_:b17iddOtlocdOtgovauthoritiessubjectssh2009007848 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+_:b17iddOtlocdOtgovauthoritiessubjectssh2009007848 <http://www.loc.gov/mads/rdf/v1#variantLabel> "United States"@en .
+_:b17iddOtlocdOtgovauthoritiessubjectssh2009007848 <http://www.loc.gov/mads/rdf/v1#elementList> _:b21iddOtlocdOtgovauthoritiessubjectssh2009007848 .
+_:b21iddOtlocdOtgovauthoritiessubjectssh2009007848 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b22iddOtlocdOtgovauthoritiessubjectssh2009007848 .
+_:b21iddOtlocdOtgovauthoritiessubjectssh2009007848 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:b22iddOtlocdOtgovauthoritiessubjectssh2009007848 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#GeographicElement> .
+_:b22iddOtlocdOtgovauthoritiessubjectssh2009007848 <http://www.loc.gov/mads/rdf/v1#elementValue> "United States"@en .
+<http://id.loc.gov/authorities/subjects/sh2009007848> <http://www.loc.gov/mads/rdf/v1#deletionNote> "This authority record has been deleted because it is not a valid heading."@en .
+<http://id.loc.gov/authorities/subjects/sh2009007848> <http://www.w3.org/2002/07/owl#sameAs> <info:lc/authorities/sh2009007848> .
+<http://id.loc.gov/authorities/subjects/sh2009007848> <http://www.w3.org/2002/07/owl#sameAs> <http://id.loc.gov/authorities/sh2009007848#concept> .
+<http://id.loc.gov/authorities/subjects/sh2009007848> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:b29iddOtlocdOtgovauthoritiessubjectssh2009007848 .
+_:b29iddOtlocdOtgovauthoritiessubjectssh2009007848 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+_:b29iddOtlocdOtgovauthoritiessubjectssh2009007848 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "2009-08-25T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+_:b29iddOtlocdOtgovauthoritiessubjectssh2009007848 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "new"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:b29iddOtlocdOtgovauthoritiessubjectssh2009007848 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/dlc> .
+_:b29iddOtlocdOtgovauthoritiessubjectssh2009007848 <http://id.loc.gov/ontologies/RecordInfo#languageOfCataloging> <http://id.loc.gov/vocabulary/iso639-2/eng> .
+<http://id.loc.gov/authorities/subjects/sh2009007848> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:b37iddOtlocdOtgovauthoritiessubjectssh2009007848 .
+_:b37iddOtlocdOtgovauthoritiessubjectssh2009007848 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+_:b37iddOtlocdOtgovauthoritiessubjectssh2009007848 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "2009-09-09T10:57:47"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+_:b37iddOtlocdOtgovauthoritiessubjectssh2009007848 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "deprecated"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:b37iddOtlocdOtgovauthoritiessubjectssh2009007848 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/dlc> .
+_:b37iddOtlocdOtgovauthoritiessubjectssh2009007848 <http://id.loc.gov/ontologies/RecordInfo#languageOfCataloging> <http://id.loc.gov/vocabulary/iso639-2/eng> .
+<http://id.loc.gov/authorities/subjects/sh2009007848> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2008/05/skos-xl#Label> .
+<http://id.loc.gov/authorities/subjects/sh2009007848> <http://www.w3.org/2008/05/skos-xl#literalForm> "Indians of North America--United States"@en .
+<http://id.loc.gov/authorities/subjects/sh2009007848> <http://www.w3.org/2004/02/skos/core#changeNote> "This authority record has been deleted because it is not a valid heading."@en .
+<http://id.loc.gov/authorities/subjects/sh2009007848> <http://www.w3.org/2004/02/skos/core#changeNote> _:b50iddOtlocdOtgovauthoritiessubjectssh2009007848 .
+_:b50iddOtlocdOtgovauthoritiessubjectssh2009007848 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocab/changeset/schema#ChangeSet> .
+_:b50iddOtlocdOtgovauthoritiessubjectssh2009007848 <http://purl.org/vocab/changeset/schema#subjectOfChange> <http://id.loc.gov/authorities/subjects/sh2009007848> .
+_:b50iddOtlocdOtgovauthoritiessubjectssh2009007848 <http://purl.org/vocab/changeset/schema#creatorName> <http://id.loc.gov/vocabulary/organizations/dlc> .
+_:b50iddOtlocdOtgovauthoritiessubjectssh2009007848 <http://purl.org/vocab/changeset/schema#createdDate> "2009-08-25T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+_:b50iddOtlocdOtgovauthoritiessubjectssh2009007848 <http://purl.org/vocab/changeset/schema#changeReason> "new"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://id.loc.gov/authorities/subjects/sh2009007848> <http://www.w3.org/2004/02/skos/core#changeNote> _:b58iddOtlocdOtgovauthoritiessubjectssh2009007848 .
+_:b58iddOtlocdOtgovauthoritiessubjectssh2009007848 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocab/changeset/schema#ChangeSet> .
+_:b58iddOtlocdOtgovauthoritiessubjectssh2009007848 <http://purl.org/vocab/changeset/schema#subjectOfChange> <http://id.loc.gov/authorities/subjects/sh2009007848> .
+_:b58iddOtlocdOtgovauthoritiessubjectssh2009007848 <http://purl.org/vocab/changeset/schema#creatorName> <http://id.loc.gov/vocabulary/organizations/dlc> .
+_:b58iddOtlocdOtgovauthoritiessubjectssh2009007848 <http://purl.org/vocab/changeset/schema#createdDate> "2009-09-09T10:57:47"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+_:b58iddOtlocdOtgovauthoritiessubjectssh2009007848 <http://purl.org/vocab/changeset/schema#changeReason> "deprecated"^^<http://www.w3.org/2001/XMLSchema#string> .
