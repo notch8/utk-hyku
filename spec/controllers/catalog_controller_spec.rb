@@ -35,7 +35,6 @@ RSpec.describe CatalogController, type: :controller do
       expect(facet_fields['human_readable_type_sim'].limit).to eq 5
       expect(facet_fields['creator_sim'].limit).to eq 5
       expect(facet_fields['contributor_sim'].limit).to eq 5
-      expect(facet_fields['keyword_sim'].limit).to eq 5
       expect(facet_fields['subject_sim'].limit).to eq 5
       expect(facet_fields['language_sim'].limit).to eq 5
       expect(facet_fields['based_near_label_sim'].limit).to eq 5

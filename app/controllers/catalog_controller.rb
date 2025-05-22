@@ -95,7 +95,6 @@ class CatalogController < ApplicationController
     config.add_facet_field 'creator_sim', limit: 5
     config.add_facet_field 'contributor_sim', label: "Contributor", limit: 5
     config.add_facet_field 'intermediate_provider_sim', label: "Intermediate Provider", limit: 5
-    config.add_facet_field 'keyword_sim', limit: 5
     config.add_facet_field 'subject_sim', limit: 5
     config.add_facet_field 'language_sim', limit: 5
     config.add_facet_field 'spatial_sim', label: "Location", limit: 5
