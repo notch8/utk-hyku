@@ -154,9 +154,9 @@ extraEnvVars: &envVars
   - name: S3_DOWNLOADS
     value: "true"
   - name: SENTRY_DSN
-    value: https://ab7f8b39ca414630bd07f6657f57f641@o1008683.ingest.sentry.io/6745049
+    value: $SENTRY_DSN
   - name: SENTRY_ENVIRONMENT
-    value: production
+    value: "utk-hyku-production"
   - name: SMTP_ADDRESS
     value: smtp.sendgrid.net
   - name: SMTP_DOMAIN

@@ -161,7 +161,7 @@ extraEnvVars: &envVars
   - name: SENTRY_DSN
     value: $SENTRY_DSN
   - name: SENTRY_ENVIRONMENT
-    value: hykuup-knapsack-friends
+    value: "utk-hyku-friends"
   - name: SMTP_ADDRESS
     value: "maildev-smtp.maildev.svc.cluster.local"
   - name: SMTP_DOMAIN
