@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require 'sentry-rails'
 require 'sentry-ruby'
 require 'sentry-sidekiq'
 
