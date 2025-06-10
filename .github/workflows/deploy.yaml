@@ -20,5 +20,5 @@ on:
 # We are using version 14 since this project has not been knap-sackerized yet
 jobs:
   deploy:
-    uses: notch8/actions/.github/workflows/deploy.yaml@v0.0.14
+    uses: notch8/actions/.github/workflows/deploy.yaml@v0.0.24
     secrets: inherit

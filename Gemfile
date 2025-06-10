@@ -93,7 +93,8 @@ gem 'sass-rails', '~> 5.0' # Use SCSS for stylesheets
 gem 'scss_lint', require: false, group: %i[development]
 gem 'secure_headers'
 gem 'selenium-webdriver', '3.142.7', group: %i[test]
-gem 'sentry-raven' # Notch8 Sentry Error Reporting
+gem 'sentry-rails' # Notch8 Sentry Error Reporting
+gem 'sentry-ruby' # Notch8 Sentry Error Reporting
 gem 'shoulda-matchers', '~> 4.0', group: %i[test]
 gem 'simple_form', '5.1.0' # TODO: simple form and allinson flex seem to have issues with 5.4.0. specifically an error on the edit form for multi_value
 gem 'simplecov', require: false, group: %i[development test]
