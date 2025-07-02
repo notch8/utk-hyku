@@ -66,4 +66,16 @@ class Ability
   def can_export_works?
     can_create_any_work?
   end
+
+  ##
+  # @api public
+  #
+  # Overrides hydra-head to allow collection_viewer to view everything in a collection
+  def test_download(id)
+    current_user.collection_viewer?(id) || super
+  end
+
+  def test_read(id)
+    current_user.collection_viewer?(id) || super
+  end
 end
