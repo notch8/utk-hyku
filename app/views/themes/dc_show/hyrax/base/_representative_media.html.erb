@@ -2,7 +2,7 @@
   OVERRIDE Hyrax v3.6.0 to check if the work has all attachments that are set to institution.
   If so then the UV should not show and instead display the thumbnail.
 %>
-<% if presenter.representative_id.present? && presenter.representative_presenter.present? && presenter.representative_presenter.file_set_ids.present? %>
+<% if presenter.representative_id.present? && presenter.representative_presenter.present? && (presenter.representative_presenter.try(:file_set_ids)&.present? || presenter.representative_presenter.intermediate_file? ) %>
   <% if defined?(viewer) && viewer && (!attachments_with_institution_visibility?(presenter) || current_user) %>
     <%= iiif_viewer_display presenter %>
   <% else %>
