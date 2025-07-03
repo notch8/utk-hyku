@@ -111,7 +111,7 @@ class User < ApplicationRecord
 
   # Check if the user can view a collection based on collection viewer role
   def collection_viewer?(object_id)
-    return false unless user_key.present?
+    return false if user_key.blank?
     return false if admin?
     return false if object_id.blank?
 
@@ -155,7 +155,7 @@ class User < ApplicationRecord
     def find_parent_doc(id)
       Hyrax::SolrService.query(
         "file_set_ids_ssim:#{id}",
-        rows:1,
+        rows: 1,
         fl: 'member_of_collection_ids_ssim',
         fq: '-has_model_ssim:Attachment'
       ).first
