@@ -108,4 +108,56 @@ class User < ApplicationRecord
     # Role for any given site
     add_role :registered, Site.instance
   end
+
+  # Check if the user can view a collection based on collection viewer role
+  def collection_viewer?(object_id)
+    return false if user_key.blank?
+    return false if admin?
+    return false if object_id.blank?
+
+    collection_ids = find_collection(object_id)
+    return false if collection_ids.blank?
+
+    collection_query = collection_ids.map { |id| "id:#{id}" }.join(' OR ')
+
+    Hyrax::SolrService.count("(#{collection_query}) AND read_access_person_ssim:#{user_key}").positive?
+  end
+
+  private
+
+    def find_collection(object_id)
+      doc = find_doc(object_id)
+
+      doc = case doc['has_model_ssim'].first
+            when 'Attachment', 'FileSet'
+              find_parent_doc(object_id)
+            else
+              doc
+            end
+
+      doc.fetch('member_of_collection_ids_ssim', nil)
+    end
+
+    def find_doc(ids)
+      id_query = Array.wrap(ids).map { |id| "id:#{id}" }.join(" OR ")
+
+      docs = Hyrax::SolrService.query(
+        id_query,
+        fl: 'id,has_model_ssim,member_of_collection_ids_ssim,is_page_of_ssim',
+        rows: ids.length
+      )
+
+      return docs.first if docs.one?
+
+      docs.find { |doc| doc['has_model_ssim'].first != 'Attachment' }
+    end
+
+    def find_parent_doc(id)
+      Hyrax::SolrService.query(
+        "file_set_ids_ssim:#{id}",
+        rows: 1,
+        fl: 'member_of_collection_ids_ssim',
+        fq: '-has_model_ssim:Attachment'
+      ).first
+    end
 end
