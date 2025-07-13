@@ -19,9 +19,14 @@ module Bulkrax
           e.status_info('Pending', importer.current_run)
           if remove_and_rerun
             delay = calculate_type_delay(type)
-            "Bulkrax::DeleteAndImport#{type.camelize}Job".constantize.set(wait: delay).send(perform_method, e, current_run)
+            "Bulkrax::DeleteAndImport#{type.camelize}Job"
+              .constantize
+              .set(wait: delay)
+              .send(perform_method, e, current_run)
           else
-            "Bulkrax::Import#{type.camelize}Job".constantize.send(perform_method, e.id, current_run.id)
+            "Bulkrax::Import#{type.camelize}Job"
+              .constantize
+              .send(perform_method, e.id, current_run.id)
           end
           increment_counters(index)
           index += 1
