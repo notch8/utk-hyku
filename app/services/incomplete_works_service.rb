@@ -8,7 +8,7 @@ require 'csv'
 #
 # Usage:
 #   IncompleteWorksService.run_reports
-#   IncompleteWorksService.run_reports(reports: [:no_files])
+#   IncompleteWorksService.run_reports(reports: [:no_files], rows: 500) # defaults to 100,000 rows
 #
 # This will create the specified CSV files in the public/uploads directory.
 class IncompleteWorksService
@@ -19,28 +19,42 @@ class IncompleteWorksService
   # Generates two CSV files:
   # - attachments_without_filesets.csv: Lists attachments without associated filesets.
   # - works_without_attachments.csv: Lists works that do not have any attachments.
-  def self.run_reports(reports: %i[no_files no_attachments], rows: 100_000)
+  def self.run_reports(reports: %i[no_files no_attachments no_filesets], rows: 100_000)
     # Create CSV for attachments without filesets
+    if reports.include?(:no_filesets)
+      data = no_filesets(rows: rows)
+      create_csv(data: data,
+                  output_file: 'attachments_without_filesets.csv',
+                  headers: ["Attachment URL", "Work Type", "Bulkrax Identifier", "Parent URL"])
+      Rails.logger.info "Created attachments_without_filesets.csv in public/uploads"
+    end
+
+     # Create CSV for filesets without files
     if reports.include?(:no_files)
-      create_csv(data: no_files(rows: rows),
-                 output_file: 'attachments_without_filesets.csv',
-                 headers: ["Attachment URL", "Work Type", "Bulkrax Identifier", "Parent URL"])
+      data = no_files(rows: rows)
+      create_csv(data: data,
+                  output_file: 'filesets_without_files.csv',
+                  headers: ["File Set URL", "FileSet Title", "Bulkrax Identifier", "Import URL"])
+      Rails.logger.info "Created filesets_without_files.csv in public/uploads"
     end
 
     return unless reports.include?(:no_attachments)
     # Create CSV for works without attachments
-    create_csv(data: no_attachments(rows: rows),
+    data = no_attachments(rows: rows)
+    create_csv(data: data,
                output_file: 'works_without_attachments.csv',
                headers: ["Work URL", "Work Type", "Bulkrax Identifier"])
+    Rails.logger.info "Created works_without_attachments.csv in public/uploads"
   end
 
   # Find all attachments without members
-  def self.no_files(rows: 100_000)
+  def self.no_filesets(rows: 100_000)
     results = Hyrax::SolrService.query(
       "has_model_ssim:Attachment AND -file_set_ids_ssim:[* TO *] AND is_page_of_ssim:[* TO *]",
       rows: rows,
       fl: 'id,is_page_of_ssim,bulkrax_identifier_tesim'
     )
+    return [] if results.empty?
 
     results.map do |hash|
       parent_model = Hyrax::SolrService.query(
@@ -71,6 +85,22 @@ class IncompleteWorksService
       "#{hash['id']};" \
       "#{hash['has_model_ssim'].first};" \
       "#{hash['bulkrax_identifier_tesim']&.first}"
+    end
+  end
+
+  def self.no_files(rows: 100_000)
+    results = Hyrax::SolrService.query(
+      "has_model_ssim:FileSet AND -file_format_tesim:[* TO *]",
+      rows: rows,
+      fl: 'id,title_tesim,bulkrax_identifier_tesim,import_url_ssim'
+    )
+    return [] if results.empty?
+
+    results.map do |hash|
+      "https://digitalcollections.lib.utk.edu/concern/file_sets/#{hash['id']};" \
+      "#{hash['title_tesim'].first};" \
+      "#{hash['bulkrax_identifier_tesim']&.first};" \
+      "#{hash['import_url_ssim']&.first}"
     end
   end
 

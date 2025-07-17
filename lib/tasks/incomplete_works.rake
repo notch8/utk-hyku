@@ -10,8 +10,9 @@ namespace :hyku do
       if tenant.blank?
         puts "ERROR: Account tenant name must be provided as an argument"
         puts "Examples:"
-        puts "  rake hyku:incomplete_works[tenant]                  # Run all reports with default row limit"
+        puts "  rake hyku:incomplete_works[tenant]                  # Run all reports with default row limit of 100,000"
         puts "  rake hyku:incomplete_works[tenant,no_files]         # Run only no_files report"
+        puts "  rake hyku:incomplete_works[tenant,no_filesets]      # Run only no_filesets report"
         puts "  rake hyku:incomplete_works[tenant,no_attachments]   # Run only no_attachments report"
         puts "  rake hyku:incomplete_works[tenant,no_files,500]     # Run no_files report with 500 row limit"
         puts "  rake hyku:incomplete_works[tenant,,500]             # Run all reports, each with 500 row limit"
@@ -19,9 +20,8 @@ namespace :hyku do
       end
 
       # Validate report types
-      reports = args[:reports] ? args[:reports].split(',').map(&:to_sym) : %i[no_files no_attachments]
-
-      valid_reports = %i[no_files no_attachments]
+      valid_reports = %i[no_attachments no_filesets no_files]
+      reports = args[:reports] ? args[:reports].split(',').map(&:to_sym) : valid_reports
       invalid_reports = reports - valid_reports
 
       if invalid_reports.any?
@@ -58,7 +58,9 @@ namespace :hyku do
       puts "Check the following files:"
       reports.each do |report|
         case report
-        when :no_files
+          when :no_files
+          puts "  /uploads/filesets_without_files.csv"
+        when :no_filesets
           puts "  /uploads/attachments_without_filesets.csv"
         when :no_attachments
           puts "  /uploads/works_without_attachments.csv"
