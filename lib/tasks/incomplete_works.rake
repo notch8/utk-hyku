@@ -58,7 +58,7 @@ namespace :hyku do
       puts "Check the following files:"
       reports.each do |report|
         case report
-          when :no_files
+        when :no_files
           puts "  /uploads/filesets_without_files.csv"
         when :no_filesets
           puts "  /uploads/attachments_without_filesets.csv"

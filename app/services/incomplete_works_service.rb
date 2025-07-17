@@ -3,8 +3,8 @@
 require 'csv'
 
 # IncompleteWorksService is responsible for generating reports on incomplete works
-# in the digital collections. It identifies attachments without filesets
-# and works without attachments, generating CSV files for each report.
+# in the digital collections. It identifies attachments without filesets, works
+# without attachments, and filesets without files, generating CSV files for each report.
 #
 # Usage:
 #   IncompleteWorksService.run_reports
@@ -16,25 +16,26 @@ class IncompleteWorksService
   #
   # @return [void]
   #
-  # Generates two CSV files:
+  # Generates up to 3 CSV files:
   # - attachments_without_filesets.csv: Lists attachments without associated filesets.
   # - works_without_attachments.csv: Lists works that do not have any attachments.
+  # - filesets_without_files.csv: Lists filesets that do not have any files.
   def self.run_reports(reports: %i[no_files no_attachments no_filesets], rows: 100_000)
     # Create CSV for attachments without filesets
     if reports.include?(:no_filesets)
       data = no_filesets(rows: rows)
       create_csv(data: data,
-                  output_file: 'attachments_without_filesets.csv',
-                  headers: ["Attachment URL", "Work Type", "Bulkrax Identifier", "Parent URL"])
+                 output_file: 'attachments_without_filesets.csv',
+                 headers: ["Attachment URL", "Work Type", "Bulkrax Identifier", "Parent URL"])
       Rails.logger.info "Created attachments_without_filesets.csv in public/uploads"
     end
 
-     # Create CSV for filesets without files
+    # Create CSV for filesets without files
     if reports.include?(:no_files)
       data = no_files(rows: rows)
       create_csv(data: data,
-                  output_file: 'filesets_without_files.csv',
-                  headers: ["File Set URL", "FileSet Title", "Bulkrax Identifier", "Import URL"])
+                 output_file: 'filesets_without_files.csv',
+                 headers: ["File Set URL", "FileSet Title", "Bulkrax Identifier", "Import URL"])
       Rails.logger.info "Created filesets_without_files.csv in public/uploads"
     end
 
