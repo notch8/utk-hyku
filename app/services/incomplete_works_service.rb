@@ -64,10 +64,10 @@ class IncompleteWorksService
       ).first['has_model_ssim'].first
       parent_id = hash['is_page_of_ssim'].first
 
-      "https://digitalcollections.lib.utk.edu/concern/parent/#{parent_id}/attachments/#{hash['id']};" \
+      "https://#{Site.account.cname}/concern/parent/#{parent_id}/attachments/#{hash['id']};" \
       "#{parent_model};" \
       "#{hash['bulkrax_identifier_tesim']&.first};" \
-      "https://digitalcollections.lib.utk.edu/concern/#{parent_model.underscore.pluralize}/#{parent_id}"
+      "https://#{Site.account.cname}/concern/#{parent_model.underscore.pluralize}/#{parent_id}"
     end
   end
 
@@ -82,7 +82,7 @@ class IncompleteWorksService
     end
 
     results.flatten.map do |hash|
-      "https://digitalcollections.lib.utk.edu/concern/#{hash['has_model_ssim'].first.downcase.pluralize}/" \
+      "https://#{Site.account.cname}/concern/#{hash['has_model_ssim'].first.downcase.pluralize}/" \
       "#{hash['id']};" \
       "#{hash['has_model_ssim'].first};" \
       "#{hash['bulkrax_identifier_tesim']&.first}"
@@ -98,7 +98,7 @@ class IncompleteWorksService
     return [] if results.empty?
 
     results.map do |hash|
-      "https://digitalcollections.lib.utk.edu/concern/file_sets/#{hash['id']};" \
+      "https://#{Site.account.cname}/concern/file_sets/#{hash['id']};" \
       "#{hash['title_tesim'].first};" \
       "#{hash['bulkrax_identifier_tesim']&.first};" \
       "#{hash['import_url_ssim']&.first}"
