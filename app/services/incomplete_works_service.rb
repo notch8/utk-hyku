@@ -58,10 +58,14 @@ class IncompleteWorksService
     return [] if results.empty?
 
     results.map do |hash|
-      parent_model = Hyrax::SolrService.query(
+      parent_result = Hyrax::SolrService.query(
         "id:#{hash['is_page_of_ssim'].first}",
         rows: 1
-      ).first['has_model_ssim'].first
+      )
+
+      # Skip this item if parent query returned no results
+      next if parent_result.empty?
+      parent_model = parent_result.first&.dig('has_model_ssim')&.first
       parent_id = hash['is_page_of_ssim'].first
 
       "https://#{Site.account.cname}/concern/parent/#{parent_id}/attachments/#{hash['id']};" \
