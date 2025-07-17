@@ -66,7 +66,8 @@ class IncompleteWorksService
       # Skip this item if parent query returned no results
       next if parent_result.empty?
       parent_model = parent_result.first&.dig('has_model_ssim')&.first
-      parent_id = hash['is_page_of_ssim'].first
+      parent_id = hash['is_page_of_ssim']&.first
+      next if parent_id.nil?
 
       "https://#{Site.account.cname}/concern/parent/#{parent_id}/attachments/#{hash['id']};" \
       "#{parent_model};" \
@@ -117,8 +118,10 @@ class IncompleteWorksService
       # Add a header row if needed
       csv << headers
 
+      break if data.empty?
       # Process each string in the array
       data.each do |str|
+        next unless str.is_a?(String)
         parts = str.split(';')
         csv << parts
       end
