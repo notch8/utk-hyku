@@ -243,11 +243,11 @@ redis:
   master:
     livenessProbe:
       enabled: true
-      initialDelaySeconds: 60       # wait longer before first check
-      periodSeconds: 60             # check every 60s
-      timeoutSeconds: 10            # allow 10s to respond
+      initialDelaySeconds: 60     # wait longer before first check
+      periodSeconds: 60           # check every 60s
+      timeoutSeconds: 10          # allow 10s to respond
       successThreshold: 1
-      failureThreshold: 5           # 5 failures = ~5 mins grace
+      failureThreshold: 5         # 5 failures = ~5 mins grace
     readinessProbe:
       enabled: true
       initialDelaySeconds: 30     # start earlier than liveness
