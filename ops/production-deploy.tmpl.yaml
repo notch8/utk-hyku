@@ -12,6 +12,9 @@ livenessProbe:
   enabled: false
 readinessProbe:
   enabled: true
+  path: "/healthz"
+  periodSeconds: 30
+  timeoutSeconds: 10
 
 brandingVolume:
   storageClass: efs-sc
@@ -237,6 +240,21 @@ redis:
   cluster:
     enabled: false
   password: $REDIS_PASSWORD
+  master:
+    livenessProbe:
+      enabled: true
+      initialDelaySeconds: 60       # wait longer before first check
+      periodSeconds: 60             # check every 60s
+      timeoutSeconds: 10            # allow 10s to respond
+      successThreshold: 1
+      failureThreshold: 5           # 5 failures = ~5 mins grace
+    readinessProbe:
+      enabled: true
+      initialDelaySeconds: 30     # start earlier than liveness
+      periodSeconds: 60           # check every 60s
+      timeoutSeconds: 10          # allow up to 10s per check
+      successThreshold: 1
+      failureThreshold: 5         # allow 5 failures before marking unready
 solr:
   enabled: false
 
