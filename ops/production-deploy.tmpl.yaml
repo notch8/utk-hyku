@@ -82,7 +82,7 @@ extraEnvVars: &envVars
   - name: DB_USER
     value: main
   - name: EXTERNAL_IIIF_URL
-    value: https://wtchtwt5fcxnxj5guruoadqpwm0uvgjl.lambda-url.us-west-2.on.aws/iiif/2
+    value: https://oacfsemyfqrfalk3j4zimxhe3i0tseay.lambda-url.us-west-2.on.aws/iiif/2
   - name: FCREPO_BASE_PATH
     value: /utk-hyku
   - name: FCREPO_HOST
