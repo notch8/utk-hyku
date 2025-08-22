@@ -234,9 +234,17 @@ fcrepo:
       memory: "2Gi"
       cpu: "1"
   enabled: false
+  postgresql:
+    enabled: false
+    image:
+      repository: bitnamilegacy/postgresql
+      tag: 12.11.0-debian-11-r12
 postgresql:
   enabled: false
 redis:
+  image:
+    repository: bitnamilegacy/redis
+    tag: 6.0.6
   cluster:
     enabled: false
   password: $REDIS_PASSWORD
