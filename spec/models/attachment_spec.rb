@@ -31,4 +31,18 @@ RSpec.describe Attachment do
       end
     end
   end
+
+  describe '#update' do
+    context 'with a connected FileSet' do
+      let(:attachment) { FactoryBot.create(:attachment_with_one_file, visibility: 'restricted') }
+
+      it 'updates the visibility of the connected FileSet' do
+        expect(attachment.visibility).to eq('restricted')
+        expect(attachment.file_sets.first.visibility).to eq('restricted')
+        attachment.update!(visibility: 'open')
+        expect(attachment.reload.visibility).to eq('open')
+        expect(attachment.file_sets.first.reload.visibility).to eq('open')
+      end
+    end
+  end
 end
