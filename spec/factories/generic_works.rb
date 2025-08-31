@@ -40,6 +40,21 @@ FactoryBot.define do
       end
     end
 
+    factory :generic_work_with_one_restricted_attachment do
+      title { ["Test GenericWork title"] }
+      after(:build) do |work|
+        work.ordered_members << attachment = FactoryBot.create(
+          :attachment_with_one_file,
+          title: ['Attachment title'],
+          visibility: 'restricted',
+          bulkrax_identifier: "1234-5678"
+        )
+        work.representative = attachment if work.representative_id.blank?
+        work.thumbnail = attachment if work.thumbnail_id.blank?
+        work.save
+      end
+    end
+
     factory :generic_work_with_two_attachments do
       after(:build) do |work|
         work.ordered_members << attachment = FactoryBot.create(
