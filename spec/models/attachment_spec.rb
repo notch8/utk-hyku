@@ -35,8 +35,23 @@ RSpec.describe Attachment do
   describe '#update' do
     context 'with a connected FileSet' do
       let(:attachment) { FactoryBot.create(:attachment_with_one_file, visibility: 'restricted') }
+      let(:file_set_visibility_double) { Hyrax::FileSetVisibilityPropagator.new(source: attachment) }
+
+      around do |example|
+        cached_adapter = ActiveJob::Base.queue_adapter
+        cached_perform_enqueued_jobs = ActiveJob::Base.queue_adapter.perform_enqueued_jobs
+        ActiveJob::Base.queue_adapter = :test
+        ActiveJob::Base.queue_adapter.perform_enqueued_jobs = true
+        example.run
+        ActiveJob::Base.queue_adapter = cached_adapter
+        ActiveJob::Base.queue_adapter.perform_enqueued_jobs = cached_perform_enqueued_jobs
+      end
 
       it 'updates the visibility of the connected FileSet' do
+        allow(Hyrax::FileSetVisibilityPropagator).to receive(:new)
+          .with(source: attachment)
+          .and_return(file_set_visibility_double)
+        expect(Hyrax::FileSetVisibilityPropagator).to receive(:new).with(source: attachment)
         expect(attachment.visibility).to eq('restricted')
         expect(attachment.file_sets.first.visibility).to eq('restricted')
         attachment.update!(visibility: 'open')
