@@ -22,10 +22,6 @@ class Attachment < ActiveFedora::Base
 
   # If we update the Attachment's visibility, we should also update the FileSet's visibility
   def update_file_set_visibility
-    file_sets.each do |fs|
-      next if visibility == fs.visibility
-
-      fs.update!(visibility: visibility)
-    end
+    ::VisibilityCopyJob.perform_later(self)
   end
 end
