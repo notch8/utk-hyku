@@ -6,6 +6,8 @@ class Attachment < ActiveFedora::Base
   include SharedWorkBehavior
   include IiifPrint.model_configuration
 
+  after_update :update_file_set_visibility
+
   self.indexer = AttachmentIndexer
 
   # Change this to restrict which works can be added as a child.
@@ -16,5 +18,10 @@ class Attachment < ActiveFedora::Base
     return false if rdf_type.blank?
 
     Hyrax::ConditionalDerivativeDecorator.intermediate_file?(object: self)
+  end
+
+  # If we update the Attachment's visibility, we should also update the FileSet's visibility
+  def update_file_set_visibility
+    ::VisibilityCopyJob.perform_later(self)
   end
 end
