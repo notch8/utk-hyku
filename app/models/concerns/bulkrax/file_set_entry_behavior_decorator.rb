@@ -8,7 +8,7 @@ module Bulkrax
       factory.find.present?
     end
 
-    # Do no raise an error if this is an update
+    # Do not raise an error if this is an update
     def validate_presence_of_filename!
       return if parsed_metadata&.[](file_reference)&.map(&:present?)&.any?
 
