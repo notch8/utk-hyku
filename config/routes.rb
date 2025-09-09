@@ -140,4 +140,18 @@ Rails.application.routes.draw do # rubocop:disable Metrics/BlockLength
   # Use proxy URL for S3 content to avoid CORS issues
   # see #create_supplementing_content in app/presenters/hyrax/iiif_manifest_presenter_decorator.rb
   get 'supplementing_content/:id(.:format)', to: 'supplementing_content#show', as: 'supplementing_content'
+
+  # TODO: this route is a temporary fix for UV small image download not working
+  get '/:file_path/full/:size/:rotation/:quality.:format',
+    to: redirect { |params, request|
+      encoded_path = params[:file_path].gsub('/', '%2F')
+      "/images/#{encoded_path}/full/#{params[:size]}/#{params[:rotation]}/#{params[:quality]}.#{params[:format]}"
+    },
+    constraints: {
+      file_path: /[a-f0-9-]+%2Ffiles%2F[a-f0-9-]+%2Ffcr:versions%2F\w+/,
+      size: /[\d,!]+/,
+      rotation: /\d+/,
+      quality: /\w+/,
+      format: /(jpg|png|gif|webp)/
+    }
 end
