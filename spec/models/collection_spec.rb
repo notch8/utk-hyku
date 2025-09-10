@@ -104,4 +104,22 @@ RSpec.describe Collection do
       end
     end
   end
+
+  describe 'reindex_member_objects' do
+    let(:work) { create(:generic_work) }
+
+    before do
+      work.member_of_collections << collection
+      work.save
+      collection.title = ['New title']
+
+      perform_enqueued_jobs do
+        collection.save
+      end
+    end
+
+    it 'reindexes its works' do
+      expect(SolrDocument.find(work.id)['member_of_collections_ssim']).to eq ['New title']
+    end
+  end
 end
