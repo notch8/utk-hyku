@@ -7,19 +7,34 @@ module Hyrax
       private
 
         def cleanup_file_sets(curation_concern)
-          fs = curation_concern.file_sets
+          begin
+            file_sets = curation_concern.file_sets
+          rescue ActiveFedora::ObjectNotFoundError
+            return
+          end
+
           attachments = curation_concern.members
                                         .select { |member| member.is_a? Attachment }
                                         .select { |attachment| attachment.member_of.size == 1 }
-          curation_concern.list_source.destroy
+          begin
+            curation_concern.list_source.destroy
+          rescue Ldp::Gone
+            Rails.logger.warn "Attempted to access deleted resource: #{curation_concern.id}"
+          end
+
           if attachments.size.positive?
             attachments.each do |attachment|
               cleanup_file_sets(attachment)
-              attachment.destroy
+              attachment.destroy(eradicate: true)
             end
           end
           Hyrax::SolrService.delete(curation_concern.id)
-          fs.each(&:destroy) if fs.size.positive?
+
+          return unless file_sets.size.positive?
+
+          file_sets.each do |file_set|
+            file_set.delete(eradicate: true)
+          end
         end
     end
   end
