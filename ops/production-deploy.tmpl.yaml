@@ -195,7 +195,7 @@ extraEnvVars: &envVars
     value: testing123
 
 worker:
-  replicaCount: 3
+  replicaCount: 2
   resources:
     limits:
       memory: "6Gi"
