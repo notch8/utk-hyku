@@ -1,4 +1,9 @@
 replicaCount: 2
+tolerations:
+  - key: "linux-version"
+    operator: "Equal"
+    value: "al2023"
+    effect: "NoSchedule"
 
 resources:
   limits:
@@ -38,6 +43,11 @@ extraVolumeMounts: &volMounts
     subPath: network-files
 
 nginx:
+  tolerations:
+    - key: "linux-version"
+      operator: "Equal"
+      value: "al2023"
+      effect: "NoSchedule"
   service:
     port: 80
 
@@ -202,6 +212,11 @@ extraEnvVars: &envVars
     value: $TEST_USER_PASSWORD
 
 worker:
+  tolerations:
+  - key: "linux-version"
+    operator: "Equal"
+    value: "al2023"
+    effect: "NoSchedule"
   replicaCount: 1
   resources:
     limits:
@@ -233,6 +248,11 @@ imagePullSecrets:
   - name: github
 
 fcrepo:
+  tolerations:
+    - key: "linux-version"
+      operator: "Equal"
+      value: "al2023"
+      effect: "NoSchedule"
   resources:
     limits:
       memory: "4Gi"
@@ -254,6 +274,12 @@ redis:
     tag: 6.0.6
   cluster:
     enabled: false
+  master:
+    tolerations:
+    - key: "linux-version"
+      operator: "Equal"
+      value: "al2023"
+      effect: "NoSchedule"
   password: $REDIS_PASSWORD
 solr:
   enabled: false
