@@ -142,16 +142,23 @@ Rails.application.routes.draw do # rubocop:disable Metrics/BlockLength
   get 'supplementing_content/:id(.:format)', to: 'supplementing_content#show', as: 'supplementing_content'
 
   # TODO: this route is a temporary fix for UV small image download not working
+  external_iiif_url = ENV.fetch('EXTERNAL_IIIF_URL', nil)
+
   get '/:file_path/full/:size/:rotation/:quality.:format',
     to: redirect { |params, request|
-      encoded_path = params[:file_path].gsub('/', '%2F')
-      "/images/#{encoded_path}/full/#{params[:size]}/#{params[:rotation]}/#{params[:quality]}.#{params[:format]}"
+      file_path = if external_iiif_url.nil?
+        "/images/#{params[:file_path].gsub('/', '%2F')}"
+      else
+        "#{external_iiif_url}/#{params[:file_path]}"
+      end
+
+      "#{file_path}/full/#{params[:size]}/#{params[:rotation]}/#{params[:quality]}.#{params[:format]}"
     },
-    constraints: {
+    constraints: external_iiif_url.nil? ? {
       file_path: /[a-f0-9-]+%2Ffiles%2F[a-f0-9-]+%2Ffcr:versions%2F\w+/,
       size: /[\d,!]+/,
       rotation: /\d+/,
       quality: /\w+/,
       format: /(jpg|png|gif|webp)/
-    }
+    } : {}
 end
