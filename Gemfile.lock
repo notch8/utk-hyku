@@ -10,7 +10,7 @@ GIT
 GIT
   remote: https://github.com/notch8/iiif_print.git
   revision: 5c5fa6880b3dc22beed738cfcba7af57b698ac36
-  branch: main
+  ref: 5c5fa6880b3dc22beed738cfcba7af57b698ac36
   specs:
     iiif_print (1.0.0)
       blacklight_iiif_search (>= 1.0, < 3.0)
@@ -53,8 +53,8 @@ GIT
 
 GIT
   remote: https://github.com/samvera/bulkrax.git
-  revision: 03d7e8bf87e52777321ae2d572bd5d221ca40f5c
-  ref: 03d7e8bf87e52777321ae2d572bd5d221ca40f5c
+  revision: f1c302409564ace06c5745596ae01562d531e9d2
+  branch: utk
   specs:
     bulkrax (9.0.2)
       bagit (~> 0.6.0)
@@ -428,7 +428,7 @@ GEM
       activerecord (>= 4.1.14, < 8.0.0)
     deprecation (1.1.0)
       activesupport
-    derivative-rodeo (0.5.2)
+    derivative-rodeo (0.5.3)
       activesupport (>= 5)
       aws-sdk-s3
       aws-sdk-sqs
@@ -775,7 +775,7 @@ GEM
       rdf-vocab (~> 3.0)
     legato (0.7.0)
       multi_json
-    libxml-ruby (5.0.4)
+    libxml-ruby (5.0.5)
     link_header (0.0.8)
     linkeddata (3.1.6)
       equivalent-xml (~> 0.6)
