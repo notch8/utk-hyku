@@ -2,7 +2,6 @@
 
 # OVERRIDE here to add featured collection methods and to delegate collection presenters to the member presenter factory
 # OVERRIDE Hyrax 3.6 to show items in sequence order
-# OVERRIDE Hyrax 3.6 to correctly determine if IIIF media is present
 
 module Hyku
   class WorkShowPresenter < Hyrax::WorkShowPresenter
@@ -57,34 +56,15 @@ module Hyku
     end
     # End Featured Collections Methods
 
-    ## OVERRIDE to allow IIIF media to be correctly shown in universal viewer
-    def iiif_viewer?
-      Hyrax.config.iiif_image_server? &&
-        representative_id.present? &&
-        representative_presenter.present? &&
-        iiif_media? &&
-        members_include_iiif_viewable?
-    end
-
     def iiif_media?(presenter: representative_presenter)
-      iiif_media_predicates = %i[image? audio? video? pdf?]
-      iiif_media_predicates.any? do |predicate|
-        presenter.try(predicate) ||
-          presenter.try(:solr_document).try(predicate)
-      end
+      presenter.image? || presenter.video? || presenter.audio?
     end
 
-    def members_include_iiif_viewable?
-      iiif_presentable_member_presenters.any? do |presenter|
+    def members_include_viewable?
+      file_set_presenters.any? do |presenter|
         iiif_media?(presenter: presenter) && current_ability.can?(:read, presenter.id)
       end
     end
-
-    def iiif_presentable_member_presenters
-      presentable_member_ids = Array.wrap(solr_document.try(:member_ids) || solr_document.try(:[], 'member_ids_ssim'))
-      member_presenters(presentable_member_ids)
-    end
-    # end OVERRIDE Hyrax 3.6 to correctly determine if IIIF media is present
 
     # OVERRIDE Hyrax 3.6 to show items in sequence order
     # list of item ids to display is based on ordered_ids
