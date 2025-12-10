@@ -29,6 +29,8 @@ module ModsSolrDocument
         load_language(xml)
         # physicalDescription
         load_phyical(xml)
+        # abstract
+        load_abstract(xml)
         # tableOfContents
         # targetAudience
         # note
@@ -159,7 +161,7 @@ module ModsSolrDocument
     def load_access(xml)
       access_terms.each do |access_term|
         Array.wrap(send(access_term))&.each do |access|
-          xml.accessCondition(type: 'use and reproduction', "xlink:href" => access.to_s)
+          xml.accessCondition(type: 'use and reproduction', "xlink:href" => access)
         end
       end
     end
@@ -203,8 +205,8 @@ module ModsSolrDocument
     end
 
     def subject_terms
-      %i[subject
-         keyword]
+      # includes keyword because it is mapped into subject
+      %i[subject]
     end
 
     def location_terms
@@ -213,7 +215,7 @@ module ModsSolrDocument
     end
 
     def access_terms
-      %i[rights_statement
+      %i[rights_uri
          license]
     end
 end

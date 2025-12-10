@@ -74,6 +74,10 @@ class SolrDocument
     self['resource_link_tesim']
   end
 
+  def rights_uri
+    self['rights_statement_ssm']
+  end
+
   def spatial
     self['spatial_tesim']
   end
@@ -176,7 +180,7 @@ class SolrDocument
           language: 'language_tesim',
           publisher: ['provider_tesim', 'intermediate_provider_tesim'],
           rights: ['rights_statement_tesim', 'license_tesim'],
-          subject: ['subject_tesim', 'keyword_tesim'],
+          subject: ['subject_tesim'],
           title: 'title_tesim',
           type: 'resource_type_tesim'
         }
