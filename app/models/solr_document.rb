@@ -34,6 +34,15 @@ class SolrDocument
   attribute :rendering_ids, Solr::Array, 'hasFormat_ssim'
   attribute :account_cname, Solr::Array, 'account_cname_tesim'
 
+  def initialize(*args)
+    # past importing created some '[]' string values in the model, which
+    # appear as empty arrays in OAI feed and other views. We sanitize them
+    # because fixing in fedora would be monumental.
+    # @TODO: once migrated to postgres, fix the data at the source.
+    sanitize_hash(args.first)
+    super
+  end
+
   def date_created_d
     self['date_created_d_tesim']
   end
@@ -205,6 +214,15 @@ class SolrDocument
       host = self['account_cname_tesim'].first
 
       "https://#{host}#{path}"
+    end
+
+    def sanitize_hash(document_hash)
+      document_hash.each do |key, value|
+        Array.wrap(value).map! do |v|
+          v == '[]' ? nil : v
+        end
+      end
+      document_hash
     end
 end
 # rubocop:enable Metrics/ClassLength
