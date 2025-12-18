@@ -51,7 +51,7 @@ module ModsSolrDocument
   end
 
   private
-  
+
     def converter
       @converter ||= UriToStringConverterService.new(self)
     end
@@ -165,7 +165,7 @@ module ModsSolrDocument
     def load_access(xml)
       access_terms.each do |access_term|
         Array.wrap(send(access_term))&.each do |access|
-          xml.accessCondition(type: access_term.to_s, "xlink:href" => access) do
+          xml.accessCondition(type: 'use_and_reproduction', "xlink:href" => access) do
             xml.text converter.convert_uri_to_value([access_term]).first
           end
         end
