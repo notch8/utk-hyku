@@ -51,6 +51,9 @@ module ModsSolrDocument
   end
 
   private
+    def converter
+      @converter ||= UriToStringConverterService.new(self)
+    end
 
     def oai_url
       tenant_url + "/catalog/oai"
@@ -161,7 +164,10 @@ module ModsSolrDocument
     def load_access(xml)
       access_terms.each do |access_term|
         Array.wrap(send(access_term))&.each do |access|
-          xml.accessCondition(type: 'use and reproduction', "xlink:href" => access)
+          access_text = converter.convert_uri_to_value([access_term]).first || ''
+          xml.accessCondition(type: access_term.to_s, "xlink:href" => access) do
+            xml.text access_text
+          end
         end
       end
     end
