@@ -18,7 +18,6 @@ module BlacklightOaiProvider
           r.ListSets do
             provider.model.sets.each do |set|
               r.set do
-
                 r.setSpec set.spec
                 r.setName collection_name_for(set)
 
@@ -37,19 +36,21 @@ module BlacklightOaiProvider
 
       private
 
-      def initialize_set_info_for(sets)
-        ids = sets.map(&:value)
-        hits = Hyrax::SolrService.query("id:(#{ids.join(' OR ')})", rows: ids.size, fl: 'id,primary_identifier_tesim,title_tesim')
-        hits.each_with_object({}) do |hit, hash|
-          hash[hit['id']] = hit
+        def initialize_set_info_for(sets)
+          ids = sets.map(&:value)
+          hits = Hyrax::SolrService.query("id:(#{ids.join(' OR ')})",
+                                          rows: ids.size,
+                                          fl: 'id,primary_identifier_tesim,title_tesim')
+          hits.each_with_object({}) do |hit, hash|
+            hash[hit['id']] = hit
+          end
         end
-      end
 
-      def collection_name_for(set)
-        name = @lookup.dig(set.value,'title_tesim')&.first
-        return set.spec unless name.present?
-        "#{set.label.titleize}: #{name}"
-      end
+        def collection_name_for(set)
+          name = @lookup.dig(set.value, 'title_tesim')&.first
+          return set.spec if name.blank?
+          "#{set.label.titleize}: #{name}"
+        end
     end
   end
 end
