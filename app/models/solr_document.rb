@@ -218,7 +218,7 @@ class SolrDocument
 
     def sanitize_hash(document_hash)
       return document_hash if document_hash.blank?
-      document_hash.each_value do |_key, value|
+      document_hash.each_value do |value|
         Array.wrap(value).map! do |v|
           v == '[]' ? nil : v
         end
