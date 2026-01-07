@@ -429,7 +429,7 @@ class CatalogController < ApplicationController
         limit: 100, # number of records returned with each request, default: 15
         set_fields: [ # must contain terms that are identifiers in order for list_sets_decorator to work properly
           { label: 'admin_set', solr_field: 'isPartOf_ssim', description: 'Items grouped by admin set' },
-          { label: 'collection', solr_field: 'member_of_collection_ids_ssim', description: 'Items grouped by collection' }
+          { label: 'collection', solr_field: 'member_of_collections_ssim', description: 'Items grouped by collection' }
         ]
       }
     }

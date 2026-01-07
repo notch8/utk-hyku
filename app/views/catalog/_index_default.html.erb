@@ -19,8 +19,13 @@
   <dl class="document-metadata dl-horizontal dl-invert">
     <% index_fields(document).each do |field_name, field| %>
       <% if should_render_index_field? document, field %>
-        <dt class="blacklight-<%= field_name.parameterize %>"><%= render_index_field_label document, field: field_name %></dt>
-        <dd class="blacklight-<%= field_name.parameterize %>"><%= doc_presenter.field_value field %></dd>
+        <% begin %>
+          <% field_value = doc_presenter.field_value field %>
+          <dt class="blacklight-<%= field_name.parameterize %>"><%= render_index_field_label document, field: field_name %></dt>
+          <dd class="blacklight-<%= field_name.parameterize %>"><%= field_value %></dd>
+        <% rescue => e %>
+          <% Rails.logger.error "Error rendering field #{field_name}: #{e.message}" %>
+        <% end %>
       <% end %>
     <% end %>
   </dl>
