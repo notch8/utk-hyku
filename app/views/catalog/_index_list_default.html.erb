@@ -1,6 +1,7 @@
 <%# This is a Blacklight file copied to Hyrax by Hyrax maintainers and then copied here from Hyrax
     hyrax/app/views/catalog/_index_list_default.html.erb to add ability to display json metadata fields %>
 <%# OVERRIDE: Hyrax v3.4.2 - add conditional rendering, edit classes and change the layout of the metadata for custom theming %>
+<%# OVERRIDE: Hyrax v3.4.2 - add rescue to prevent catalog search results page from breaking if a QA term is empty %>
 <% if search_results_theme == 'dc_repository_search' && home_page_theme == 'dc_repository' %>
   <div class="search-results-page-metadata col-md-10">
     <% if document.to_h["has_model_ssim"].first != 'Collection' %>
@@ -54,8 +55,12 @@
         <% doc_presenter = index_presenter(document) %>
         <% index_fields(document).each do |field_name, field| %>
           <% if should_render_index_field? document, field %>
-            <dt data-solr-field-name="<%= field_name %>"><%= render_index_field_label document, field: field_name %></dt>
-            <dd><%= doc_presenter.field_value field %></dd>
+            <% begin %>
+              <% field_value = doc_presenter.field_value field %>
+              <dt data-solr-field-name="<%= field_name %>"><%= render_index_field_label document, field: field_name %></dt>
+              <dd><%= field_value %></dd>
+            <% rescue %>
+            <% end %>
           <% end %>
         <% end %>
       </dl>

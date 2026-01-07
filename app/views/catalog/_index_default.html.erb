@@ -1,5 +1,5 @@
 <%# OVERRIDE Hyrax 3.4.2: add conditional rendering and change layout for metadata %>
-
+<%# OVERRIDE: Hyrax 3.4.2 - add rescue to prevent catalog search results page from breaking if a QA term is empty %>
 <% doc_presenter = index_presenter(document) %>
 <%# default partial to display solr document fields in catalog index view %>
 <% if search_results_theme == 'dc_repository_search' && home_page_theme == 'dc_repository' %>
@@ -19,8 +19,13 @@
   <dl class="document-metadata dl-horizontal dl-invert">
     <% index_fields(document).each do |field_name, field| %>
       <% if should_render_index_field? document, field %>
-        <dt class="blacklight-<%= field_name.parameterize %>"><%= render_index_field_label document, field: field_name %></dt>
-        <dd class="blacklight-<%= field_name.parameterize %>"><%= doc_presenter.field_value field %></dd>
+        <% begin %>
+          <% field_value = doc_presenter.field_value field %>
+          <dt class="blacklight-<%= field_name.parameterize %>"><%= render_index_field_label document, field: field_name %></dt>
+          <dd class="blacklight-<%= field_name.parameterize %>"><%= field_value %></dd>
+        <% rescue => e %>
+          <% Rails.logger.error "Error rendering field #{field_name}: #{e.message}" %>
+        <% end %>
       <% end %>
     <% end %>
   </dl>
