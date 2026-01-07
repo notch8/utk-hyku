@@ -1,5 +1,5 @@
 <%# OVERRIDE Hyrax 3.4.2: add conditional rendering and change layout for metadata %>
-
+<%# OVERRIDE: Hyrax 3.4.2 - add rescue to prevent catalog search results page from breaking if a QA term is empty %>
 <% doc_presenter = index_presenter(document) %>
 <%# default partial to display solr document fields in catalog index view %>
 <% if search_results_theme == 'dc_repository_search' && home_page_theme == 'dc_repository' %>
