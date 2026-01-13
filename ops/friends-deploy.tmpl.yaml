@@ -5,8 +5,8 @@ resources:
     memory: "2Gi"
     cpu: "1000m"
   requests:
-    memory: "1Gi"
-    cpu: "250m"
+    memory: "1.5Gi"
+    cpu: "100m"
 
 livenessProbe:
   enabled: false
@@ -205,11 +205,11 @@ worker:
   replicaCount: 1
   resources:
     limits:
-      memory: "3Gi"
+      memory: "2Gi"
       cpu: "1000m"
     requests:
       memory: "1Gi"
-      cpu: "250m"
+      cpu: "100m"
   podSecurityContext:
     runAsUser: 1001
     runAsGroup: 101
@@ -233,25 +233,23 @@ imagePullSecrets:
   - name: github
 
 fcrepo:
-  resources:
-    limits:
-      memory: "4Gi"
-      cpu: "2"
-    requests:
-      memory: "2Gi"
-      cpu: "1"
   enabled: false
   postgresql:
     enabled: false
-    image:
-      repository: bitnamilegacy/postgresql
-      tag: 12.11.0-debian-11-r12
 postgresql:
   enabled: false
 redis:
   image:
     repository: bitnamilegacy/redis
     tag: 6.0.6
+  master:
+    resources:
+      limits:
+        memory: "256Mi"
+        cpu: "100m"
+      requests:
+        memory: "128Mi"
+        cpu: "20m"
   cluster:
     enabled: false
   password: $REDIS_PASSWORD
