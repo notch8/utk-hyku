@@ -2,10 +2,10 @@ replicaCount: 2
 
 resources:
   limits:
-    memory: "2Gi"
+    memory: "4Gi"
     cpu: "1000m"
   requests:
-    memory: "1.5Gi"
+    memory: "2Gi"
     cpu: "100m"
 
 livenessProbe:
@@ -205,10 +205,10 @@ worker:
   replicaCount: 1
   resources:
     limits:
-      memory: "2Gi"
+      memory: "4Gi"
       cpu: "1000m"
     requests:
-      memory: "1Gi"
+      memory: "2Gi"
       cpu: "100m"
   podSecurityContext:
     runAsUser: 1001
@@ -245,10 +245,10 @@ redis:
   master:
     resources:
       limits:
-        memory: "256Mi"
+        memory: "512Mi"
         cpu: "100m"
       requests:
-        memory: "128Mi"
+        memory: "256Mi"
         cpu: "20m"
   cluster:
     enabled: false
