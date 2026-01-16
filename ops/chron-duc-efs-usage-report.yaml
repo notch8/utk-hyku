@@ -1,0 +1,152 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: duc-efs-usage-utk-all
+  namespace: storage
+spec:
+  schedule: "0 2 * * 0"
+  concurrencyPolicy: Forbid
+  successfulJobsHistoryLimit: 3
+  failedJobsHistoryLimit: 3
+  jobTemplate:
+    spec:
+      backoffLimit: 6
+      ttlSecondsAfterFinished: 3600
+      template:
+        spec:
+          restartPolicy: OnFailure
+          containers:
+            - name: scanner
+              image: debian:12-slim
+              imagePullPolicy: IfNotPresent
+              command: ["/bin/bash", "-lc"]
+              args:
+                - |
+                  set -euo pipefail
+                  export DEBIAN_FRONTEND=noninteractive
+
+                  # ===== Config =====
+                  PER_PATH_TIMEOUT="120m"       # duc index can be slow on tiny-file forests
+                  HEARTBEAT_SECS="60"
+                  DUC_DB_DIR="/tmp/duc"         # IMPORTANT: keep DB off EFS
+
+                  ROOT="/efs"
+                  OUT_DIR="${ROOT}/usage/utk"
+                  TS="$(date -u +%Y%m%d-%H%M%S)"
+                  OUT="${OUT_DIR}/utk-efs-duc-bytes-${TS}.tsv"
+
+                  PVC_UTK_BRANDING="pvc-6842dcf8-2620-43bf-9b1a-3391054427dd"
+                  PVC_UTK_DERIV="pvc-5f491685-2c9c-40f5-90cf-f8fc33672242"
+                  PVC_UTK_UPLOADS="pvc-9ba030e0-306e-46e7-8978-8d4f6daa8659"
+
+                  echo "[setup] installing packages..." >&2
+                  apt-get update -y
+                  apt-get install -y --no-install-recommends \
+                    ca-certificates \
+                    coreutils \
+                    findutils \
+                    grep \
+                    sed \
+                    duc
+                  rm -rf /var/lib/apt/lists/*
+
+                  duc --version >&2 || true
+
+                  mkdir -p "${OUT_DIR}" "${DUC_DB_DIR}"
+                  : > "${OUT}"
+                  printf "name\tpath\tbytes\n" >> "${OUT}"
+
+                  if ls -d "${ROOT}/pvc-"* >/dev/null 2>&1; then
+                    MODE="efs-root"
+                  else
+                    MODE="access-point-root"
+                  fi
+
+                  echo "Mount mode detected: ${MODE}" >&2
+                  echo "Per-path timeout: ${PER_PATH_TIMEOUT}" >&2
+                  echo "duc db dir: ${DUC_DB_DIR}" >&2
+                  echo "heartbeat: every ${HEARTBEAT_SECS}s" >&2
+
+                  run_with_heartbeat() {
+                    local tmp
+                    tmp="$(mktemp)"
+                    ( "$@" >"${tmp}" 2>&1 ) &
+                    local pid="$!"
+                    while kill -0 "${pid}" 2>/dev/null; do
+                      echo "[scan] still running... $(date -u +%Y-%m-%dT%H:%M:%SZ) pid=${pid}" >&2
+                      sleep "${HEARTBEAT_SECS}"
+                    done
+                    wait "${pid}" || true
+                    cat "${tmp}"
+                    rm -f "${tmp}"
+                  }
+
+                  duc_bytes() {
+                    # Example goal: bytes like du -sb
+                    local target="$1"
+                    local db="${DUC_DB_DIR}/$(echo "${target}" | tr '/:' '__').duc.db"
+
+                    rm -f "${db}" || true
+
+                    echo "[scan] duc index target=${target} db=${db}" >&2
+                    # Index the target into a fresh DB
+                    if ! run_with_heartbeat timeout "${PER_PATH_TIMEOUT}" duc index -d "${db}" "${target}" >/dev/null; then
+                      echo "[scan] TIMEOUT/FAIL indexing ${target}" >&2
+                      echo ""
+                      return 0
+                    fi
+
+                    # Query total apparent size in bytes
+                    # `duc ls -b` prints size and path; we grab the first integer token.
+                    local out
+                    out="$(duc ls -d "${db}" -b --dirs-only --levels=0 "${target}" 2>/dev/null | head -n 1 || true)"
+
+                    echo "[scan] done: ${target} -> ${out}" >&2
+
+                    printf "%s" "${out}" \
+                      | sed -E 's/,//g' \
+                      | grep -Eo '[0-9]+' \
+                      | head -n 1
+                  }
+
+                  scan_pvc() {
+                    local pvc="$1"
+                    local label="$2"
+
+                    if [ "${MODE}" = "efs-root" ]; then
+                      local target="${ROOT}/${pvc}"
+                      local out_label="/${pvc}"
+
+                      if [ ! -d "${target}" ]; then
+                        echo "WARN: missing directory ${target} (skipping)" >&2
+                        return 0
+                      fi
+
+                      local bytes
+                      bytes="$(duc_bytes "${target}" || true)"
+                      bytes="${bytes:-0}"
+
+                      printf "%s\t%s\t%s\n" "${label}" "${out_label}" "${bytes}" >> "${OUT}"
+                    else
+                      local bytes
+                      bytes="$(duc_bytes "${ROOT}" || true)"
+                      bytes="${bytes:-0}"
+
+                      printf "%s\t%s\t%s\n" "mounted-access-point-root" "/(ap-root)" "${bytes}" >> "${OUT}"
+                      echo "INFO: access-point-root mode; single-root scan only" >&2
+                    fi
+                  }
+
+                  scan_pvc "${PVC_UTK_BRANDING}" "utk-hyku-production-hyrax-branding"
+                  scan_pvc "${PVC_UTK_DERIV}"    "utk-hyku-production-hyrax-derivatives"
+                  scan_pvc "${PVC_UTK_UPLOADS}"  "utk-hyku-production-hyrax-uploads"
+
+                  echo "Done. Output:" >&2
+                  cat "${OUT}" >&2
+              volumeMounts:
+                - name: efs
+                  mountPath: /efs
+          volumes:
+            - name: efs
+              persistentVolumeClaim:
+                claimName: mount-pvcefs
