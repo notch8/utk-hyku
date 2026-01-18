@@ -76,10 +76,9 @@ spec:
 
                   run_with_heartbeat() {
                     # Runs command in background, logs heartbeat until it exits.
-                    # Prints combined stdout/stderr of the command to stdout.
+                    # Emits combined stdout/stderr to stdout and preserves exit code.
                     local tmp
                     tmp="$(mktemp)"
-                    # shellcheck disable=SC2068
                     ( "$@" >"${tmp}" 2>&1 ) &
                     local pid="$!"
 
@@ -88,42 +87,50 @@ spec:
                       sleep "${HEARTBEAT_SECS}"
                     done
 
-                    wait "${pid}" || true
+                    wait "${pid}"
+                    local rc=$?
                     cat "${tmp}"
                     rm -f "${tmp}"
+                    return "${rc}"
                   }
 
                   diskus_bytes() {
                     local path="$1"
-                    local cmd=(diskus --verbose --threads "${DISKUS_THREADS}")
-
+                    local cmd=(diskus --threads "${DISKUS_THREADS}")
                     if [ "${SIZE_MODE}" = "apparent" ]; then
-                      cmd=(diskus --verbose --threads "${DISKUS_THREADS}" --apparent-size)
+                      cmd+=(--apparent-size)
                     fi
 
                     echo "[scan] starting: timeout ${PER_PATH_TIMEOUT} ${cmd[*]} ${path}" >&2
 
-                    local out
-                    out="$(run_with_heartbeat timeout "${PER_PATH_TIMEOUT}" "${cmd[@]}" "${path}" | head -n 1 || true)"
+                    local output rc
+                    output="$(run_with_heartbeat timeout "${PER_PATH_TIMEOUT}" "${cmd[@]}" "${path}")"
+                    rc=$?
 
-                    if echo "${out}" | grep -qi "timed out"; then
-                      echo "[scan] TIMEOUT after ${PER_PATH_TIMEOUT}: ${path}" >&2
+                    # timeout exit codes: 124 = timed out, 137 = SIGKILL (sometimes)
+                    if [ "${rc}" -eq 124 ] || [ "${rc}" -eq 137 ]; then
+                      echo "[scan] TIMEOUT after ${PER_PATH_TIMEOUT}: ${path} (rc=${rc})" >&2
                       echo ""
                       return 0
                     fi
 
-                    if echo "${out}" | grep -qi "^error:"; then
-                      echo "[scan] diskus error for ${path}: ${out}" >&2
+                    if [ "${rc}" -ne 0 ]; then
+                      echo "[scan] diskus non-zero exit for ${path} (rc=${rc})" >&2
+                      echo "[scan] output: ${output}" >&2
                       echo ""
                       return 0
                     fi
 
-                    echo "[scan] done: ${path} -> ${out}" >&2
-
-                    printf "%s" "${out}" \
+                    # diskus output formats can vary; grab the LAST integer-like token.
+                    local bytes
+                    bytes="$(printf "%s\n" "${output}" \
+                      | tr -d '\r' \
                       | sed -E 's/,//g' \
                       | grep -Eo '[0-9]+' \
-                      | head -n 1
+                      | tail -n 1)"
+
+                    echo "[scan] done: ${path} -> ${bytes:-<no-bytes-parsed>}" >&2
+                    printf "%s" "${bytes:-0}"
                   }
 
                   scan_pvc() {
