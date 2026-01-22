@@ -16,4 +16,26 @@
       <noscript>You need to enable JavaScript to run this app.</noscript>
       <div id="root"></div>
    </body>
+   <style>
+      html,
+      body,
+      #root,
+      .clover-iiif,
+      [data-state="open"],
+      .clover-content,
+      .c-ldcKiQ,
+      .c-gKYThq,
+      .c-LdPyz,
+      .c-LdPyz > div,
+      .c-iHOaIo {
+         height: 100% !important;
+         max-height: none !important;
+      }
+
+      /* Only apply full height to video when clover-canvases doesn't exist */
+      .clover-iiif:not(:has(.clover-canvases)) #clover-iiif-video {
+         height: 100% !important;
+         max-height: none !important;
+      }
+   </style>
 </html>
