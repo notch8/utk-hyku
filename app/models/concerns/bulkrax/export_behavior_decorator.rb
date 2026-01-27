@@ -16,7 +16,8 @@ module Bulkrax
       ext_mime = ::Marcel::MimeType.for(name: fn)
       # OVERRIDE begin
       if File.extname(fn).blank?
-        filename = "#{file_set.id}_#{fn}" + Rack::Mime::MIME_TYPES.invert[mime]
+        extension = Rack::Mime::MIME_TYPES.invert[mime] || ".#{mime.to_s.split('/').last}"
+        filename = "#{file_set.id}_#{fn}#{extension}"
       elsif fn.include?(file_set.id) || importerexporter.metadata_only?
         # OVERRIDE end
         filename = "#{fn}.#{mime.to_sym}"
