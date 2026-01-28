@@ -20,10 +20,10 @@ class CleanupSubDirectoryJob < ApplicationJob
     end
 
     def should_be_deleted?(path)
-      File.file?(path) && ((old_enough(path) && fileset_created?(path)) || very_old?(path))
+      File.file?(path) && ((old_enough?(path) && fileset_created?(path)) || very_old?(path))
     end
 
-    def old_enough(path)
+    def old_enough?(path)
       return true if File.mtime(path) < (Time.zone.now - days_old.to_i.days)
 
       false
