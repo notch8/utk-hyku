@@ -1,0 +1,85 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: efs-usage-utk-all
+  namespace: storage
+spec:
+  schedule: "0 2 * * 0" # Every Sunday at 2:00 AM UTC
+  concurrencyPolicy: Forbid
+  successfulJobsHistoryLimit: 3
+  failedJobsHistoryLimit: 3
+  jobTemplate:
+    spec:
+      backoffLimit: 1
+      template:
+        spec:
+          restartPolicy: OnFailure
+          containers:
+            - name: scanner
+              image: alpine:3.19
+              command:
+                - /bin/sh
+                - -c
+                - |
+                  set -euo pipefail
+                  TS="$(date -u +%Y%m%d-%H%M%S)"
+
+                  ROOT="/efs"
+                  OUT_DIR="${ROOT}/usage/utk"
+                  OUT="${OUT_DIR}/utk-efs-bytes-${TS}.tsv"
+                  mkdir -p "${OUT_DIR}"
+
+                  # UTK EFS PVC directories
+                  PVC_UTK_BRANDING="pvc-6842dcf8-2620-43bf-9b1a-3391054427dd"
+                  PVC_UTK_DERIV="pvc-5f491685-2c9c-40f5-90cf-f8fc33672242"
+                  PVC_UTK_UPLOADS="pvc-9ba030e0-306e-46e7-8978-8d4f6daa8659"
+
+                  # Detect whether we have the EFS root view (contains pvc-* dirs) or an access-point-root view.
+                  if ls -d "${ROOT}/pvc-"* >/dev/null 2>&1; then
+                    MODE="efs-root"
+                  else
+                    MODE="access-point-root"
+                  fi
+
+                  echo "Mount mode detected: ${MODE}"
+                  echo "Writing ${OUT}"
+                  : > "${OUT}"
+
+                  scan_pvc() {
+                    pvc="$1"
+                    label="$2"
+
+                    if [ "${MODE}" = "efs-root" ]; then
+                      target="${ROOT}/${pvc}"
+                      out_label="/${pvc}"
+                      if [ ! -d "${target}" ]; then
+                        echo "WARN: missing directory at root: ${target} (skipping)" >&2
+                        return 0
+                      fi
+                      bytes="$(du -sb "${target}" 2>/dev/null | awk '{print $1}')"
+                      printf "%s\t%s\t%s\n" "${label}" "${out_label}" "${bytes}" >> "${OUT}"
+                    else
+                      # In access-point-root mode, we can only see the mounted AP directory as ${ROOT}.
+                      # We can't reliably know which PVC it is unless we infer from contents or mount metadata.
+                      # So we record one row for "mounted access point root".
+                      bytes="$(du -sb "${ROOT}" 2>/dev/null | awk '{print $1}')"
+                      printf "%s\t%s\t%s\n" "mounted-access-point-root" "/(ap-root)" "${bytes}" >> "${OUT}"
+                      echo "INFO: access-point-root mode; cannot scan multiple PVC dirs from this mount." >&2
+                      return 0
+                    fi
+                  }
+
+                  # Output columns: name<TAB>path<TAB>bytes
+                  scan_pvc "${PVC_UTK_BRANDING}"    "utk-hyku-production-hyrax-branding"
+                  scan_pvc "${PVC_UTK_DERIV}"       "utk-hyku-production-hyrax-derivatives"
+                  scan_pvc "${PVC_UTK_UPLOADS}"     "utk-hyku-production-hyrax-uploads"
+
+                  echo "Done. Contents:"
+                  cat "${OUT}"
+              volumeMounts:
+                - name: efs
+                  mountPath: /efs
+          volumes:
+            - name: efs
+              persistentVolumeClaim:
+                claimName: mount-pvcefs

@@ -1,0 +1,176 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: diskus-efs-usage-utk-all
+  namespace: storage
+spec:
+  schedule: "0 2 * * 0"
+  concurrencyPolicy: Forbid
+  successfulJobsHistoryLimit: 3
+  failedJobsHistoryLimit: 3
+  jobTemplate:
+    spec:
+      backoffLimit: 6
+      ttlSecondsAfterFinished: 3600
+      template:
+        spec:
+          restartPolicy: OnFailure
+          containers:
+            - name: scanner
+              image: rust:1.80-slim
+              imagePullPolicy: IfNotPresent
+              command: ["/bin/bash", "-lc"]
+              args:
+                - |
+                  set -euo pipefail
+                  export DEBIAN_FRONTEND=noninteractive
+
+                  SIZE_MODE="apparent"          # apparent (du -sb-ish) or disk
+                  PER_PATH_TIMEOUT="45m"        # timeout per PVC scan
+                  DISKUS_THREADS="8"            # bump to 16 if needed
+                  HEARTBEAT_SECS="60"           # log every N seconds while scanning
+
+                  ROOT="/efs"
+                  OUT_DIR="${ROOT}/usage/utk"
+                  TS="$(date -u +%Y%m%d-%H%M%S)"
+                  OUT="${OUT_DIR}/utk-efs-bytes-${TS}.tsv"
+
+                  PVC_UTK_BRANDING="pvc-6842dcf8-2620-43bf-9b1a-3391054427dd"
+                  PVC_UTK_DERIV="pvc-5f491685-2c9c-40f5-90cf-f8fc33672242"
+                  PVC_UTK_UPLOADS="pvc-9ba030e0-306e-46e7-8978-8d4f6daa8659"
+
+                  echo "[setup] installing packages..." >&2
+                  apt-get update -y
+                  apt-get install -y --no-install-recommends \
+                    ca-certificates \
+                    curl \
+                    git \
+                    build-essential \
+                    pkg-config \
+                    coreutils
+                  rm -rf /var/lib/apt/lists/*
+
+                  export PATH="/usr/local/cargo/bin:${PATH}"
+                  command -v cargo >/dev/null || { echo "ERROR: cargo not found" >&2; exit 1; }
+
+                  echo "[setup] installing diskus (requires egress)..." >&2
+                  cargo install diskus --locked
+                  command -v diskus >/dev/null || { echo "ERROR: diskus install failed" >&2; exit 1; }
+                  diskus --version >&2
+
+                  mkdir -p "${OUT_DIR}"
+                  : > "${OUT}"
+                  printf "name\tpath\tbytes\n" >> "${OUT}"
+
+                  if ls -d "${ROOT}/pvc-"* >/dev/null 2>&1; then
+                    MODE="efs-root"
+                  else
+                    MODE="access-point-root"
+                  fi
+
+                  echo "Mount mode detected: ${MODE}" >&2
+                  echo "Size mode: ${SIZE_MODE}" >&2
+                  echo "Per-path timeout: ${PER_PATH_TIMEOUT}" >&2
+                  echo "diskus threads: ${DISKUS_THREADS}" >&2
+                  echo "heartbeat: every ${HEARTBEAT_SECS}s" >&2
+
+                  run_with_heartbeat() {
+                    # Runs command in background, logs heartbeat until it exits.
+                    # Emits combined stdout/stderr to stdout and preserves exit code.
+                    local tmp
+                    tmp="$(mktemp)"
+                    ( "$@" >"${tmp}" 2>&1 ) &
+                    local pid="$!"
+
+                    while kill -0 "${pid}" 2>/dev/null; do
+                      echo "[scan] still running... $(date -u +%Y-%m-%dT%H:%M:%SZ) pid=${pid}" >&2
+                      sleep "${HEARTBEAT_SECS}"
+                    done
+
+                    wait "${pid}"
+                    local rc=$?
+                    cat "${tmp}"
+                    rm -f "${tmp}"
+                    return "${rc}"
+                  }
+
+                  diskus_bytes() {
+                    local path="$1"
+                    local cmd=(diskus --threads "${DISKUS_THREADS}")
+                    if [ "${SIZE_MODE}" = "apparent" ]; then
+                      cmd+=(--apparent-size)
+                    fi
+
+                    echo "[scan] starting: timeout ${PER_PATH_TIMEOUT} ${cmd[*]} ${path}" >&2
+
+                    local output rc
+                    output="$(run_with_heartbeat timeout "${PER_PATH_TIMEOUT}" "${cmd[@]}" "${path}")"
+                    rc=$?
+
+                    # timeout exit codes: 124 = timed out, 137 = SIGKILL (sometimes)
+                    if [ "${rc}" -eq 124 ] || [ "${rc}" -eq 137 ]; then
+                      echo "[scan] TIMEOUT after ${PER_PATH_TIMEOUT}: ${path} (rc=${rc})" >&2
+                      echo ""
+                      return 0
+                    fi
+
+                    if [ "${rc}" -ne 0 ]; then
+                      echo "[scan] diskus non-zero exit for ${path} (rc=${rc})" >&2
+                      echo "[scan] output: ${output}" >&2
+                      echo ""
+                      return 0
+                    fi
+
+                    # diskus output formats can vary; grab the LAST integer-like token.
+                    local bytes
+                    bytes="$(printf "%s\n" "${output}" \
+                      | tr -d '\r' \
+                      | sed -E 's/,//g' \
+                      | grep -Eo '[0-9]+' \
+                      | tail -n 1)"
+
+                    echo "[scan] done: ${path} -> ${bytes:-<no-bytes-parsed>}" >&2
+                    printf "%s" "${bytes:-0}"
+                  }
+
+                  scan_pvc() {
+                    local pvc="$1"
+                    local label="$2"
+
+                    if [ "${MODE}" = "efs-root" ]; then
+                      local target="${ROOT}/${pvc}"
+                      local out_label="/${pvc}"
+
+                      if [ ! -d "${target}" ]; then
+                        echo "WARN: missing directory ${target} (skipping)" >&2
+                        return 0
+                      fi
+
+                      local bytes
+                      bytes="$(diskus_bytes "${target}")"
+                      bytes="${bytes:-0}"
+
+                      printf "%s\t%s\t%s\n" "${label}" "${out_label}" "${bytes}" >> "${OUT}"
+                    else
+                      local bytes
+                      bytes="$(diskus_bytes "${ROOT}")"
+                      bytes="${bytes:-0}"
+
+                      printf "%s\t%s\t%s\n" "mounted-access-point-root" "/(ap-root)" "${bytes}" >> "${OUT}"
+                      echo "INFO: access-point-root mode; single-root scan only" >&2
+                    fi
+                  }
+
+                  scan_pvc "${PVC_UTK_BRANDING}" "utk-hyku-production-hyrax-branding"
+                  scan_pvc "${PVC_UTK_DERIV}"    "utk-hyku-production-hyrax-derivatives"
+                  scan_pvc "${PVC_UTK_UPLOADS}"  "utk-hyku-production-hyrax-uploads"
+
+                  echo "Done. Output:" >&2
+                  cat "${OUT}" >&2
+              volumeMounts:
+                - name: efs
+                  mountPath: /efs
+          volumes:
+            - name: efs
+              persistentVolumeClaim:
+                claimName: mount-pvcefs
