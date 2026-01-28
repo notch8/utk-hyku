@@ -6,6 +6,7 @@ class CleanupSubDirectoryJob < ApplicationJob
     @directory = directory
     @days_old = days_old
     delete_files
+    delete_empty_directories
   end
 
   private
@@ -15,9 +16,20 @@ class CleanupSubDirectoryJob < ApplicationJob
         next unless should_be_deleted?(path)
 
         File.delete(path)
-        parent_directory = File.dirname(path)
-        FileUtils.rmdir(parent_directory, parents: true) if Dir.empty?(parent_directory)
       end
+    end
+
+    def delete_empty_directories
+      # Find all UUID-level directories (deepest level)
+      Dir.glob("#{directory}/*/*/*/*/*").select { |d| File.directory?(d) }.each do |dir|
+        begin
+          FileUtils.rmdir(dir, parents: true)
+        rescue SystemCallError
+          # Directory not empty, ignore
+        end
+      end
+
+      Rails.logger.info("Completed empty directory cleanup for #{directory}")
     end
 
     def should_be_deleted?(path)
@@ -38,6 +50,7 @@ class CleanupSubDirectoryJob < ApplicationJob
 
     def fileset_created?(path)
       fs_id = fileset_id(path)
+
       Account.find_each do |account|
         begin
           account.switch do
