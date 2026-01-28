@@ -12,7 +12,6 @@ class CleanupSubDirectoryJob < ApplicationJob
 
     def delete_files
       Dir.glob("#{directory}/**/*").each do |path|
-        next unless File.file?(path)
         next unless should_be_deleted?(path)
 
         File.delete(path)
@@ -22,6 +21,8 @@ class CleanupSubDirectoryJob < ApplicationJob
     end
 
     def should_be_deleted?(path)
+      return false unless File.file?(path)
+
       return true if very_old?(path)
 
       old_enough?(path) && fileset_created?(path)
