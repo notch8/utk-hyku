@@ -12,41 +12,45 @@ class CleanupSubDirectoryJob < ApplicationJob
 
     def delete_files
       Dir.glob("#{directory}/**/*").each do |path|
+        next unless File.file?(path)
         next unless should_be_deleted?(path)
 
         File.delete(path)
-        FileUtils.rmdir(parent_directory(path), parents: true) if Dir.empty?(parent_directory(path))
+        parent_directory = File.dirname(path)
+        FileUtils.rmdir(parent_directory, parents: true) if Dir.empty?(parent_directory)
       end
     end
 
     def should_be_deleted?(path)
-      File.file?(path) && ((old_enough?(path) && fileset_created?(path)) || very_old?(path))
+      return true if very_old?(path)
+
+      old_enough?(path) && fileset_created?(path)
     end
 
     def old_enough?(path)
-      return true if File.mtime(path) < (Time.zone.now - days_old.to_i.days)
-
-      false
+      File.mtime(path) < (Time.zone.now - days_old.to_i.days)
     end
 
     def very_old?(path)
-      return true if File.mtime(path) < (Time.zone.now - 2.years)
-
-      false
-    end
-
-    def parent_directory(path)
-      split_path = path.split('/')
-      split_path[0..-2].join('/')
+      File.mtime(path) < (Time.zone.now - 2.years)
     end
 
     def fileset_created?(path)
-      fs_id = path.split('/')[-2]
-      file_set = FileSet.find(fs_id)
-      return true if file_set&.original_file&.present?
+      fs_id = fileset_id(path)
+      Account.find_each do |account|
+        begin
+          account.switch do
+            return true if FileSet.exists?(fs_id)
+          end
+        rescue StandardError => e
+          Rails.logger.error("Error checking FileSet #{fs_id} in tenant #{account.tenant}: #{e.message}")
+        end
+      end
 
       false
-    rescue ActiveFedora::ObjectNotFoundError
-      false
+    end
+
+    def fileset_id(path)
+      path.split('/')[-2]
     end
 end

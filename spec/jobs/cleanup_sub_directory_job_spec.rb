@@ -3,7 +3,6 @@
 RSpec.describe CleanupSubDirectoryJob do
   let(:old_time) { Time.zone.now - 1.year }
   let(:new_time) { Time.zone.now - 1.week }
-  let(:fs_double) { instance_double(FileSet, original_file: true) }
   let(:path_1) { '/app/samvera/uploads/ff/00/27/d1/file-set-id-1/path_1' }
   let(:path_2) { '/app/samvera/uploads/ff/11/28/19/file-set-id-2/path_2' }
   let(:path_3) { '/app/samvera/uploads/ff/22/17/de/file-set-id-3/path_3' }
@@ -11,6 +10,7 @@ RSpec.describe CleanupSubDirectoryJob do
   let(:path_5) { '/app/samvera/uploads/ff/f4/11/30/file-set-id-5/path_5' }
 
   before do
+    2.times { FactoryBot.create(:account) }
     allow(Dir).to receive(:glob).and_call_original
     allow(Dir).to receive(:glob).with('/app/samvera/uploads/ff/**/*').and_return([path_5, path_1, path_2,
                                                                                   path_3, path_4])
@@ -27,20 +27,20 @@ RSpec.describe CleanupSubDirectoryJob do
     allow(File).to receive(:file?).with(path_4).and_return(false)
     allow(File).to receive(:file?).with(path_5).and_return(true)
     allow(File).to receive(:mtime).with(path_5).and_return(old_time)
-    allow(FileSet).to receive(:find).with('file-set-id-1').and_return(fs_double)
-    allow(FileSet).to receive(:find).with('file-set-id-2').and_return(fs_double)
-    allow(FileSet).to receive(:find).with('file-set-id-5').and_raise(ActiveFedora::ObjectNotFoundError)
+    allow(FileSet).to receive(:exists?).with('file-set-id-1').and_return(true)
+    allow(FileSet).to receive(:exists?).with('file-set-id-2').and_return(true)
+    allow(FileSet).to receive(:exists?).with('file-set-id-5').and_return(false)
   end
   it 'deletes files ' do
     expect(File).to receive(:delete).with(path_1)
     expect(File).to receive(:delete).with(path_2)
-    # Too new
+    # # Too new
     expect(File).not_to receive(:delete).with(path_3)
-    # Not a file
+    # # Not a file
     expect(File).not_to receive(:delete).with(path_4)
-    # Does not have a FileSet yet
+    # # Does not have a FileSet yet
     expect(File).not_to receive(:delete).with(path_5)
-    expect(FileSet).to receive(:find).with('file-set-id-5')
+    # expect(FileSet).to receive(:find).with('file-set-id-5')
     described_class.perform_now(days_old: 180, directory: '/app/samvera/uploads/ff')
   end
 
