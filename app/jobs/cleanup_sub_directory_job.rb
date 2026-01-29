@@ -5,8 +5,11 @@ class CleanupSubDirectoryJob < ApplicationJob
   def perform(days_old:, directory:)
     @directory = directory
     @days_old = days_old
+    @files_checked = 0
+    @files_deleted = 0
     delete_files
     delete_empty_directories
+    Rails.logger.info("Completed #{directory}: checked #{@files_checked}, deleted #{@files_deleted}")
   end
 
   private
@@ -16,6 +19,8 @@ class CleanupSubDirectoryJob < ApplicationJob
         next unless should_be_deleted?(path)
 
         File.delete(path)
+        @files_deleted += 1
+        Rails.logger.info("Checked #{@files_checked}, deleted #{deleted_count} files") if (@files_checked % 100).zero?
       end
     end
 
@@ -50,7 +55,7 @@ class CleanupSubDirectoryJob < ApplicationJob
 
     def fileset_created?(path)
       fs_id = fileset_id(path)
-
+      @files_checked += 1
       Account.find_each do |account|
         begin
           account.switch do
