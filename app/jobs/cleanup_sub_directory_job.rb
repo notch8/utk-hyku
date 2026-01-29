@@ -24,8 +24,8 @@ class CleanupSubDirectoryJob < ApplicationJob
       Dir.glob("#{directory}/*/*/*/*/*").select { |d| File.directory?(d) }.each do |dir|
         begin
           FileUtils.rmdir(dir, parents: true)
-        rescue SystemCallError
-          # Directory not empty, ignore
+        rescue Errno::ENOTEMPTY
+          next
         end
       end
 
