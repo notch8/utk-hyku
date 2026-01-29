@@ -14,7 +14,7 @@ Rails.application.configure do
     cleanup_upload_files: {
       cron: '0 2 * * 0',
       class: 'CleanupUploadFilesJob',
-      kwargs: { days_old: 180, uploads_path: '/app/samvera/uploads' },
+      args: { days_old: 180, uploads_path: '/app/samvera/uploads' },
       enabled_by_default: -> { Rails.env.production? }
     }
   }

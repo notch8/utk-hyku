@@ -9,7 +9,7 @@ class CleanupSubDirectoryJob < ApplicationJob
     @files_deleted = 0
     delete_files
     delete_empty_directories
-    Rails.logger.info("Completed #{directory}: checked #{@files_checked}, deleted #{@files_deleted}")
+    logger.info("Completed #{directory}: checked #{@files_checked}, deleted #{@files_deleted}")
   end
 
   private
@@ -20,7 +20,7 @@ class CleanupSubDirectoryJob < ApplicationJob
 
         File.delete(path)
         @files_deleted += 1
-        Rails.logger.info("Checked #{@files_checked}, deleted #{deleted_count} files") if (@files_checked % 100).zero?
+        logger.info("Checked #{@files_checked}, deleted #{deleted_count} files") if (@files_checked % 100).zero?
       end
     end
 
@@ -34,7 +34,7 @@ class CleanupSubDirectoryJob < ApplicationJob
         end
       end
 
-      Rails.logger.info("Completed empty directory cleanup for #{directory}")
+      logger.info("Completed empty directory cleanup for #{directory}")
     end
 
     def should_be_deleted?(path)
@@ -58,11 +58,11 @@ class CleanupSubDirectoryJob < ApplicationJob
       @files_checked += 1
       Account.find_each do |account|
         begin
-          account.switch do
+          Apartment::Tenant.switch(account.tenant) do
             return true if FileSet.exists?(fs_id)
           end
         rescue StandardError => e
-          Rails.logger.error("Error checking FileSet #{fs_id} in tenant #{account.tenant}: #{e.message}")
+          logger.error("Error checking FileSet #{fs_id} in tenant #{account.tenant}: #{e.message}")
         end
       end
 
