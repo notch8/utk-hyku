@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class CleanupUploadFilesJob < ApplicationJob
+  non_tenant_job
+
   attr_reader :uploads_path
   def perform(days_old:, uploads_path:)
     Rails.logger.info("Starting cleanup coordinator for files older than #{days_old} days")
