@@ -80,7 +80,7 @@ RSpec.describe CleanupSubDirectoryJob do
 
   describe 'cleaning up directories' do
     before do
-      allow(Dir).to receive(:glob).with("/app/samvera/uploads/ff/*/*/*/*/*")
+      allow(Dir).to receive(:glob).with("/app/samvera/uploads/ff/*/*/*/*")
                                   .and_return([
                                                 '/app/samvera/uploads/ff/00/27/d1/file-set-id-1',
                                                 '/app/samvera/uploads/ff/11/28/19/file-set-id-2',
