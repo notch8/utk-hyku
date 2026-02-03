@@ -3,11 +3,11 @@
 class CleanupSubDirectoryJob < ApplicationJob
   non_tenant_job
 
-  attr_reader :days_old, :very_old_days, :directory
-  def perform(days_old:, directory:, very_old_days: 730)
+  attr_reader :delete_ingested_after_days, :delete_orphaned_after_days, :directory
+  def perform(delete_ingested_after_days:, directory:, delete_orphaned_after_days: 730)
     @directory = directory
-    @days_old = days_old
-    @very_old_days = very_old_days
+    @delete_ingested_after_days = delete_ingested_after_days
+    @delete_orphaned_after_days = delete_orphaned_after_days
     @files_checked = 0
     @files_deleted = 0
     delete_files
@@ -43,17 +43,21 @@ class CleanupSubDirectoryJob < ApplicationJob
     def should_be_deleted?(path)
       return false unless File.file?(path)
 
-      return true if very_old?(path)
+      return true if orphaned_and_old_enough?(path)
 
-      old_enough?(path) && fileset_created?(path)
+      ingested_and_old_enough?(path)
     end
 
-    def old_enough?(path)
-      File.mtime(path) < (Time.zone.now - days_old.to_i.days)
+    def ingested_and_old_enough?(path)
+      file_older_than?(path, delete_ingested_after_days) && fileset_created?(path)
     end
 
-    def very_old?(path)
-      File.mtime(path) < (Time.zone.now - very_old_days.to_i.days)
+    def orphaned_and_old_enough?(path)
+      file_older_than?(path, delete_orphaned_after_days)
+    end
+
+    def file_older_than?(path, days)
+      File.mtime(path) < (Time.zone.now - days.to_i.days)
     end
 
     def fileset_created?(path)

@@ -45,34 +45,35 @@ RSpec.describe CleanupSubDirectoryJob do
   it 'deletes old files with matching FileSets' do
     expect(File).to receive(:delete).with(path_1)
     expect(File).to receive(:delete).with(path_2)
-    described_class.perform_now(days_old: 180, directory: '/app/samvera/uploads/ff')
+    described_class.perform_now(delete_ingested_after_days: 180, directory: '/app/samvera/uploads/ff')
   end
 
-  it 'does not delete files newer than days_old threshold' do
+  it 'does not delete files newer than delete_ingested_after_days threshold' do
     expect(File).not_to receive(:delete).with(path_3)
-    described_class.perform_now(days_old: 180, directory: '/app/samvera/uploads/ff')
+    described_class.perform_now(delete_ingested_after_days: 180, directory: '/app/samvera/uploads/ff')
   end
 
   it 'does not delete directories' do
     expect(File).not_to receive(:delete).with(path_4)
-    described_class.perform_now(days_old: 180, directory: '/app/samvera/uploads/ff')
+    described_class.perform_now(delete_ingested_after_days: 180, directory: '/app/samvera/uploads/ff')
   end
 
-  it 'does not delete old files without matching FileSets (orphaned but not very old)' do
+  it 'does not delete old files without matching FileSets (orphaned but not old enough)' do
     expect(File).not_to receive(:delete).with(path_5)
-    described_class.perform_now(days_old: 180, directory: '/app/samvera/uploads/ff')
+    described_class.perform_now(delete_ingested_after_days: 180, directory: '/app/samvera/uploads/ff')
   end
 
-  it 'deletes very old files even without matching FileSets' do
+  it 'deletes orphaned files older than delete_orphaned_after_days' do
     expect(File).to receive(:delete).with(path_6)
-    described_class.perform_now(days_old: 180, directory: '/app/samvera/uploads/ff', very_old_days: 730)
+    described_class.perform_now(delete_ingested_after_days: 180, directory: '/app/samvera/uploads/ff', delete_orphaned_after_days: 730)
   end
 
-  it 'uses configurable very_old_days threshold' do
-    # With very_old_days: 400, path_5 (1 year old) should be deleted
+  it 'uses configurable delete_orphaned_after_days threshold' do
+    # With delete_orphaned_after_days: 300, path_5 (1 year old) should be deleted
     expect(File).to receive(:delete).with(path_5)
-    described_class.perform_now(days_old: 180, directory: '/app/samvera/uploads/ff', very_old_days: 300)
+    described_class.perform_now(delete_ingested_after_days: 180, directory: '/app/samvera/uploads/ff', delete_orphaned_after_days: 300)
   end
+
   describe 'cleaning up directories' do
     before do
       allow(Dir).to receive(:glob).with("/app/samvera/uploads/ff/*/*/*/*/*")
@@ -95,7 +96,7 @@ RSpec.describe CleanupSubDirectoryJob do
       expect(FileUtils).to receive(:rmdir).with('/app/samvera/uploads/ff/11/28/19/file-set-id-2', parents: true)
       expect(FileUtils).to receive(:rmdir).with('/app/samvera/uploads/ff/22/17/de/file-set-id-3', parents: true)
 
-      described_class.perform_now(days_old: 180, directory: '/app/samvera/uploads/ff')
+      described_class.perform_now(delete_ingested_after_days: 180, directory: '/app/samvera/uploads/ff')
     end
   end
 end
