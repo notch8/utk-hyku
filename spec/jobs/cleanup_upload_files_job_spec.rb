@@ -17,8 +17,11 @@ RSpec.describe CleanupUploadFilesJob do
   end
 
   it 'passes delete_orphaned_after_days parameter to child jobs' do
-    expect { described_class.perform_now(delete_ingested_after_days: 180, uploads_path: '/app/samvera/uploads', delete_orphaned_after_days: 365) }
-      .to have_enqueued_job(CleanupSubDirectoryJob)
+    expect do
+      described_class.perform_now(delete_ingested_after_days: 180,
+                                  uploads_path: '/app/samvera/uploads',
+                                  delete_orphaned_after_days: 365)
+    end.to have_enqueued_job(CleanupSubDirectoryJob)
       .with(delete_ingested_after_days: 180, directory: 'path_1', delete_orphaned_after_days: 365)
   end
 

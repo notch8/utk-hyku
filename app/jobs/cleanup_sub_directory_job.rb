@@ -1,9 +1,10 @@
 # frozen_string_literal: true
 
+# Finds uploaded files in a directory, determines whether they should be deleted, and deletes appropriate files.
 class CleanupSubDirectoryJob < ApplicationJob
   non_tenant_job
 
-  attr_reader :delete_ingested_after_days, :delete_orphaned_after_days, :directory
+  attr_reader :delete_ingested_after_days, :delete_orphaned_after_days, :directory, :files_checked, :files_deleted
   def perform(delete_ingested_after_days:, directory:, delete_orphaned_after_days: 730)
     @directory = directory
     @delete_ingested_after_days = delete_ingested_after_days
@@ -29,7 +30,7 @@ class CleanupSubDirectoryJob < ApplicationJob
 
     def delete_empty_directories
       # Find all UUID-level directories (deepest level)
-      Dir.glob("#{directory}/*/*/*/*/*").select { |d| File.directory?(d) }.each do |dir|
+      Dir.glob("#{directory}/*/*/*/*/*").select { |path| File.directory?(path) }.each do |dir|
         begin
           FileUtils.rmdir(dir, parents: true)
         rescue Errno::ENOTEMPTY
@@ -61,22 +62,21 @@ class CleanupSubDirectoryJob < ApplicationJob
     end
 
     def fileset_created?(path)
-      fs_id = fileset_id(path)
       @files_checked += 1
       Account.find_each do |account|
-        begin
-          Apartment::Tenant.switch(account.tenant) do
-            return true if FileSet.exists?(fs_id)
-          end
-        rescue StandardError => e
-          logger.error("Error checking FileSet #{fs_id} in tenant #{account.tenant}: #{e.message}")
-        end
+        return true if tenant_has_file_set?(file_set_id: path.split('/')[-2], tenant: account.tenant)
       end
 
       false
     end
 
-    def fileset_id(path)
-      path.split('/')[-2]
+    def tenant_has_file_set?(file_set_id:, tenant:)
+      Apartment::Tenant.switch(tenant) do
+        return true if FileSet.exists?(file_set_id)
+      end
+
+      false
+    rescue StandardError => error
+      logger.error("Error checking FileSet #{file_set_id} in tenant #{tenant}: #{error.message}")
     end
 end
