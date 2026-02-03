@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class CleanupSubDirectoryJob < ApplicationJob
+  non_tenant_job
+
   attr_reader :days_old, :directory
   def perform(days_old:, directory:)
     @directory = directory
@@ -20,7 +22,7 @@ class CleanupSubDirectoryJob < ApplicationJob
 
         File.delete(path)
         @files_deleted += 1
-        logger.info("Checked #{@files_checked}, deleted #{deleted_count} files") if (@files_checked % 100).zero?
+        logger.info("Checked #{@files_checked}, deleted #{@files_deleted} files") if (@files_checked % 100).zero?
       end
     end
 
