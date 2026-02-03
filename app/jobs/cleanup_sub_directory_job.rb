@@ -4,6 +4,9 @@
 class CleanupSubDirectoryJob < ApplicationJob
   non_tenant_job
 
+  # Assumptions:
+  # The second to last element in the path is the ID of the associated FileSet
+  # The directory has a pair-tree structure
   attr_reader :delete_ingested_after_days, :delete_all_after_days, :directory, :files_checked, :files_deleted
   def perform(delete_ingested_after_days:, directory:, delete_all_after_days: 730)
     @directory = directory
@@ -30,7 +33,7 @@ class CleanupSubDirectoryJob < ApplicationJob
 
     def delete_empty_directories
       # Find all UUID-level directories (deepest level)
-      Dir.glob("#{directory}/*/*/*/*/*").select { |path| File.directory?(path) }.each do |dir|
+      Dir.glob("#{directory}/*/*/*/*").select { |path| File.directory?(path) }.each do |dir|
         begin
           FileUtils.rmdir(dir, parents: true)
         rescue Errno::ENOTEMPTY
