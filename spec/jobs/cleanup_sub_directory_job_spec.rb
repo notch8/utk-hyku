@@ -7,10 +7,17 @@ RSpec.describe CleanupSubDirectoryJob do
   let(:path_2) { '/app/samvera/uploads/ff/11/28/19/file-set-id-2/path_2' }
   let(:path_3) { '/app/samvera/uploads/ff/22/17/de/file-set-id-3/path_3' }
   let(:path_4) { '/app/samvera/uploads/ff/33/0d/6b/file-set-id-4/path_4' }
+  let(:path_5) { '/app/samvera/uploads/ff/f4/11/30/file-set-id-5/path_5' }
+  let(:account_1) { FactoryBot.create(:account) }
+  let(:account_2) { FactoryBot.create(:account) }
 
   before do
+    allow(Apartment::Tenant).to receive(:switch).and_call_original
+    allow(Apartment::Tenant).to receive(:switch).with(account_1.tenant).and_yield
+    allow(Apartment::Tenant).to receive(:switch).with(account_2.tenant).and_return(true)
     allow(Dir).to receive(:glob).and_call_original
-    allow(Dir).to receive(:glob).with('/app/samvera/uploads/ff/**/*').and_return([path_1, path_2, path_3, path_4])
+    allow(Dir).to receive(:glob).with('/app/samvera/uploads/ff/**/*').and_return([path_5, path_1, path_2,
+                                                                                  path_3, path_4])
 
     allow(Dir).to receive(:empty?).and_return(true)
     allow(FileUtils).to receive(:rmdir)
@@ -23,21 +30,22 @@ RSpec.describe CleanupSubDirectoryJob do
     allow(File).to receive(:file?).with(path_3).and_return(true)
     allow(File).to receive(:mtime).with(path_3).and_return(new_time)
     allow(File).to receive(:file?).with(path_4).and_return(false)
+    allow(File).to receive(:file?).with(path_5).and_return(true)
+    allow(File).to receive(:mtime).with(path_5).and_return(old_time)
+    allow(FileSet).to receive(:exists?).with('file-set-id-1').and_return(true)
+    allow(FileSet).to receive(:exists?).with('file-set-id-2').and_return(true)
+    allow(FileSet).to receive(:exists?).with('file-set-id-5').and_return(false)
   end
-
-  it 'deletes old files' do
+  it 'deletes files ' do
     expect(File).to receive(:delete).with(path_1)
     expect(File).to receive(:delete).with(path_2)
-    described_class.perform_now(days_old: 180, directory: '/app/samvera/uploads/ff')
-  end
-
-  it 'does not delete files newer than days_old threshold' do
+    # # Too new
     expect(File).not_to receive(:delete).with(path_3)
-    described_class.perform_now(days_old: 180, directory: '/app/samvera/uploads/ff')
-  end
-
-  it 'does not delete directories' do
+    # # Not a file
     expect(File).not_to receive(:delete).with(path_4)
+    # # Does not have a FileSet yet
+    expect(File).not_to receive(:delete).with(path_5)
+    # expect(FileSet).to receive(:find).with('file-set-id-5')
     described_class.perform_now(days_old: 180, directory: '/app/samvera/uploads/ff')
   end
   describe 'cleaning up directories' do
