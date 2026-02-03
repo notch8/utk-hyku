@@ -1,15 +1,25 @@
+# frozen_string_literal: true
 
 Rails.application.configure do
   # Configure options individually...
   config.good_job.preserve_job_records = true
   config.good_job.retry_on_unhandled_error = false
-  config.good_job.on_thread_error = -> (exception) { Raven.capture_exception(exception) }
+  config.good_job.on_thread_error = ->(exception) { Raven.capture_exception(exception) }
   config.good_job.execution_mode = :external
   # config.good_job.queues = '*'
   config.good_job.shutdown_timeout = 60 # seconds
   config.good_job.poll_interval = 5
-  # config.good_job.enable_cron = true
-  # config.good_job.cron = { example: { cron: '0 * * * *', class: 'ExampleJob'  } }
+  config.good_job.enable_cron = true
+  config.good_job.cron = {
+    cleanup_upload_files: {
+      cron: '0 2 * * 0',
+      class: 'CleanupUploadFilesJob',
+      # delete_ingested_after_days: delete files with matching FileSets older than this
+      # delete_all_after_days: delete all files, whether or not they have a FileSet, older than this
+      args: { delete_ingested_after_days: 180, uploads_path: '/app/samvera/uploads', delete_all_after_days: 365 },
+      enabled_by_default: -> { Rails.env.production? }
+    }
+  }
 end
 
 # Wrapping this in an after_initialize block to ensure that all constants are loaded
