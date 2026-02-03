@@ -42,36 +42,11 @@ class CleanupSubDirectoryJob < ApplicationJob
     def should_be_deleted?(path)
       return false unless File.file?(path)
 
-      return true if very_old?(path)
-
-      old_enough?(path) && fileset_created?(path)
+      @files_checked += 1
+      old_enough?(path)
     end
 
     def old_enough?(path)
       File.mtime(path) < (Time.zone.now - days_old.to_i.days)
-    end
-
-    def very_old?(path)
-      File.mtime(path) < (Time.zone.now - 2.years)
-    end
-
-    def fileset_created?(path)
-      fs_id = fileset_id(path)
-      @files_checked += 1
-      Account.find_each do |account|
-        begin
-          Apartment::Tenant.switch(account.tenant) do
-            return true if FileSet.exists?(fs_id)
-          end
-        rescue StandardError => e
-          logger.error("Error checking FileSet #{fs_id} in tenant #{account.tenant}: #{e.message}")
-        end
-      end
-
-      false
-    end
-
-    def fileset_id(path)
-      path.split('/')[-2]
     end
 end
