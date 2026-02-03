@@ -15,4 +15,16 @@ RSpec.describe CleanupUploadFilesJob do
     expect { described_class.perform_now(days_old: 180, uploads_path: '/app/samvera/uploads') }
       .to have_enqueued_job(CleanupSubDirectoryJob).exactly(3).times
   end
+
+  it 'passes very_old_days parameter to child jobs' do
+    expect { described_class.perform_now(days_old: 180, uploads_path: '/app/samvera/uploads', very_old_days: 365) }
+      .to have_enqueued_job(CleanupSubDirectoryJob)
+      .with(days_old: 180, directory: 'path_1', very_old_days: 365)
+  end
+
+  it 'uses default very_old_days of 730 when not specified' do
+    expect { described_class.perform_now(days_old: 180, uploads_path: '/app/samvera/uploads') }
+      .to have_enqueued_job(CleanupSubDirectoryJob)
+      .with(days_old: 180, directory: 'path_1', very_old_days: 730)
+  end
 end

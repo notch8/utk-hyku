@@ -3,10 +3,11 @@
 class CleanupSubDirectoryJob < ApplicationJob
   non_tenant_job
 
-  attr_reader :days_old, :directory
-  def perform(days_old:, directory:)
+  attr_reader :days_old, :very_old_days, :directory
+  def perform(days_old:, directory:, very_old_days: 730)
     @directory = directory
     @days_old = days_old
+    @very_old_days = very_old_days
     @files_checked = 0
     @files_deleted = 0
     delete_files
@@ -52,7 +53,7 @@ class CleanupSubDirectoryJob < ApplicationJob
     end
 
     def very_old?(path)
-      File.mtime(path) < (Time.zone.now - 2.years)
+      File.mtime(path) < (Time.zone.now - very_old_days.to_i.days)
     end
 
     def fileset_created?(path)
