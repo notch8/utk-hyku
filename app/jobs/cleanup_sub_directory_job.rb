@@ -4,11 +4,11 @@
 class CleanupSubDirectoryJob < ApplicationJob
   non_tenant_job
 
-  attr_reader :delete_ingested_after_days, :delete_orphaned_after_days, :directory, :files_checked, :files_deleted
-  def perform(delete_ingested_after_days:, directory:, delete_orphaned_after_days: 730)
+  attr_reader :delete_ingested_after_days, :delete_all_after_days, :directory, :files_checked, :files_deleted
+  def perform(delete_ingested_after_days:, directory:, delete_all_after_days: 730)
     @directory = directory
     @delete_ingested_after_days = delete_ingested_after_days
-    @delete_orphaned_after_days = delete_orphaned_after_days
+    @delete_all_after_days = delete_all_after_days
     @files_checked = 0
     @files_deleted = 0
     delete_files
@@ -44,7 +44,7 @@ class CleanupSubDirectoryJob < ApplicationJob
     def should_be_deleted?(path)
       return false unless File.file?(path)
 
-      return true if orphaned_and_old_enough?(path)
+      return true if very_old?(path)
 
       ingested_and_old_enough?(path)
     end
@@ -53,8 +53,8 @@ class CleanupSubDirectoryJob < ApplicationJob
       file_older_than?(path, delete_ingested_after_days) && fileset_created?(path)
     end
 
-    def orphaned_and_old_enough?(path)
-      file_older_than?(path, delete_orphaned_after_days)
+    def very_old?(path)
+      file_older_than?(path, delete_all_after_days)
     end
 
     def file_older_than?(path, days)
