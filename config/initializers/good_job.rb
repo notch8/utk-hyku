@@ -14,7 +14,9 @@ Rails.application.configure do
     cleanup_upload_files: {
       cron: '0 2 * * 0',
       class: 'CleanupUploadFilesJob',
-      args: { days_old: 180, uploads_path: '/app/samvera/uploads' },
+      # delete_ingested_after_days: delete files with matching FileSets older than this
+      # delete_all_after_days: delete all files, whether or not they have a FileSet, older than this
+      args: { delete_ingested_after_days: 180, uploads_path: '/app/samvera/uploads', delete_all_after_days: 365 },
       enabled_by_default: -> { Rails.env.production? }
     }
   }

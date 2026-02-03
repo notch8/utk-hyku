@@ -127,7 +127,7 @@ Hyrax.config do |config|
   # Temporary path to hold uploads before they are ingested into FCrepo.
   # This must be a lambda that returns a Pathname
   config.upload_path = ->() do
-    if Site.account&.s3_bucket
+    if Site.account&.s3_bucket&.present?
       "uploads/#{Apartment::Tenant.current}"
     else
       ENV['HYRAX_UPLOAD_PATH'].present? ? Pathname.new(File.join(ENV['HYRAX_UPLOAD_PATH'], Apartment::Tenant.current)) : Rails.root.join('public', 'uploads', Apartment::Tenant.current)

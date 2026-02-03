@@ -1,12 +1,14 @@
 # frozen_string_literal: true
 
+# Finds uploaded files in a directory, determines whether they should be deleted, and deletes appropriate files.
 class CleanupSubDirectoryJob < ApplicationJob
   non_tenant_job
 
-  attr_reader :days_old, :directory
-  def perform(days_old:, directory:)
+  attr_reader :delete_ingested_after_days, :delete_all_after_days, :directory, :files_checked, :files_deleted
+  def perform(delete_ingested_after_days:, directory:, delete_all_after_days: 730)
     @directory = directory
-    @days_old = days_old
+    @delete_ingested_after_days = delete_ingested_after_days
+    @delete_all_after_days = delete_all_after_days
     @files_checked = 0
     @files_deleted = 0
     delete_files
@@ -28,7 +30,7 @@ class CleanupSubDirectoryJob < ApplicationJob
 
     def delete_empty_directories
       # Find all UUID-level directories (deepest level)
-      Dir.glob("#{directory}/*/*/*/*/*").select { |d| File.directory?(d) }.each do |dir|
+      Dir.glob("#{directory}/*/*/*/*/*").select { |path| File.directory?(path) }.each do |dir|
         begin
           FileUtils.rmdir(dir, parents: true)
         rescue Errno::ENOTEMPTY
@@ -44,34 +46,37 @@ class CleanupSubDirectoryJob < ApplicationJob
 
       return true if very_old?(path)
 
-      old_enough?(path) && fileset_created?(path)
+      ingested_and_old_enough?(path)
     end
 
-    def old_enough?(path)
-      File.mtime(path) < (Time.zone.now - days_old.to_i.days)
+    def ingested_and_old_enough?(path)
+      file_older_than?(path, delete_ingested_after_days) && fileset_created?(path)
     end
 
     def very_old?(path)
-      File.mtime(path) < (Time.zone.now - 2.years)
+      file_older_than?(path, delete_all_after_days)
+    end
+
+    def file_older_than?(path, days)
+      File.mtime(path) < (Time.zone.now - days.to_i.days)
     end
 
     def fileset_created?(path)
-      fs_id = fileset_id(path)
       @files_checked += 1
       Account.find_each do |account|
-        begin
-          Apartment::Tenant.switch(account.tenant) do
-            return true if FileSet.exists?(fs_id)
-          end
-        rescue StandardError => e
-          logger.error("Error checking FileSet #{fs_id} in tenant #{account.tenant}: #{e.message}")
-        end
+        return true if tenant_has_file_set?(file_set_id: path.split('/')[-2], tenant: account.tenant)
       end
 
       false
     end
 
-    def fileset_id(path)
-      path.split('/')[-2]
+    def tenant_has_file_set?(file_set_id:, tenant:)
+      Apartment::Tenant.switch(tenant) do
+        return true if FileSet.exists?(file_set_id)
+      end
+
+      false
+    rescue StandardError => error
+      logger.error("Error checking FileSet #{file_set_id} in tenant #{tenant}: #{error.message}")
     end
 end

@@ -12,7 +12,22 @@ RSpec.describe CleanupUploadFilesJob do
   end
 
   it 'spawns child jobs for each sub-directory' do
-    expect { described_class.perform_now(days_old: 180, uploads_path: '/app/samvera/uploads') }
+    expect { described_class.perform_now(delete_ingested_after_days: 180, uploads_path: '/app/samvera/uploads') }
       .to have_enqueued_job(CleanupSubDirectoryJob).exactly(3).times
+  end
+
+  it 'passes delete_all_after_days parameter to child jobs' do
+    expect do
+      described_class.perform_now(delete_ingested_after_days: 180,
+                                  uploads_path: '/app/samvera/uploads',
+                                  delete_all_after_days: 365)
+    end.to have_enqueued_job(CleanupSubDirectoryJob)
+      .with(delete_ingested_after_days: 180, directory: 'path_1', delete_all_after_days: 365)
+  end
+
+  it 'uses default delete_all_after_days of 730 when not specified' do
+    expect { described_class.perform_now(delete_ingested_after_days: 180, uploads_path: '/app/samvera/uploads') }
+      .to have_enqueued_job(CleanupSubDirectoryJob)
+      .with(delete_ingested_after_days: 180, directory: 'path_1', delete_all_after_days: 730)
   end
 end
