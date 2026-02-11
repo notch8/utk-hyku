@@ -17,7 +17,7 @@ Rails.application.configure do
       # delete_ingested_after_days: delete files with matching FileSets older than this
       # delete_all_after_days: delete all files, whether or not they have a FileSet, older than this
       args: { delete_ingested_after_days: 180, uploads_path: '/app/samvera/uploads', delete_all_after_days: 365 },
-      # Disabled: was deleting uploads; re-enable with -> { Rails.env.production? } when safe
+      # Disabled: was deleting uploads at a path we weren't ready to handle; re-enable with -> { Rails.env.production? } when safe
       enabled_by_default: false
     }
   }
