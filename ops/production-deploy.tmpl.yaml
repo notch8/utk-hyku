@@ -204,7 +204,7 @@ worker:
   replicaCount: 2
   resources:
     limits:
-      memory: 7Gi
+      memory: 12Gi
       cpu: 1.5
     requests:
       memory: 6Gi
