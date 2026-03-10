@@ -104,7 +104,7 @@ class IncompleteWorksService
 
     results.map do |hash|
       "https://#{Site.account.cname}/concern/file_sets/#{hash['id']};" \
-      "#{hash['title_tesim'].first};" \
+      "#{hash['title_tesim']&.first};" \
       "#{hash['bulkrax_identifier_tesim']&.first};" \
       "#{hash['import_url_ssim']&.first}"
     end
