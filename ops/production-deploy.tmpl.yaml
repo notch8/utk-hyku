@@ -131,6 +131,8 @@ extraEnvVars: &envVars
     value: good_job
   - name: HYRAX_FITS_PATH
     value: /app/fits/fits.sh
+  - name: HYRAX_UPLOAD_PATH
+    value: "/app/samvera/hyrax-webapp/public/uploads"
   - name: HYRAX_USE_SOLR_GRAPH_NESTING
     value: "true"
   - name: IN_DOCKER
