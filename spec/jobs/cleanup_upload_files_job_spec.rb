@@ -60,18 +60,26 @@ RSpec.describe CleanupUploadFilesJob do
     end.not_to have_enqueued_job(CleanupSubDirectoryJob).with(directory: hyrax_uploaded_file_dir)
   end
 
-  it 'passes delete_all_after_days and uploads_path to child jobs' do
+  it 'passes delete_all_after_days parameter to child jobs' do
     expect do
       described_class.perform_now(delete_ingested_after_days: 180,
                                   uploads_path: '/app/samvera/uploads',
                                   delete_all_after_days: 365)
     end.to have_enqueued_job(CleanupSubDirectoryJob)
-      .with(delete_ingested_after_days: 180, directory: hex_dir_ff, uploads_path: '/app/samvera/uploads', delete_all_after_days: 365)
+      .with(
+        delete_ingested_after_days: 180,
+        directory: hex_dir_ff,
+        delete_all_after_days: 365
+      )
   end
 
   it 'uses default delete_all_after_days of 730 when not specified' do
     expect { described_class.perform_now(delete_ingested_after_days: 180, uploads_path: '/app/samvera/uploads') }
       .to have_enqueued_job(CleanupSubDirectoryJob)
-      .with(delete_ingested_after_days: 180, directory: hex_dir_ff, uploads_path: '/app/samvera/uploads', delete_all_after_days: 730)
+      .with(
+        delete_ingested_after_days: 180,
+        directory: hex_dir_ff,
+        delete_all_after_days: 730
+      )
   end
 end
