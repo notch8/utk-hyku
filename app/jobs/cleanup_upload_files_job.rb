@@ -4,6 +4,11 @@
 class CleanupUploadFilesJob < ApplicationJob
   non_tenant_job
 
+  # Only process pair-tree hex directories (00-ff); do not process tenant UUID directories
+  # which contain permanent site/branding files (e.g. banner_images), or other protected
+  # dirs (uploaded_collection_thumbnails, identity_provider, hyrax).
+  HEX_TOP_DIR_PATTERN = /\A[0-9a-f]{2}\z/
+
   attr_reader :uploads_path
   def perform(delete_ingested_after_days:, uploads_path:, delete_all_after_days: 730)
     @uploads_path = uploads_path
@@ -20,7 +25,9 @@ class CleanupUploadFilesJob < ApplicationJob
   private
 
     def top_level_directories
-      @top_level_directories ||= Dir.glob("#{uploads_path}/*").select { |path| File.directory?(path) }
+      @top_level_directories ||= Dir.glob("#{uploads_path}/*").select do |path|
+        File.directory?(path) && File.basename(path).match?(HEX_TOP_DIR_PATTERN)
+      end
     end
 
     def message(delete_ingested_after_days, delete_all_after_days)
