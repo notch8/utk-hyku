@@ -4,11 +4,21 @@
 class CleanupSubDirectoryJob < ApplicationJob
   non_tenant_job
 
+  # Avoid ApplicationJob's retry_on(StandardError) burning 5 attempts
+  # and swallowing the error when the retry block is present.
+  discard_on ArgumentError do |_job, error|
+    logger.warn(error.message)
+  end
+
   # Assumptions:
   # The second to last element in the path is the ID of the associated FileSet
   # The directory has a pair-tree structure
+  # +directory+ must be a single hex pair-tree top segment (00-ff), same filter as CleanupUploadFilesJob
+  # (never tenant UUID roots, site/, hyrax/, etc.).
   attr_reader :delete_ingested_after_days, :delete_all_after_days, :directory, :files_checked, :files_deleted
   def perform(delete_ingested_after_days:, directory:, delete_all_after_days: 730)
+    assert_hex_pair_tree_directory!(directory)
+
     @directory = directory
     @delete_ingested_after_days = delete_ingested_after_days
     @delete_all_after_days = delete_all_after_days
@@ -20,6 +30,16 @@ class CleanupSubDirectoryJob < ApplicationJob
   end
 
   private
+
+    def assert_hex_pair_tree_directory!(dir)
+      path = File.expand_path(dir.to_s)
+      basename = File.basename(path)
+      return if basename.match?(CleanupUploadFilesJob::HEX_TOP_DIR_PATTERN)
+
+      raise ArgumentError,
+            "CleanupSubDirectoryJob only accepts pair-tree hex top-level directories (basename 00-ff per " \
+            "CleanupUploadFilesJob::HEX_TOP_DIR_PATTERN); got #{dir.inspect}"
+    end
 
     def delete_files
       Dir.glob("#{directory}/**/*").each do |path|

@@ -4,6 +4,7 @@ RSpec.describe CleanupSubDirectoryJob do
   let(:old_time) { Time.zone.now - 1.year }
   let(:very_old_time) { Time.zone.now - 3.years }
   let(:new_time) { Time.zone.now - 1.week }
+  let(:hex_pair_tree_root) { '/app/samvera/uploads/ff' }
   let(:path_1) { '/app/samvera/uploads/ff/00/27/d1/file-set-id-1/path_1' }
   let(:path_2) { '/app/samvera/uploads/ff/11/28/19/file-set-id-2/path_2' }
   let(:path_3) { '/app/samvera/uploads/ff/22/17/de/file-set-id-3/path_3' }
@@ -42,31 +43,64 @@ RSpec.describe CleanupSubDirectoryJob do
     allow(FileSet).to receive(:exists?).with('file-set-id-6').and_return(false)
   end
 
+  describe 'hex pair-tree directory guard' do
+    # Call #perform directly so ArgumentError is not intercepted by ApplicationJob's retry_on(StandardError).
+    it 'raises when given a tenant UUID directory (site branding lives here)' do
+      tenant_root = '/app/samvera/uploads/56e0eb81-c2d5-4d5d-9171-b251bf7299a4'
+      expect do
+        described_class.new.perform(delete_ingested_after_days: 180, directory: tenant_root)
+      end.to raise_error(ArgumentError, /only accepts pair-tree hex top-level directories/)
+    end
+
+    it 'raises when given a site banner path' do
+      banner = '/app/samvera/uploads/56e0eb81-c2d5-4d5d-9171-b251bf7299a4/site/banner_images/1'
+      expect do
+        described_class.new.perform(delete_ingested_after_days: 180, directory: banner)
+      end.to raise_error(ArgumentError, /only accepts pair-tree hex top-level directories/)
+    end
+
+    it 'raises when given the hyrax uploaded_file cache root' do
+      hyrax_dir = '/app/samvera/uploads/hyrax'
+      expect do
+        described_class.new.perform(delete_ingested_after_days: 180, directory: hyrax_dir)
+      end.to raise_error(ArgumentError, /only accepts pair-tree hex top-level directories/)
+    end
+
+    it 'accepts a valid hex pair-tree root with a trailing slash' do
+      allow(Dir).to receive(:glob).and_return([])
+      allow(FileUtils).to receive(:rmdir)
+
+      expect do
+        described_class.new.perform(delete_ingested_after_days: 180, directory: "#{hex_pair_tree_root}/")
+      end.not_to raise_error
+    end
+  end
+
   it 'deletes old files with matching FileSets' do
     expect(File).to receive(:delete).with(path_1)
     expect(File).to receive(:delete).with(path_2)
-    described_class.perform_now(delete_ingested_after_days: 180, directory: '/app/samvera/uploads/ff')
+    described_class.perform_now(delete_ingested_after_days: 180, directory: hex_pair_tree_root)
   end
 
   it 'does not delete files newer than delete_ingested_after_days threshold' do
     expect(File).not_to receive(:delete).with(path_3)
-    described_class.perform_now(delete_ingested_after_days: 180, directory: '/app/samvera/uploads/ff')
+    described_class.perform_now(delete_ingested_after_days: 180, directory: hex_pair_tree_root)
   end
 
   it 'does not delete directories' do
     expect(File).not_to receive(:delete).with(path_4)
-    described_class.perform_now(delete_ingested_after_days: 180, directory: '/app/samvera/uploads/ff')
+    described_class.perform_now(delete_ingested_after_days: 180, directory: hex_pair_tree_root)
   end
 
   it 'does not delete old files without matching FileSets (orphaned but not old enough)' do
     expect(File).not_to receive(:delete).with(path_5)
-    described_class.perform_now(delete_ingested_after_days: 180, directory: '/app/samvera/uploads/ff')
+    described_class.perform_now(delete_ingested_after_days: 180, directory: hex_pair_tree_root)
   end
 
   it 'deletes orphaned files older than delete_all_after_days' do
     expect(File).to receive(:delete).with(path_6)
     described_class.perform_now(delete_ingested_after_days: 180,
-                                directory: '/app/samvera/uploads/ff',
+                                directory: hex_pair_tree_root,
                                 delete_all_after_days: 730)
   end
 
@@ -74,7 +108,7 @@ RSpec.describe CleanupSubDirectoryJob do
     # With delete_all_after_days: 300, path_5 (1 year old) should be deleted
     expect(File).to receive(:delete).with(path_5)
     described_class.perform_now(delete_ingested_after_days: 180,
-                                directory: '/app/samvera/uploads/ff',
+                                directory: hex_pair_tree_root,
                                 delete_all_after_days: 300)
   end
 
@@ -100,7 +134,7 @@ RSpec.describe CleanupSubDirectoryJob do
       expect(FileUtils).to receive(:rmdir).with('/app/samvera/uploads/ff/11/28/19/file-set-id-2', parents: true)
       expect(FileUtils).to receive(:rmdir).with('/app/samvera/uploads/ff/22/17/de/file-set-id-3', parents: true)
 
-      described_class.perform_now(delete_ingested_after_days: 180, directory: '/app/samvera/uploads/ff')
+      described_class.perform_now(delete_ingested_after_days: 180, directory: hex_pair_tree_root)
     end
   end
 end
