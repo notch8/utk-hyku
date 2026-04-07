@@ -30,7 +30,7 @@ jobs:
     uses: notch8/actions/.github/workflows/build.yaml@v1.0.9
     secrets: inherit
     with:
-      components: '["base","worker","solr"]'
+      components: '["web","worker","solr"]'
       debug_step: ${{ github.event_name == 'workflow_dispatch' && inputs.debug_step || '' }}
 
   lint:
