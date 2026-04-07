@@ -60,7 +60,7 @@ services:
   solr:
     image: ghcr.io/notch8/utk-hyku/solr:${TAG:-latest}
     build:
-      context: ./solr
+      context: .
       target: solr
     environment:
       - OOM=script

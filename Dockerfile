@@ -24,3 +24,11 @@ USER app
 
 FROM web AS worker
 CMD ./bin/worker
+
+# Use a Solr version with patched Log4j to address CVE-2021-44228
+FROM solr:8.11.2 AS solr
+ENV SOLR_USER="solr" \
+    SOLR_GROUP="solr"
+USER root
+COPY --chown=solr:solr solr/security.json /var/solr/data/security.json
+USER $SOLR_USER
