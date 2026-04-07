@@ -1,5 +1,6 @@
 name: "Build Test Lint"
 run-name: Build Test Lint of ${{ github.ref_name }} by @${{ github.actor }}
+
 on:
   push:
     branches:
@@ -9,30 +10,46 @@ on:
       - main
   workflow_dispatch:
     inputs:
-      debug_enabled:
-        type: boolean
-        description: 'Run the build with tmate debugging enabled (https://github.com/marketplace/actions/debugging-with-tmate)'
+      debug_step:
         required: false
-        default: false
-# We are using version 14 since this project has not been knap-sackerized yet
+        description: "Pause the build job to debug using tmate (lint/test are only debuggable when those workflows are run directly via workflow_dispatch)"
+        type: choice
+        default: ""
+        options:
+          - ""
+          - build
+
+env:
+  REGISTRY: ghcr.io
+  DOCKER_BUILDKIT: 1
+  COMPOSE_DOCKER_CLI_BUILD: 1
+
 jobs:
   build:
-    uses: notch8/actions/.github/workflows/build.yaml@v0.0.15
+    permissions: write-all
+    uses: notch8/actions/.github/workflows/build.yaml@v1.0.9
     secrets: inherit
     with:
-      platforms: "linux/amd64"
-      webTarget: hyku-base
-      workerTarget: hyku-worker
-      solrTarget: hyku-solr
-  test:
-    needs: build
-    uses: notch8/actions/.github/workflows/test.yaml@v0.0.15
-    with:
-      webTarget: hyku-base
-      workerTarget: hyku-worker
+      components: '["hyku-base","hyku-worker","hyku-solr"]'
+      debug_step: ${{ github.event_name == 'workflow_dispatch' && inputs.debug_step || '' }}
+
   lint:
     needs: build
-    uses: notch8/actions/.github/workflows/lint.yaml@v0.0.15
+    uses: notch8/actions/.github/workflows/lint.yaml@v1.0.9
+    secrets: inherit
     with:
-      webTarget: hyku-base
-      workerTarget: hyku-worker
+      rubocop_cmd: "bundle exec rubocop --parallel --format progress --format junit --out rubocop.xml --display-only-failed"
+
+  test:
+    needs: build
+    uses: notch8/actions/.github/workflows/test.yaml@v1.0.9
+    secrets: inherit
+    with:
+      confdir: "/app/samvera/hyrax-webapp/solr/conf"
+      solrTarget: hyku-solr
+      rspec_cmd: "gem install semaphore_test_boosters && bundle && rspec_booster --job $CI_NODE_INDEX/$CI_NODE_TOTAL"
+
+  reports:
+    if: always()
+    needs: [test, lint]
+    uses: notch8/actions/.github/workflows/report.yaml@v1.0.9
