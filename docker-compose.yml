@@ -3,13 +3,13 @@ version: '3.8'
 x-app: &app
   build:
     context: .
-    target: hyku-base
+    target: hyku-web
     args:
       BUILDKIT_INLINE_CACHE: 1
     cache_from:
       - ghcr.io/samvera/hyku/base:latest
-      - ghcr.io/notch8/utk-hyku:latest
-  image: ghcr.io/notch8/utk-hyku:${TAG:-latest}
+      - ghcr.io/notch8/utk-hyku/web:latest
+  image: ghcr.io/notch8/utk-hyku/web:${TAG:-latest}
   env_file:
     - .env
   # NOTE: all common env variables moved to .env
@@ -60,7 +60,7 @@ services:
   solr:
     image: ghcr.io/notch8/utk-hyku/solr:${TAG:-latest}
     build:
-      context: ./solr
+      context: .
       target: hyku-solr
     environment:
       - OOM=script
@@ -177,7 +177,7 @@ services:
       args:
         BUILDKIT_INLINE_CACHE: 1
       cache_from:
-        - ghcr.io/notch8/utk-hyku:${TAG:-latest}
+        - ghcr.io/notch8/utk-hyku/web:${TAG:-latest}
         - ghcr.io/notch8/utk-hyku/worker:${TAG:-latest}
     image: ghcr.io/notch8/utk-hyku/worker:${TAG:-latest}
     depends_on:
