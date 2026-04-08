@@ -46,7 +46,6 @@ jobs:
     secrets: inherit
     with:
       confdir: "/app/samvera/hyrax-webapp/solr/conf"
-      solrTarget: hyku-solr
       rspec_cmd: "gem install semaphore_test_boosters && bundle && rspec_booster --job $CI_NODE_INDEX/$CI_NODE_TOTAL"
 
   reports:
