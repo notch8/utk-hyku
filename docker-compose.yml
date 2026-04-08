@@ -3,7 +3,7 @@ version: '3.8'
 x-app: &app
   build:
     context: .
-    target: web
+    target: hyku-web
     args:
       BUILDKIT_INLINE_CACHE: 1
     cache_from:
@@ -61,7 +61,7 @@ services:
     image: ghcr.io/notch8/utk-hyku/solr:${TAG:-latest}
     build:
       context: .
-      target: solr
+      target: hyku-solr
     environment:
       - OOM=script
       - SOLR_ADMIN_USER=solr
@@ -173,7 +173,7 @@ services:
     # command: sh -l -c "bundle && tail -f /dev/null"
     build:
       context: .
-      target: worker
+      target: hyku-worker
       args:
         BUILDKIT_INLINE_CACHE: 1
       cache_from:
