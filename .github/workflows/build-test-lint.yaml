@@ -18,31 +18,27 @@ on:
         options:
           - ""
           - build
-
-env:
-  REGISTRY: ghcr.io
-  DOCKER_BUILDKIT: 1
-  COMPOSE_DOCKER_CLI_BUILD: 1
+          - test
+          - lint
 
 jobs:
   build:
     permissions: write-all
-    uses: notch8/actions/.github/workflows/build.yaml@v1.0.9
+    uses: notch8/actions/.github/workflows/build.yaml@add-sep-target
     secrets: inherit
     with:
       components: '["web","worker","solr"]'
-      debug_step: ${{ github.event_name == 'workflow_dispatch' && inputs.debug_step || '' }}
 
   lint:
     needs: build
-    uses: notch8/actions/.github/workflows/lint.yaml@v1.0.9
+    uses: notch8/actions/.github/workflows/lint.yaml@add-sep-target
     secrets: inherit
     with:
       rubocop_cmd: "bundle exec rubocop --parallel --format progress"
 
   test:
     needs: build
-    uses: notch8/actions/.github/workflows/test.yaml@v1.0.9
+    uses: notch8/actions/.github/workflows/test.yaml@add-sep-target
     secrets: inherit
     with:
       confdir: "/app/samvera/hyrax-webapp/solr/conf"
@@ -51,4 +47,4 @@ jobs:
   reports:
     if: always()
     needs: [test, lint]
-    uses: notch8/actions/.github/workflows/report.yaml@v1.0.9
+    uses: notch8/actions/.github/workflows/report.yaml@add-sep-target
