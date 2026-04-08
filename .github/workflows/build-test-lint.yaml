@@ -27,7 +27,7 @@ on:
 jobs:
   build:
     permissions: write-all
-    uses: notch8/actions/.github/workflows/build.yaml@fix-non-knapsack-no-checkout_all
+    uses: notch8/actions/.github/workflows/build.yaml@v1.0.9
     secrets: inherit
     with:
       components: '["web","worker","solr"]'
