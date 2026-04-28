@@ -6,7 +6,7 @@ on:
   pull_request:
     branches: [main,brakeman_audit]
   workflow_dispatch:
-  
+
 jobs:
   brakeman:
     runs-on: ubuntu-latest
@@ -18,7 +18,7 @@ jobs:
           ruby-version: '2.7'
       - name: Install dependencies
         run: |
-          gem install brakeman
+          gem install brakeman -v 5.4.1
       - name: Run Brakeman
         run: brakeman -f json -o brakeman-audit-report.json
       - name: Publish Brakeman Audit Report
