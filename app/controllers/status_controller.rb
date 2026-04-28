@@ -13,10 +13,15 @@ class StatusController < ApplicationController
     add_breadcrumb t(:'hyrax.admin.sidebar.system_status'), main_app.status_path
   end
 
+  RESTART_COMMANDS = {
+    "FcrepoEndpoint" => ["kubectl", "rollout", "restart", "deployment", "fcrepo"]
+  }.freeze
+
   def update
     @endpoint = Endpoint.find(params[:id])
-    result = if @endpoint.restart_command.present? && @endpoint.last_restart < 5.minutes.ago
-               `#{@endpoint.restart_command}`
+    result = if RESTART_COMMANDS[@endpoint.type].present? && @endpoint.last_restart < 5.minutes.ago
+               system(*RESTART_COMMANDS[@endpoint.type])
+               t('.restarted')
              else
                t('.not_run')
              end
