@@ -52,7 +52,7 @@ ingress:
         - path: /
   annotations: {
     nginx.org/client-max-body-size: "0",
-    cert-manager.io/cluster-issuer: letsencrypt-production-dns
+    cert-manager.io/cluster-issuer: letsencrypt-prod-nginx-ingress
     }
   tls:
     - hosts:
