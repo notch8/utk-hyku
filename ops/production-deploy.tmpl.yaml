@@ -62,13 +62,16 @@ ingress:
   #   {"op": "add", "path": "/spec/ingressClassName", "value": "nginx-ingress"},
   #   {"op": "remove", "path": "/metadata/annotations/kubernetes.io~1ingress.class"}
   # ]'
-  # ingressClassName: "nginx-ingress"
+  ingressClassName: "nginx-ingress"
   enabled: true
   hosts:
     - host: utk-hyku-production.notch8.cloud
       paths:
         - path: /
     - host: "*.utk-hyku-production.notch8.cloud"
+      paths:
+        - path: /
+    - host: utk-origin.notch8.cloud
       paths:
         - path: /
     # These are currently separate manually-created ingresses
@@ -88,6 +91,9 @@ ingress:
         - utk-hyku-production.notch8.cloud
         - "*.utk-hyku-production.notch8.cloud"
       secretName: notch8cloud
+    - hosts:
+        - utk-origin.notch8.cloud
+      secretName: utk-origin-tls
   resources:
     limits:
       memory: 256Mi
