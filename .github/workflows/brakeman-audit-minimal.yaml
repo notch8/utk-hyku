@@ -1,0 +1,29 @@
+name: Brakeman Security Scan
+run-name: Brakeman Audit of ${{ github.ref_name }} by @${{ github.actor }}
+on:
+  push:
+    branches: [main,brakeman_audit]
+  pull_request:
+    branches: [main,brakeman_audit]
+  workflow_dispatch:
+
+jobs:
+  brakeman:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '2.7'
+      - name: Install dependencies
+        run: |
+          gem install brakeman -v 5.4.1
+      - name: Run Brakeman
+        run: brakeman -f json -o brakeman-audit-report.json
+      - name: Publish Brakeman Audit Report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: brakeman-audit-report
+          path: ./brakeman-audit-report.json

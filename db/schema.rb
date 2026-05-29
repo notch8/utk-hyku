@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2025_04_22_195027) do
+ActiveRecord::Schema.define(version: 2026_04_28_141055) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "hstore"
@@ -386,8 +386,7 @@ ActiveRecord::Schema.define(version: 2025_04_22_195027) do
     t.binary "options"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.text "restart_command"
-    t.datetime "last_restart", default: "2025-02-13 03:27:20"
+    t.datetime "last_restart", default: "2026-01-27 16:25:00"
   end
 
   create_table "featured_collections", force: :cascade do |t|
