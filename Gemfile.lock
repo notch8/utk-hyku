@@ -1197,6 +1197,7 @@ GEM
       rainbow (>= 2.2.2, < 4.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (~> 1.0, >= 1.0.1)
+    rubocop-junit-formatter (0.1.4)
     rubocop-rspec (1.22.2)
       rubocop (>= 0.52.1)
     ruby-box (1.15.0)
@@ -1494,6 +1495,7 @@ DEPENDENCIES
   rspec-retry
   rspec_junit_formatter
   rubocop (~> 0.50, <= 0.52.1)
+  rubocop-junit-formatter
   rubocop-rspec (~> 1.22, <= 1.22.2)
   ruby-saml (>= 1.17.0)
   sass-rails (~> 5.0)
