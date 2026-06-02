@@ -53,7 +53,7 @@ GIT
 
 GIT
   remote: https://github.com/samvera/bulkrax.git
-  revision: f1c302409564ace06c5745596ae01562d531e9d2
+  revision: 37eb1ddca0499196994fcdf53c23a553fffa56ea
   branch: utk
   specs:
     bulkrax (9.0.2)
@@ -266,7 +266,7 @@ GEM
     babel-transpiler (0.7.0)
       babel-source (>= 4.0, < 6)
       execjs (~> 2.0)
-    bagit (0.6.0)
+    bagit (0.6.1)
       docopt (~> 0.5.0)
       validatable (~> 1.6)
     bcp47 (0.3.3)
@@ -775,7 +775,7 @@ GEM
       rdf-vocab (~> 3.0)
     legato (0.7.0)
       multi_json
-    libxml-ruby (5.0.5)
+    libxml-ruby (5.0.6)
     link_header (0.0.8)
     linkeddata (3.1.6)
       equivalent-xml (~> 0.6)
