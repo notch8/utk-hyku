@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2025_04_22_195027) do
+ActiveRecord::Schema.define(version: 2026_06_02_010000) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "hstore"
@@ -271,6 +271,7 @@ ActiveRecord::Schema.define(version: 2025_04_22_195027) do
     t.datetime "updated_at", null: false
     t.integer "order", default: 0
     t.string "status_message", default: "Pending"
+    t.string "error_class"
     t.index ["child_id"], name: "index_bulkrax_pending_relationships_on_child_id"
     t.index ["importer_run_id"], name: "index_bulkrax_pending_relationships_on_importer_run_id"
     t.index ["parent_id"], name: "index_bulkrax_pending_relationships_on_parent_id"
@@ -387,7 +388,7 @@ ActiveRecord::Schema.define(version: 2025_04_22_195027) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "restart_command"
-    t.datetime "last_restart", default: "2025-02-13 03:27:20"
+    t.datetime "last_restart", default: "2026-06-01 20:51:11"
   end
 
   create_table "featured_collections", force: :cascade do |t|
