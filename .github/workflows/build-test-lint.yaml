@@ -38,7 +38,7 @@ jobs:
     uses: notch8/actions/.github/workflows/lint.yaml@v1.0.9
     secrets: inherit
     with:
-      rubocop_cmd: "bundle exec rubocop --parallel --format progress --out rubocop.xml"
+      rubocop_cmd: "bundle exec rubocop --parallel --format progress --require rubocop/formatter/junit_formatter --format RuboCop::Formatter::JUnitFormatter --out rubocop.xml"
 
   test:
     needs: build
