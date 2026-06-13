@@ -27,7 +27,7 @@ on:
 jobs:
   build:
     permissions: write-all
-    uses: notch8/actions/.github/workflows/build.yaml@nodejs24-upgrade
+    uses: notch8/actions/.github/workflows/build.yaml@v1.0.10
     secrets: inherit
     with:
       components: '["web","worker","solr"]'
@@ -35,14 +35,14 @@ jobs:
 
   lint:
     needs: build
-    uses: notch8/actions/.github/workflows/lint.yaml@nodejs24-upgrade
+    uses: notch8/actions/.github/workflows/lint.yaml@v1.0.10
     secrets: inherit
     with:
       rubocop_cmd: "bundle exec rubocop --parallel --format progress --require rubocop/formatter/junit_formatter --format RuboCop::Formatter::JUnitFormatter --out rubocop.xml"
 
   test:
     needs: build
-    uses: notch8/actions/.github/workflows/test.yaml@nodejs24-upgrade
+    uses: notch8/actions/.github/workflows/test.yaml@v1.0.10
     secrets: inherit
     with:
       confdir: "/app/samvera/hyrax-webapp/solr/conf"
@@ -51,4 +51,4 @@ jobs:
   reports:
     if: always()
     needs: [test, lint]
-    uses: notch8/actions/.github/workflows/report.yaml@nodejs24-upgrade
+    uses: notch8/actions/.github/workflows/report.yaml@v1.0.10

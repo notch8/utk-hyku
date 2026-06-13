@@ -11,7 +11,7 @@ on:
 
 jobs:
   bundler-audit:
-    uses: notch8/actions/.github/workflows/bundler-audit.yaml@nodejs24-upgrade
+    uses: notch8/actions/.github/workflows/bundler-audit.yaml@v1.0.10
     with:
       webTarget: web
       tag: latest
