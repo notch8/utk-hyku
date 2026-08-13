@@ -1,11 +1,11 @@
-replicaCount: 2
+replicaCount: 3
 
 resources:
   limits:
-    memory: 4Gi
-    cpu: 1
+    memory: 6Gi
+    cpu: 2
   requests:
-    memory: 3Gi
+    memory: 4Gi
     cpu: 100m
 
 livenessProbe:
@@ -13,8 +13,10 @@ livenessProbe:
 readinessProbe:
   enabled: true
   path: "/healthz"
+  initialDelaySeconds: 15
   periodSeconds: 30
-  timeoutSeconds: 10
+  timeoutSeconds: 30
+  failureThreshold: 6
 
 brandingVolume:
   storageClass: efs-sc
@@ -183,7 +185,7 @@ extraEnvVars: &envVars
   - name: RAILS_LOG_TO_STDOUT
     value: "true"
   - name: RAILS_MAX_THREADS
-    value: "5"
+    value: "12"
   - name: RAILS_SERVE_STATIC_FILES
     value: "true"
   - name: REDIS_HOST

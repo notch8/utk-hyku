@@ -3,3 +3,10 @@
 # To ban all spiders from the entire site uncomment the next two lines:
 # User-agent: *
 # Disallow: /
+
+# Every item/collection page is also reachable with an explicit ?locale=
+# param for each supported language, multiplying the crawlable surface by
+# ~7x for duplicate content. Block the locale-parameterized URLs so
+# compliant crawlers only index the canonical (default-locale) page.
+User-agent: *
+Disallow: /*locale=
