@@ -6,4 +6,11 @@ else
   puts 'DB_URL not set, no pool change needed'
 end
 
+# Size the DB connection pool to this process's own concurrency (GoodJob
+# threads), not a flat guess — avoids self-inflicted pool contention and
+# keeps this worker role's worst-case connection footprint predictable
+# against the shared Postgres instance's max_connections. See bin/web for
+# the Puma-side equivalent.
+ENV['DB_POOL'] ||= (ENV.fetch('GOOD_JOB_MAX_THREADS', 5).to_i + 2).to_s
+
 exec "echo $DB_URL && bundle exec good_job"

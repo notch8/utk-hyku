@@ -2,4 +2,11 @@
 # frozen_string_literal: true
 `echo "$GOOGLE_OAUTH_PRIVATE_KEY_VALUE" | base64 -d > prod-cred.p12` unless ENV['GOOGLE_OAUTH_PRIVATE_KEY_VALUE'].to_s.strip.empty?
 
+# Size the DB connection pool to this process's own concurrency (Puma
+# threads), not a flat guess — avoids self-inflicted pool contention and
+# keeps this web role's worst-case connection footprint predictable
+# against the shared Postgres instance's max_connections. See bin/worker
+# for the GoodJob-side equivalent.
+ENV['DB_POOL'] ||= (ENV.fetch('RAILS_MAX_THREADS', 5).to_i + 2).to_s
+
 exec "bundle exec puma -v -b tcp://0.0.0.0:3000"
