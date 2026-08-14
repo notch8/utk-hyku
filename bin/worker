@@ -1,16 +1,20 @@
 #!/usr/local/bin/ruby
 
-if ENV['DB_URL'] && !ENV['DB_URL'].empty?
-  ENV['DB_URL'] = ENV['DB_URL'].gsub('pool=5', 'pool=30')
-else
-  puts 'DB_URL not set, no pool change needed'
-end
-
 # Size the DB connection pool to this process's own concurrency (GoodJob
 # threads), not a flat guess — avoids self-inflicted pool contention and
 # keeps this worker role's worst-case connection footprint predictable
 # against the shared Postgres instance's max_connections. See bin/web for
 # the Puma-side equivalent.
+#
+# DATABASE_URL's own ?pool= wins over database.yml's pool: setting, so
+# DB_POOL alone isn't enough — the chart bakes a hardcoded pool=5 into
+# DATABASE_URL and that's what ActiveRecord actually uses. Rewrite it here.
+# (Previously this rewrote DB_URL's "pool=5" substring instead — DB_URL is
+# a different, unused variable that doesn't even contain that substring,
+# so that rewrite was a silent no-op.)
 ENV['DB_POOL'] ||= (ENV.fetch('GOOD_JOB_MAX_THREADS', 5).to_i + 2).to_s
+if ENV['DATABASE_URL'] && ENV['DATABASE_URL'].include?('pool=')
+  ENV['DATABASE_URL'] = ENV['DATABASE_URL'].sub(/pool=\d+/, "pool=#{ENV['DB_POOL']}")
+end
 
 exec "echo $DB_URL && bundle exec good_job"

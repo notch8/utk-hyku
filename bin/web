@@ -7,6 +7,13 @@
 # keeps this web role's worst-case connection footprint predictable
 # against the shared Postgres instance's max_connections. See bin/worker
 # for the GoodJob-side equivalent.
+#
+# DATABASE_URL's own ?pool= wins over database.yml's pool: setting, so
+# DB_POOL alone isn't enough — the chart bakes a hardcoded pool=5 into
+# DATABASE_URL and that's what ActiveRecord actually uses. Rewrite it here.
 ENV['DB_POOL'] ||= (ENV.fetch('RAILS_MAX_THREADS', 5).to_i + 2).to_s
+if ENV['DATABASE_URL'] && ENV['DATABASE_URL'].include?('pool=')
+  ENV['DATABASE_URL'] = ENV['DATABASE_URL'].sub(/pool=\d+/, "pool=#{ENV['DB_POOL']}")
+end
 
 exec "bundle exec puma -v -b tcp://0.0.0.0:3000"
