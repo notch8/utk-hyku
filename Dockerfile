@@ -22,6 +22,11 @@ RUN ARCH=$(uname -m) && \
   rm kubectl
 USER app
 
+# Explicit CMD so this stage actually runs bin/web (which sizes the DB
+# pool per-role) instead of silently inheriting the base image's own
+# `bundle exec puma ...` CMD and bypassing bin/web entirely.
+CMD ./bin/web
+
 FROM hyku-web AS hyku-worker
 CMD ./bin/worker
 
