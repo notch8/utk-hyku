@@ -1,29 +1,6 @@
 #!/usr/local/bin/ruby
 
-# Size the DB connection pool to this process's own concurrency (GoodJob
-# threads), not a flat guess — avoids self-inflicted pool contention and
-# keeps this worker role's worst-case connection footprint predictable
-# against the shared Postgres instance's max_connections. See bin/web for
-# the Puma-side equivalent.
-#
-# database.yml's pool: reads DB_POOL, but DATABASE_URL's own ?pool= (when
-# present) wins over that — the chart bakes in a hardcoded pool=5, so
-# without this, database.yml's setting would be silently ignored. Rather
-# than rewriting the URL's pool= to match DB_POOL (two calculations that
-# have to be kept in sync by hand), strip it entirely so database.yml's
-# DB_POOL is the one and only place pool size is ever specified.
-# (Previously this rewrote DB_URL's "pool=5" substring instead — DB_URL is
-# a different, unused variable that doesn't even contain that substring,
-# so that rewrite was a silent no-op.)
-require 'uri'
-ENV['DB_POOL'] ||= (ENV.fetch('GOOD_JOB_MAX_THREADS', 5).to_i + 2).to_s
-if ENV['DATABASE_URL']
-  uri = URI.parse(ENV['DATABASE_URL'])
-  if uri.query
-    remaining = URI.decode_www_form(uri.query).reject { |k, _| k == 'pool' }
-    uri.query = remaining.empty? ? nil : URI.encode_www_form(remaining)
-    ENV['DATABASE_URL'] = uri.to_s
-  end
-end
+require_relative 'db_pool_env'
+DbPoolEnv.configure!(default_pool: ENV.fetch('GOOD_JOB_MAX_THREADS', 5).to_i + 2)
 
 exec "echo $DB_URL && bundle exec good_job"
