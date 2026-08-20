@@ -1,9 +1,6 @@
 #!/usr/local/bin/ruby
 
-if ENV['DB_URL'] && !ENV['DB_URL'].empty?
-  ENV['DB_URL'] = ENV['DB_URL'].gsub('pool=5', 'pool=30')
-else
-  puts 'DB_URL not set, no pool change needed'
-end
+require_relative 'db_pool_env'
+DbPoolEnv.configure!(default_pool: ENV.fetch('GOOD_JOB_MAX_THREADS', 5).to_i + 2)
 
 exec "echo $DB_URL && bundle exec good_job"

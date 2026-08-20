@@ -22,8 +22,13 @@ RUN ARCH=$(uname -m) && \
   rm kubectl
 USER app
 
+# Explicit CMD so this stage actually runs bin/web (which sizes the DB
+# pool per-role) instead of silently inheriting the base image's own
+# `bundle exec puma ...` CMD and bypassing bin/web entirely.
+CMD ["./bin/web"]
+
 FROM hyku-web AS hyku-worker
-CMD ./bin/worker
+CMD ["./bin/worker"]
 
 # Use a Solr version with patched Log4j to address CVE-2021-44228
 FROM solr:8.11.2 AS hyku-solr

@@ -2,4 +2,7 @@
 # frozen_string_literal: true
 `echo "$GOOGLE_OAUTH_PRIVATE_KEY_VALUE" | base64 -d > prod-cred.p12` unless ENV['GOOGLE_OAUTH_PRIVATE_KEY_VALUE'].to_s.strip.empty?
 
+require_relative 'db_pool_env'
+DbPoolEnv.configure!(default_pool: ENV.fetch('RAILS_MAX_THREADS', 5).to_i + 2)
+
 exec "bundle exec puma -v -b tcp://0.0.0.0:3000"

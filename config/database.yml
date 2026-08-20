@@ -7,7 +7,10 @@ login: &login
   username: <%= ENV['DB_USER'] %>
   password: <%= ENV['DB_PASSWORD'] %>
   database: <%= ENV['DB_NAME'] || 'hyku' %>
-  pool: 50
+  # Set per-role in bin/web / bin/worker (sized to that process's own
+  # thread concurrency). 10 is a conservative fallback for anything that
+  # doesn't go through those entrypoints (console, rake tasks, migrations).
+  pool: <%= ENV.fetch('DB_POOL', 10).to_i %>
   timeout: 5000
 
 
