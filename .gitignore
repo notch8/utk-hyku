@@ -72,3 +72,4 @@ yarn-debug.log*
 *~undo-tree~
 .DS_Store
 fits.log
+.claude/settings.local.json

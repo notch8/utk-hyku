@@ -30,6 +30,11 @@ CMD ["./bin/web"]
 FROM hyku-web AS hyku-worker
 CMD ["./bin/worker"]
 
+FROM registry.gitlab.com/notch8/scripts/bitnami-nginx:1.21.5-debian-10-r4 AS hyku-nginx
+COPY --from=hyku-web /app/samvera/hyrax-webapp/public/assets /app/samvera/hyrax-webapp/public/assets
+COPY --from=hyku-web /app/samvera/hyrax-webapp/public/uv /app/samvera/hyrax-webapp/public/uv
+COPY --from=hyku-web /app/samvera/hyrax-webapp/public/clover-iiif /app/samvera/hyrax-webapp/public/clover-iiif
+
 # Use a Solr version with patched Log4j to address CVE-2021-44228
 FROM solr:8.11.2 AS hyku-solr
 ENV SOLR_USER="solr" \
