@@ -33,7 +33,10 @@ CMD ["./bin/worker"]
 FROM nginxinc/nginx-unprivileged:1.29-alpine AS hyku-nginx
 USER root
 COPY ops/nginx/nginx.conf /etc/nginx/nginx.conf
-RUN mkdir -p /opt/bitnami/nginx/logs && chown -R nginx:nginx /opt/bitnami
+RUN mkdir -p /opt/bitnami/nginx/logs && \
+    ln -sf /dev/stdout /opt/bitnami/nginx/logs/access.log && \
+    ln -sf /dev/stderr /opt/bitnami/nginx/logs/error.log && \
+    chown -R nginx:nginx /opt/bitnami
 COPY --from=hyku-web /app/samvera/hyrax-webapp/public/assets /app/samvera/hyrax-webapp/public/assets
 COPY --from=hyku-web /app/samvera/hyrax-webapp/public/uv /app/samvera/hyrax-webapp/public/uv
 COPY --from=hyku-web /app/samvera/hyrax-webapp/public/clover-iiif /app/samvera/hyrax-webapp/public/clover-iiif
