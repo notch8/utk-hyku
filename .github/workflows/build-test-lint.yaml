@@ -40,6 +40,7 @@ jobs:
       - name: Validate nginx server block syntax
         run: |
           mkdir -p /tmp/bitnami-conf/server_blocks/common /tmp/bitnami-conf/server_blocks/ldap /tmp/bitnami-logs
+          chmod 777 /tmp/bitnami-logs
           sed 's/{{ .Values.global.hyraxHostName }}/127.0.0.1/' ops/nginx/server-block.conf > /tmp/bitnami-conf/server_blocks/common/server-block.conf
           printf 'include  "/opt/bitnami/nginx/conf/server_blocks/ldap/*.conf";\ninclude  "/opt/bitnami/nginx/conf/server_blocks/common/*.conf";\n' > /tmp/bitnami-conf/server_blocks/server-blocks-paths.conf
           cp -r ops/nginx/conf.d /tmp/bitnami-conf/conf.d
