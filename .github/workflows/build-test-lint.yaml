@@ -33,6 +33,20 @@ jobs:
       components: '["web","worker","solr","nginx"]'
       docker_target_prefix: hyku-
 
+  nginx-config-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Validate nginx server block syntax
+        run: |
+          mkdir -p /tmp/server_blocks/common /tmp/server_blocks/ldap
+          sed 's/{{ .Values.global.hyraxHostName }}/127.0.0.1/' ops/nginx/server-block.conf > /tmp/server_blocks/common/server-block.conf
+          printf 'include  "/opt/bitnami/nginx/conf/server_blocks/ldap/*.conf";\ninclude  "/opt/bitnami/nginx/conf/server_blocks/common/*.conf";\n' > /tmp/server_blocks/server-blocks-paths.conf
+          docker run --rm \
+            -v /tmp/server_blocks:/opt/bitnami/nginx/conf/server_blocks:ro \
+            registry.gitlab.com/notch8/scripts/bitnami-nginx:1.21.5-debian-10-r4 \
+            nginx -t
+
   lint:
     needs: build
     uses: notch8/actions/.github/workflows/lint.yaml@v1.0.10

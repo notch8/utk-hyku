@@ -27,6 +27,14 @@ helm pull oci://ghcr.io/samvera/charts/hyrax --version 2.0.0 --untar --untardir 
 
 helm repo update
 
+# nginx.serverBlockFile in the values file points at a real .conf file (not a Helm value itself) --
+# load it into nginx.serverBlock via --set-file so the config can be linted outside of a YAML string.
+values_file=$(echo "$HELM_EXTRA_ARGS" | grep -oE 'ops/[^ ]+\.ya?ml')
+server_block_file=$(grep -m1 '^\s*serverBlockFile:' "$values_file" 2>/dev/null | awk '{print $2}')
+if [ -n "$server_block_file" ] && [ -f "$server_block_file" ]; then
+    HELM_EXTRA_ARGS="$HELM_EXTRA_ARGS --set-file nginx.serverBlock=$server_block_file"
+fi
+
 helm upgrade \
     --install \
     --atomic \
