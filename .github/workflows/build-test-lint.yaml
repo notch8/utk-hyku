@@ -39,12 +39,16 @@ jobs:
       - uses: actions/checkout@v5
       - name: Validate nginx server block syntax
         run: |
-          mkdir -p /tmp/server_blocks/common /tmp/server_blocks/ldap
-          sed 's/{{ .Values.global.hyraxHostName }}/127.0.0.1/' ops/nginx/server-block.conf > /tmp/server_blocks/common/server-block.conf
-          printf 'include  "/opt/bitnami/nginx/conf/server_blocks/ldap/*.conf";\ninclude  "/opt/bitnami/nginx/conf/server_blocks/common/*.conf";\n' > /tmp/server_blocks/server-blocks-paths.conf
+          mkdir -p /tmp/bitnami-conf/server_blocks/common /tmp/bitnami-conf/server_blocks/ldap /tmp/bitnami-logs
+          sed 's/{{ .Values.global.hyraxHostName }}/127.0.0.1/' ops/nginx/server-block.conf > /tmp/bitnami-conf/server_blocks/common/server-block.conf
+          printf 'include  "/opt/bitnami/nginx/conf/server_blocks/ldap/*.conf";\ninclude  "/opt/bitnami/nginx/conf/server_blocks/common/*.conf";\n' > /tmp/bitnami-conf/server_blocks/server-blocks-paths.conf
+          cp -r ops/nginx/conf.d /tmp/bitnami-conf/conf.d
+          cp -r ops/nginx/bots.d /tmp/bitnami-conf/bots.d
           docker run --rm \
-            -v /tmp/server_blocks:/opt/bitnami/nginx/conf/server_blocks:ro \
-            registry.gitlab.com/notch8/scripts/bitnami-nginx:1.21.5-debian-10-r4 \
+            -v ./ops/nginx/nginx.conf:/etc/nginx/nginx.conf:ro \
+            -v /tmp/bitnami-conf:/opt/bitnami/nginx/conf:ro \
+            -v /tmp/bitnami-logs:/opt/bitnami/nginx/logs \
+            nginxinc/nginx-unprivileged:1.29-alpine \
             nginx -t
 
   lint:
