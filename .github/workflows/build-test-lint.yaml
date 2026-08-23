@@ -30,8 +30,25 @@ jobs:
     uses: notch8/actions/.github/workflows/build.yaml@v1.0.10
     secrets: inherit
     with:
-      components: '["web","worker","solr"]'
+      components: '["web","worker","solr","nginx"]'
       docker_target_prefix: hyku-
+
+  nginx-config-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Validate nginx server block syntax
+        run: |
+          mkdir -p /tmp/bitnami-conf/server_blocks/common /tmp/bitnami-conf/server_blocks/ldap /tmp/bitnami-logs
+          chmod 777 /tmp/bitnami-logs
+          sed 's/{{ .Values.global.hyraxHostName }}/127.0.0.1/' ops/nginx/server-block.conf > /tmp/bitnami-conf/server_blocks/common/server-block.conf
+          printf 'include  "/opt/bitnami/nginx/conf/server_blocks/ldap/*.conf";\ninclude  "/opt/bitnami/nginx/conf/server_blocks/common/*.conf";\n' > /tmp/bitnami-conf/server_blocks/server-blocks-paths.conf
+          docker run --rm \
+            -v ./ops/nginx/nginx.conf:/etc/nginx/nginx.conf:ro \
+            -v /tmp/bitnami-conf:/opt/bitnami/nginx/conf:ro \
+            -v /tmp/bitnami-logs:/opt/bitnami/nginx/logs \
+            nginxinc/nginx-unprivileged:1.29-alpine \
+            nginx -t
 
   lint:
     needs: build

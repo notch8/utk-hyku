@@ -18,12 +18,39 @@ readinessProbe:
   timeoutSeconds: 30
   failureThreshold: 6
 
+global:
+  # Used by the nginx chart to calculate upstream rails_app
+  hyraxHostName: utk-hyku-production-hyrax
+
 brandingVolume:
   storageClass: efs-sc
 derivativesVolume:
   storageClass: efs-sc
 uploadsVolume:
   storageClass: efs-sc
+
+nginx:
+  enabled: true
+  service:
+    type: ClusterIP
+  image:
+    registry: ghcr.io
+    repository: "$REPO_LOWER/nginx"
+    tag: "$TAG"
+  extraVolumes:
+    - name: "uploads"
+      persistentVolumeClaim:
+        claimName: "{{ .Values.global.hyraxHostName }}-uploads"
+    - name: "branding"
+      persistentVolumeClaim:
+        claimName: "{{ .Values.global.hyraxHostName }}-branding"
+  extraVolumeMounts:
+    - name: uploads
+      mountPath: /app/samvera/hyrax-webapp/public/system
+      subPath: public-system
+    - name: branding
+      mountPath: /app/samvera/hyrax-webapp/public/branding
+  serverBlockFile: ops/nginx/server-block.conf
 
 extraVolumeMounts: &volMounts
   - name: uploads
@@ -86,6 +113,7 @@ ingress:
     #     - path: /
   annotations: {
     nginx.org/client-max-body-size: "0",
+    nginx.org/websocket-services: "utk-hyku-production-nginx",
     cert-manager.io/cluster-issuer: letsencrypt-production-dns
     }
   tls:

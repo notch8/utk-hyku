@@ -30,6 +30,18 @@ CMD ["./bin/web"]
 FROM hyku-web AS hyku-worker
 CMD ["./bin/worker"]
 
+FROM nginxinc/nginx-unprivileged:1.29-alpine AS hyku-nginx
+USER root
+COPY ops/nginx/nginx.conf /etc/nginx/nginx.conf
+RUN mkdir -p /opt/bitnami/nginx/logs && \
+    ln -sf /dev/stdout /opt/bitnami/nginx/logs/access.log && \
+    ln -sf /dev/stderr /opt/bitnami/nginx/logs/error.log && \
+    chown -R nginx:nginx /opt/bitnami
+COPY --from=hyku-web /app/samvera/hyrax-webapp/public/assets /app/samvera/hyrax-webapp/public/assets
+COPY --from=hyku-web /app/samvera/hyrax-webapp/public/uv /app/samvera/hyrax-webapp/public/uv
+COPY --from=hyku-web /app/samvera/hyrax-webapp/public/clover-iiif /app/samvera/hyrax-webapp/public/clover-iiif
+USER nginx
+
 # Use a Solr version with patched Log4j to address CVE-2021-44228
 FROM solr:8.11.2 AS hyku-solr
 ENV SOLR_USER="solr" \
