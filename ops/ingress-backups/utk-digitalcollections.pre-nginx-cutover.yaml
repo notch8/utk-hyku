@@ -1,0 +1,26 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod-nginx-ingress
+    field.cattle.io/publicEndpoints: '[{"addresses":[""],"port":443,"protocol":"HTTPS","serviceName":"utk-hyku-production:utk-hyku-production-hyrax","ingressName":"utk-hyku-production:utk-digitalcollections","hostname":"digitalcollections.lib.utk.edu","path":"/","allNodes":false}]'
+    nginx.org/client-max-body-size: "0"
+  name: utk-digitalcollections
+  namespace: utk-hyku-production
+spec:
+  ingressClassName: nginx-ingress
+  rules:
+  - host: digitalcollections.lib.utk.edu
+    http:
+      paths:
+      - backend:
+          service:
+            name: utk-hyku-production-hyrax
+            port:
+              number: 80
+        path: /
+        pathType: ImplementationSpecific
+  tls:
+  - hosts:
+    - digitalcollections.lib.utk.edu
+    secretName: digitalcollections-tls
