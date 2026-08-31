@@ -13,6 +13,16 @@ livenessProbe:
 readinessProbe:
   enabled: false
 
+# db-setup's migration-count check queries schema_migrations before db:create
+# ever runs, so it dies under `set -e` against a genuinely empty database.
+dbPreSetupInitContainer:
+  - name: ensure-schema-migrations
+    image: "ghcr.io/$REPO_LOWER/web:$TAG"
+    command:
+      - sh
+      - -c
+      - PGPASSWORD=$DB_PASSWORD psql -h $DB_HOST -p 5432 -U $DB_USER $DB_NAME -c "CREATE TABLE IF NOT EXISTS schema_migrations (version character varying(255) NOT NULL PRIMARY KEY);"
+
 global:
   # Used by the nginx chart to calculate upstream rails_app
   hyraxHostName: utk-hyku-staging-hyrax
