@@ -10,6 +10,7 @@ on:
         type: choice
         options:
           - friends
+          - staging
           - production
       debug_enabled:
         type: boolean
