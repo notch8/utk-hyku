@@ -299,6 +299,7 @@ solr:
 externalFcrepoHost: fcrepo.fcrepo.svc.cluster.local
 externalPostgresql:
   host: zalando-postgres-v14-pooler.postgres.svc.cluster.local
+  database: utk_hyku_staging
   username: postgres
   password: $DB_PASSWORD
 
