@@ -15,13 +15,15 @@ readinessProbe:
 
 # db-setup's migration-count check queries schema_migrations before db:create
 # ever runs, so it dies under `set -e` against a genuinely empty database.
+# Host/user/db are hardcoded, not $DB_HOST-style: this container gets no env
+# from the chart, and envsubst blanks any $VARNAME with no matching CI secret.
 dbPreSetupInitContainer:
   - name: ensure-schema-migrations
     image: "ghcr.io/$REPO_LOWER/web:$TAG"
     command:
       - sh
       - -c
-      - PGPASSWORD=$DB_PASSWORD psql -h $DB_HOST -p 5432 -U $DB_USER $DB_NAME -c "CREATE TABLE IF NOT EXISTS schema_migrations (version character varying(255) NOT NULL PRIMARY KEY);"
+      - PGPASSWORD=$DB_PASSWORD psql -h zalando-postgres-v14-pooler.postgres.svc.cluster.local -p 5432 -U postgres utk_hyku_staging -c "CREATE TABLE IF NOT EXISTS schema_migrations (version character varying(255) NOT NULL PRIMARY KEY);"
 
 global:
   # Used by the nginx chart to calculate upstream rails_app
