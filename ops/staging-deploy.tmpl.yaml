@@ -106,6 +106,8 @@ extraEnvVars: &envVars
     value: $DB_PASSWORD
   - name: DB_URL
     value: postgresql://postgres:$DB_PASSWORD@zalando-postgres-v14-pooler.postgres.svc.cluster.local
+  - name: PGSSLMODE
+    value: require
   - name: DB_USER
     value: postgres
   - name: FCREPO_BASE_PATH
