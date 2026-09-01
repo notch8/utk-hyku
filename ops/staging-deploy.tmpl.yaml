@@ -120,6 +120,11 @@ extraEnvVars: &envVars
     value: postgresql://postgres:$DB_PASSWORD@zalando-postgres-v14-pooler.postgres.svc.cluster.local
   - name: PGSSLMODE
     value: require
+  # Transaction-mode pgbouncer doesn't preserve these across transactions.
+  - name: DB_PREPARED_STATEMENTS
+    value: "false"
+  - name: DB_ADVISORY_LOCKS
+    value: "false"
   - name: DB_USER
     value: postgres
   - name: FCREPO_BASE_PATH
