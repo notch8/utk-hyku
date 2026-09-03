@@ -16,9 +16,17 @@ startupProbe:
 livenessProbe:
   enabled: true
   path: "/healthz"
+  initialDelaySeconds: 15
+  periodSeconds: 60
+  timeoutSeconds: 60
+  failureThreshold: 6
 readinessProbe:
   enabled: true
   path: "/healthz"
+  initialDelaySeconds: 15
+  periodSeconds: 60
+  timeoutSeconds: 60
+  failureThreshold: 6
 
 # db-setup's migration-count check queries schema_migrations before db:create
 # ever runs, so it dies under `set -e` against a genuinely empty database.
