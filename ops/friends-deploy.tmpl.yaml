@@ -16,9 +16,17 @@ startupProbe:
 livenessProbe:
   enabled: true
   path: "/healthz"
+  initialDelaySeconds: 15
+  periodSeconds: 60
+  timeoutSeconds: 60
+  failureThreshold: 6
 readinessProbe:
   enabled: true
   path: "/healthz"
+  initialDelaySeconds: 15
+  periodSeconds: 60
+  timeoutSeconds: 60
+  failureThreshold: 6
 
 global:
   # Used by the nginx chart to calculate upstream rails_app
