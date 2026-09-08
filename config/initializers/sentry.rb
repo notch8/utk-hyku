@@ -8,5 +8,4 @@ Sentry.init do |config|
   config.environment = ENV['SENTRY_ENVIRONMENT']
   config.breadcrumbs_logger = [:active_support_logger, :http_logger]
   config.enabled_environments = %w[utk-hyku-friends utk-hyku-production]
-  config.debug = true
 end
