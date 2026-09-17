@@ -6,7 +6,7 @@ resources:
     cpu: "1000m"
   requests:
     memory: "2Gi"
-    cpu: "100m"
+    cpu: "200m"
 
 # Chart default path "/" does a full Solr+DB-backed page render - too slow/heavy for a health check. /healthz (okcomputer, standard Hyrax dependency) is cheap and dependency-free.
 startupProbe:
