@@ -1,12 +1,18 @@
 replicaCount: 3
 
+autoscaling:
+  enabled: true
+  minReplicas: 3
+  maxReplicas: 8
+  targetCPUUtilizationPercentage: 70
+
 resources:
   limits:
     memory: 6Gi
     cpu: 2
   requests:
     memory: 4Gi
-    cpu: 100m
+    cpu: 1 # actual sustained usage is ~900m; 100m under-requested it and broke % of it for the autoscaler above
 
 # Chart default path "/" does a full Solr+DB-backed page render - too slow/heavy for a health check. /healthz (okcomputer, standard Hyrax dependency) is cheap and dependency-free.
 startupProbe:
