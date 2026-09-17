@@ -1,11 +1,5 @@
 replicaCount: 2
 
-autoscaling:
-  enabled: true
-  minReplicas: 2
-  maxReplicas: 4
-  targetCPUUtilizationPercentage: 70
-
 resources:
   limits:
     memory: "4Gi"
