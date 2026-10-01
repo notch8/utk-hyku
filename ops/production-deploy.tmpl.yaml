@@ -232,8 +232,6 @@ extraEnvVars: &envVars
     value: redis://:$REDIS_PASSWORD@utk-hyku-production-redis-master:6379/0
   - name: ROB_EMAIL
     value: rob@notch8.com
-  - name: ROB_PASSWORD
-    value: testing123
   - name: S3_DOWNLOADS
     value: "true"
   - name: SENTRY_DSN
@@ -270,12 +268,8 @@ extraEnvVars: &envVars
     value: http://admin:$SOLR_ADMIN_PASSWORD@solr-headless.solr:8983/solr/
   - name: SUPPORT_EMAIL
     value: support@notch8.com
-  - name: SUPPORT_PASSWORD
-    value: testing123
   - name: TEST_USER_EMAIL
     value: user@notch8.com
-  - name: TEST_USER_PASSWORD
-    value: testing123
 
 worker:
   replicaCount: 2
