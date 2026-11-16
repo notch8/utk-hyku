@@ -185,7 +185,7 @@ extraEnvVars: &envVars
   - name: HYKU_ADMIN_HOST
     value: hykuadmin.lib.utk.edu
   - name: HYKU_ADMIN_ONLY_TENANT_CREATION
-    value: "false"
+    value: "true"
   - name: HYKU_BULKRAX_ENABLED
     value: "true"
   - name: HYKU_CONTACT_EMAIL

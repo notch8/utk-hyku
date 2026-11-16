@@ -39,6 +39,7 @@ RSpec.describe Ability do
     end
 
     it { is_expected.not_to be_able_to(:manage, :all) }
+    it { expect(ability.can_import_works?).to be false }
 
     describe "#user_groups" do
       subject { ability.user_groups }
@@ -59,6 +60,7 @@ RSpec.describe Ability do
     it { is_expected.not_to be_able_to(:manage, :all) }
     it { is_expected.not_to be_able_to(:manage, Account) }
     it { is_expected.to be_able_to(:manage, Site) }
+    it { expect(ability.can_import_works?).to be true }
 
     describe "#user_groups" do
       subject { ability.user_groups }
