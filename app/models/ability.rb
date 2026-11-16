@@ -60,7 +60,7 @@ class Ability
   end
 
   def can_import_works?
-    can_create_any_work?
+    admin?
   end
 
   def can_export_works?
